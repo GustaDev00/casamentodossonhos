@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" type="text/css" href="css/style480.css">
+        
+    <style>
+        .form1,.form2,.form3{transition: width 2s;}
+
+    </style>
+  </head>
+  <body>
+
+        <img class="perfil" src="imagens/galeria2.jpeg" >
+
+      <div class="container">
+        <div class="row">
+
+            <div class="principal">
+<br/><br/>
+                    <button class="btn btn-primary" id="btn1">   Lista de presente </button>
+                    <button class="btn btn-primary" id="btn2">   Principal </button>
+                    <button class="btn btn-primary" id="btn3">   Confimar presença </button>
+                    <br/><br/>
+            </div>
+
+                    <div class="form1">
+                            <p class="casal">Gabriela e Julio</p><br>
+                        <form>                            
+                            <div class="form-row">
+                                <div class="tipo">
+                                    <p>Presente: Status: E-mail:</p> 
+                                </div><br>
+
+                              <div class="lista1">                                                                   
+                                <input type="text" class="form-control"  size="10" placeholder="Objeto">
+                              </div>
+
+                              <div class="lista2">                                  
+                                  <select class="custom-select" >
+                                      <option  selected >Selecione</option>
+                                      <option  value="1" >Confirmado</option>
+                                      <option  value="2" >Pendente</option>
+                                      <option value="3" >Cancelado</option>                                                                            
+                                  </select>
+                              </div>
+                                
+                               <div class="lista3">                           
+                                    <input type="text" class=""  size="14" placeholder="Digite o e-mail">
+                                </div>
+                                                                          
+                                  <br>  <br>  
+                                  <hr>                     
+                            <!--  <button type="submit" class="btn btn-primary">Sign in</button> -->
+                            </div> 
+                        </form>                      
+                    </div>
+
+                        <div class="form2">
+                                <p class="casal">Gabriela e Julio</p>
+                         
+                             <div class="prin">
+                                 <label>Dia:</label>
+                                 <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10"><br>
+                                
+                                                     
+                                    <label>Horário:</label>
+                                    <input type="text" class="form" id="" placeholder="19:00" size="10"><br>
+                               
+                                    <label>Local:</label>
+                                    <input type="text" class="form" id="" placeholder="Endereço" size="25"><br>
+                             </div>    
+                                                                
+                             <img class="galeria3" src="imagens/galeria3.jpeg" ><br>
+                           <!--  <button class="editar" type="submit" >Editar</button> -->
+                                                    
+                                                                
+                              
+                               </div>
+                               <div class="form3">
+                                    <p class="casal">Gabriela e Julio</p>
+                                      <form>
+                                            <div class="group2">
+                                                    <img class="letra" src="imagens/logo.png"><br><br>
+
+                                                    <h3>Convite</h3>                                                
+                                                    <p>Sua presença é muito importante em um momento tão especial.</p>
+                                                    <br>
+                                              <label >Nome:</label><br>
+                                              <input type="email" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" size="50">
+                                            <br><br>
+                                            <div>
+                                                    <label >Acompanhantes:</label><br>
+                                                    <select class="select1" size="">
+                                                            <option selected >Selecione</option>
+                                                            <option value="1" > 1 acompanhante</option>
+                                                            <option value="2"> 2 acompanhantes</option>  
+                                                            <option value="3"> 3 acompanhantes</option> 
+                                                            <option value="4"> 4 acompanhantes</option>             
+                                                    </select>
+                                                </div><br>
+                                            
+
+                                            <div class="">
+                                              <label >E-mail:</label><br>
+                                              <input type="text" class="form-control" id="email" placeholder="casamentodossonhos@gmail.com" size="50" >
+                                            </div><br>
+
+                                            <div class="conf1">
+                                                
+                                                    <label>Celular:</label><br>
+                                                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="(xx)xxxx-xxxx">
+                                                  
+                                                </div>
+
+                                            <div class="conf">
+                                            <label>Presença:</label><br>
+                                            <select class="select2" >
+                                                    <option selected >Selecione</option>
+                                                    <option value="1" >Confirmada</option>
+                                                    <option value="2">Cancelada</option>              
+                                            </select>
+                                        </div><br><br><br>
+                                            <button type="submit" class="botao">Confirmar</button>
+                                        </div>
+                                        </form>
+                                   </div>
+
+            
+        </div>
+      </div>
+    
+
+<script>
+    var btn1 = document.querySelector("#btn1");
+    var btn2 = document.querySelector("#btn2");
+    var btn3 = document.querySelector("#btn3");
+
+    var form1 = document.querySelector(".form1");
+    var form2 = document.querySelector(".form2");
+    var form3 = document.querySelector(".form3")
+
+    form1.style.display = "none";
+   // form2.style.display = "none";
+    form3.style.display = "none";
+   
+
+
+    btn1.addEventListener("click",function(){
+        form3.style.display = "none";
+        form2.style.display = "none";
+        form1.style.display = "block";
+       
+    })
+
+     btn2.addEventListener("click",function(){
+        form1.style.display = "none";
+        form3.style.display = "none";        
+        form2.style.display = "block";
+        
+     
+    })
+    btn3.addEventListener("click",function(){
+        form1.style.display = "none";
+        form2.style.display = "none";
+        
+        form3.style.display = "block";
+         
+    })
+
+
+
+</script>
+    
+  </body>
+</html>
