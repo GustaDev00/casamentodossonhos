@@ -143,8 +143,17 @@ figure figcaption a:active{
 
 
 /*-------------------loja.html-----------*/
-.produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt}
-.produto_loja img{width: 40vw;}
+/* .produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt; display: flex; align-items: center} */
+.produto_loja img{width: 40vw; align-self: center}
+.produto_loja{display: grid}
+#filtro{border: 1px solid; margin: 20px;}
+#filtro a{position: relative;bottom: 20px; margin-left: 14px}
+.produto_loja h3{
+    display: block;
+    background-color: red;
+    width: 100%;
+    flex-grow: 1;
+}
 
 
 /*-------------------login.html-----------*/
