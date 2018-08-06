@@ -143,6 +143,8 @@ figure figcaption a:active{
 
 
 /*-------------------loja.html-----------*/
+.produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt}
+.produto_loja img{width: 40vw;}
 
 
 /*-------------------login.html-----------*/
