@@ -1,6 +1,0 @@
-
-#container div{display: inline-block; max-width:1366px}
-#container div:nth-child(1){width: 49vw; height: calc(var(--ajustes)/2); background-color: black}
-#container div:nth-child(2){width: 49vw; height: calc(var(--ajustes)/2); background-color: red}
-#container div:nth-child(3){width: 49vw; height: calc(var(--ajustes)/2); background-color: blue; border-radius: 100%}
-#container div:nth-child(4){width: 49vw; height: calc(var(--ajustes)/2); background-color: green; border-radius: 100%}
