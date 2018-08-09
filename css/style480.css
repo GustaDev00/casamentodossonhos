@@ -316,10 +316,6 @@ div.teste{
     border-radius: 6px;
     border-width: thin;
    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
     width: 360px;
     height: 120px;
     margin: auto;
@@ -459,7 +455,7 @@ button.btn.btn-primary{
     background-color:pink;
     border:solid grey 1px ;    
     height: 30px; 
-    width: 158px;
+    width: 32%;
     margin-left: -6px;           
 }
 
