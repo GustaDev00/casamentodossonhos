@@ -36,7 +36,7 @@
                                 <input type="checkbox" class="checkbox" onclick="mostra('mb')"/> <a class="presente"> Geladeira</a>
                 
                                  <div id="mb" class="email">
-                                    <button type="button" id="b"class="confirma">Enviar</button>
+                                    <button type="button" id="b"class="confirma" onclick="asd();">Enviar</button>
                                     <input type="text" id="b" class="e"  size="12" placeholder="Digite seu e-mail">
                                   </div>
                             </div>
@@ -44,7 +44,8 @@
                                <div class="lista2">                                    
                                   <select class="custom-select" >
                                       <option  selected >Selecione</option>
-                                      <option  value="1" >Confirmar</option>                                                                                                            
+                                      <option  value="1" >Confirmar</option>
+                                      <p id="crro">                                                                                                            
                                   </select>
                               </div>
                                  
@@ -174,6 +175,10 @@
 
                }else{document.getElementById(id).style.display = 'block'}
             }
+
+                function asd(){
+                    document.getElementById("crro").innerHTML = "confirmado";
+                }
         </script>                         
   </body>
 </html>
