@@ -38,9 +38,9 @@ try{
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
                 //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
-                $ultimoCod = $cod_usu->cod_usuario;
+                //$ultimoCod = $cod_usu->cod_usuario;
                 session_start();
-                $_SESSION['cod_usuario'] = $ultimoCod;
+                //$_SESSION['cod_usuario'] = $ultimoCod;
                     echo '<script>';
                     echo 'alert("Seu cadastro foi realizado com sucesso")';
                     echo '</script>';
