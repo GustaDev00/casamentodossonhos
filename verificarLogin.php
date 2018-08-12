@@ -23,14 +23,14 @@ $senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
 //    $validarlogin->execute();
 $validarLogin = executeSelect($pdo, $verificar);
 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
-$id = $fetch->cod_usuario;
+//$id = $fetch->cod_usuario;
 $count = $validarLogin->rowCount();
     if($count > 0)
     {
         session_start();
         $_SESSION["email"]= $_POST["email"];
         $_SESSION["senha"]= $_POST["senha"];
-        $_SESSION["id"]= $id;
+        //$_SESSION["id"]= $id;
             echo "<script>alert('Logado Com Sucesso!');
               loginsucessfully();
                 </script>";
