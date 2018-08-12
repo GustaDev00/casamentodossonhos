@@ -158,6 +158,19 @@ figure figcaption a:active{
 
 /*-------------------login.html-----------*/
 
+div.teste{
+    Border-radius: 6px;
+    Border-width: thin;
+    Border:solid;
+    text-align: center;
+    Position: absolute;
+    Box-shadow: 0px 0px 10px black;
+    top: 200px;
+    right: 100px;
+    left: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
 
 /*-------------------perfilCliente.html-----------*/
 /*-----------------------------------perfilCliente.html---------------------*/
