@@ -4,7 +4,7 @@ include_once './Db/daohelper.php';
 try{
     if(empty($_POST)){
         echo'<script>';
-        echo"location.href='index.php'";
+        echo"location.href='index.html'";
         echo '</script>';
     }else{
         $nome = isset($_REQUEST['nome'])?$_REQUEST['nome']:null;
