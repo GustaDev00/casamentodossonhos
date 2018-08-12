@@ -4,7 +4,7 @@
 	<title>Autenticando Usuário</title>-->
 	<script type="text/javascript">
 		function loginsucessfully(){
-			setTimeout("window.location='./index.php?p=home.php'", 1);
+			setTimeout("window.location='login.html'", 1);
                         alert('faça um login para continuar');
 		}
 
