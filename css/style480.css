@@ -158,61 +158,279 @@ figure figcaption a:active{
 
 /*-------------------login.html-----------*/
 
+div.teste{
+    Border-radius: 6px;
+    Border-width: thin;
+    Border:solid;
+    text-align: center;
+    Position: absolute;
+    Box-shadow: 0px 0px 10px black;
+    top: 200px;
+    right: 100px;
+    left: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
 
 /*-------------------perfilCliente.html-----------*/
 /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
-div.tipo{
-    word-spacing: 100px;
-    padding-left: 16px; 
-    margin-bottom: 0;
+ /*---------------TOPO---------------*/
+ #container{min-width: 320px;}
+
+#container header{
+    background-color: #f6dddf;
+    width: 100vw;
+    height: 66px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
 }
 
-div.lista1{
-    float: left;
-    padding-left: 16px; 
+
+#container header form input{
+    position: relative;
     
-  
+}
+#container header form input:first-child{
+     width: 339px;
+    height: 44px;
+    border: 2px solid #FF757F;
+    border-radius: 50px;
+    background-color: #f6dddf;
+    padding: 20px;
+}
+
+#container header form input:last-child{
+   right: 60px;
+    top: 10px
+}
+/*---------------CONTEUDO 1PAG---------------*/
+figure figcaption p{
+  position: absolute;
+  top:  50vw;
+  left: 40px;
+  right: 40px;
+  font-size: 25px;
+  color: White;
+}
+figure img{width: 100vw}
+
+figure figcaption a{
+    position: relative;
+    text-decoration: none;
+    border: 3px solid white;
+    top: 2em;
+    border-radius: 20px;
+    color: white;
+}
+figure figcaption a:first-child{
+    left: 2em;
+    padding: 15px;
+}
+figure figcaption a:last-child{
+    left: 2em;
+    padding:  15px 30px;
+    left: 3em;
+}
+
+figure figcaption a:active{
+    color: #FF757F;
+    border-color: #FF757F;
+}
+/*---------------CONTEUDO 2PAG---------------*/
+#nos{ background-color: #F2F2F2; padding: 12vw;}
+ #nos h2{
+     text-align: CENTER;
+}
+
+#nos p{
+    margin-top: 7vw;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+
+
+/*---------------MENU FIXO---------------*/
+#container main footer ol li a{
+    background-color: #f6dddf;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+    }
+#container main footer ol li{
+    list-style: none;
+
+}
+#container main footer #menu{
+    display: flex;
+    position: fixed;
+    top: 94%; 
+    }
+    #container main footer ol li a{
+        padding: 28px 41px 25px 41px;
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        
+        
+    }
+    #container main footer ol li .item.home{
+        border-right:1px solid black;
+    }
+
+    #container main footer ol li .item.login{
+        border-left:1px solid black;
+    }
+
+    #container main footer ol li a:active{
+        background-color: #d1a7a7;
+        color: white;
+    }
+/*---------------SUBMENU---------------*/
+    #container main footer ol li #submenu{ 
+        position: absolute;
+        bottom:10vw;
+        right:2%;
+    }
+
+    #container main footer ol li #submenu li{
+        padding: 27px 0px 20px 0px;
+    }
+    #container main footer ol li #submenu li a{
+        padding: 26px 61px 20px 40px;
+        border-bottom: 1px solid;
+
+    }
+    #container main footer ol li #submenu li .concerta{
+        padding-right: 52%;
+    }
+     #container main footer ol li #submenu{display: none;}
+
+/*---------------CARROSSEL---------------*/
+
+#carrossel{ position:relative; height:260px; width:100vw; overflow:hidden }
+#caixa{ position:absolute; height:200px; }
+#caixa img{ float:left; width: 100vw;  }
+
+/*---------------------enchendo de linguiça-------------*/
+
+#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
+
+
+
+/*-------------------loja.html-----------*/
+
+
+/*-------------------login.html-----------*/
+
+div.teste{  
+    border: solid;  
+    border-radius: 6px;
+    border-width: thin;
+   position: absolute;
+    width: 360px;
+    height: 120px;
+    margin: auto;
+   box-shadow: 0px 0px 10px black;
+    padding: 50px;
+    box-sizing: border-box;
+
+}
+
+
+/*-----------------------------------perfilCliente.html---------------------*/
+/*LISTA DE PRESENTE*/
+div.tipo{
+    word-spacing: 68px;
+    padding-left: 28px; 
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+div.lista1{     
+    padding-left: 2px;     
+    font-size: 16px;     
 }
 
 div.lista2 {     
     float: left;
-    padding-left: 60px; 
-    
+    padding-left: 65px;     
 }
- select.custom-select{
-    width: 100px;
-    height: 21px;
-    border-color: rgb(169, 169, 169);
- }
-div.lista3{
-    
+select.custom-select{
+    padding-top: 1px;
+}
+
+a.presente{
+    float: left;   
+    padding-left: 14px;
+    padding-top: 0;
+}
+
+input.checkbox{
+    float: left;
+}
+
+select.custom-select{
     float: right;
-    padding-right: 24px;
+   }
+
+div.email{    
+    float: right;    
 }
+ 
+input.e{
+   margin-right: 30px;
+}
+/*botao enviar*/
+.confirma{
+    border-radius: 6px;
+    background-color: pink;
+    border-color:pink;
+    padding: 2px;  
+}
+
+
+
 hr{
     margin: 0;
     padding: 0;
     border-style: dotted;    
     border-width: thin;
     border-color: gray;
-
+}
+ 
+button.confirma{
+    float: right;
+}
+input.checkbox{
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
+div.form-row{
+    display: inline;
+}
 
 
 /*PRINCIPAL*/
 /* quadrado com dia local data */
-div.prin{    
-   background-color: pink;    
+div.prin{   
+    background-color: pink;    
     width:270px;     
     border-radius: 6px;
     padding-left: 6px;
     padding-top: 6px;
     padding-bottom: 6px;          
-    margin-left: 3px;     
-    margin-top: 6px;        
-            
+    margin-left:6px;     
+    margin-top: 6px;  
+
+    
+    
+    
+    
+           
 }
 
 
@@ -250,7 +468,7 @@ button.btn.btn-primary{
     background-color:pink;
     border:solid grey 1px ;    
     height: 30px; 
-    width: 158px;
+    width: 32%;
     margin-left: -6px;           
 }
 
@@ -280,8 +498,7 @@ div.group2{
     padding-bottom: 40px;       
 }
 
-div.conf1{   
-    display: inline-block;     
+div.conf1{       
     float: left;
 }
 div.conf{
@@ -307,7 +524,7 @@ p{
     background-color: pink;
     border-radius: 6px;
     border-color: pink;
-    padding: 4px;    
+    padding: 8px;    
  }
 
  select.select1{
@@ -327,6 +544,19 @@ p.casal{
      font-size: 18px;
  }
 
+
+
+
+/*-------------------------------perfilVendedor.html-------------------------*/
+
+
+/*-------------------pruduto.html-----------*/
+
+
+
+
+
+    
 /*-------------------perfilVendedor.html-----------*/
 
 
