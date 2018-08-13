@@ -24,22 +24,28 @@
     
 
 <body>
+    <form action="verificarLogin.php" method="post">
+        <input type="hidden" value="verificar" name="acao">
+        <section id="login">
+            <h2>Entrar</h2>
     
-        <div class="teste">
-        <div class="campo">
-
-            <label>E-mail:</label><br/><br/>
-            <input type="text" placeholder="E-mail" name="email" required-size = ""> <br/><br/>
-
-            <label>Senha:</label><br/><br/>
-            <input type="password" placeholder="Insira sua Senha" name="Senha" required-size=""><br/><br/>
-        </div>
-        <div class="botao">
-            <a href="#"><button type="submit">Entrar</button></a> <br/><br/>
-            <input type="checkbox" checked="checked">Lembre de mim
-        </div>
-    </div>
-
+            <div class="campo">
+    
+                <label>E-mail:</label><br/>
+                <input type="text" placeholder="E-mail" name="email" required size="60"> <br/> <br/>
+    
+                <label>Senha:</label><br/>
+                <input type="password" placeholder="Inserir senha" name="senha" required size="60"><br/><br/>
+            </div>
+    
+            <div class="botao">
+                <a href="login.php"><button type="submit">Entrar</button></a>
+                
+            </div>
+    
+    
+        </section>
+    </form>
     
     <figure><img src="imagens/fundo.png" title="fundo_login" >
         <figcaption><!--<p>Nosso sonho é realizar o seu. Venha fazer seu casamento com facilidade e do jeito que sempre sonhou.
