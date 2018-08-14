@@ -18,7 +18,7 @@
 #container header form input:first-child{
      width: 339vw;
     height: 44px;
-    border: 2px solid red;
+    border: 2px solid #FF757F;
     border-radius: 50px;
     background-color: #f6dddf;
     padding: 20px;
