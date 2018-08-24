@@ -19,7 +19,6 @@ figure figcaption p{
   }
   #container header form input:first-child{
     width: 45vw;
-    display: inline
   }
   #container header form input:last-child{
     right: 50px;
