@@ -1,144 +1,35 @@
 ﻿ /*---------------TOPO---------------*/
  #container{min-width: 320px;}
 
-#container header{
-    background-color: #f6dddf;
-    width: 100vw;
-    height: 66px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center
-}
+/*---------------alterar---------------*/
+ #container header{
+    height: 70px;
+ }
 
+ #user_icone{display: none}
+ #loja_icone{display: none;}
 
-#container header form input{
+ #container header form input{
     position: relative;
-    
-}
-#container header form input:first-child{
-     width: 339vw;
-    height: 44px;
-    border: 2px solid #FF757F;
-    border-radius: 50px;
-    background-color: #f6dddf;
-    padding: 20px;
-}
+    margin: 15px 0 0 46px;
+  }
 
-#container header form input:last-child{
-   right: 60vw;
-    top: 10vw
-}
-/*---------------CONTEUDO 1PAG---------------*/
-figure figcaption p{
-  position: absolute;
-  top:  50vw;
-  left: 40px;
-  right: 40px;
-  font-size: 25px;
-  color: White;
-}
-figure img{width: 100vw}
+  #container header form input:first-child{
+    width: 60vw;
+  }
+  #container header form input:last-child{
+    left: 49vw;
+     bottom: 50px;
+   }
 
-figure figcaption a{
-    position: relative;
-    text-decoration: none;
-    border: 3px solid white;
-    top: 2em;
-    border-radius: 20px;
-    color: white;
-}
-figure figcaption a:first-child{
-    left: 2em;
-    padding: 15px;
-}
-figure figcaption a:last-child{
-    left: 2em;
-    padding:  15px 30px;
-    left: 3em;
-}
+                /*----------------*/
 
-figure figcaption a:active{
-    color: #FF757F;
-    border-color: #FF757F;
-}
-/*---------------CONTEUDO 2PAG---------------*/
-#nos{ background-color: #F2F2F2; padding: 12vw;}
- #nos h2{
-     text-align: CENTER;
-}
-
-#nos p{
-    margin-top: 7vw;
-    font-size: 20px;
-    line-height: 28px;
-}
-
-
-
-/*---------------MENU FIXO---------------*/
-#container main footer ol li a{
-    background-color: #f6dddf;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-    }
-#container main footer ol li{
-    list-style: none;
-
-}
-#container main footer #menu{
-    display: flex;
-    position: fixed;
-    top: 94%; 
-    }
-    #container main footer ol li a{
-        padding: 28px 41px 25px 41px;
-        color: black;
-        font-size: 18px;
-        text-decoration: none;
-        
-        
-    }
-    #container main footer ol li .item.home{
-        border-right:1px solid black;
-    }
-
-    #container main footer ol li .item.login{
-        border-left:1px solid black;
-    }
-
-    #container main footer ol li a:active{
-        background-color: #d1a7a7;
-        color: white;
-    }
-/*---------------SUBMENU---------------*/
-    #container main footer ol li #submenu{ 
-        position: absolute;
-        bottom:10vw;
-        right:2%;
-    }
-
-    #container main footer ol li #submenu li{
-        padding: 27px 0px 20px 0px;
-    }
-    #container main footer ol li #submenu li a{
-        padding: 26px 61px 20px 40px;
-        border-bottom: 1px solid;
-
-    }
-    #container main footer ol li #submenu li .concerta{
-        padding-right: 52%;
-    }
-     #container main footer ol li #submenu{display: none;}
-
-/*---------------CARROSSEL---------------*/
-
-#carrossel{ position:relative; height:260px; width:100vw; overflow:hidden }
-#caixa{ position:absolute; height:200px; }
-#caixa img{ float:left; width: 100vw;  }
-
-/*---------------------enchendo de linguiça-------------*/
-
-#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
+  figure figcaption p{
+    width: 330px;
+        left: calc(48vw - 165px);
+        right: 40px;
+  }
+/*---------------acima---------------*/
 
 
 

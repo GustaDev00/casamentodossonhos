@@ -18,9 +18,10 @@
         <script>
         $(function(){
             var x = 1;
+            /*
             var limite  = $('#caixa img').length * $('#caixa img').width() * -1;
             var largura = (limite * (-1)) + $('#caixa img').width();
-
+            */
             $("#link").click(function(){
                 if(x == 1){ 
                     x = 2;
@@ -30,6 +31,9 @@
                         $("#submenu").hide();
                     }
                 });
+        });
+
+                /*
             console.log(limite,largura);
                 $('#caixa').append('<img>');
 				$('#caixa img:last').attr('src','imagens/galeria1.jpeg');
@@ -44,17 +48,20 @@
 					
                 }
                 setInterval(Roda, 8000)
-        });
+        }); */
         </script>
     
         <div id="container">
 
             <header>
-                <a href="index.html"><img src="imagens/logo.png" title="Casamento dos sonhos"></a>
+                <a href="index.html"><img src="imagens/logo.png" title="Casamento dos sonhos" id="logo"></a>
                 <form method="post" action="pesquisa.php">
-                <input type="search" name="pesquisar" id="pesquisar">
+                <input type="search" name="pesquisar" id="pesquisar" maxlength="34">
                     <input type="image" src="imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
-                </form>    
+                </form> 
+                
+                <a href="index.html"><img id="user_icone" src="imagens/user.png" title="Casamento dos sonhos"></a>
+                <a href="index.html"><img id="loja_icone" src="imagens/loja.png" title="Casamento dos sonhos"></a>   
             </header>
                 
             <main>
@@ -62,7 +69,10 @@
                <section>
                 <figure>
                     <img src="imagens/fundo.png" title="aliança" >
-                    <figcaption><p>Nosso sonho é realizar o seu. Venha fazer seu casamento com facilidade e do jeito que sempre sonhou.
+                    <figcaption>
+                        <p>Nosso sonho é realizar o seu. Venha fazer seu casamento 
+                            com facilidade e do jeito que sempre sonhou.
+                            <br><br>
                     <a href="#nos">Começar</a>
                     <a href="login.html"> Entrar </a></figcaption>
                      </figure>
