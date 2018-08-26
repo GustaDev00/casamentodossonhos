@@ -9,10 +9,7 @@
   width: 100vw;
   display: flex;
 }
-#logo{
-  margin:  10px
-}
-
+#logo{ margin:  10px}
 
 #container header form input:first-child{
   height: 44px;
@@ -21,6 +18,8 @@
   background-color: #f6dddf;
 
 }
+
+
 
 
 
@@ -50,7 +49,7 @@ figure figcaption a:active{
   border-color: #FF757F;
 }
 /*---------------CONTEUDO 2PAG---------------*/
-#nos{ background-color: #F2F2F2; padding: 12vw; width: 100vw}
+#nos{ background-color: #F2F2F2; padding: 12vw; }
 #nos h2{
    text-align: CENTER;
 }
