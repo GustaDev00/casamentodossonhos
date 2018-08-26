@@ -1,0 +1,26 @@
+
+
+
+#container header{
+    height: 70px;
+ }
+
+ #user_icone, #loja_icone{margin: 10px 10px 0 2vw;float: left}
+
+figure figcaption p{
+    width: 450px;
+    font-size: 38px;
+    left: calc(48vw - 225px);
+}
+
+#container header form input{
+    position: relative;
+    margin: 15px 0 0 6px;
+  }
+  #container header form input:first-child{
+    width: 45vw;
+  }
+  #container header form input:last-child{
+    right: 50px;
+     top: 10px;
+   }
