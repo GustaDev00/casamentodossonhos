@@ -5,15 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" type="text/css" href="css/style480.css">
+   <link rel="stylesheet" type="text/css" href="css/default.css">
+
         
     <style>
         .form1,.form2,.form3{transition: width 2s;}
     </style>     
   </head>
   <body>
-        <img class="perfil" src="imagens/galeria2.jpeg" >
+        
 
-      <div class="container">        
+      <div class="container"> <img class="perfil" src="imagens/galeria2.jpeg" >       
             <div class="principal">
 <br/><br/>
                     <button class="btn btn-primary" id="btn1">   Lista de presente </button>
@@ -25,7 +27,7 @@
                        <div class="form1">
                             <p class="casal">Gabriela e Julio</p><br>
                             <p class="texto">Marque o presente!</p><br><br>
-                        <form>      
+                        <form id="um">      
                                                    
                             <div class="form-row">
                                 <div class="tipo">
@@ -79,7 +81,7 @@
                                                     <img class="letra" src="imagens/logo.png"><br><br>
 
                                                     <h3>Convite</h3>                                                
-                                                    <p>Sua presença é muito importante em um momento tão especial.</p>
+                                                    <p id="sua">Sua presença é muito importante em um momento tão especial.</p>
                                                     <br>
                                               <label >Nome:</label><br>
                                               <input type="email" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" size="50">
@@ -102,7 +104,7 @@
 
                                             <div class="conf1">                                                
                                                     <label>Celular:</label><br>
-                                                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="(xx)xxxx-xxxx">
+                                                    <input type="number" class="form-control" id="cel" placeholder="(xx)xxxx-xxxx">
                                             </div>
 
                                         <div class="conf">

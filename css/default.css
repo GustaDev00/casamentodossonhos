@@ -9,5 +9,23 @@
   position: relative; 
 }
  */
+ /* PERFIL CLIENTE*/
+
+ div.container{
+   margin: 2%;
+ }
+ 
+ div.group2{
+ padding-left: 2%;
+ padding-right: 2%;
+ padding-bottom: 8%;
+ }
+
+ label, h3{
+   font-size: 3vw;
+ }
+  form#um{
+    font-size: 3vw;
+  }
 
 
