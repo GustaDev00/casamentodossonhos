@@ -6,7 +6,7 @@
  }
 
   #user_icone{margin: 10px 11px 0 2vw;}
-  #ferramentas_topo{border: 1px solid; position: absolute;left: 21vw; display: flex;}
+  #ferramentas_topo{position: absolute; display: flex ;left: 17vw;}
 
 figure figcaption p{
     width: 450px;
