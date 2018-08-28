@@ -131,3 +131,45 @@ figure figcaption a:active{
 
 
 
+/*--------------------loja--------------*/
+
+.oi{
+    width: 40vw;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px 0 0 20px;
+}
+
+.hidde{ height: 130px; margin: 10px; overflow: hidden;}
+
+.produto_loja{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 23px; 
+    background: #f6dddf;
+    height: 170px;
+}
+
+#filtro{
+    border: 1px solid; 
+    margin: 20px;
+}
+
+#filtro a{
+    position: relative;
+    bottom: 20px; 
+    margin-left: 14px
+}
+
+.produto_loja h3{
+    display: block;
+    background-color: red;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nome_descricao{
+    float: right;
+    
+}

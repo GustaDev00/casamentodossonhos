@@ -15,6 +15,19 @@
         <link rel=stylesheet media="screen and (min-width:1025px)" href="css/style1366.css">
         <!-- Jquery-->
         <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function(){
+            var recebeNome = "produto";
+            
+        for(aume=1;aume<=3;aume++){
+            var produto = "#" + recebeNome + aume;
+
+            $(produto).animate({this: hide()}, 20000);
+            
+
+        }
+    });
+        </script>
        
     
         <div id="container">
@@ -34,9 +47,10 @@
 
                     <div id="produto1" class="produto_loja">
                         <div class="oi">
+                            <div class="hidde">
                         <!-- <img src="imagens/produto1" title="produto1"> -->
                         <img src="imagens/galeria1.jpeg" title="produto1">
-                        </div>
+                        </div></div>
                         <div class="nome_descricao">
                         <h3>Nome do Produto</h3>
                         <p>Descrição do produto......
@@ -45,9 +59,10 @@
 
                     <div id="produto2" class="produto_loja">
                             <div class="oi">
+                                <div class="hidde">
                         <!-- <img src="imagens/produto2" title="produto2"> -->
-                            <img src="imagens/galeria2.jpeg" title="produto2">
-                            </div>
+                            <img src="imagens/base.jpg" title="produto2">
+                            </div></div>
                             <div class="nome_descricao">
                             <h3>Nome do Produto</h3>
                             <p>Descrição do produto......
@@ -55,10 +70,11 @@
                     </div>
 
                         <div id="produto3" class="produto_loja">
-                                <div class="oi"> 
+                                <div class="oi">
+                                    <div class="hidde"> 
                             <!-- <img src="imagens/produto3" title="produto3"> -->
                               <img src="imagens/galeria3.jpeg" title="produto3">
-                              </div>
+                              </div></div>
                               <div class="nome_descricao">
                                 <h3>Nome do Produto</h3>
                                 <p>Descrição do produto......
