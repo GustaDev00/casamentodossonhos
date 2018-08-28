@@ -361,7 +361,7 @@ select.custom-select{
     font-size: 2.5vw;
     padding-top: 1px;
    }
-   
+
 
 div.email{    
     float: right;    
@@ -469,13 +469,14 @@ img.perfil{
 
 /*CONFIRMAR PRESENÇA*/
 
-p#sua{
-    font-size: 3vw;
-}
+
 div.form{
     margin-top: 0px;    
 }
 
+p#sua{
+    font-size: 3vw;
+}
 div.group2{
     border-color:grey;
     border-style: dotted;    
@@ -523,12 +524,6 @@ p{
      border-color: rgb(169, 169, 169);
  }
 
- select.select2{
-     width: 170px;
-     height: 22px;
-     border-color: rgb(169, 169, 169);
- }
-
 p.casal{
      text-align: center;
      font-size: 5vw;
@@ -549,9 +544,13 @@ p.casal{
     height: 4vw;
   }
   select.select2{
-    width: 40vw;
+    width: 100%;
     height: 4vw;
-  }
+    margin-top: 1vw;
+    border-color: rgb(169, 169, 169);
+}
+
+     
 
 
 
