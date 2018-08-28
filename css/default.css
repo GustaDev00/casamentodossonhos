@@ -1,14 +1,135 @@
 *{margin: 0px; padding: 0px}
+
 :root{
  --ajustes: 100vw;
     --equilibro: 50vw;
 }
-
-/* figure{
-  display: inline-block; 
-  position: relative; 
+#container header{
+  background-color: #f6dddf;
+  width: 100vw;
+  display: flex;
 }
- */
+#logo{ margin:  10px}
+
+#container header form input:first-child{
+  height: 44px;
+  border: 2px solid #FF757F;
+  border-radius: 50px;
+  background-color: #f6dddf;
+
+}
+
+
+
+
+
+/*---------------CONTEUDO 1PAG---------------*/
+figure figcaption p{
+  top:  240px;
+  border: 1px solid;
+position: absolute;
+font-size: 25px;
+color: White;
+}
+figure img{width: 100vw}
+figure figcaption{width: 100vw; word-break: keep-all}
+figure figcaption a{
+  position: relative;
+  text-decoration: none;
+  border: 3px solid white;
+  top: 2rem;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 30px;
+  margin: 3%;
+}
+
+figure figcaption a:active{
+  color: #FF757F;
+  border-color: #FF757F;
+}
+
+/*---------------CONTEUDO 2PAG---------------*/
+#nos{ background-color: #F2F2F2; padding: 12vw; }
+#nos h2{
+   text-align: CENTER;
+}
+
+#nos p{
+  margin-top: 7vw;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+
+
+/*---------------MENU FIXO---------------*/
+/*
+#container main footer ol li a{
+  background-color: #f6dddf;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+  }
+#container main footer ol li{
+  list-style: none;
+
+}
+#container main footer #menu{
+  display: flex;
+  position: fixed;
+  top: 94%; 
+  }
+  #container main footer ol li a{
+      padding: 28px 41px 25px 41px;
+      color: black;
+      font-size: 18px;
+      text-decoration: none;
+      
+      
+  }
+  #container main footer ol li .item.home{
+      border-right:1px solid black;
+  }
+
+  #container main footer ol li .item.login{
+      border-left:1px solid black;
+  }
+
+  #container main footer ol li a:active{
+      background-color: #d1a7a7;
+      color: white;
+  }
+/*---------------SUBMENU---------------*/
+/*
+  #container main footer ol li #submenu{ 
+      position: absolute;
+      bottom:10vw;
+      right:2%;
+  }
+
+  #container main footer ol li #submenu li{
+      padding: 27px 0px 20px 0px;
+  }
+  #container main footer ol li #submenu li a{
+      padding: 26px 61px 20px 40px;
+      border-bottom: 1px solid;
+
+  }
+  #container main footer ol li #submenu li .concerta{
+      padding-right: 52%;
+  }
+   #container main footer ol li #submenu{display: none;}
+
+/*---------------CARROSSEL---------------*/
+
+#carrossel{ position:relative; height:260px; width:100vw; overflow:hidden }
+#caixa{ position:absolute; height:200px; }
+#caixa img{ float:left; width: 100vw;  }
+
+/*---------------------enchendo de linguiça-------------*/
+
+#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
+
  /* PERFIL CLIENTE*/
 
  div.container{

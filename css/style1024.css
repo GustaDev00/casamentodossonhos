@@ -1,0 +1,31 @@
+
+
+
+#container header{
+    height: 90px;
+ }
+ #logo{width: 80px;}
+
+  #user_icone, #loja_icone{margin: 10px 5px 0 2vw;}
+  #icones_topo{border: 1px solid; position: absolute;left: 75vw; top: 10px}
+
+figure figcaption p{
+    width: 450px;
+    font-size: 38px;
+    left: calc(48vw - 225px);
+}
+
+#container header form input{
+    position: relative;
+    margin: 15px 0 0 6px;
+  }
+  #container header form input:first-child{
+    width: 45vw;
+    padding-left: 50px;
+    height: 50px;
+    margin-top: 20px;
+  }
+  #container header form input:last-child{
+    top: 10px;
+    right: 43vw;
+   }
