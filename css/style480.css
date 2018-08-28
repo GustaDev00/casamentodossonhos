@@ -47,6 +47,20 @@
     border-radius: 20px 0 0 20px;
 }
 
+
+
+#container header form input{
+    position: relative;
+    
+}
+#container header form input:first-child{
+    width: 339px;
+    height: 44px;
+    border: 2px solid #FF757F;
+    border-radius: 50px;
+    background-color: #f6dddf;
+    padding: 20px;
+
 .produto_loja{
     border: 1px solid black;
     border-radius: 20px;
@@ -96,13 +110,14 @@ div.teste{
     }
 
 /*-------------------perfilCliente.html-----------*/
+  
+  
 /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
     word-spacing: 68px;
     padding-left: 28px; 
-    margin-bottom: 0;
-    margin-right: 0;
+   
 }
 
 div.lista1{     
@@ -112,16 +127,13 @@ div.lista1{
 
 div.lista2 {     
     float: left;
-    padding-left: 65px;     
-}
-select.custom-select{
-    padding-top: 1px;
+    padding-left: 12%;
+     
 }
 
 a.presente{
     float: left;   
-    padding-left: 14px;
-    padding-top: 0;
+    padding-left: 14px;   
 }
 
 input.checkbox{
@@ -130,7 +142,12 @@ input.checkbox{
 
 select.custom-select{
     float: right;
+    height: 5vw;
+    width: 17vw;
+    font-size: 2.5vw;
+    padding-top: 1px;
    }
+
 
 div.email{    
     float: right;    
@@ -171,24 +188,26 @@ div.form-row{
 }
 
 
+
+
+
 /*PRINCIPAL*/
 /* quadrado com dia local data */
 div.prin{   
     background-color: pink;    
-    width:270px;     
+    width:57%;     
     border-radius: 6px;
     padding-left: 6px;
     padding-top: 6px;
     padding-bottom: 6px;          
     margin-left:6px;     
-    margin-top: 6px;     
+
+    margin-top: 6px; 
 }
 
 
 div.form2{
-    margin-left: auto;
-    
-    
+    margin-left: auto;       
 }
 input.form{
     background-color: pink;
@@ -201,52 +220,57 @@ div.principal{
 }
 
 
-
-
 /*imagem*/
 
 img.galeria3{
-    margin-top: -13px;    
-    width:200px; 
-    padding-left: 255px; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;   
+    margin-top: -4%;    
+    margin-right: 10%;
+    width:40%;
+    float: right;
+    position: relative;     
+}
+
+input.form{
+    width: 57%;
 }
 
 /*botao de cima*/
 button.btn.btn-primary{
     background-color:pink;
     border:solid grey 1px ;    
-    height: 30px; 
+    height: 6vw; 
     width: 32%;
-    margin-left: -6px;           
+    margin-left: -6px;
+    font-size: 3vw;           
 }
 
 /*img perfil*/
 img.perfil{
-    width: 250px;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
     display: block;    
     border-radius: 6px;
-    margin-bottom: -18px;    
+    margin-bottom: -2vw;    
 }
 
 /*CONFIRMAR PRESENÇA*/
+
+
 div.form{
     margin-top: 0px;    
 }
 
+p#sua{
+    font-size: 3vw;
+}
 div.group2{
     border-color:grey;
     border-style: dotted;    
     border-width: thin;
     border-top-width: 0px;
     padding-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;       
+       
 }
 
 div.conf1{       
@@ -259,6 +283,7 @@ div.conf{
 
 img.letra{   
     float: right;
+    width: 14%;
 }
 
 h3{
@@ -275,7 +300,9 @@ p{
     background-color: pink;
     border-radius: 6px;
     border-color: pink;
-    padding: 8px;    
+    padding: 1vw;   
+    height: 6vw; 
+    width: 20%;
  }
 
  select.select1{
@@ -284,16 +311,36 @@ p{
      border-color: rgb(169, 169, 169);
  }
 
- select.select2{
-     width: 170px;
-     height: 22px;
-     border-color: rgb(169, 169, 169);
- }
-
 p.casal{
      text-align: center;
-     font-size: 18px;
+     font-size: 5vw;
  }
+ 
+ input.form-control{
+    width: 82vw;
+    height: 3vw;
+  }
+  
+  input#cel{
+    width: 40vw;
+    height: 3vw;
+  }
+  
+  select.select1{
+    width: 83vw;
+    height: 4vw;
+  }
+  select.select2{
+    width: 100%;
+    height: 4vw;
+    margin-top: 1vw;
+    border-color: rgb(169, 169, 169);
+}
+
+     
+
+
+
 
 
 
