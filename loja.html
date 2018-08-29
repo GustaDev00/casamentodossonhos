@@ -17,15 +17,25 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script>
             $(function(){
-            var recebeNome = "produto";
-            
+            var ComparaTamanho, produto, ComparaLargura;
         for(aume=1;aume<=3;aume++){
-            var produto = "#" + recebeNome + aume;
-
-            $(produto).animate({this: hide()}, 20000);
+            produto = "#" + "produto" + aume + " img";  
+            ComparaLargura = $(produto).width();
+            ComparaTamanho = $(produto).height();
+            DefinirOrientacao();
+            console.log(ComparaLargura);
+            console.log(ComparaTamanho);
             
 
         }
+
+        function DefinirOrientacao(){
+                if(ComparaLargura > ComparaTamanho){
+                    console.log("paisagem");
+                }else{
+                    console.log("retrato");
+                }
+            }
     });
         </script>
        
