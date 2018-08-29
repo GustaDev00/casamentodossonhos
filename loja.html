@@ -17,6 +17,8 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script>
             $(function(){
+
+
             var ComparaTamanho, produto, ComparaLargura;
         for(aume=1;aume<=3;aume++){
             produto = "#" + "produto" + aume + " img";  
@@ -28,12 +30,16 @@
             
 
         }
+        
 
         function DefinirOrientacao(){
                 if(ComparaLargura > ComparaTamanho){
                     console.log("paisagem");
+                    $(produto).css("width","35vw");
+                    $(produto).css("margin-top","10px");
                 }else{
                     console.log("retrato");
+                    $(produto).css("width","10px");
                 }
             }
     });
