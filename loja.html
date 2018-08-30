@@ -40,7 +40,11 @@
             console.log("largura da div " + $(".oi").height());   */
 
             definiFuncao();
-
+                    console.log("margin de teste 1 " + parseFloat(($(".hidde").width() / 2)));
+                    console.log("margin de teste 2 " + parseFloat(($(produto).width()/2)));
+                    teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
+                    $(produto).css("margin-left", teste123 );
+                    console.log("margin da esquerda " + teste123);
         }
         
 
@@ -48,12 +52,6 @@
                 if(ComparaLargura > ComparaTamanho){
                     console.log("paisagem480");
                     $(produto).css("width","157px");   
-                    console.log("margin de teste 1 " + parseFloat(($(".hidde").width() / 2)));
-                    console.log("margin de teste 2 " + parseFloat(($(produto).width()/2)));
-                    teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
-                    $(produto).css("margin-left", teste123 );
-                    console.log("margin da esquerda " + teste123);
-
                     teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2))
                     $(produto).css("margin-top", teste123 );
                     console.log("margin top " + teste123);
