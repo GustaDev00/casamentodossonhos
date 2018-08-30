@@ -29,6 +29,10 @@
         left: calc(48vw - 165px);
         right: 40px;
   }
+
+#carrossel{overflow: hidden;}
+#caixa{width: 200%;}
+#caixa img{ float:left; width: 100vw;}
 /*---------------acima---------------*/
 
 
