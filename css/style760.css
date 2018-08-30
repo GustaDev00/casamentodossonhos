@@ -8,11 +8,7 @@
   #user_icone{margin: 10px 11px 0 2vw;}
   #ferramentas_topo{position: absolute; display: flex ;left: 17vw;}
 
-figure figcaption p{
-    width: 450px;
-    font-size: 38px;
-    left: calc(48vw - 225px);
-}
+
 
 #container header form input{
     position: relative;
@@ -25,3 +21,22 @@ figure figcaption p{
     right: 50px;
      top: 10px;
    }
+
+   /*--------pagina 1 ---------*/
+   
+   figure figcaption p{
+    width: 450px;
+    font-size: 38px;
+    left: calc(48vw - 225px);
+}
+   /*-------carrossel----------*/
+
+    #carrossel{
+      overflow: hidden;
+       height: 270px;
+        width: 480px;
+        background-color: #F2F2F2;
+        left: calc(50vw - 240px);
+      }
+    #caixa{width: 200%; }
+    #caixa img{float: left;width: 480px;}

@@ -30,8 +30,8 @@
         right: 40px;
   }
 
-#carrossel{overflow: hidden;}
-#caixa{width: 200%;}
+#carrossel{ height:260px; overflow: hidden; background-color: #F2F2F2}
+#caixa{width: 400%;}
 #caixa img{ float:left; width: 100vw;}
 /*---------------acima---------------*/
 

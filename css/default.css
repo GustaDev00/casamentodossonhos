@@ -116,7 +116,7 @@ figure figcaption a:active{
 
 /*---------------CARROSSEL---------------*/
 
-#carrossel{ position:relative; height:260px; width:100%;  overflow: hidden;}
+#carrossel{ position:relative; width:100%;  overflow: hidden;}
 #caixa{ position:absolute;}
 #caixa img{ float:left; }
 
