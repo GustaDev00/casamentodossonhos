@@ -23,80 +23,52 @@
                     definiFuncao = DefinirOrientacao480;
                 }else if($(window).width() <= 768){
                     definiFuncao = DefinirOrientacao768;
-                }else if($(window).width() <= 1024){
+                }else if($(window).width() <= 1366){
                     definiFuncao = DefinirOrientacao1024;
-                }else{
-                    definiFuncao = DefinirOrientacao1366;
-                    }
+                }
 
             var ComparaTamanho, produto, ComparaLargura, teste123;
         for(aume=1;aume<=3;aume++){
             produto = "#" + "produto" + aume + " img";  
             ComparaLargura = $(produto).width();
             ComparaTamanho = $(produto).height();
-         /*   console.log("largura da imagem" + ComparaLargura);
-            console.log("tamanho da imagem" +ComparaTamanho);
-            console.log("largura da div " + $(".oi").width());
-            console.log("largura da div " + $(".oi").height());   */
 
             definiFuncao();
-                    console.log("margin de teste 1 " + parseFloat(($(".hidde").width() / 2)));
-                    console.log("margin de teste 2 " + parseFloat(($(produto).width()/2)));
                     teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
-                    $(produto).css("margin-left", teste123 );
-                    console.log("margin da esquerda " + teste123);
+                    $(produto).css("margin-left", teste123 ); 
+                    teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2));
+                    $(produto).css("margin-top", teste123 );
         }
         
 
         function DefinirOrientacao480(){
                 if(ComparaLargura > ComparaTamanho){
-                    console.log("paisagem480");
                     $(produto).css("width","157px");   
-                    teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2))
-                    $(produto).css("margin-top", teste123 );
-                    console.log("margin top " + teste123);
                 }else{
-                    console.log("retrato");
                     $(produto).css("width","117px");
-
-                    teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
-                    $(produto).css("margin-left", teste123 );
-                    console.log("margin da esquerda " + teste123);
-
-                    teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2))
-                    $(produto).css("margin-top", teste123 );
                 }
             }
 
             function DefinirOrientacao768(){
                 if(ComparaLargura > ComparaTamanho){
-                    console.log("paisagem768");
-                    $(produto).css("width","35vw");
-                    $(produto).css("margin-top","10px");
+                    $(produto).css("width","177px");
                 }else{
-                    console.log("retrato");
-                    $(produto).css("width","10px");
+                    $(produto).css("width","137px");
                 }
             }
 
             function DefinirOrientacao1024(){
                 if(ComparaLargura > ComparaTamanho){
-                    console.log("paisagem1024");
-                    $(produto).css("width","35vw");
-                    $(produto).css("margin-top","10px");
+                    $(produto).css("width","197px");
                 }else{
-                    console.log("retrato");
-                    $(produto).css("width","10px");
+                    $(produto).css("width","157px");
                 }
             }
 
             function DefinirOrientacao1366(){
                 if(ComparaLargura > ComparaTamanho){
-                    console.log("paisagem1366");
-                    $(produto).css("width","35vw");
-                    $(produto).css("margin-top","10px");
+                    $(produto).css("width","10px");
                 }else{
-                    console.log("retrato");
                     $(produto).css("width","10px");
                 }
             }

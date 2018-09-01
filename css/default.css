@@ -137,14 +137,14 @@ figure figcaption a:active{
     border-radius: 20px 0 0 20px;
 }
 
-.hidde{ height: 130px; margin: 10px;}
+.hidde{ height: 90%; margin: 10px; }
 
 .produto_loja{
     border: 1px solid black;
     border-radius: 20px;
     margin: 23px; 
     background: #f6dddf;
-    height: 170px;
+    
 }
 
 #filtro{
@@ -159,13 +159,6 @@ figure figcaption a:active{
 }
 
 .produto_loja h3{
-    display: block;
-    background-color: red;
-    width: 100%;
-    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
-.nome_descricao{
-    float: right;
-    
-}
