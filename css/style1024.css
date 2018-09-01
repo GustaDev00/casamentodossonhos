@@ -6,14 +6,10 @@
  }
  #logo{width: 80px;}
 
-  #user_icone, #loja_icone{margin: 10px 5px 0 2vw;}
-  #icones_topo{border: 1px solid; position: absolute;left: 75vw; top: 10px}
+  #user_icone, #loja_icone{margin: 0px 15px 0 5vw;}
+  #icones_topo{ position: absolute;left: 70vw; top: 20px}
 
-figure figcaption p{
-    width: 450px;
-    font-size: 38px;
-    left: calc(48vw - 225px);
-}
+
 
 #container header form input{
     position: relative;
@@ -21,11 +17,39 @@ figure figcaption p{
   }
   #container header form input:first-child{
     width: 45vw;
-    padding-left: 50px;
+    padding-left: 7VW;
     height: 50px;
     margin-top: 20px;
   }
   #container header form input:last-child{
     top: 10px;
-    right: 43vw;
+    right: 44vw;
    }
+/*-----------------------pagina 1 ---------------------*/
+   figure figcaption p{
+    width: 450px;
+    font-size: 38px;
+    left: calc(48vw - 225px);
+}
+
+#container main section figure{ height: 800px; overflow: hidden;}
+
+/* ------------------------pagina 2 ---------------- */
+
+   #nos h2{font-size: 32px}
+   #nos p{
+    font-size: 23px;
+  line-height: 40px;
+  width: 600px;
+  margin-left: calc(48vw - 350px);
+  }
+
+
+  /* ---------------------- carrossel ------- */
+
+  #carrossel{ width: 99.8%; height: 300px; border: 1px solid black;}
+  #caixa{top: 65px; left: calc(49vw - 5vw - 300px);}
+  #caixa img{width: 300px;}
+  #caixa img:nth-child(2){height: 170px;  padding-left: 10vw}
+  #caixa img:last-child, #caixa img:nth-child(3){display: none;}
+  

@@ -29,6 +29,10 @@
         left: calc(48vw - 165px);
         right: 40px;
   }
+
+#carrossel{ height:260px; overflow: hidden; background-color: #F2F2F2}
+#caixa{width: 400%;}
+#caixa img{ float:left; width: 100vw;}
 /*---------------acima---------------*/
 
 
@@ -37,46 +41,10 @@
 /* .produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt; display: flex; align-items: center} */
 .produto_loja img{
     width: 40vw;
-}
-.oi{
-    width: 40vw;
-    height: 124px;
-    overflow: hidden;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border-radius: 20px 0 0 20px;
+    margin: 0px;
 }
 
-.produto_loja{
-    border: 1px solid black;
-    border-radius: 20px;
-    margin: 23px; 
-    background: #d1a7a7;
-    height: 144px;
-}
 
-#filtro{
-    border: 1px solid; 
-    margin: 20px;
-}
-
-#filtro a{
-    position: relative;
-    bottom: 20px; 
-    margin-left: 14px
-}
-
-.produto_loja h3{
-    display: block;
-    background-color: red;
-    width: 100%;
-    flex-grow: 1;
-}
-
-.nome_descricao{
-    float: right;
-    
-}
 
 
 /*-------------------login.html-----------*/

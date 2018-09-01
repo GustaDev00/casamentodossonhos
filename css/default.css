@@ -6,7 +6,7 @@
 }
 #container header{
   background-color: #f6dddf;
-  width: 100vw;
+  width: 100%;
   display: flex;
 }
 #logo{ margin:  10px}
@@ -20,19 +20,15 @@
 }
 
 
-
-
-
 /*---------------CONTEUDO 1PAG---------------*/
 figure figcaption p{
   top:  240px;
-  border: 1px solid;
 position: absolute;
 font-size: 25px;
 color: White;
 }
-figure img{width: 100vw}
-figure figcaption{width: 100vw; word-break: keep-all}
+figure img{width: 100%}
+figure figcaption{width: 100%;}
 figure figcaption a{
   position: relative;
   text-decoration: none;
@@ -49,14 +45,13 @@ figure figcaption a:active{
   border-color: #FF757F;
 }
 /*---------------CONTEUDO 2PAG---------------*/
-#nos{ background-color: #F2F2F2; padding: 12vw; }
+#nos{ background-color: #F2F2F2; padding: 9vw; }
 #nos h2{
    text-align: CENTER;
 }
 
 #nos p{
   margin-top: 7vw;
-  font-size: 20px;
   line-height: 28px;
 }
 
@@ -121,9 +116,9 @@ figure figcaption a:active{
 
 /*---------------CARROSSEL---------------*/
 
-#carrossel{ position:relative; height:260px; width:100vw; overflow:hidden }
-#caixa{ position:absolute; height:200px; }
-#caixa img{ float:left; width: 100vw;  }
+#carrossel{ position:relative; width:100%;  overflow: hidden;}
+#caixa{ position:absolute;}
+#caixa img{ float:left; }
 
 /*---------------------enchendo de linguiça-------------*/
 
@@ -132,3 +127,45 @@ figure figcaption a:active{
 
 
 
+/*--------------------loja--------------*/
+
+.oi{
+    width: 40vw;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px 0 0 20px;
+}
+
+.hidde{ height: 130px; margin: 10px;}
+
+.produto_loja{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 23px; 
+    background: #f6dddf;
+    height: 170px;
+}
+
+#filtro{
+    border: 1px solid; 
+    margin: 20px;
+}
+
+#filtro a{
+    position: relative;
+    bottom: 20px; 
+    margin-left: 14px
+}
+
+.produto_loja h3{
+    display: block;
+    background-color: red;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nome_descricao{
+    float: right;
+    
+}

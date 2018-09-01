@@ -33,14 +33,14 @@ try{
                 echo "location.href='cadastro.php'";
                 echo '</script>';
             }else{
-                $queryInsert = "INSERT INTO usuario(email, nome_usu, senha_usu, url_foto_usu)
+                $queryInsert = "INSERT INTO usuario(email, nome, senha, url_foto_usu)
                          VALUES('$email', '$nome', '$senha','NADA')";
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
-                $cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
-                $ultimoCod = $cod_usu->cod_usuario;
+                //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
+                //$ultimoCod = $cod_usu->cod_usuario;
                 session_start();
-                $_SESSION['cod_usuario'] = $ultimoCod;
+                //$_SESSION['cod_usuario'] = $ultimoCod;
                     echo '<script>';
                     echo 'alert("Seu cadastro foi realizado com sucesso")';
                     echo '</script>';
