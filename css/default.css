@@ -59,21 +59,21 @@ figure figcaption a:active{
 
 /*---------------MENU FIXO---------------*/
 /*
-#container main footer ol li a{
+#container main section nav ol li a{
   background-color: #f6dddf;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
   }
-#container main footer ol li{
+#container main section nav ol li{
   list-style: none;
 
 }
-#container main footer #menu{
+#container main section nav #menu{
   display: flex;
   position: fixed;
   top: 94%; 
   }
-  #container main footer ol li a{
+  #container main section nav ol li a{
       padding: 28px 41px 25px 41px;
       color: black;
       font-size: 18px;
@@ -81,38 +81,38 @@ figure figcaption a:active{
       
       
   }
-  #container main footer ol li .item.home{
+  #container main section nav ol li .item.home{
       border-right:1px solid black;
   }
 
-  #container main footer ol li .item.login{
+  #container main section nav ol li .item.login{
       border-left:1px solid black;
   }
 
-  #container main footer ol li a:active{
+  #container main section nav ol li a:active{
       background-color: #d1a7a7;
       color: white;
   }
 /*---------------SUBMENU---------------*/
 /*
-  #container main footer ol li #submenu{ 
+  #container main section nav ol li #submenu{ 
       position: absolute;
       bottom:10vw;
       right:2%;
   }
 
-  #container main footer ol li #submenu li{
+  #container main section nav ol li #submenu li{
       padding: 27px 0px 20px 0px;
   }
-  #container main footer ol li #submenu li a{
+  #container main section nav ol li #submenu li a{
       padding: 26px 61px 20px 40px;
       border-bottom: 1px solid;
 
   }
-  #container main footer ol li #submenu li .concerta{
+  #container main section nav ol li #submenu li .concerta{
       padding-right: 52%;
   }
-   #container main footer ol li #submenu{display: none;}
+   #container main section nav ol li #submenu{display: none;}
 
 /*---------------CARROSSEL---------------*/
 
