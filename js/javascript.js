@@ -14,9 +14,8 @@ $(function(){
                 $("#submenu").hide();
             }
         });
-
-
         
+                
     console.log(limite,largura);
         $('#caixa').append('<img>');
         $('#caixa img:last').attr('src','imagens/galeria1.jpeg');
@@ -30,5 +29,11 @@ $(function(){
             });
             
         }
-        setInterval(Roda,2000)
+
+        if($(window).width() <= 768 ){
+            setInterval(Roda,2000)
+                }else{
+            console.log($(window).width())
+        }
+        
 });
