@@ -37,15 +37,15 @@ figure figcaption a{
 }
 #container main section figure{ height: 800px; overflow: hidden;}
 
-/* ------------------------pagina 2 ---------------- */
+  /* ------------------------pagina 2 ---------------- */
 
-   #nos h2{font-size: 42px}
-   #nos p{
-    font-size: 33px;
-  line-height: 50px;
-  width: 800px;
-  margin-left: calc(48vw - 480px);
-  }
+    #nos h2{font-size: 42px}
+    #nos p{
+      font-size: 33px;
+    line-height: 50px;
+    width: 800px;
+    margin-left: calc(48vw - 480px);
+    }
 
 
   /* ---------------------- carrossel ------- */
@@ -56,3 +56,5 @@ figure figcaption a{
   #caixa img:nth-child(2){height: 225px;  padding-left: 18vw}
   #caixa img:last-child, #caixa img:nth-child(3){display: none;}
   
+  /*-------------navegação fixa----------*/
+  #container main section nav ol li a{display: none;}
