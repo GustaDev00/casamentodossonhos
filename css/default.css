@@ -57,7 +57,68 @@ figure figcaption a:active{
 
 
 
+<<<<<<< HEAD
 
+=======
+/*---------------MENU FIXO---------------*/
+/*
+#container main section nav ol li a{
+  background-color: #f6dddf;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+  }
+#container main section nav ol li{
+  list-style: none;
+
+}
+#container main section nav #menu{
+  display: flex;
+  position: fixed;
+  top: 94%; 
+  }
+  #container main section nav ol li a{
+      padding: 28px 41px 25px 41px;
+      color: black;
+      font-size: 18px;
+      text-decoration: none;
+      
+      
+  }
+  #container main section nav ol li .item.home{
+      border-right:1px solid black;
+  }
+
+  #container main section nav ol li .item.login{
+      border-left:1px solid black;
+  }
+
+  #container main section nav ol li a:active{
+      background-color: #d1a7a7;
+      color: white;
+  }
+/*---------------SUBMENU---------------*/
+/*
+  #container main section nav ol li #submenu{ 
+      position: absolute;
+      bottom:10vw;
+      right:2%;
+  }
+
+  #container main section nav ol li #submenu li{
+      padding: 27px 0px 20px 0px;
+  }
+  #container main section nav ol li #submenu li a{
+      padding: 26px 61px 20px 40px;
+      border-bottom: 1px solid;
+
+  }
+  #container main section nav ol li #submenu li .concerta{
+      padding-right: 52%;
+  }
+   #container main section nav ol li #submenu{display: none;}
+
+/*---------------CARROSSEL---------------*/
+>>>>>>> Hellen
 
 #carrossel{ position:relative; width:100%;  overflow: hidden;}
 #caixa{ position:absolute;}
@@ -80,14 +141,14 @@ figure figcaption a:active{
     border-radius: 20px 0 0 20px;
 }
 
-.hidde{ height: 130px; margin: 10px;}
+.hidde{ height: 90%; margin: 10px; }
 
 .produto_loja{
     border: 1px solid black;
     border-radius: 20px;
     margin: 23px; 
     background: #f6dddf;
-    height: 170px;
+    
 }
 
 #filtro{
@@ -102,13 +163,6 @@ figure figcaption a:active{
 }
 
 .produto_loja h3{
-    display: block;
-    background-color: red;
-    width: 100%;
-    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
-.nome_descricao{
-    float: right;
-    
-}
