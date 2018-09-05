@@ -1,0 +1,97 @@
+
+
+
+#container header{
+    height: 90px;
+ }
+ #logo{width: 80px;}
+
+  #user_icone, #loja_icone{margin: 0px 15px 0 5vw;}
+  #icones_topo{ position: absolute;left: 70vw; top: 20px}
+
+
+
+#container header form input{
+    position: relative;
+    margin: 15px 0 0 6px;
+  }
+  #container header form input:first-child{
+    width: 45vw;
+    padding-left: 7VW;
+    height: 50px;
+    margin-top: 20px;
+  }
+  #container header form input:last-child{
+    top: 10px;
+    right: 44vw;
+   }
+/*-----------------------pagina 1 ---------------------*/
+   figure figcaption p{
+    width: 450px;
+    font-size: 38px;
+    
+}
+  figure figcaption{left: calc(48vw - 225px);top:  240px;}
+
+#container main section figure{ height: 800px; overflow: hidden;}
+
+/* ------------------------pagina 2 ---------------- */
+
+   #nos h2{font-size: 32px}
+   #nos p{
+    font-size: 23px;
+  line-height: 40px;
+  width: 600px;
+  margin-left: calc(48vw - 350px);
+  }
+
+
+  /* ---------------------- carrossel ------- */
+
+  #carrossel{ width: 99.8%; height: 300px; border: 1px solid black;}
+  #caixa{top: 65px; left: calc(49vw - 5vw - 300px);}
+  #caixa img{width: 300px;}
+  #caixa img:nth-child(2){height: 170px;  padding-left: 10vw}
+  #caixa img:last-child, #caixa img:nth-child(3){display: none;}
+
+   /*-------------navegação---------*/
+   #container main section nav ol li a{display: none;}
+   footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
+  footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
+  footer p{margin-left: 75%}
+  
+  /*--------------------------------loja----------------------*/
+
+  .produto_loja {
+    width: 680px;
+    height: 200px;
+    margin: 25px  auto;
+}
+
+.produto_loja:first-child{
+  margin-top: 45px;
+}
+
+.oi{
+  width: 30vw;
+  height: 180px;
+}
+
+.nome_descricao{
+position: relative;
+width: 30vw;
+text-align: left;
+left:52%;
+bottom:186px;
+height: 170px;
+}
+
+.nome_descricao h3{
+font-size: 28px;
+padding-bottom: 10px
+}
+
+.nome_descricao p{
+font-size: 25px;
+}
+
