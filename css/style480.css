@@ -1,0 +1,368 @@
+﻿ /*---------------TOPO---------------*/
+ #container{min-width: 320px;}
+
+/*---------------alterar---------------*/
+ #container header{
+    height: 70px;
+ }
+
+ #user_icone{display: none}
+ #loja_icone{display: none;}
+
+ #container header form input{
+    position: relative;
+    margin: 15px 0 0 46px;
+  }
+
+  #container header form input:first-child{
+    width: 60vw;
+  }
+  #container header form input:last-child{
+    left: 49vw;
+     bottom: 50px;
+   }
+
+                /*----------------*/
+
+  figure figcaption p{
+    width: 330px;
+        left: calc(48vw - 165px);
+        right: 40px;
+  }
+/*---------------acima---------------*/
+
+
+
+/*-------------------loja.html-----------*/
+/* .produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt; display: flex; align-items: center} */
+.produto_loja img{
+    width: 40vw;
+}
+.oi{
+    width: 40vw;
+    height: 124px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+#container header form input{
+    position: relative;
+    
+}
+#container header form input:first-child{
+    width: 339px;
+    height: 44px;
+    border: 2px solid #FF757F;
+    border-radius: 50px;
+    background-color: #f6dddf;
+    padding: 20px;
+}
+
+.produto_loja{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 23px; 
+    background: #d1a7a7;
+    height: 144px;
+}
+
+#filtro{
+    border: 1px solid; 
+    margin: 20px;
+}
+
+#filtro a{
+    position: relative;
+    bottom: 20px; 
+    margin-left: 14px
+}
+
+.produto_loja h3{
+    display: block;
+    background-color: red;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nome_descricao{
+    float: right;
+    
+}
+
+
+/*-------------------login.html-----------*/
+
+div.teste{
+    Border-radius: 6px;
+    Border-width: thin;
+    Border:solid;
+    text-align: center;
+    Position: absolute;
+    Box-shadow: 0px 0px 10px black;
+    top: 200px;
+    right: 100px;
+    left: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+
+/*-------------------perfilCliente.html-----------*/
+  
+  
+/*-----------------------------------perfilCliente.html---------------------*/
+/*LISTA DE PRESENTE*/
+div.tipo{
+    word-spacing: 68px;
+    padding-left: 28px; 
+   
+}
+
+div.lista1{     
+    padding-left: 2px;     
+    font-size: 16px;     
+}
+
+div.lista2 {     
+    float: left;
+    padding-left: 12%;
+     
+}
+
+a.presente{
+    float: left;   
+    padding-left: 14px;   
+}
+
+input.checkbox{
+    float: left;
+}
+
+select.custom-select{
+    float: right;
+    height: 5vw;
+    width: 17vw;
+    font-size: 2.5vw;
+    padding-top: 1px;
+   }
+
+
+div.email{    
+    float: right;    
+}
+ 
+input.e{
+   margin-right: 30px;
+}
+/*botao enviar*/
+.confirma{
+    border-radius: 6px;
+    background-color: pink;
+    border-color:pink;
+    padding: 2px;  
+}
+
+
+
+hr{
+    margin: 0;
+    padding: 0;
+    border-style: dotted;    
+    border-width: thin;
+    border-color: gray;
+}
+ 
+button.confirma{
+    float: right;
+}
+input.checkbox{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+div.form-row{
+    display: inline;
+}
+
+
+
+
+
+/*PRINCIPAL*/
+/* quadrado com dia local data */
+div.prin{   
+    background-color: pink;    
+    width:57%;     
+    border-radius: 6px;
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;          
+    margin-left:6px;     
+
+    margin-top: 6px; 
+}
+
+
+div.form2{
+    margin-left: auto;       
+}
+input.form{
+    background-color: pink;
+    border-color:pink;
+    border: 0px;       
+}
+
+div.principal{
+    text-align: center;    
+}
+
+
+/*imagem*/
+
+img.galeria3{
+    margin-top: -4%;    
+    margin-right: 10%;
+    width:40%;
+    float: right;
+    position: relative;     
+}
+
+input.form{
+    width: 57%;
+}
+
+/*botao de cima*/
+button.btn.btn-primary{
+    background-color:pink;
+    border:solid grey 1px ;    
+    height: 6vw; 
+    width: 32%;
+    margin-left: -6px;
+    font-size: 3vw;           
+}
+
+/*img perfil*/
+img.perfil{
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;    
+    border-radius: 6px;
+    margin-bottom: -2vw;    
+}
+
+/*CONFIRMAR PRESENÇA*/
+
+
+div.form{
+    margin-top: 0px;    
+}
+
+p#sua{
+    font-size: 3vw;
+}
+div.group2{
+    border-color:grey;
+    border-style: dotted;    
+    border-width: thin;
+    border-top-width: 0px;
+    padding-top: 0;
+       
+}
+
+div.conf1{       
+    float: left;
+}
+div.conf{
+    float: right;
+    margin-right: 40px;
+}
+
+img.letra{   
+    float: right;
+    width: 14%;
+}
+
+h3{
+    margin: 0;
+    text-align: left;
+}
+
+p{
+     margin:0;    
+ }
+
+ button.botao{
+    float:right;
+    background-color: pink;
+    border-radius: 6px;
+    border-color: pink;
+    padding: 1vw;   
+    height: 6vw; 
+    width: 20%;
+ }
+
+ select.select1{
+     width: 382px;
+     height: 22px;
+     border-color: rgb(169, 169, 169);
+ }
+
+p.casal{
+     text-align: center;
+     font-size: 5vw;
+ }
+ 
+ input.form-control{
+    width: 82vw;
+    height: 3vw;
+  }
+  
+  input#cel{
+    width: 40vw;
+    height: 3vw;
+  }
+  
+  select.select1{
+    width: 83vw;
+    height: 4vw;
+  }
+  select.select2{
+    width: 100%;
+    height: 4vw;
+    margin-top: 1vw;
+    border-color: rgb(169, 169, 169);
+}
+
+     
+
+
+
+
+
+
+
+/*-------------------------------perfilVendedor.html-------------------------*/
+
+
+/*-------------------pruduto.html-----------*/
+
+
+
+
+
+    
+/*-------------------perfilVendedor.html-----------*/
+
+
+/*-------------------pruduto.html-----------*/
+
+
+
+
+
+    
