@@ -15,8 +15,8 @@ $senha = isset($_REQUEST['Senha'])?$_REQUEST['Senha']:null;
 
     $pdo= connection();
 
-    echo $verificar = ("SELECT email, senha from usuario where 
-            email='$email' and senha='$senha'");
+    $verificar = "SELECT email, senha_usu from usuario where 
+            email='$email' and senha_usu='$senha';";
 
 //    $validarlogin->bindValue(":email", $_POST['email']);
 //    $validarlogin->bindValue(":senha", md5($_POST['senha']));
@@ -29,8 +29,8 @@ $count = $validarLogin->rowCount();
     {
         session_start();
         $_SESSION["email"]= $_POST["email"];
-        $_SESSION["senha"]= $_POST["Senha"];
-        $_SESSION["id"]= $id;
+        $_SESSION["senha"]= $_POST["senha"];
+        //$_SESSION["id"]= $id;
             echo "<script>alert('Logado Com Sucesso!');
               loginsucessfully();
                 </script>";
