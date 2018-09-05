@@ -6,13 +6,9 @@
  }
 
   #user_icone{margin: 10px 11px 0 2vw;}
-  #ferramentas_topo{border: 1px solid; position: absolute;left: 21vw; display: flex;}
+  #ferramentas_topo{position: absolute; display: flex ;left: 17vw;}
 
-figure figcaption p{
-    width: 450px;
-    font-size: 38px;
-    left: calc(48vw - 225px);
-}
+
 
 #container header form input{
     position: relative;
@@ -25,3 +21,57 @@ figure figcaption p{
     right: 50px;
      top: 10px;
    }
+
+   /*--------pagina 1 ---------*/
+   
+   figure figcaption p{
+    width: 450px;
+    font-size: 38px;
+    left: calc(48vw - 225px);
+}
+   /*-------carrossel----------*/
+
+    #carrossel{
+      overflow: hidden;
+       height: 270px;
+        width: 480px;
+        background-color: #F2F2F2;
+        left: calc(50vw - 240px);
+      }
+    #caixa{width: 200%; }
+    #caixa img{float: left;width: 480px;}
+
+    /*-------------loja-----------------*/
+    .produto_loja {
+      width: 480px;
+      height: 200px;
+      margin: 25px  auto;
+  }
+
+  .produto_loja:first-child{
+    margin-top: 45px;
+  }
+
+  .oi{
+    width: 30vw;
+    height: 180px;
+}
+
+.nome_descricao{
+  position: relative;
+  width: 25vw;
+  text-align: left;
+  left:56%;
+  bottom:186px;
+  height: 170px;
+}
+
+.nome_descricao h3{
+  font-size: 20px;
+  padding-bottom: 10px
+}
+
+.nome_descricao p{
+  font-size: 18px;
+}
+

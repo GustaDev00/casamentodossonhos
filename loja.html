@@ -15,6 +15,65 @@
         <link rel=stylesheet media="screen and (min-width:1025px)" href="css/style1366.css">
         <!-- Jquery-->
         <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function(){
+                var definiFuncao;
+
+                if($(window).width() <= 480){
+                    definiFuncao = DefinirOrientacao480;
+                }else if($(window).width() <= 768){
+                    definiFuncao = DefinirOrientacao768;
+                }else if($(window).width() <= 1366){
+                    definiFuncao = DefinirOrientacao1024;
+                }
+
+            var ComparaTamanho, produto, ComparaLargura, teste123;
+        for(aume=1;aume<=3;aume++){
+            produto = "#" + "produto" + aume + " img";  
+            ComparaLargura = $(produto).width();
+            ComparaTamanho = $(produto).height();
+
+            definiFuncao();
+                    teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
+                    $(produto).css("margin-left", teste123 ); 
+                    teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2));
+                    $(produto).css("margin-top", teste123 );
+        }
+        
+
+        function DefinirOrientacao480(){
+                if(ComparaLargura > ComparaTamanho){
+                    $(produto).css("width","157px");   
+                }else{
+                    $(produto).css("width","117px");
+                }
+            }
+
+            function DefinirOrientacao768(){
+                if(ComparaLargura > ComparaTamanho){
+                    $(produto).css("width","177px");
+                }else{
+                    $(produto).css("width","137px");
+                }
+            }
+
+            function DefinirOrientacao1024(){
+                if(ComparaLargura > ComparaTamanho){
+                    $(produto).css("width","197px");
+                }else{
+                    $(produto).css("width","157px");
+                }
+            }
+
+            function DefinirOrientacao1366(){
+                if(ComparaLargura > ComparaTamanho){
+                    $(produto).css("width","10px");
+                }else{
+                    $(produto).css("width","10px");
+                }
+            }
+    });
+        </script>
        
     
         <div id="container">
@@ -34,9 +93,10 @@
 
                     <div id="produto1" class="produto_loja">
                         <div class="oi">
+                            <div class="hidde">
                         <!-- <img src="imagens/produto1" title="produto1"> -->
                         <img src="imagens/galeria1.jpeg" title="produto1">
-                        </div>
+                        </div></div>
                         <div class="nome_descricao">
                         <h3>Nome do Produto</h3>
                         <p>Descrição do produto......
@@ -45,9 +105,10 @@
 
                     <div id="produto2" class="produto_loja">
                             <div class="oi">
+                                <div class="hidde">
                         <!-- <img src="imagens/produto2" title="produto2"> -->
-                            <img src="imagens/galeria2.jpeg" title="produto2">
-                            </div>
+                            <img src="imagens/base.jpg" title="produto2">
+                            </div></div>
                             <div class="nome_descricao">
                             <h3>Nome do Produto</h3>
                             <p>Descrição do produto......
@@ -55,10 +116,11 @@
                     </div>
 
                         <div id="produto3" class="produto_loja">
-                                <div class="oi"> 
+                                <div class="oi">
+                                    <div class="hidde"> 
                             <!-- <img src="imagens/produto3" title="produto3"> -->
                               <img src="imagens/galeria3.jpeg" title="produto3">
-                              </div>
+                              </div></div>
                               <div class="nome_descricao">
                                 <h3>Nome do Produto</h3>
                                 <p>Descrição do produto......

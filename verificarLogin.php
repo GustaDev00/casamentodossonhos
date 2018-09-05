@@ -10,7 +10,7 @@
 
 require_once './Db/daohelper.php';
 $email = isset($_REQUEST['email'])?$_REQUEST['email']:null;
-$senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
+$senha = isset($_REQUEST['Senha'])?$_REQUEST['Senha']:null;
     
 
     $pdo= connection();
@@ -39,7 +39,7 @@ $count = $validarLogin->rowCount();
     else
     {
         echo "<script>alert('Usuarios Ou Senha Incorretos!');
-            top.location.href='login.html';
+           top.location.href='login.html';
             </script>";
     }
 
