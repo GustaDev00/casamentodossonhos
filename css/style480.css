@@ -26,102 +26,72 @@
 
   figure figcaption p{
     width: 330px;
+        left: calc(48vw - 165px);
+        right: 40px;
   }
-  figure figcaption{left: calc(48vw - 165px);top:  240px; right: 40px;}
-
-#carrossel{ height:260px; overflow: hidden; background-color: #F2F2F2}
-#caixa{width: 400%;}
-#caixa img{ float:left; width: 100vw;}
-
-/*----------------nfooter----------*/
-footer{display: none}
-/*---------------MENU FIXO---------------*/
-
-#container main section nav ol li a{
-  background-color: #f6dddf;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-  }
-#container main section nav ol li{
-  list-style: none;
-
-}
-#container main section nav #menu{
-  display: flex;
-  position: fixed;
-  top: 94%; 
-  }
-  #container main section nav ol li a{
-      padding: 28px 41px 25px 41px;
-      color: black;
-      font-size: 18px;
-      text-decoration: none;
-      
-      
-  }
-  #container main section nav ol li .item.home{
-      border-right:1px solid black;
-  }
-
-  #container main section nav ol li .item.login{
-      border-left:1px solid black;
-  }
-
-  #container main section nav ol li a:active{
-      background-color: #d1a7a7;
-      color: white;
-  }
-/*---------------SUBMENU---------------*/
-
-  #container main section nav ol li #submenu{ 
-      position: absolute;
-      bottom:10vw;
-      right:2%;
-  }
-
-  #container main section nav ol li #submenu li{
-      padding: 27px 0px 20px 0px;
-  }
-  #container main section nav ol li #submenu li a{
-      padding: 26px 61px 20px 40px;
-      border-bottom: 1px solid;
-
-  }
-  #container main section nav ol li #submenu li .concerta{
-      padding-right: 52%;
-  }
-   #container main section nav ol li #submenu{display: none;}
-
-/*---------------CARROSSEL---------------*/
-
-#carrossel{ height: 232px;}
-/*---------------------enchendo de linguiça-------------*/
-
-#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
 /*---------------acima---------------*/
 
 
 
 /*-------------------loja.html-----------*/
 /* .produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt; display: flex; align-items: center} */
-.produto_loja {
-    height: 170px;
+.produto_loja img{
+    width: 40vw;
 }
-
 .oi{
     width: 40vw;
-    height: 150px;
+    height: 124px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+#container header form input{
+    position: relative;
+    
+}
+#container header form input:first-child{
+    width: 339px;
+    height: 44px;
+    border: 2px solid #FF757F;
+    border-radius: 50px;
+    background-color: #f6dddf;
+    padding: 20px;
+}
+
+.produto_loja{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 23px; 
+    background: #d1a7a7;
+    height: 144px;
+}
+
+#filtro{
+    border: 1px solid; 
+    margin: 20px;
+}
+
+#filtro a{
+    position: relative;
+    bottom: 20px; 
+    margin-left: 14px
+}
+
+.produto_loja h3{
+    display: block;
+    background-color: red;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .nome_descricao{
-    position: relative;
-    width: 38vw;
-    text-align: left;
-    left:55%;
-    bottom: 160px;
-    height: 150px;
- }
-
+    float: right;
+    
+}
 
 
 /*-------------------login.html-----------*/
