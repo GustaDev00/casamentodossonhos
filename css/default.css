@@ -4,6 +4,8 @@
  --ajustes: 100vw;
     --equilibro: 50vw;
 }
+html{scroll-behavior: smooth;}
+#container main{background-color: #f2f2f2;}
 #container header{
   background-color: #f6dddf;
   width: 100%;
@@ -22,13 +24,14 @@
 
 /*---------------CONTEUDO 1PAG---------------*/
 figure figcaption p{
-  top:  240px;
-position: absolute;
 font-size: 25px;
 color: White;
 }
 figure img{width: 100%}
-figure figcaption{width: 100%;}
+
+figure figcaption{
+ position: absolute;
+}
 figure figcaption a{
   position: relative;
   text-decoration: none;
@@ -58,11 +61,6 @@ figure figcaption a:active{
 #carrossel{ position:relative; width:100%;  overflow: hidden;}
 #caixa{ position:absolute;}
 #caixa img{ float:left; }
-
-/*---------------------enchendo de linguiça-------------*/
-
-#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
-
 
 
 

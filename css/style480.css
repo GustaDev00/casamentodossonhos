@@ -26,17 +26,17 @@
 
   figure figcaption p{
     width: 330px;
-        left: calc(48vw - 165px);
-        right: 40px;
   }
+  figure figcaption{left: calc(48vw - 165px);top:  240px; right: 40px;}
 
 #carrossel{ height:260px; overflow: hidden; background-color: #F2F2F2}
 #caixa{width: 400%;}
 #caixa img{ float:left; width: 100vw;}
 
-/*----------------navegação  fixa----------*/
+/*----------------nfooter----------*/
+footer{display: none}
 /*---------------MENU FIXO---------------*/
-/*
+
 #container main section nav ol li a{
   background-color: #f6dddf;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
@@ -72,7 +72,7 @@
       color: white;
   }
 /*---------------SUBMENU---------------*/
-/*
+
   #container main section nav ol li #submenu{ 
       position: absolute;
       bottom:10vw;
@@ -93,6 +93,11 @@
    #container main section nav ol li #submenu{display: none;}
 
 /*---------------CARROSSEL---------------*/
+
+#carrossel{ height: 232px;}
+/*---------------------enchendo de linguiça-------------*/
+
+#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
 /*---------------acima---------------*/
 
 
