@@ -31,7 +31,7 @@ $(function(){
         }
 
         if($(window).width() <= 768 ){
-            setInterval(Roda,2000)
+            setInterval(Roda,6000)
                 }else{
             console.log($(window).width())
         }

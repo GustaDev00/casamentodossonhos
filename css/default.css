@@ -4,6 +4,8 @@
  --ajustes: 100vw;
     --equilibro: 50vw;
 }
+html{scroll-behavior: smooth;}
+#container main{background-color: #f2f2f2;}
 #container header{
   background-color: #f6dddf;
   width: 100%;
@@ -22,13 +24,14 @@
 
 /*---------------CONTEUDO 1PAG---------------*/
 figure figcaption p{
-  top:  240px;
-position: absolute;
 font-size: 25px;
 color: White;
 }
 figure img{width: 100%}
-figure figcaption{width: 100%;}
+
+figure figcaption{
+ position: absolute;
+}
 figure figcaption a{
   position: relative;
   text-decoration: none;
@@ -56,93 +59,9 @@ figure figcaption a:active{
   line-height: 28px;
 }
 
-
-
-/*---------------MENU FIXO---------------*/
-/*
-#container main section nav ol li a{
-  background-color: #f6dddf;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-  }
-#container main section nav ol li{
-  list-style: none;
-
-}
-#container main section nav #menu{
-  display: flex;
-  position: fixed;
-  top: 94%; 
-  }
-  #container main section nav ol li a{
-      padding: 28px 41px 25px 41px;
-      color: black;
-      font-size: 18px;
-      text-decoration: none;
-      
-      
-  }
-  #container main section nav ol li .item.home{
-      border-right:1px solid black;
-  }
-
-  #container main section nav ol li .item.login{
-      border-left:1px solid black;
-  }
-
-  #container main section nav ol li a:active{
-      background-color: #d1a7a7;
-      color: white;
-  }
-/*---------------SUBMENU---------------*/
-/*
-  #container main section nav ol li #submenu{ 
-      position: absolute;
-      bottom:10vw;
-      right:2%;
-  }
-
-  #container main section nav ol li #submenu li{
-      padding: 27px 0px 20px 0px;
-  }
-  #container main section nav ol li #submenu li a{
-      padding: 26px 61px 20px 40px;
-      border-bottom: 1px solid;
-
-  }
-  #container main section nav ol li #submenu li .concerta{
-      padding-right: 52%;
-  }
-   #container main section nav ol li #submenu{display: none;}
-
-/*---------------CARROSSEL---------------*/
-
 #carrossel{ position:relative; width:100%;  overflow: hidden;}
 #caixa{ position:absolute;}
 #caixa img{ float:left; }
-
-/*---------------------enchendo de linguiça-------------*/
-
-#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
-
- /* PERFIL CLIENTE*/
-
- div.container{
-   margin: 2%;
- }
- 
- div.group2{
- padding-left: 2%;
- padding-right: 2%;
- padding-bottom: 8%;
- }
-
- label, h3{
-   font-size: 3vw;
- }
-  form#um{
-    font-size: 3vw;
-  }
 
 
 

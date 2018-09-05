@@ -29,8 +29,9 @@
    figure figcaption p{
     width: 450px;
     font-size: 38px;
-    left: calc(48vw - 225px);
+    
 }
+  figure figcaption{left: calc(48vw - 225px);top:  240px;}
 
 #container main section figure{ height: 800px; overflow: hidden;}
 
@@ -52,6 +53,12 @@
   #caixa img{width: 300px;}
   #caixa img:nth-child(2){height: 170px;  padding-left: 10vw}
   #caixa img:last-child, #caixa img:nth-child(3){display: none;}
+
+   /*-------------navegação---------*/
+   #container main section nav ol li a{display: none;}
+   footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
+  footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
+  footer p{margin-left: 75%}
   
   /*--------------------------------loja----------------------*/
 
