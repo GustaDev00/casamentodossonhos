@@ -9,16 +9,9 @@
         <link href="css/default.css" rel=stylesheet>
         <!-- Telas Responsivas -->
         <link rel=stylesheet media="screen and (max-width:480px)" href="css/style480.css">
-        <!--<link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="css/style760.css">
+        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="css/style760.css">
         <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="css/style1024.css">
-        <link rel=stylesheet media="screen and (min-width:1025px)" href="css/style1366.css">-->
-  
-  
-  
-        <!-- <link href="casamentodossonhos/css/style480.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>-->
+        <!--<link rel=stylesheet media="screen and (min-width:1025px)" href="css/style1366.css">-->
 </head>
 
     
@@ -29,16 +22,15 @@
         <div class="teste">
             <img id="logologin" src="imagens/logo.png" title="logo_login">
         <div class="campo">
-
-            <label>E-mail:</label><br/><br/>
+            <form action="verificarLogin.php" method="POST">
+            <label>Entrar</label><br/><br/>
             <input type="text" placeholder="E-mail" name="email" required-size = ""> <br/><br/>
 
-            <label>Senha:</label><br/><br/>
             <input type="password" placeholder="Insira sua Senha" name="Senha" required-size=""><br/><br/>
         </div>
         <div class="botao">
-            <a href="#"><button type="submit">Entrar</button></a> <br/><br/>
-            <input type="checkbox" checked="checked">Lembre de mim
+            <input type="submit" value="entrar"> <br/><br/>
+            não é cadastrado? <a href="cadastro.html"> cadstre - se</a></form>
         </div>
         </div>
 </body>

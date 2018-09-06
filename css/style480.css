@@ -8,7 +8,7 @@ div.teste{
     text-align: center;
     Position: absolute;
     Box-shadow: 0px 0px 10px black;
-    top: 250px;
+    top: 150px;
     right: 10%;
     left: 10%;
     padding-bottom: 5px;
@@ -16,11 +16,12 @@ div.teste{
     }
     #fundologin{
         height: 100%;
+        width: 100%;
     }
     #fig_inicial {
     color:white;
     position: absolute;
-    top: 570px;
+    top: 420px;
     right: calc(50vw - 68px);
 
 }
@@ -30,6 +31,11 @@ div.teste{
 div.campo{
     margin-top: 15px;
 }
-/*-------------------perfilCliente.html-----------*/
-/*-----------------------------------perfilCliente.html---------------------*/
-/*LISTA DE PRESENTE*/
+
+div.botao input:first-child{
+    margin-left: 140px;
+}
+
+div.botao input:last-child{ 
+margin-right: 80px
+}
