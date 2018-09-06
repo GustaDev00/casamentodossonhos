@@ -126,7 +126,7 @@ div.lista1{
 
 div.lista2 {     
     float: left;
-    padding-left: 12%;
+    padding-left: 10%;
      
 }
 
@@ -152,8 +152,9 @@ div.email{
     float: right;    
 }
  
-input.e{
-   margin-right: 30px;
+input.e{   
+   margin-right: 1vw;
+   height: 4vw;
 }
 /*botao enviar*/
 .confirma{

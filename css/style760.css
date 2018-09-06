@@ -43,8 +43,7 @@ div.lista1{
 
 div.lista2 {     
   float: left;
-  padding-left: 12%;
-   
+  padding-left: 12%;   
 }
 
 a.presente{
@@ -65,7 +64,6 @@ select.custom-select{
   padding-top: 1px;
  }
 
-
 div.email{    
   float: right;    
 }
@@ -74,23 +72,22 @@ input.e{
   margin-right: 3vw;
   margin-left: 2vw;
   height: 4vw;
+  width: 27vw;
 }
-
 
 p.texto{
   font-size: 3vw;
 }
+
 /*botao enviar*/
 .confirma{
   border-radius: 6px;
   background-color: pink;
   border-color:pink;
-  width: 8vw;
-  height: 4vw;
+  width: 9vw;
+  height: 5vw;
   float: right;
 }
-
-
 
 hr{
   margin: 0;
@@ -99,7 +96,6 @@ hr{
   border-width: thin;
   border-color: gray;
 }
-
 
 input.checkbox{
   display: inline;
@@ -111,10 +107,6 @@ div.form-row{
   display: inline;
 }
 
-
-
-
-
 /*PRINCIPAL*/
 /* quadrado com dia local data */
 div.prin{   
@@ -124,15 +116,14 @@ div.prin{
   padding-left: 6px;
   padding-top: 6px;
   padding-bottom: 6px;          
-  margin-left:6px;     
-
+  margin-left:6px;
   margin-top: 6px; 
 }
-
 
 div.form2{
   margin-left: auto;       
 }
+
 input.form{
   background-color: pink;
   border-color:pink;
@@ -143,9 +134,7 @@ div.principal{
   text-align: center;    
 }
 
-
 /*imagem*/
-
 img.galeria3{
   margin-top: -4%;    
   margin-right: 10%;
@@ -179,8 +168,6 @@ img.perfil{
 }
 
 /*CONFIRMAR PRESENÇA*/
-
-
 div.form{
   margin-top: 0px;    
 }
@@ -188,21 +175,22 @@ div.form{
 p#sua{
   font-size: 3vw;
 }
+
 div.group2{
   border-color:grey;
   border-style: dotted;    
   border-width: thin;
   border-top-width: 0px;
-  padding-top: 0;
-     
+  padding-top: 0;     
 }
 
 div.conf1{       
   float: left;
 }
+
 div.conf{
   float: right;
-  margin-right: 40px;
+  margin-right: 12vw;
 }
 
 img.letra{   
@@ -254,8 +242,9 @@ select.select1{
   width: 83vw;
   height: 4vw;
 }
+
 select.select2{
-  width: 100%;
+  width: 120%;
   height: 4vw;
   margin-top: 1vw;
   border-color: rgb(169, 169, 169);
