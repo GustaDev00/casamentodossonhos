@@ -117,7 +117,6 @@ div.teste{
 div.tipo{
     word-spacing: 68px;
     padding-left: 28px; 
-   
 }
 
 div.lista1{     
@@ -161,7 +160,8 @@ input.e{
     border-radius: 6px;
     background-color: pink;
     border-color:pink;
-    padding: 2px;  
+    padding: 2px; 
+    float: right;
 }
 
 
@@ -174,9 +174,7 @@ hr{
     border-color: gray;
 }
  
-button.confirma{
-    float: right;
-}
+
 input.checkbox{
     display: inline;
     margin: 0;
