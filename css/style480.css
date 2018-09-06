@@ -159,13 +159,13 @@ figure figcaption a:active{
 /*-------------------login.html-----------*/
 
 div.teste{
-    Border-radius: 6%;
+    Border-radius: 3%;
     Border-width: thin;
     Border:solid;
     text-align: center;
     Position: absolute;
     Box-shadow: 0px 0px 10px black;
-    top: 200px;
+    top: 200%;
     right: 100px;
     left: 100px;
     padding-bottom: 5px;
