@@ -72,6 +72,29 @@
                     $(produto).css("width","10px");
                 }
             }
+            //funcao de troca o valor fecho mano pqp
+            
+            var valorNum = 1;
+                var Qphp = 11;
+            Qphp = Qphp / 10;
+            
+            $("#container main section:last-child img:last-child").on("click", function(){
+                if(valorNum < Qphp){
+                    valorNum = valorNum + 1;
+                    $("#container main section:last-child label").text(valorNum);
+                }else{
+                    
+                }
+            });
+            
+            $("#container main section:last-child img:first-child").on("click", function(){
+                if(valorNum > 1){
+                valorNum = valorNum - 1;
+                    $("#container main section:last-child label").text(valorNum);
+                }else{
+
+                }
+            });
     });
         </script>
        
@@ -86,12 +109,13 @@
                 
                <section id="filtro">
                   <!-- <img src="imagens/filtro.png" title="icone_filtro"> -->
-                   <img src="imagens/logo.png" title="icone_filtro">
+                   <img src="imagens/filtro.gif" title="icone_filtro">
                    <a href="#">Categoria</a>
                 </section>
                 <section id="caixa_produtos">
 
                     <div id="produto1" class="produto_loja">
+                        <a href="">
                         <div class="oi">
                             <div class="hidde">
                         <!-- <img src="imagens/produto1" title="produto1"> -->
@@ -101,9 +125,11 @@
                         <h3>Nome do Produto</h3>
                         <p>Descrição do produto......
                     </div>
+                </a>
                     </div>
 
                     <div id="produto2" class="produto_loja">
+                            <a href="">
                             <div class="oi">
                                 <div class="hidde">
                         <!-- <img src="imagens/produto2" title="produto2"> -->
@@ -113,9 +139,11 @@
                             <h3>Nome do Produto</h3>
                             <p>Descrição do produto......
                     </div>
+                </a>
                     </div>
 
                         <div id="produto3" class="produto_loja">
+                                <a href="">
                                 <div class="oi">
                                     <div class="hidde"> 
                             <!-- <img src="imagens/produto3" title="produto3"> -->
@@ -125,8 +153,13 @@
                                 <h3>Nome do Produto</h3>
                                 <p>Descrição do produto......
                         </div>
-
+                    </a>
                         </div>
+                </section>
+                <section>
+                    <img src="imagens/seta_esquerda.png">
+                    <label id="valorTroca">1</label>
+                    <img src="imagens/seta_direita.png">
                 </section>
                     
                

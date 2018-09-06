@@ -140,7 +140,7 @@ figure figcaption a:active{
 .hidde{ height: 90%; margin: 10px; }
 
 .produto_loja{
-    border: 1px solid black;
+    border: 1px solid #FF757F;
     border-radius: 20px;
     margin: 23px; 
     background: #f6dddf;
@@ -148,8 +148,11 @@ figure figcaption a:active{
 }
 
 #filtro{
-    border: 1px solid; 
     margin: 20px;
+}
+
+#filtro img{
+    width: 62px;
 }
 
 #filtro a{
@@ -162,3 +165,13 @@ figure figcaption a:active{
     margin-bottom: 10px;
 }
 
+#container main section:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.produto_loja a{
+    text-decoration: none
+}
