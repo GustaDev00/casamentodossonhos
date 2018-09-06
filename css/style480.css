@@ -52,9 +52,9 @@ footer{display: none}
   top: 94%; 
   }
   #container main section nav ol li a{
-      padding: 28px 41px 25px 41px;
+      padding: 20px 41px 20px 41px;
       color: black;
-      font-size: 18px;
+      font-size: 16px;
       text-decoration: none;
       
       
@@ -75,22 +75,22 @@ footer{display: none}
 
   #container main section nav ol li #submenu{ 
       position: absolute;
-      bottom:10vw;
-      right:2%;
+      bottom:8.2vw;
+      right:0%;
   }
 
   #container main section nav ol li #submenu li{
       padding: 27px 0px 20px 0px;
   }
   #container main section nav ol li #submenu li a{
-      padding: 26px 61px 20px 40px;
+      padding: 26px 50px 20px 60px;
       border-bottom: 1px solid;
 
   }
   #container main section nav ol li #submenu li .concerta{
       padding-right: 52%;
   }
-   #container main section nav ol li #submenu{display: none;}
+   #container main section nav ol li #submenu{display:none;}
 
 /*---------------CARROSSEL---------------*/
 
