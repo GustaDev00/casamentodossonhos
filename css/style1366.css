@@ -1,0 +1,223 @@
+     /*-----------------------------------perfilCliente.html---------------------*/
+/*LISTA DE PRESENTE*/
+div.tipo{
+    word-spacing: 68px;
+    padding-left: 28px; 
+  }
+  
+  div.lista1{     
+    padding-left: 2px;     
+    font-size: 16px;     
+  }
+  
+  div.lista2 {     
+    float: left;
+    padding-left: 12%;   
+  }
+  
+  a.presente{
+    float: left;   
+    padding-left: 14px;   
+    font-size: 35px;
+  }
+  
+  input.checkbox{
+    float: left;
+  }
+  
+  select.custom-select{
+    float: right;
+    height: 5vw;
+    width: 17vw;
+    font-size: 2.5vw;
+    padding-top: 1px;
+   }
+  
+  div.email{    
+    float: right;    
+  }
+  
+  input.e{
+    margin-right: 3vw;
+    margin-left: 2vw;
+    height: 4vw;
+    width: 27vw;
+  }
+  
+  p.texto{
+    font-size: 3vw;
+  }
+  
+  /*botao enviar*/
+  .confirma{
+    border-radius: 6px;
+    background-color: pink;
+    border-color:pink;
+    width: 9vw;
+    height: 5vw;
+    float: right;
+    font-size: 2vw;
+  }
+  
+  hr{
+    margin-top: 3%;
+    padding: 0;
+    border-style: dotted;    
+    border-width: thin;
+    border-color: gray;
+  }
+  
+  input.checkbox{
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div.form-row{
+    display: inline;
+  }
+  
+  /*PRINCIPAL*/
+  /* quadrado com dia local data */
+  div.prin{   
+    background-color: pink;    
+    width:57%;     
+    border-radius: 6px;
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;          
+    margin-left:6px;
+    margin-top: 6px; 
+  }
+  
+  div.form2{
+    margin-left: auto;       
+  }
+  
+  input.form{
+    background-color: pink;
+    border-color:pink;
+    border: 0px;       
+  }
+  
+  div.principal{
+    text-align: center;    
+  }
+  
+  /*imagem*/
+  img.galeria3{
+    margin-top: -4%;    
+    margin-right: 10%;
+    width:40%;
+    float: right;
+    position: relative;     
+  }
+  
+  input.form{
+    width: 57%;
+  }
+  
+  /*botao de cima*/
+  button.btn.btn-primary{
+    background-color:pink;
+    border:solid grey 1px ;    
+    height: 6vw; 
+    width: 32%;
+    margin-left: -6px;
+    font-size: 3vw;           
+  }
+  
+  /*img perfil*/
+  img.perfil{
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;    
+    border-radius: 6px;
+    margin-bottom: -2vw;    
+  }
+  
+  /*CONFIRMAR PRESENÇA*/
+  div.form{
+    margin-top: 0px;    
+  }
+  
+  p#sua{
+    font-size: 3vw;
+  }
+  
+  div.group2{
+    border-color:grey;
+    border-style: dotted;    
+    border-width: thin;
+    border-top-width: 0px;
+    padding-top: 0;     
+  }
+  
+  div.conf1{       
+    float: left;
+  }
+  
+  div.conf{
+    float: right;
+    margin-right: 12vw;
+  }
+  
+  img.letra{   
+    float: right;
+    width: 14%;
+  }
+  
+  h3{
+    margin: 0;
+    text-align: left;
+  }
+  
+  p{
+     margin:0;    
+  }
+  
+  button.botao{   
+    background-color: pink;
+    border-radius: 6px;
+    border-color: pink;    
+    height: 6vw; 
+    width: 20%;   
+    font-size: 2vw;
+    margin: 70px 10px 10px 74vw;
+  }
+  
+  select.select1{
+     width: 382px;
+     height: 22px;
+     border-color: rgb(169, 169, 169);
+  }
+  
+  p.casal{
+     text-align: center;
+     font-size: 5vw;
+  }
+  
+  input.form-control{
+    width: 82vw;
+    height: 3vw;
+    font-size:25px;
+  }
+  
+  input#cel{
+    width: 40vw;
+    height: 3vw;
+  }
+  
+  select.select1{
+    width: 83vw;
+    height: 4vw;
+    font-size:25px;
+  }
+  
+  select.select2{
+    width: 120%;
+    height: 4vw;
+    border-color: rgb(169, 169, 169);
+    font-size:25px;
+  }
