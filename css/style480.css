@@ -17,10 +17,10 @@ div.teste{
     #fundologin{
         height: 100%;
     }
-    #fig_inicial { border:1px solid;
-    background-color: black;
+    #fig_inicial {
+    color:white;
     position: absolute;
-    top: 470px;
+    top: 570px;
     right: calc(50vw - 68px);
 
 }
