@@ -14,26 +14,30 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     //    $validarlogin->execute();
     $validarLogin = executeSelect($pdo, $verificar);
     $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
-    $id = $fetch->cod_usuario;
+    $id = $fetch->cod_usu;
     
     if(($_SESSION["id"] = $id) == true){
-        $select = "select * from usuario where cod_usuario = '$id'";
+        $select = "select * from usuario where cod_usu = '$id'";
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
+        $nome = $fetch2->nome_usu;
         $senha = $fetch2->senha_usu;
-        echo $senha;
+        $email = $fetch2->email;
+        echo "Seu id é: $id <br>";
+        echo "Seu email é: $email <br>";
+        echo "Seu nome é: $nome <br>";
+        echo "Sua senha é: $senha <br>";
     }
     echo "VOCE ESTÁ LOGADO E ESTÁ NO PERFIL SEU MERDA";
-    
-    
     ?>
+
     <form action="deslogar.php">
         <a href="deslogar.php"><button type="submit">DESLOGA</button></a>
     </form>
   <?php
 }else{
-	//echo "<center>VocÊ está logado! :D</center>";
-     echo "NÃO ESTÁ LOGADO CARAI";
+	echo "<script>alert('Faça o Login para continuar!');</script>";
+    echo "<script>location.href='login.html'</script>";
 }
 
 

@@ -10,7 +10,7 @@
 
 require_once './Db/daohelper.php';
 $email = isset($_REQUEST['email'])?$_REQUEST['email']:null;
-$senha = isset($_REQUEST['Senha'])?$_REQUEST['Senha']:null;
+$senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
     
 
     $pdo= connection();
