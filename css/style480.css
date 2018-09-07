@@ -2,12 +2,8 @@
 /*-------------------login.html-----------*/
 
 div.teste{
-    Border-radius: 3%;
-    Border-width: thin;
-    Border:solid;
     text-align: center;
     Position: absolute;
-    Box-shadow: 0px 0px 10px black;
     top: 150px;
     right: 10%;
     left: 10%;
