@@ -22,7 +22,10 @@ div.tipo{
   }
   
   input.checkbox{
-    float: left;
+    float: left;    
+    display: inline;
+    margin: 0;
+    padding: 0;
   }
   
   select.custom-select{
@@ -67,11 +70,7 @@ div.tipo{
     border-color: gray;
   }
   
-  input.checkbox{
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
+  
   
   div.form-row{
     display: inline;

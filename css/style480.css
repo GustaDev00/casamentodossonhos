@@ -22,7 +22,10 @@ a.presente{
 }
 
 input.checkbox{
-    float: left;
+    float: left;    
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 select.custom-select{
@@ -58,12 +61,6 @@ hr{
     border-width: thin;
     border-color: gray;
 } 
-
-input.checkbox{
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
 
 div.form-row{
     display: inline;
@@ -228,7 +225,7 @@ a.edit{
     height: 6vw;
     width: 29%;
     margin-left: -7px;
-    font-size: 75%;
+    font-size: 77%;
 }
 
 .primary{   

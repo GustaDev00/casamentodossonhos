@@ -22,8 +22,12 @@ a.presente{
   font-size: 28px;
 }
 
-input.checkbox{
-  float: left;
+.checkbox{
+  float: left; 
+
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 select.custom-select{
@@ -68,12 +72,6 @@ hr{
   border-color: gray;
 }
 
-input.checkbox{
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
 div.form-row{
   display: inline;
 }
@@ -116,6 +114,7 @@ img.galeria3{
 
 input.form{
   width: 57%;
+  font-size: 2vw;
 }
 
 /*botao de cima*/
@@ -220,3 +219,134 @@ select.select2{
   height: 4vw;
   border-color: rgb(169, 169, 169);
 }
+
+/*----------------------LOGADO-----------------*/
+
+a.edit{
+  text-decoration: none;
+  color: #4F4E4E;
+  float: right;
+  padding-right: 6%;
+}
+
+#b1{
+  background-color: pink;
+  border: solid grey 1px;
+  height: 6vw;
+  width: 26.5%;
+  margin-left: -7px;
+  font-size: 120%;
+}
+
+.primary{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 6vw; 
+  width: 25%;
+  margin-right: -6px;
+  font-size: 120%;
+}
+
+div.conv{
+  border-color: grey;
+  border-style: dotted;
+  border-width: thin;  
+  margin: 2% 5% 2% 5%;
+  padding: 3% 8% 3% 8%;
+}
+
+label.qtd{
+  float: right; 
+  font-size: 2.5vw;   
+}
+
+label.nm{
+  font-size: 2.5vw;
+}
+p.c{
+  padding-left: 5%;
+  font-size: 2.5vw;
+} 
+
+a.pres{
+  padding-left: 28px;
+}
+a.co{
+  padding-left: 12%;
+}
+
+hr.w{
+  margin: 0 auto;
+  margin-top: 2%;}
+
+.cma{
+    border-radius: 6px;
+    background-color: pink;
+    border-color:pink;
+    padding:1% 2% 1% 2%;
+    float: right;
+  }
+
+ div.princ{   
+    background-color: pink;    
+    width:57%;     
+    border-radius: 6px;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;          
+    margin-left:6px;
+    margin-top: 6px; 
+ }  
+
+label#prin{
+    font-size:2.5vw;
+}
+    
+.l1{
+font-size: 2.5vw;
+}
+
+.b {  
+  position:relative;
+}
+.b button {
+  font-size: 2vw;
+  border: 0px;
+  position:absolute;
+  top: -3.5vw;
+  left: 81.5%;
+  background: transparent;
+  /*-webkit-transform:translate3d(-50%, -50%, 0); 
+  transform:translate3d(-55%, -50%, 0);*/
+}
+
+#irineu{
+  position:relative;
+}
+
+#irineu button{
+  font-size: 2vw;
+  border: 0px;
+  position:absolute;
+  top: 1vw;
+ left: 69%;
+  background: transparent;
+  /*-webkit-transform:translate3d(-50%, -50%, 0); 
+  transform:translate3d(-55%, -50%, 0);*/
+}
+
+.add{
+  margin-top: 1%;
+  margin-left: 4%;
+  border-radius: 6px;
+  background-color: pink;
+  border-color:pink;
+  padding:1% 2% 1% 2%;
+  float: left;
+}
+
+.edit{
+  font-size: 2vw;
+}
+
+input.form

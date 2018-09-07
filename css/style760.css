@@ -23,7 +23,11 @@ a.presente{
 }
 
 input.checkbox{
-  float: left;
+  margin-top: 1%;
+  float: left; 
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 select.custom-select{
@@ -65,12 +69,6 @@ hr{
   border-style: dotted;    
   border-width: thin;
   border-color: gray;
-}
-
-input.checkbox{
-  display: inline;
-  margin: 0;
-  padding: 0;
 }
 
 div.form-row{
@@ -286,19 +284,22 @@ hr.w{
     border-color:pink;
     padding:1% 2% 1% 2%;
     float: right;
+  }
 
-    }
+ div.princ{   
+    background-color: pink;    
+    width:57%;     
+    border-radius: 6px;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;          
+    margin-left:6px;
+    margin-top: 6px; 
+ }  
 
-    div.princ{   
-      background-color: pink;    
-      width:57%;     
-      border-radius: 6px;
-      padding-left: 3%;
-      padding-top: 2%;
-      padding-bottom: 2%;          
-      margin-left:6px;
-      margin-top: 6px; 
-    }  
+label#prin{
+    font-size:2.5vw;
+}
     
 .l1{
 font-size: 2.5vw;
