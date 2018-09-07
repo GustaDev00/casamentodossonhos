@@ -5,7 +5,6 @@
  #logo{width: 95px;}
 
   #user_icone, #loja_icone{margin: 0px 15px 0 5vw; width: 60px;}
-  #user_icone:hover, #loja_icone:hover{border: 1px solid black;}
   #icones_topo{ position: absolute;left: 70vw; top: 10px}
   #container header form input{
     position: relative;
