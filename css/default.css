@@ -25,7 +25,7 @@ html{scroll-behavior: smooth;}
 /*---------------CONTEUDO 1PAG---------------*/
 figure figcaption p{
 font-size: 25px;
-color: White;
+color: #ED545B;
 }
 figure img{width: 100%}
 
@@ -35,10 +35,10 @@ figure figcaption{
 figure figcaption a{
   position: relative;
   text-decoration: none;
-  border: 3px solid white;
+  border: 3px solid #ED545B;
   top: 2rem;
   border-radius: 20px;
-  color: white;
+  color: #ED545B;
   padding: 15px 30px;
   margin: 3%;
 }
