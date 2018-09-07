@@ -250,3 +250,51 @@ div.conv{
 label.qtd{
     float: right;    
 }
+p.c{
+    padding-left: 5%;
+} 
+
+a.pres{
+    padding-left: 28px;
+}
+a.co{
+    padding-left: 12%;
+}
+
+hr.w{
+    margin: 0 auto}
+
+.cma{
+    border-radius: 6px;
+    background-color: pink;
+    border-color:pink;
+    padding: 2px; 
+    float: right;
+
+    }
+
+div.princ{   
+        background-color: pink;    
+        width:57%;     
+        border-radius: 6px;
+        padding-left: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;          
+        margin-left:6px;
+        margin-top: 6px; 
+  }
+
+.l1{
+  font-size: 2.5vw;
+ }
+
+ .b button {
+    font-size: 2vw;
+    border: 0px;
+    position:absolute;
+    top: -3.5vw;
+    left: 81.5%;
+    background: transparent;
+    /*-webkit-transform:translate3d(-50%, -50%, 0); 
+    transform:translate3d(-55%, -50%, 0);*/
+  }
