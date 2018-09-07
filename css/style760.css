@@ -317,3 +317,28 @@ font-size: 2.5vw;
   /*-webkit-transform:translate3d(-50%, -50%, 0); 
   transform:translate3d(-55%, -50%, 0);*/
 }
+
+#irineu{
+  position:relative;
+}
+
+#irineu button{
+  font-size: 2vw;
+  border: 0px;
+  position:absolute;
+  top: 1vw;
+ left: 69%;
+  background: transparent;
+  /*-webkit-transform:translate3d(-50%, -50%, 0); 
+  transform:translate3d(-55%, -50%, 0);*/
+}
+
+.add{
+  margin-top: 1%;
+  margin-left: 4%;
+  border-radius: 6px;
+  background-color: pink;
+  border-color:pink;
+  padding:1% 2% 1% 2%;
+  float: left;
+}
