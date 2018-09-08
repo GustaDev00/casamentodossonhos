@@ -99,3 +99,24 @@ footer{display: none}
 
 #enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
 /*---------------acima---------------*/
+﻿
+/*-------------------loja.html-----------*/
+/* .produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt; display: flex; align-items: center} */
+.produto_loja {
+    height: 170px;
+}
+
+.oi{
+    width: 40vw;
+    height: 150px;
+}
+
+.nome_descricao{
+    position: relative;
+    width: 38vw;
+    text-align: left;
+    left:55%;
+    bottom: 160px;
+    height: 150px;
+ }
+ 

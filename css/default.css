@@ -63,5 +63,45 @@ figure figcaption a:active{
 #caixa{ position:absolute;}
 #caixa img{ float:left; }
 
+#container main section:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+/*--------------------loja--------------*/
 
+.oi{
+    width: 40vw;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px 0 0 20px;
+}
 
+.hidde{ height: 90%; margin: 10px; }
+
+.produto_loja{
+    border: 1px solid #FF757F;
+    border-radius: 20px;
+    margin: 23px; 
+    background: #f6dddf;
+    
+}
+
+#filtro{
+    margin: 20px;
+}
+
+#filtro img{
+    width: 62px;
+}
+
+#filtro a{
+    position: relative;
+    bottom: 20px; 
+    margin-left: 14px
+}
+.produto_loja a{
+    text-decoration: none
+}
