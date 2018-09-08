@@ -60,38 +60,3 @@
   footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
   footer p{margin-left: 75%}
   
-  /*--------------------------------loja----------------------*/
-
-  .produto_loja {
-    width: 680px;
-    height: 200px;
-    margin: 25px  auto;
-}
-
-.produto_loja:first-child{
-  margin-top: 45px;
-}
-
-.oi{
-  width: 30vw;
-  height: 180px;
-}
-
-.nome_descricao{
-position: relative;
-width: 30vw;
-text-align: left;
-left:52%;
-bottom:186px;
-height: 170px;
-}
-
-.nome_descricao h3{
-font-size: 28px;
-padding-bottom: 10px
-}
-
-.nome_descricao p{
-font-size: 25px;
-}
-

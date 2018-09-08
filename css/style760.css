@@ -1,6 +1,4 @@
 
-
-
 #container header{
     height: 70px;
  }
@@ -46,38 +44,3 @@
   footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
  footer a{text-decoration: none; color: black; position: absolute; left: -50px;}
  footer p{margin-left: 70%}
-
-    /*-------------loja-----------------*/
-    .produto_loja {
-      width: 480px;
-      height: 200px;
-      margin: 25px  auto;
-  }
-
-  .produto_loja:first-child{
-    margin-top: 45px;
-  }
-
-  .oi{
-    width: 30vw;
-    height: 180px;
-}
-
-.nome_descricao{
-  position: relative;
-  width: 25vw;
-  text-align: left;
-  left:56%;
-  bottom:186px;
-  height: 170px;
-}
-
-.nome_descricao h3{
-  font-size: 20px;
-  padding-bottom: 10px
-}
-
-.nome_descricao p{
-  font-size: 18px;
-}
-
