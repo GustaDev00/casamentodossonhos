@@ -446,3 +446,34 @@ font-size: 2.5vw;
     margin: 0.8%;
     font-size: 2.5vw;
 }
+/*-------login---------*/
+div.teste{
+    Border-radius: 3%;
+    Border-width: thin;
+    Border:solid;
+    text-align: center;
+    Position: absolute;
+    Box-shadow: 0px 0px 10px black;
+    top: 250px;
+    right:25%;
+    left: 25%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+    #fundologin{
+        height: 100%;
+        width: 100%;
+    }
+    #fig_inicial {
+    color:white;
+    position: absolute;
+    top: 577px;
+    right: calc(50vw - 68px);
+
+}
+#logologin{
+    width:80px;
+}
+div.campo{
+    margin-top: 15px;
+}

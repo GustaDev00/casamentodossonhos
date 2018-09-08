@@ -265,19 +265,8 @@ div.group2{
 div.conf1{       
     float: left;
 }
-div.conf{
-    float: right;
-    margin-right: 40px;
-}
-
-img.letra{   
-    float: right;
-    width: 14%;
-}
-
-h3{
-    margin: 0;
-    text-align: left;
+div.botao input:first-child{
+    margin-left: 140px;
 }
 
 p{
@@ -450,3 +439,45 @@ div.princ{
     margin: 1%;
     font-size: 2.5vw;
 }
+
+img.letra{   
+    float: right;
+    width: 14%;
+}
+
+
+/*-------------------login.html-----------*/
+
+div.teste{
+    text-align: center;
+    Position: absolute;
+    top: 150px;
+    right: 10%;
+    left: 10%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+    #fundologin{
+        height: 100%;
+        width: 100%;
+    }
+    #fig_inicial {
+    color:white;
+    position: absolute;
+    top: 420px;
+    right: calc(50vw - 68px);
+}
+
+#logologin{
+    width: 75px;
+}
+div.campo{
+    margin-top: 15px;
+}
+    div.botao input:last-child{ 
+        margin-right: 80px
+        }
+
+
+
+
