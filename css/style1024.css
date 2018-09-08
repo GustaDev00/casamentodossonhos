@@ -2,7 +2,7 @@
      /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
-  word-spacing: 68px;
+  word-spacing: 88px;
   padding-left: 28px; 
 }
 
@@ -23,12 +23,11 @@ a.presente{
 }
 
 .checkbox{
-  float: left; 
-
+ float: left; 
   display: inline;
   margin: 0;
   padding: 0;
-}
+} 
 
 select.custom-select{
   float: right;
@@ -315,7 +314,8 @@ font-size: 2.5vw;
   position:absolute;
   top: -3.5vw;
   left: 81.5%;
-  background: transparent;
+  background: #ffc0cb8c;
+  border-radius: 6px;
   /*-webkit-transform:translate3d(-50%, -50%, 0); 
   transform:translate3d(-55%, -50%, 0);*/
 }
@@ -329,8 +329,9 @@ font-size: 2.5vw;
   border: 0px;
   position:absolute;
   top: 1vw;
- left: 69%;
-  background: transparent;
+ left: 68%;
+  background: #ffc0cb8c;
+  border-radius: 6px;
   /*-webkit-transform:translate3d(-50%, -50%, 0); 
   transform:translate3d(-55%, -50%, 0);*/
 }
@@ -349,4 +350,9 @@ font-size: 2.5vw;
   font-size: 2vw;
 }
 
-input.form
+  /*favoritos*/
+#l{
+    width: 23%;
+    margin: 0.8%;
+    font-size: 2.5vw;
+}

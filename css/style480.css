@@ -223,7 +223,7 @@ a.edit{
     background-color: pink;
     border: solid grey 1px;
     height: 6vw;
-    width: 29%;
+    width: 29.5%;
     margin-left: -7px;
     font-size: 77%;
 }
@@ -232,7 +232,7 @@ a.edit{
     background-color:pink;
     border:solid grey 1px ;    
     height: 6vw; 
-    width: 25%;
+    width: 24.5%;
     margin-right: -6px;
 }
 
@@ -289,9 +289,10 @@ div.princ{
     font-size: 2vw;
     border: 0px;
     position:absolute;
-    top: 80.5vw;
+    top: 75vw;
     left: 80%;
-    background: transparent;
+    background: #ffc0cb8c;
+    border-radius: 6px;
     /*-webkit-transform:translate3d(-50%, -50%, 0); 
     transform:translate3d(-55%, -50%, 0);*/
   }
@@ -306,8 +307,9 @@ div.princ{
     border: 0px;
     position:absolute;
     top: 1vw;
-   left: 69%;
-    background: transparent;
+    left: 68%;
+    background: #ffc0cb8c;
+    border-radius: 6px;
     /*-webkit-transform:translate3d(-50%, -50%, 0); 
     transform:translate3d(-55%, -50%, 0);*/
   }
@@ -321,3 +323,12 @@ div.princ{
     padding:1% 2% 1% 2%;
     float: left;
   }
+
+
+  /*favoritos*/
+
+#l{
+    width: 30%;
+    margin: 1%;
+    font-size: 2.5vw;
+}
