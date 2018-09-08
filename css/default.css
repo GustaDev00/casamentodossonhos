@@ -88,20 +88,40 @@ figure figcaption a:active{
     background: #f6dddf;
     
 }
-
 #filtro{
-    margin: 20px;
+  margin: 20px;
 }
 
 #filtro img{
-    width: 62px;
+  width: 62px;
 }
 
 #filtro a{
-    position: relative;
-    bottom: 20px; 
-    margin-left: 14px
+  position: relative;
+  bottom: 20px; 
+  margin-left: 14px
 }
 .produto_loja a{
-    text-decoration: none
+  text-decoration: none
 }
+ /* PERFIL CLIENTE*/
+
+ div.container{
+   margin: 2%;
+ }
+ 
+ div.group2{
+ padding-left: 2%;
+ padding-right: 2%; 
+ }
+
+ label, h3{
+   font-size: 3vw;
+ }
+  div#um{
+    font-size: 3vw;  
+    margin-left: 6%;
+   margin-top: 2%;
+  }
+
+
