@@ -119,6 +119,7 @@ footer{display: none}
  }
 
 
+ 
 /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
@@ -141,10 +142,8 @@ a.presente{
     padding-left: 14px;   
 }
 
-input.checkbox{  
+input.checkbox{    
     display: inline;
-    margin: 0;
-    padding: 0;
 }
 
 select.custom-select{
@@ -208,7 +207,43 @@ input.form{
     border: 0px;       
 }
 
+div.principal{
+    text-align: center;    
+}
+
 /*imagem*/
+
+img.galeria3{
+    margin-top: -4%;    
+    margin-right: 10%;
+    width:40%;
+    float: right;
+    position: relative;     
+}
+
+input.form{
+    width: 57%;
+}
+
+/*botao de cima*/
+button.btn.btn-primary{
+    background-color:pink;
+    border:solid grey 1px ;    
+    height: 6vw; 
+    width: 32%;
+    margin-left: -6px;
+    font-size: 3vw;           
+}
+
+/*img perfil*/
+img.perfil{
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;    
+    border-radius: 6px;
+    margin-bottom: -2vw;    
+}
 
 /*CONFIRMAR PRESENÇA*/
 div.form{
@@ -227,7 +262,23 @@ div.group2{
     padding-top: 0;       
 }
 
+div.conf1{       
+    float: left;
+}
+div.conf{
+    float: right;
+    margin-right: 40px;
+}
 
+img.letra{   
+    float: right;
+    width: 14%;
+}
+
+h3{
+    margin: 0;
+    text-align: left;
+}
 
 p{
      margin:0;    
