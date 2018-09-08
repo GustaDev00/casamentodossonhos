@@ -1,0 +1,67 @@
+*{margin: 0px; padding: 0px}
+
+:root{
+ --ajustes: 100vw;
+    --equilibro: 50vw;
+}
+html{scroll-behavior: smooth;}
+
+#container header{
+  background-color: #f6dddf;
+  width: 100%;
+  display: flex;
+}
+#logo{ margin:  10px}
+
+#container header form input:first-child{
+  height: 44px;
+  border: 2px solid #FF757F;
+  border-radius: 50px;
+  background-color: #f6dddf;
+
+}
+
+
+/*---------------CONTEUDO 1PAG---------------*/
+figure figcaption p{
+font-size: 25px;
+color: #ED545B;
+}
+figure img{width: 100%}
+
+figure figcaption{
+ position: absolute;
+}
+figure figcaption a{
+  position: relative;
+  text-decoration: none;
+  border: 3px solid #ED545B;
+  top: 2rem;
+  border-radius: 20px;
+  color: #ED545B;
+  padding: 15px 30px;
+  margin: 7VW;
+}
+
+figure figcaption a:active{
+  color: #FF757F;
+  border-color: #FF757F;
+}
+
+/*---------------CONTEUDO 2PAG---------------*/
+#nos{ background-color: #F2F2F2; padding: 9vw; }
+#nos h2{
+   text-align: CENTER;
+}
+
+#nos p{
+  margin-top: 7vw;
+  line-height: 28px;
+}
+
+#carrossel{ position:relative; width:100%;  overflow: hidden;}
+#caixa{ position:absolute;}
+#caixa img{ float:left; }
+
+
+

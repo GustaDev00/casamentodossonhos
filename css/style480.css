@@ -1,0 +1,101 @@
+﻿ /*---------------TOPO---------------*/
+ #container{min-width: 320px;}
+
+/*---------------alterar---------------*/
+ #container header{
+    height: 70px;
+ }
+
+ #user_icone{display: none}
+ #loja_icone{display: none;}
+
+ #container header form input{
+    position: relative;
+    margin: 15px 0 0 46px;
+  }
+
+  #container header form input:first-child{
+    width: 60vw;
+  }
+  #container header form input:last-child{
+    left: 49vw;
+     bottom: 50px;
+   }
+
+                /*----------------*/
+
+  figure figcaption p{
+    width: 330px;
+  }
+  figure figcaption{left: calc(48vw - 165px);top:  240px; right: 40px;}
+
+#carrossel{ height:260px; overflow: hidden; background-color: #F2F2F2}
+#caixa{width: 400%;}
+#caixa img{ float:left; width: 100vw;}
+
+/*----------------nfooter----------*/
+footer{display: none}
+/*---------------MENU FIXO---------------*/
+
+#container main section nav ol li a{
+  background-color: #f6dddf;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+  }
+#container main section nav ol li{
+  list-style: none;
+
+}
+#container main section nav #menu{
+  display: flex;
+  position: fixed;
+  top: 94%; 
+  }
+  #container main section nav ol li a{
+      padding: 20px 41px 20px 41px;
+      color: black;
+      font-size: 16px;
+      text-decoration: none;
+      
+      
+  }
+  #container main section nav ol li .item.home{
+      border-right:1px solid black;
+  }
+
+  #container main section nav ol li .item.login{
+      border-left:1px solid black;
+  }
+
+  #container main section nav ol li a:active{
+      background-color: #d1a7a7;
+      color: white;
+  }
+/*---------------SUBMENU---------------*/
+
+  #container main section nav ol li #submenu{ 
+      position: absolute;
+      bottom:8.2vw;
+      right:0%;
+  }
+
+  #container main section nav ol li #submenu li{
+      padding: 27px 0px 20px 0px;
+  }
+  #container main section nav ol li #submenu li a{
+      padding: 26px 50px 20px 60px;
+      border-bottom: 1px solid;
+
+  }
+  #container main section nav ol li #submenu li .concerta{
+      padding-right: 52%;
+  }
+   #container main section nav ol li #submenu{display:none;}
+
+/*---------------CARROSSEL---------------*/
+
+#carrossel{ height: 232px;}
+/*---------------------enchendo de linguiça-------------*/
+
+#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
+/*---------------acima---------------*/
