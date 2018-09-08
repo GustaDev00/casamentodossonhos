@@ -102,13 +102,13 @@ footer{display: none}
 
 
 /*-------------------loja.html-----------*/
-/* .produto_loja{width: 89vw; border: 1px solid; margin: 0 auto; border-radius: 10pt; display: flex; align-items: center} */
+
 .produto_loja {
     height: 170px;
 }
 
 .oi{
-    width: 40vw;
+    width: 35vw;
     height: 150px;
 }
 
