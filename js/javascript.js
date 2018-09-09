@@ -32,5 +32,20 @@ $(function(){
                 }else{
             console.log($(window).width())
         }
-        
+        //funcao do index 
+        var trocaDescricao = 1;
+        $("#descrip_produto div:last-child").css("display","none");
+        $("#all_icones a:first-child").on("click",function(){
+                
+                if(trocaDescricao == 1){
+                    trocaDescricao ++;
+                    $("#descrip_produto div:first-child").css("display","none");
+                    $("#descrip_produto div:last-child").css("display","block");
+                }else{
+                    trocaDescricao --;
+                    $("#descrip_produto div:last-child").css("display","none");
+                    $("#descrip_produto div:first-child").css("display","block");
+                    
+                }
+        });
 });
