@@ -63,7 +63,7 @@ figure figcaption a:active{
 #caixa{ position:absolute;}
 #caixa img{ float:left; }
 
-#container main section:last-child{
+#container main #nav_fixo{
     display: flex;
     align-items: center;
     justify-content: center;
