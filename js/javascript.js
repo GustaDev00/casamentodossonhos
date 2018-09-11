@@ -32,19 +32,30 @@ $(function(){
                 }else{
         }
         //funcao do index 
-        var trocaDescricao = 1;
+        var trocaV = 1;
         $("#descrip_produto div:last-child").css("display","none");
         $("#all_icones a:first-child").on("click",function(){
                 
-                if(trocaDescricao == 1){
-                    trocaDescricao ++;
+                if(trocaV == 1){
+                    trocaV = 2;
                     $("#descrip_produto div:first-child").css("display","none");
                     $("#descrip_produto div:last-child").css("display","block");
                 }else{
-                    trocaDescricao --;
+                    trocaV = 1;
                     $("#descrip_produto div:last-child").css("display","none");
                     $("#descrip_produto div:first-child").css("display","block  ");
                     
                 }
+        });
+        //Função Vendedor
+
+        $("#MenuVendedor ol li:last-child").on("click",function(){
+            $("#FotosVendedor").css("display","none");
+            $("#ProdutosVendedor").css("display","block");
+        });
+
+        $("#MenuVendedor ol li:first-child").on("click",function(){
+            $("#FotosVendedor").css("display","block");
+            $("#ProdutosVendedor").css("display","none");
         });
 });

@@ -169,4 +169,25 @@ figure figcaption a:active{
 
   /*----------PERFIL VENDEDOR-----------*/
 
+    #vendedor{width: 85%; margin: 10px 5% 0 5%;}
+    #TopoVendedor{
+      padding: 10px;
+      background-color: #f6dddf;
+      width: 100%;
+     }
+     #TopoVendedor h1{float: right; margin-right: 70px}
+     #InfoVendedor{padding: 10px; width: 100%;}
+     #InfoVendedor article h3{margin-top: 5px}
+     #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0}
+     #MenuVendedor ol li{display: inline;}
+     #MenuVendedor ol li:first-child{border-right: 1px solid black;}
+     #MenuVendedor ol li{
+       padding: 5px 17% 5px 17%;
+       font-size: 18px;
+       font-family: arial, sans-serif
+      }
+
+      #FotosVendedor{margin-top: 15px; text-align: center}
+      #ProdutosVendedor{margin-top: 15px; display: none; text-align: center}
+
   
