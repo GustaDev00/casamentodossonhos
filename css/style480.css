@@ -1,4 +1,4 @@
- /*---------------TOPO---------------*/
+﻿ /*---------------TOPO---------------*/
  #container{min-width: 320px;}
 
 /*---------------alterar---------------*/
@@ -477,5 +477,56 @@ div.campo{
         }
 
 
+ /*---------------------------------------------ALL USER--------------------*/
 
+ div.adm{
+    margin-left: 3%;
+    margin-top: 3%;
+ }
+ img.abc{
+     width: 26%;
+     margin-top: 2%;
+     margin-left: 1%;
+     margin-right: 1%;
+     border-radius: 100%;
+     border-style: dashed;
+     padding: 1%;
+     border-color: #595959;
+     border-width: 0.6vw;
+ }
 
+ .fil{
+    width: 14%;
+    border: solid 1px;
+    border-radius: 14%;    
+ }
+
+.x{width: 10%;
+float: right;}
+
+div.camp{
+    margin:2%;
+    padding: 0% 2% 2% 0%;
+    border: solid 1px;
+    border-radius: 4%;
+}
+
+#yz{
+    margin-left: 3%; 
+    margin-top: 2%; 
+    padding-right: 20%;
+}
+
+button{
+    margin-top: 6px;
+    float: right;  
+    border-radius: 10px;
+    padding: 1% 2% 1% 2%;
+    font-size: 3vw;
+    border-color: pink;
+    background-color: pink;
+    
+
+}
+/*.cli{float: right}
+*/
