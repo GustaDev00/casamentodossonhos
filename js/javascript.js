@@ -1,5 +1,5 @@
-$(function(){
-    var x = 1;
+var x = 1;
+    $(function(){
     
     var limite  = $('#caixa img').length * $('#caixa img').width() * -1;
     var largura = (limite * (-1)) + $('#caixa img').width();
@@ -58,4 +58,82 @@ $(function(){
             $("#FotosVendedor").css("display","block");
             $("#ProdutosVendedor").css("display","none");
         });
+        var definiFuncao;
+
+        if($(window).width() <= 480){
+            definiFuncao = DefinirOrientacao480;
+        }else if($(window).width() <= 768){
+            definiFuncao = DefinirOrientacao768;
+        }else if($(window).width() <= 1366){
+            definiFuncao = DefinirOrientacao1024;
+        }
+
+    var ComparaTamanho, produto, ComparaLargura, teste123;
+for(aume=1;aume<=3;aume++){
+    produto = "#" + "produto" + aume + " img";  
+    ComparaLargura = $(produto).width();
+    ComparaTamanho = $(produto).height();
+
+    definiFuncao();
+            teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
+            $(produto).css("margin-left", teste123 ); 
+            teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2));
+            $(produto).css("margin-top", teste123 );
+}
+
+
+function DefinirOrientacao480(){
+        if(ComparaLargura > ComparaTamanho){
+            $(produto).css("width","157px");   
+        }else{
+            $(produto).css("width","117px");
+        }
+    }
+
+    function DefinirOrientacao768(){
+        if(ComparaLargura > ComparaTamanho){
+            $(produto).css("width","177px");
+        }else{
+            $(produto).css("width","137px");
+        }
+    }
+
+    function DefinirOrientacao1024(){
+        if(ComparaLargura > ComparaTamanho){
+            $(produto).css("width","197px");
+        }else{
+            $(produto).css("width","157px");
+        }
+    }
+
+    function DefinirOrientacao1366(){
+        if(ComparaLargura > ComparaTamanho){
+            $(produto).css("width","10px");
+        }else{
+            $(produto).css("width","10px");
+        }
+    }
+    //funcao de troca o valor fecho mano pqp
+    
+    var valorNum = 1;
+        var Qphp = 11;
+    Qphp = Qphp / 10;
+    
+    $("#container main section:last-child img:last-child").on("click", function(){
+        if(valorNum < Qphp){
+            valorNum = valorNum + 1;
+            $("#container main section:last-child label").text(valorNum);
+        }else{
+            
+        }
+    });
+    
+    $("#container main section:last-child img:first-child").on("click", function(){
+        if(valorNum > 1){
+        valorNum = valorNum - 1;
+            $("#container main section:last-child label").text(valorNum);
+        }else{
+
+        }
+    });
 });
