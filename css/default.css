@@ -11,6 +11,7 @@ html{scroll-behavior: smooth;}
   width: 100%;
   display: flex;
 }
+#icones_topo a img{width: 43px;} 
 #logo{ margin:  10px}
 
 #container header form input:first-child{
