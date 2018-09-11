@@ -1,13 +1,14 @@
 
 #container header{height: 90px;}
+#icones_topo a img{width: 42px;} 
 #user_icone, #loja_icone{margin: 0px 15px 0 5vw;}
 #icones_topo{ position: absolute;left: 70vw; top: 20px}
 
-
+#logo{ margin:  20px}
 
 #container header form input{
   position: relative;
-  margin: 15px 0 0 6px;
+  margin: 15px 0 0 26px;
 }
 #container header form input:first-child{
   width: 45vw;
@@ -49,7 +50,7 @@ margin-left: calc(48vw - 350px);
 #caixa img:last-child, #caixa img:nth-child(3){display: none;}
 
  /*-------------navegação---------*/
- #container main section nav ol li a{display: none;}
+ #container main section nav{display: none;}
  footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
 footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
 footer p{margin-left: 75%}

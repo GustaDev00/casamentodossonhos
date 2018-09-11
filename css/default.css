@@ -11,8 +11,8 @@ html{scroll-behavior: smooth;}
   width: 100%;
   display: flex;
 }
-#icones_topo a img{width: 43px;} 
-#logo{ margin:  10px}
+
+
 
 #container header form input:first-child{
   height: 44px;
@@ -21,7 +21,7 @@ html{scroll-behavior: smooth;}
   background-color: #f6dddf;
 
 }
-
+#complemento{height: 50px; width: 100%; background-color: #f2f2f2}
 
 /*---------------CONTEUDO 1PAG---------------*/
 figure figcaption p{

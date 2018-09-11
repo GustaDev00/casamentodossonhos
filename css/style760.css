@@ -2,13 +2,24 @@
 #container header{
     height: 70px;
  }
-
+ #logo{ margin:  10px}
+ #icones_topo a img{width: 42px;} 
   #user_icone{margin: 10px 11px 0 2vw;}
   #ferramentas_topo{position: absolute; display: flex ;left: 17vw;}
-  #container header form input:last-child{
-    right: 50px;
-     top: 10px;
-   }
+#container header form input{
+  position: relative;
+  margin: 15px 0 0 6px;
+}
+#container header form input:first-child{
+  width: 45vw;
+  padding-left: 7VW;
+  height: 50px;
+  bottom: 5px
+}
+#container header form input:last-child{
+  top: 5px;
+  right: 44vw;
+ }
 
    /*--------pagina 1 ---------*/
    
@@ -29,7 +40,7 @@
     #caixa{width: 200%; }
     #caixa img{float: left;width: 480px;top:  240px;}
          /*-------------navegação---------*/
-    #container main section nav ol li a{display: none;}
+    #container main section nav {display: none;}
     footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
     footer a{text-decoration: none; color: black; position: absolute; left: -50px;}
     footer p{margin-left: 70%}

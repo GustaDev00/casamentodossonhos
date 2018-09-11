@@ -36,12 +36,6 @@
 /*----------------nfooter----------*/
 footer{display: none}
 /*---------------MENU FIXO---------------*/
-
-#container main section nav ol li a{
-  background-color: #f6dddf;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-  }
 #container main section nav ol li{
   list-style: none;
 }
@@ -49,16 +43,19 @@ footer{display: none}
 
 #container main section nav #menu{
   display: flex;
+  align-items: center;
   position: fixed;
-  top: 94%; 
+  top: 92%; 
+  background-color: #f6dddf;
+  height: 60px;
+  width: 100%;
   }
   #container main section nav ol li a{
-      padding: 20px 41px 20px 41px;
+      padding: 20px 8vw 20px 7vw; 
       color: black;
-      font-size: 16px;
+      font-size: 17px;
       text-decoration: none;
-      
-      
+     font-family: 'Trebuchet MS', Arial, sans-serif    
   }
   #container main section nav ol li .item.home{
       border-right:1px solid black;
@@ -95,7 +92,7 @@ footer{display: none}
 #carrossel{ height: 232px;}
 /*---------------------enchendo de linguiça-------------*/
 
-#enchendolinguica{height: 100px; width: 100%; background-color: #f2f2f2}
+
 /*---------------acima---------------*/
 
 
