@@ -105,7 +105,7 @@ figure figcaption a:active{
 .produto_loja a{
   text-decoration: none
 }
- /* PERFIL CLIENTE*/
+ /* --------------------PERFIL CLIENTE--------------------*/
 
  div.container{
    margin: 2%;
@@ -126,3 +126,47 @@ figure figcaption a:active{
   }
 
 
+  /*-------produto-------------*/
+
+  #produto{margin: 40px 30px; width: 340px;}/*conserta em cada pagina de css*/
+  #SobreProduto{
+    color:#5E5E5E;
+    font-family: Arial, Helvetica, sans-serif
+    }
+  #SobreProduto h1{font-size: 32px;}
+  #valorP{
+    display: flex;
+    margin-top: 10px;
+    justify-content:space-around
+    }
+  #valorP a{
+    padding:10px;
+    background-color: #169BD5;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none
+  }
+  #descrip_produto{
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 30px;
+    padding: 10px
+  }
+  #PrimeiraCaixa{height: 115px; overflow: auto;}
+  #SegundaCaixa a img{width: 105px; margin: 30px 0px 40px 60px}
+  #SegundaCaixa article{float: left;}
+  #SegundaCaixa article h3{margin-top: 3px}
+  #all_icones{
+    width: 65%;
+    height: 50px;
+    background-color: #f6dddf;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+  }
+  #all_icones img{width: 42px;}
+
+  /*----------PERFIL VENDEDOR-----------*/
+
+  
