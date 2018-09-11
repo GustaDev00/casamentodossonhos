@@ -30,7 +30,6 @@ $(function(){
         if($(window).width() <= 768 ){
             setInterval(Roda,6000)
                 }else{
-            console.log($(window).width())
         }
         //funcao do index 
         var trocaDescricao = 1;
@@ -44,7 +43,7 @@ $(function(){
                 }else{
                     trocaDescricao --;
                     $("#descrip_produto div:last-child").css("display","none");
-                    $("#descrip_produto div:first-child").css("display","block");
+                    $("#descrip_produto div:first-child").css("display","block  ");
                     
                 }
         });
