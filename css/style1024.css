@@ -478,3 +478,14 @@ div.teste{
 div.campo{
     margin-top: 15px;
 }
+
+/*---------------CLIENTE ADM--------------*/
+
+.pri{
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 6vw; 
+  width: 33.6%;
+  margin-left: -6px;
+  font-size: 120%;   
+}

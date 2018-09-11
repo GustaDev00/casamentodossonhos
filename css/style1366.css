@@ -463,3 +463,14 @@ input.form{
   margin: 1%;
   font-size: 2.5vw;
 }
+
+/*---------------CLIENTE ADM--------------*/
+
+.pri{
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 6vw; 
+  width: 33.5%;
+  margin-left: -6px;
+  font-size: 140%;   
+}

@@ -530,3 +530,15 @@ button.pes{
 }
 /*.cli{float: right}
 */
+
+/*---------------CLIENTE ADM--------------*/
+
+.pri{
+    background-color:pink;
+    border:solid grey 1px ;    
+    height: 6vw; 
+    width: 34%;
+    margin-left: -6px;
+    font-size: 77%;   
+}
+
