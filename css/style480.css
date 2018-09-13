@@ -72,15 +72,16 @@ footer{display: none}
 /*---------------SUBMENU---------------*/
 #container main section nav ol li #submenu{ 
     position: absolute;
-    bottom:8.2vw;
+    bottom:14.5vw;
     right:0%;
+    background-color: #f6dddf;
 }
 
 #container main section nav ol li #submenu li{
     padding: 27px 0px 20px 0px;
 }
 #container main section nav ol li #submenu li a{
-    padding: 26px 50px 20px 60px;
+    padding: 26px 37px 20px 50px;
     border-bottom: 1px solid;
 
 }
@@ -497,18 +498,13 @@ div.campo{
 
  .fil{
     width: 14%;
-    border: solid 1px;
-    border-radius: 14%;    
  }
 
-.x{width: 10%;
-float: right;}
+.x{width: 10%; float: right}
 
 div.camp{
     margin:2%;
     padding: 0% 2% 2% 0%;
-    border: solid 1px;
-    border-radius: 4%;
 }
 
 #yz{

@@ -52,11 +52,13 @@ var x = 1;
         $("#MenuVendedor ol li:last-child").on("click",function(){
             $("#FotosVendedor").css("display","none");
             $("#ProdutosVendedor").css("display","block");
+            $("#ProdutosVendedorL").css("display","block");
         });
 
         $("#MenuVendedor ol li:first-child").on("click",function(){
             $("#FotosVendedor").css("display","block");
             $("#ProdutosVendedor").css("display","none");
+            $("#ProdutosVendedorL").css("display","none");
         });
         var definiFuncao;
 
@@ -136,4 +138,20 @@ function DefinirOrientacao480(){
 
         }
     });
+    //loja trocando para sessão enviar mensage
+    x = 1;
+    $("#all_icones a:nth-child(2)").on("click", function(){
+        if(x == 1){
+        $("#SobreProduto").css("display","none");
+        $("#MensagemEnviar").css("display","block");
+        x =2;
+        }else {
+        $("#SobreProduto").css("display","block");
+        $("#MensagemEnviar").css("display","none");
+        x = 1;
+        }
+    });
+
+    //alluser
+ 
 });

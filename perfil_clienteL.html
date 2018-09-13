@@ -10,6 +10,16 @@
     <link rel=stylesheet type="text/css" media="screen and (min-width:1025px)" href="css/style1366.css">  
     <link rel="stylesheet" type="text/css" href="css/default.css">
      
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function(){
+        $("#campoAdd").css("display","none");
+        $("#abrirAdd").on("click", function(){
+            $("#campoAdd").css("display","block");
+            });
+        
+    });
+        </script>
     <style>
         .f1,.f2,.f3.f4{transition: width 2s;}
     </style>     
@@ -42,15 +52,15 @@
                             <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
                       <a class="pres"> Geladeira</a> 
                      <a class="co">Confirmado</a>                                                        
-                            <button type="button" class="cma" id="ma">Excluir</button>                               
+                            <INPUT type="button" class="cma" id="ma">Excluir</button>                               
                     </div>                                                                             
                                                       
                 </div> <br><hr class="w">  
-                <form action="ListaPresente.php" method="post">
+                <form action="ListaPresente.php" method="post" id="campoAdd">
                     <Input type="text" name="Nomepresente">
-                    <Input type="submit" value="enviar">
+                    <Input type="submit" value="enviar" id="enviandoAdd">
                     </Form>     
-                <button type="button" class="add" onclick="asd();">Adicionar</button>                          
+                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>                          
        </div>
 
                     <div class="f2">

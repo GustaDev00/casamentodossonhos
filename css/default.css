@@ -105,6 +105,11 @@ figure figcaption a:active{
 .produto_loja a{
   text-decoration: none
 }
+#container main #setasConjunto{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
  /* --------------------PERFIL CLIENTE--------------------*/
 
  div.container{
@@ -128,7 +133,7 @@ figure figcaption a:active{
 
   /*-------produto-------------*/
 
-  #produto{margin: 40px 30px; width: 340px;}/*conserta em cada pagina de css*/
+  #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
   #SobreProduto{
     color:#5E5E5E;
     font-family: Arial, Helvetica, sans-serif
@@ -152,10 +157,28 @@ figure figcaption a:active{
     margin-top: 30px;
     padding: 10px
   }
+
   #PrimeiraCaixa{height: 115px; overflow: auto;}
   #SegundaCaixa a img{width: 105px; margin: 30px 0px 40px 60px}
   #SegundaCaixa article{float: left;}
   #SegundaCaixa article h3{margin-top: 3px}
+  #MensagemEnviar form{font-family: Arial, sans-serif;}
+  #MensagemEnviar{display: none}
+  #MensagemEnviar form label{
+    border: 1px solid;
+    display: flex;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  #MensagemEnviar form textarea{
+    resize: none;
+    margin-top: 5px;
+    width: 99%;
+    height: 200px;
+
+  }
+  #btnForm{position: absolute; top:410px; right: 19%;} 
+
   #all_icones{
     width: 65%;
     height: 50px;
@@ -165,6 +188,7 @@ figure figcaption a:active{
     justify-content: space-around;
     align-items: center
   }
+
   #all_icones img{width: 42px;}
 
   /*----------PERFIL VENDEDOR-----------*/
@@ -178,7 +202,7 @@ figure figcaption a:active{
      #TopoVendedor h1{float: right; margin-right: 70px}
      #InfoVendedor{padding: 10px; width: 100%;}
      #InfoVendedor article h3{margin-top: 5px}
-     #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0}
+     #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
      #MenuVendedor ol li{display: inline;}
      #MenuVendedor ol li:first-child{border-right: 1px solid black;}
      #MenuVendedor ol li{
@@ -186,11 +210,11 @@ figure figcaption a:active{
        font-size: 16px;
        font-family: arial, sans-serif
       }
-      #FotosVendedor img, #ProdutosVendedor img{width: 156px;}
+      #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
 
       #FotosVendedor{margin-top: 15px; text-align: center}
-      #ProdutosVendedor{margin-top: 15px; display: none; text-align: center}
+      #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
 
-      #FotosVendedor a, #ProdutosVendedor a{padding: 35px 8px;border: 1px  dashed blue; margin: 0 0 0 8px; float: left; text-decoration: none}
-
+      #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px;border: 1px  dashed blue; margin: 0 0 0 8px; float: left; text-decoration: none}
+      #ProdutosVendedorL form{display: none}
   
