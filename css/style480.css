@@ -46,7 +46,6 @@ footer{display: none}
   display: flex;
   align-items: center;
   position: fixed;
-  top: 92%; 
   background-color: #f6dddf;
   height: 60px;
   width: 100%;
@@ -54,7 +53,7 @@ footer{display: none}
   #container main section nav ol li a{
       padding: 20px 8vw 20px 7vw; 
       color: black;
-      font-size: 17px;
+      font-size: 13px;
       text-decoration: none;
      font-family: 'Trebuchet MS', Arial, sans-serif    
   }
@@ -69,31 +68,8 @@ footer{display: none}
     background-color: #d1a7a7;
     color: white;
 }
-/*---------------SUBMENU---------------*/
-#container main section nav ol li #submenu{ 
-    position: absolute;
-    bottom:14.5vw;
-    right:0%;
-    background-color: #f6dddf;
-}
-
-#container main section nav ol li #submenu li{
-    padding: 27px 0px 20px 0px;
-}
-#container main section nav ol li #submenu li a{
-    padding: 26px 37px 20px 50px;
-    border-bottom: 1px solid;
-
-}
-#container main section nav ol li #submenu li .concerta{
-    padding-right: 52%;
-}
- #container main section nav ol li #submenu{display:none;}
-
 /*---------------CARROSSEL---------------*/
 #carrossel{ height: 232px;}
-/*---------------------enchendo de linguiça-------------*/
-
 
 /*---------------acima---------------*/
 
