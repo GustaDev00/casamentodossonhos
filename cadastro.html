@@ -1,40 +1,134 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        
-        <title>Login</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-        
-    </head>
-    <body>
-            <form action="cadastro.php" method="post" enctype="multipart/form-data">
-<section id="cadastro">
 
-   
-    <h2>Cadastre-se!</h2>
-    <input name="nome" class="text1" placeholder="noivo"  type="text" size="60">
-    <select> <option value="noivo">noivo</option><option value="noiva">noiva</option></select><br><br>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" href="css/default.css">
+
+  
+</head>
+
+<body>
+
+  <!-- multistep form -->
+<form id="msform" action="" method="post">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active"></li>
+    <li></li>
+  </ul>
+  <!-- caixa 1 -->
+  <fieldset>
+    <h2 class="fs-title">Cadastre - se</h2>
+    <h3 class="fs-subtitle">Esse é o passo 1</h3>
+      <input type="button" name="tipoC" class="cadastroE action-button" value="Casal" onclick="testee(2);">
+      <input type="button" name="tipoC" class="cadastroE action-button" value="Empresa" onclick="testee(1);">
+      
+      <!-- -------Aqui começa o cadastro do casal------ -->
+      <div class="cadastro_casal">
+          <input type="text" name="nomeCasal" placeholder="Nome" id="NomedoCasal" maxlength="30" required>
+          <select id="SelecaoTipoC" >
+              <option selected>Selecione</option>
+              <option value="Noivo" name="casalDefinicao">Noivo</option>
+              <option value="Noiva" name="casalDefinicao">Noiva</option>
+          </select>
+        <input type="email" name="emailCasal" placeholder="E-mail" required>
+          <input type="password" name="senhaCasal" placeholder="Senha" required>
+          <input type="password" name="confirma_senhaCasal" placeholder="Confirmar Senha" required>
+          <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data de Nascimento</label>
+          <input type="date" name="NascimentoCasal" required>
+      </div>
+      <!-- -------Aqui começa o cadastro da Empresa------ -->
+      <div class="cadastro_Empresa">
+          <input type="text" name="nomeEmpresa" placeholder="Nome Empresa" required>
+        <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
+          <input type="email" name="emailEmpresa" placeholder="E-mail" required>
+          <input type="password" name="senhaEmpresa" placeholder="Senha" required>
+          <input type="password" name="_confirmar_senhaEmpresa" placeholder="Confirmar Senha" required>     
+      </div>
+      <div id="viaC" style="display: none">
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="CEP" required>
+        <input name="rua" type="text" id="rua" size="60" placeholder="Rua" required>
+        <input name="bairro" type="text" id="bairro" size="40" placeholder="Bairro" required>
+        <input name="cidade" type="text" id="cidade" size="40" placeholder="Cidade" required>
+        <input name="uf" type="text" id="uf" size="2" placeholder="Estado" required>
+      </div>
+      <input id="proximo" style="display: none" type="button" name="next" class="next action-button" value="Proximo" >
+  </fieldset>
     
-    
-    <input name="email" class="text1" placeholder="E-mail" type="text" size="60"><br/><br>
-    <input name="senha" class="text1" placeholder="Inserir senha" type="password" size="60"><br/><br/>
-    <input name="confirmar senha" class="text1" placeholder="confirmar senha"  type="text" size="60"><br/><br><br>
-
-    <input name="bairro" class="text1" placeholder="bairro"  type="text" size="60"><br/><br>
-    <input name="cidade" class="text1" placeholder="cidade" type="text" size="60"><br/><br>
-    <input name="cpf" class="text1" placeholder="Inserir senha" type="celular" size="60"><br/><br/><br>
-    <label>Data de nascimento:</label><br>
-    <input name="" class="text1" placeholder=""  type="text" size="60"><br/>
-    <br><br> 
-
-        <a href="cadastro.php"><button type="submit">Proximo</button></a>
-   
-    <br>
-
-</section>
+    <!-- ------caixa 2 ----- -->
+    <fieldset>
+    <h2 class="fs-title">Quase lá</h2>
+    <h3 class="fs-subtitle">Esse é o passo 2</h3>
+        
+        <div id="quadro" >
+        <img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">
+        </div>
+        <input type=file id=imgChooser required>
+        <!-- --------segunda caixa do cadastro casal ----- -->
+    <div class="cadastro_casal">
+        <div id="infoColoca">
+        <label class="InfodoC definiTamanhoL">Casal</label>
+        <label class="InfodoC definiTamanhoL">Casal</label>
+        </div>
+        <input type="text" name="segundoCasal" placeholder="Nome do Parceiro(a)" id="segundoCasal" required>
+          <select>
+              <option value="Noivo" name="casalDefinicao2">Noivo</option>
+              <option value="Noiva" name="casalDefinicao2">Noiva</option>
+          </select>
+        <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data de Nascimento</label>
+          <input type="date" name="NascimentoCasal" required>
+        <br>
+        <hr><p style="font-family: arial, sans-serif; margin: 10px 0 10px 0"> Opcional</p><hr>
+        <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data do Casamento:</label>
+          <input type="date" name="NascimentoCasal" required>
+        
+      </div>
+      <!-- --------segunda caixa do cadastro empresa ----- -->
+      <div class="cadastro_Empresa">
+          <input type=tel placeholder="Celular ou telefone ex 11912345678" maxlength="11" style="font-size: 15px" required>
+          <select>
+            <option selected>Selecione a Categoria:
+            <option value="joias">Jóias
+            <option value="acessoria">Acessórias
+            <option value="cerimonialista">Cerimonialista
+            <option value="automóveis">Automóveis
+            <option value="fotografia">Fotografia
+            <option value="flores">Flores
+            <option value="lembrancinhas">Lembracinhas
+            <option value="luademel">Lua de Mel
+            <option value="musica">Dj/Música
+            <option value="salaodebeleza">Salão de Beleza
+            <option value="ternos">Ternos
+            <option value="vestidos">Vestidos
+            <option value="salaodefesta">Salão de Festa
+          </select>
+      </div>
+        <input type="button" name="previous" class="previous action-button" value="Previous" >
+    <input id="valor" type="submit" class="action-button" value="Enviar Cadastro" >
+  </fieldset>
+  <!--<fieldset>
+    <h2 class="fs-title">Personal Details</h2>
+    <h3 class="fs-subtitle">We will never sell it</h3>
+    <input type="text" name="fname" placeholder="First Name" >
+    <input type="text" name="lname" placeholder="Last Name" >
+    <input type="text" name="phone" placeholder="Phone" >
+    <textarea name="address" placeholder="Address"></textarea>
+    <input type="button" name="previous" class="previous action-button" value="Previous" >
+    <input type="submit" name="submit" class="submit action-button" value="Submit" >
+  </fieldset> -->
 </form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+  
+
+    <script  src="js/passopasso.js"></script>
+
 </body>
+
 </html>
