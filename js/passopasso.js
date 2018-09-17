@@ -17,35 +17,40 @@ function testee(x){
         $(".cadastro_Empresa").css("display","none");
     }
 }
-// funcao que remove o campo de folmulario dependendo da escolha acima
-$("#valor").click(function(){
-var submi =  $("#msform").attr("action");
-if(submi == "cadastroCasal.php"){
-    $(".cadastro_Empresa").remove();
-}else{
-    $(".cadastro_casal").remove();
-}
-$("#valor").submit();
-});
 
-// função que ira pegar o nome e o tipo do cadastrante
-$("#proximo").click(function(){
-var CTipo = $("#SelecaoTipoC option:selected").val(), CNome = $("#NomedoCasal").val();
-if(CTipo == "Selecione"){
-    CTipo = "Volte para selecionar";
-}else{}
-if(CNome == ""){
-    CNome = "Volte e defina o Nome";
-}
-$(".InfodoC:first-child").text(CNome);
-$(".InfodoC:Last-child").text(CTipo);
-});
+
+
+
 
 //Criando variaveis para troca a caixa 
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
-$(function(){  
+$(function(){
+    // função que ira pegar o nome e o tipo do cadastrante    
+    $("#proximo").click(function(){
+        var CTipo = $("#SelecaoTipoC option:selected").val(), CNome = $("#NomedoCasal").val();
+        if(CTipo == "Selecione"){
+            CTipo = "Volte para selecionar";
+        }else{}
+        if(CNome == ""){
+            CNome = "Volte e defina o Nome";
+        }
+        $(".InfodoC:first-child").text(CNome);
+        $(".InfodoC:Last-child").text(CTipo);
+        });
+
+        // funcao que remove o campo de folmulario dependendo da escolha acima
+$("#valor").click(function(){
+    var submi =  $("#msform").attr("action");
+    if(submi == "cadastroCasal.php"){
+        $(".cadastro_Empresa").remove();
+    }else{
+        $(".cadastro_casal").remove();
+    }
+    $("#valor").submit();
+    });
+    
     var TamanhoDocumento = $(window).height();
             TamanhoDocumento = parseInt(((TamanhoDocumento - 53)*100)/$(window).height()) + "%";
             $("#menu").css("top", TamanhoDocumento);
