@@ -1,18 +1,22 @@
-var x = 1;
-    $(function(){
-    
+   $(function(){
+        $("#Categoria_icones").css("display","none");
+        var x = 1;
+var TrocaLoja = 1;
+ $("#ClickLoja").click(function(){
+    if(TrocaLoja == 1){
+        $("#caixa_produtos").css("display","none");
+        $("#Categoria_icones").css("display","block");
+        TrocaLoja = 2;
+    } else{
+        $("#caixa_produtos").css("display","block");
+        $("#Categoria_icones").css("display","none");
+        TrocaLoja = 1;
+    }
+});
     var limite  = $('#caixa img').length * $('#caixa img').width() * -1;
     var largura = (limite * (-1)) + $('#caixa img').width();
     var PassaTamanho = "-=" + $('#caixa img').width() + "px";
-    $("#link").click(function(){
-        if(x == 1){ 
-            x = 2;
-            $("#submenu").show();
-            }else{
-                x = 1;
-                $("#submenu").hide();
-            }
-        });
+
         
         $('#caixa').append('<img>');
         $('#caixa img:last').attr('src','imagens/galeria1.jpeg');

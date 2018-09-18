@@ -4,7 +4,7 @@
  --ajustes: 100vw;
     --equilibro: 50vw;
 }
-html{scroll-behavior: smooth;}
+html{scroll-behavior:}
 
 #container header{
   background-color: #f6dddf;
@@ -109,6 +109,9 @@ figure figcaption a:active{
 	display:flex;
 	justify-content: center;
 	align-items:center;
+}
+#Categoria_icones a img{
+  width: 30%;
 }
  /* --------------------PERFIL CLIENTE--------------------*/
 
@@ -221,9 +224,6 @@ figure figcaption a:active{
       /*--------pagina de cadastro ------*/
       
 
-body {
-  background-color: antiquewhite
-}
 /*form styles*/
 #msform {
 width: 400px;
@@ -366,4 +366,54 @@ color: white;
 .cadastro_Empresa, .cadastro_casal{display: none}
 
 
-  
+  /*-------------------login.html-----------*/
+
+div.teste{
+  width: 336PX;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  }
+
+  .campo label{font-size: 22PX}
+  .campo form input{
+    padding: 10px;
+    border: 0px; 
+    border: 2px solid #f6dddf;
+    border-radius: 5px; 
+    border-bottom: 2px solid #FF757F;
+    background-color: white;
+    outline: none;
+    color: black
+  }
+
+  ::-webkit-input-placeholder {
+    color: black;
+ }
+ 
+ #btn_entrar{
+   border: 2px solid #f6dddf;
+   border-bottom: 2px solid #FF757F;
+   padding: 10px 40px 10px 40px;
+ }
+ #btn_entrar:hover, #btn_entrar:active{
+   border: 2px solid #FF757F;
+ }
+
+  #Campo_Login .teste a:last-child{
+    position: absolute;
+    top: 410PX;
+    left: calc(50% - 70PX);
+  }
+
+div.campo{
+  margin-top: 15px;
+}
+
+

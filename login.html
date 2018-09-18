@@ -8,30 +8,31 @@
         <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
         <link href="css/default.css" rel=stylesheet>
         <!-- Telas Responsivas -->
-        <link rel=stylesheet media="screen and (max-width:480px)" href="css/style480.css">
-        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="css/style760.css">
-        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="css/style1024.css">
         <!--<link rel=stylesheet media="screen and (min-width:1025px)" href="css/style1366.css">-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/javascript.js"></script>
 </head>
 
     
 
-<body>
-       <figure><img id="fundologin" src="imagens/fundo.png" title="fundo_login" >
-        <figcaption id="fig_inicial"><a href="index.html"> Voltar a pagina inical </a></figcaption></figure>
+<body style="background-color: #f6dddf">
+    <section id="Campo_Login">
+      
         <div class="teste">
             <img id="logologin" src="imagens/logo.png" title="logo_login">
         <div class="campo">
             <form action="verificarLogin.php" method="POST">
             <label>Entrar</label><br/><br/>
             <input type="text" placeholder="E-mail" name="email" required-size = ""> <br/><br/>
-
             <input type="password" placeholder="Insira sua Senha" name="Senha" required-size=""><br/><br/>
+
+            <input type="submit" value="Entrar" id="btn_entrar"> <br/><br/>
+            </form>
+        </div>        
+           <p>Ainda não possui uma conta?</p> <a href="cadastro.html"> cadastre - se</a><br>
+           <a href="index.html">Voltar a pagina inicial</a>
         </div>
-        <div class="botao">
-            <input type="submit" value="entrar"> <br/><br/>
-           <p>não é cadastrado?</p> <a href="cadastro.html"> cadstre - se</a></form>
-        </div>
-        </div>
+        
+    </section>
 </body>
 </html>

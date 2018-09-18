@@ -421,39 +421,6 @@ img.letra{
 }
 
 
-/*-------------------login.html-----------*/
-
-div.teste{
-    text-align: center;
-    Position: absolute;
-    top: 150px;
-    right: 10%;
-    left: 10%;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    }
-    #fundologin{
-        height: 100%;
-        width: 100%;
-    }
-    #fig_inicial {
-    color:white;
-    position: absolute;
-    top: 420px;
-    right: calc(50vw - 68px);
-}
-
-#logologin{
-    width: 75px;
-}
-div.campo{
-    margin-top: 15px;
-}
-    div.botao input:last-child{ 
-        margin-right: 80px
-        }
-
-
  /*---------------------------------------------ALL USER--------------------*/
 
  div.adm{
