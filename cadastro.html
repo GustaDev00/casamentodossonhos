@@ -16,9 +16,9 @@
 
   
 
-<body style="background-color: #f6dddf">
+<body style="background-color: #f6dddf" >
   <!-- multistep form -->
-<form id="msform" action="" method="post">
+<form id="msform" action="" method="post" enctype="multipart/form-data">
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active"></li>
@@ -51,7 +51,7 @@
         <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
           <input type="email" name="emailEmpresa" placeholder="E-mail" required>
           <input type="password" name="senhaEmpresa" placeholder="Senha" required>
-          <input type="password" name="_confirmar_senhaEmpresa" placeholder="Confirmar Senha" required>     
+          <input type="password" name="confirmar_senhaEmpresa" placeholder="Confirmar Senha" required>     
       </div>
       <div id="viaC" style="display: none">
         <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="CEP" required>
@@ -93,8 +93,8 @@
       </div>
       <!-- --------segunda caixa do cadastro empresa ----- -->
       <div class="cadastro_Empresa">
-          <input type=tel placeholder="Celular ou telefone ex 11912345678" maxlength="11" style="font-size: 15px" required>
-          <select>
+          <input type=tel name=telEmpresa placeholder="Celular ou telefone ex 11912345678" maxlength="11" style="font-size: 15px" required>
+          <select name=cate>
             <option selected>Selecione a Categoria:
             <option value="joias">Jóias
             <option value="acessoria">Acessórias

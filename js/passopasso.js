@@ -51,9 +51,7 @@ $("#valor").click(function(){
     $("#valor").submit();
     });
     
-    var TamanhoDocumento = $(window).height();
-            TamanhoDocumento = parseInt(((TamanhoDocumento - 53)*100)/$(window).height()) + "%";
-            $("#menu").css("top", TamanhoDocumento);
+
 // funcção proximo
 $(".next").click(function(){
 if(animating) return false;

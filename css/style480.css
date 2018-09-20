@@ -37,7 +37,7 @@
 /*----------------nfooter----------*/
 footer{display: none}
 /*---------------MENU FIXO---------------*/
-#container main section nav ol li{
+/*#container main section nav ol li{
   list-style: none;
 }
 
@@ -67,6 +67,30 @@ footer{display: none}
 #container main section nav ol li a:active{
     background-color: #d1a7a7;
     color: white;
+} */
+
+#container main section nav #menu{
+    list-style: none;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #f6dddf;
+}
+
+#container main section nav ol li a{
+    padding: 17px 8vw 20px 7vw;
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+}
+#container main section nav ol li .item.home{
+    border-right:1px solid black;
+}
+#container main section nav ol li .item.login{
+  border-left:1px solid black;
 }
 /*---------------CARROSSEL---------------*/
 #carrossel{ height: 232px;}

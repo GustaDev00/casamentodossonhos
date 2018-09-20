@@ -18,11 +18,12 @@ try{
         $bairroCasal = isset($_REQUEST['bairro'])?$_REQUEST['bairro']:null;
         $cidadeCasal = isset($_REQUEST['cidade'])?$_REQUEST['cidade']:null;
         $ufCasal = isset($_REQUEST['uf'])?$_REQUEST['uf']:null;
-        $imagemCasal = isset($_REQUEST['SImagem'])?$_REQUEST['SImagem']:null;
+        $imagemCasal = isset($_FILES['SImagem'])?$_FILES['SImagem']:null;
         $NomeParceiro = isset($_REQUEST['segundoCasal'])?$_REQUEST['segundoCasal']:null;
         $casalDefinicao2 = isset($_REQUEST['casalDefinicao2'])?$_REQUEST['casalDefinicao2']:null;
         $NascimentoCasal2 = isset($_REQUEST['NascimentoCasal2'])?$_REQUEST['NascimentoCasal2']:null;
         $DataCasal = isset($_REQUEST['DataCasal'])?$_REQUEST['DataCasal']:null;
+        
 
         if($nomeCasal == null or $casalDefinicao == null or $emailCasal == null 
         or $senhaCasal == null or $confirmaSenhaCasal == null or $NascimentoCasal == null 
@@ -50,8 +51,12 @@ try{
                 echo "location.href='cadastro.php'";
                 echo '</script>';
             }else{
-                $queryInsert = "INSERT INTO usuario(email, nome_usu, senha_usu, url_foto_usu)
-                         VALUES('$email', '$nome', '$senha','NADA')";
+                $queryInsert = "INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
+                nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
+                tipo_par_usu, nascimento_par_usu, data_casal)
+                         VALUES('$nomeCasal', '$casalDefinicao' ,'$emailCasal', '$senhaCasal', '$NascimentoCasal', '$cepCasal'
+                         , '$ruaCasal', '$bairroCasal', '$cidadeCasal', '$ufCasal', '$imagemCasal', '$NomeParceiro', '$casalDefinicao2'
+                         , '$NascimentoCasal2', '$DataCasal')";
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
                 //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
@@ -79,7 +84,8 @@ try{
     }
     
     
-    
+  
+  var_dump($imagemCasal);  
 } catch (Exception $ex) {
 
 }
