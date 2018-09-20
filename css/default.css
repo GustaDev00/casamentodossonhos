@@ -4,7 +4,7 @@
  --ajustes: 100vw;
     --equilibro: 50vw;
 }
-html{scroll-behavior:}
+html{scroll-behavior:smooth}
 
 #container header{
   background-color: #f6dddf;
@@ -409,7 +409,7 @@ div.teste{
   #Campo_Login .teste a:last-child{
     position: absolute;
     top: 410PX;
-    left: calc(50% - 70PX);
+    left: calc(49% - 70PX);
   }
 
 div.campo{
