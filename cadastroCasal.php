@@ -1,7 +1,7 @@
 <?php
 
 include_once './Db/daohelper.php';
-try{
+//try{
     if(empty($_POST)){
         echo'<script>';
         echo"location.href='index.html'";
@@ -24,7 +24,9 @@ try{
         $NascimentoCasal2 = isset($_REQUEST['NascimentoCasal2'])?$_REQUEST['NascimentoCasal2']:null;
         $DataCasal = isset($_REQUEST['DataCasal'])?$_REQUEST['DataCasal']:null;
         
-
+        echo $nomeCasal. "<br>". $casalDefinicao. "<br>". $cepCasal;
+    }
+/*
         if($nomeCasal == null or $casalDefinicao == null or $emailCasal == null 
         or $senhaCasal == null or $confirmaSenhaCasal == null or $NascimentoCasal == null 
         or $cepCasal == null or $ruaCasal == null or $bairroCasal == null 
@@ -88,4 +90,4 @@ try{
   var_dump($imagemCasal);  
 } catch (Exception $ex) {
 
-}
+} */
