@@ -18,3 +18,6 @@ tipo_par_usu varchar(60),
 nascimento_par_usu varchar(60),
 data_casal varchar(60)
 );
+
+select * from usuario;
+SELECT email_usu FROM usuario WHERE email_usu = "gustavo.felipe01@outlook.com";

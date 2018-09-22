@@ -1,7 +1,7 @@
 <?php
 
 include_once './Db/daohelper.php';
-//try{
+try{
     if(empty($_POST)){
         echo'<script>';
         echo"location.href='index.html'";
@@ -24,9 +24,7 @@ include_once './Db/daohelper.php';
         $NascimentoCasal2 = isset($_REQUEST['NascimentoCasal2'])?$_REQUEST['NascimentoCasal2']:null;
         $DataCasal = isset($_REQUEST['DataCasal'])?$_REQUEST['DataCasal']:null;
         
-        echo $nomeCasal. "<br>". $casalDefinicao. "<br>". $cepCasal;
-    }
-/*
+
         if($nomeCasal == null or $casalDefinicao == null or $emailCasal == null 
         or $senhaCasal == null or $confirmaSenhaCasal == null or $NascimentoCasal == null 
         or $cepCasal == null or $ruaCasal == null or $bairroCasal == null 
@@ -40,8 +38,34 @@ include_once './Db/daohelper.php';
             echo "location.href='cadastro.html'";
             echo '</script>';
         }else{
+            if ( isset( $imagemCasal[ 'name' ] ) && $imagemCasal[ 'error' ] == 0 ) {
+                $arquivo_tmp = $imagemCasal[ 'tmp_name' ];
+                $nome = $imagemCasal[ 'name' ];
+                $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
+                $extensao = strtolower ( $extensao );
+                
+                }else{
+                        echo 'Não foi possive subir sua imagem, Tente novamente.<br />';
+                }
+             
+                // Somente imagens, .jpg;.jpeg;.gif;.png
+                // Estão enfileradas of formatos permitidos e separados por ; 
+                // Isso serve apenas para poder pesquisar dentro desta String
+                if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+                    
+                // Cria um nome único para esta imagem, Evita nomes com acentos, espaços e caracteres
+                    $novoNome = uniqid ( time () ) . '.' . $extensao;
+                    $destino = 'imagem_usuario / ' . $novoNome;
+                    
+                    }else{
+                    echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
+                    }
+            
+                     @move_uploaded_file ( $arquivo_tmp, $destino );
+                        echo ' <img src="' . $destino . '" >';
+
             $conn = connection();
-            $verificar = "SELECT email FROM usuario WHERE email = '$email'";
+            $verificar = "SELECT email_usu FROM usuario WHERE email_usu = '$email'";
             $querySelect = executeSelect($conn, $verificar);
             
             if($querySelect->rowCount() > 0){
@@ -50,7 +74,7 @@ include_once './Db/daohelper.php';
                 echo '</script>';
 
                 echo '<script>';
-                echo "location.href='cadastro.php'";
+                echo "location.href='cadastro.html'";
                 echo '</script>';
             }else{
                 $queryInsert = "INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
@@ -87,7 +111,7 @@ include_once './Db/daohelper.php';
     
     
   
-  var_dump($imagemCasal);  
-} catch (Exception $ex) {
+  
+}catch (Exception $ex) {
 
-} */
+}
