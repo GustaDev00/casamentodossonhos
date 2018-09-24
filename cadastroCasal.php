@@ -62,10 +62,10 @@ try{
                     }
             
                      @move_uploaded_file ( $arquivo_tmp, $destino );
-                        echo ' <img src="' . $destino . '" >';
+                        //echo ' <img src="' . $destino . '" >';
 
             $conn = connection();
-            $verificar = "SELECT email_usu FROM usuario WHERE email_usu = '$email'";
+            $verificar = "SELECT email_usu FROM usuario WHERE email_usu = '$emailCasal'";
             $querySelect = executeSelect($conn, $verificar);
             
             if($querySelect->rowCount() > 0){
@@ -81,7 +81,7 @@ try{
                 nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
                 tipo_par_usu, nascimento_par_usu, data_casal)
                          VALUES('$nomeCasal', '$casalDefinicao' ,'$emailCasal', '$senhaCasal', '$NascimentoCasal', '$cepCasal'
-                         , '$ruaCasal', '$bairroCasal', '$cidadeCasal', '$ufCasal', '$imagemCasal', '$NomeParceiro', '$casalDefinicao2'
+                         , '$ruaCasal', '$bairroCasal', '$cidadeCasal', '$ufCasal', '$destino', '$NomeParceiro', '$casalDefinicao2'
                          , '$NascimentoCasal2', '$DataCasal')";
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
