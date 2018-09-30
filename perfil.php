@@ -4,31 +4,50 @@ require_once './Db/daohelper.php';
 session_start();
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 	//header("Location: login_usuarios/login.php");
-	//exit;
+    //exit;
+    $email = $_SESSION["email"];
+    $senha = $_SESSION["senha"];
     $pdo= connection();
-
-    $verificar = ("SELECT * FROM USUARIO");
-    
-    //    $validarlogin->bindValue(":email", $_POST['email']);
-    //    $validarlogin->bindValue(":senha", md5($_POST['senha']));
-    //    $validarlogin->execute();
-    $validarLogin = executeSelect($pdo, $verificar);
-    $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
-    $id = $fetch->cod_usu;
-    
-    if(($_SESSION["id"] = $id) == true){
-        $select = "select * from usuario where cod_usu = '$id'";
+    if($_SESSION["defini"] == 2){
+        $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
         $nome = $fetch2->nome_usu;
         $senha = $fetch2->senha_usu;
-        $email = $fetch2->email;
-        echo "Seu id é: $id <br>";
+        $email = $fetch2->email_usu;
+        $imagemL = $fetch2->foto_usu;
+        echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
+        //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
+
+    }else if($_SESSION["defini"] == 1){
+        $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
+        $execute = executeSelect($pdo, $select);
+        $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
+        $nome = $fetch2->nome_empre;
+        $senha = $fetch2->senha_empre;
+        $email = $fetch2->email_empre;
+        $imagemL = $fetch2->foto_empre;
+        echo "Seu id é: '{$_SESSION["id"]}' <br>";
+        echo "Seu email é: $email <br>";
+        echo "Seu nome é: $nome <br>";
+        echo "Sua senha é: $senha <br>";
+        //echo ' <img src="' . $imagemL . '" >'. "<br>";
+    }else if ($_SESSION["defini"] == 3){
+        $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
+        $execute = executeSelect($pdo, $select);
+        $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
+        $nome = $fetch2->nome_adm;
+        $senha = $fetch2->senha_adm;
+        $email = $fetch2->email_adm;
+        echo "Seu id é: '{$_SESSION["id"]}' <br>";
+        echo "Seu email é: $email <br>";
+        echo "Seu nome é: $nome <br>";
+        echo "Sua senha é: $senha <br>";
+
     }
-    echo "VOCE ESTÁ LOGADO E ESTÁ NO PERFIL SEU MERDA";
     ?>
 
     <form action="deslogar.php">

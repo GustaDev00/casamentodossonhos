@@ -62,7 +62,7 @@ try{
                     }
             
                      @move_uploaded_file ( $arquivo_tmp, $destino );
-                        //echo ' <img src="' . $destino . '" >';
+                        //
 
             $conn = connection();
             $verificar = "SELECT email_usu FROM usuario WHERE email_usu = '$emailCasal'";

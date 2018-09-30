@@ -11,7 +11,7 @@ try{
         $cnpjEmpresa = isset($_REQUEST['cnpjEmpresa'])?$_REQUEST['cnpjEmpresa']:null;
         $emailEmpresa = isset($_REQUEST['emailEmpresa'])?$_REQUEST['emailEmpresa']:null;
         $senhaEmpresa = isset($_REQUEST['senhaEmpresa'])?$_REQUEST['senhaEmpresa']:null;
-        $confirmaSenhaEmpresa = isset($_REQUEST['confirma_senhaEmpresa'])?$_REQUEST['confirma_senhaEmpresa']:null;
+        $confirmaSenhaEmpresa = isset($_REQUEST['confirmar_senhaEmpresa'])?$_REQUEST['confirmar_senhaEmpresa']:null;
         $cepEmpresa = isset($_REQUEST['cep'])?$_REQUEST['cep']:null;
         $ruaEmpresa = isset($_REQUEST['rua'])?$_REQUEST['rua']:null;
         $bairroEmpresa = isset($_REQUEST['bairro'])?$_REQUEST['bairro']:null;
@@ -20,6 +20,8 @@ try{
         $imagemEmpresa = isset($_FILES['SImagem'])?$_FILES['SImagem']:null;
         $telEmpresa = isset($_REQUEST['telEmpresa'])?$_REQUEST['telEmpresa']:null;
         $categoriaEmpresa = isset($_REQUEST['cate'])?$_REQUEST['cate']:null;
+    }
+
 
         if($nomeEmpresa == null or $cnpjEmpresa == null or $emailEmpresa == null 
         or $senhaEmpresa == null or $confirmaSenhaEmpresa == null or $cepEmpresa == null
@@ -34,8 +36,35 @@ try{
             echo "location.href='cadastro.html'";
             echo '</script>';
         }else{
+
+            
+            if ( isset( $imagemEmpresa[ 'name' ] ) && $imagemEmpresa[ 'error' ] == 0 ) {
+                $arquivo_tmp = $imagemEmpresa[ 'tmp_name' ];
+                $nome = $imagemEmpresa[ 'name' ];
+                $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
+                $extensao = strtolower ( $extensao );
+                
+                }else{
+                        echo 'Não foi possive subir sua imagem, Tente novamente.<br />';
+                }
+             
+                // Somente imagens, .jpg;.jpeg;.gif;.png
+                // Estão enfileradas of formatos permitidos e separados por ; 
+                // Isso serve apenas para poder pesquisar dentro desta String
+                if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+                    
+                // Cria um nome único para esta imagem, Evita nomes com acentos, espaços e caracteres
+                    $novoNome = uniqid ( time () ) . '.' . $extensao;
+                    $destino = 'imagem_usuario / ' . $novoNome;
+                    
+                    }else{
+                    echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
+                    }
+            
+                     @move_uploaded_file ( $arquivo_tmp, $destino );
+
             $conn = connection();
-            $verificar = "SELECT email FROM usuario WHERE email = '$email'";
+            $verificar = "SELECT email_empre FROM empresa WHERE email_empre = '$emailEmpresa'";
             $querySelect = executeSelect($conn, $verificar);
             
             if($querySelect->rowCount() > 0){
@@ -44,17 +73,17 @@ try{
                 echo '</script>';
 
                 echo '<script>';
-                echo "location.href='cadastro.php'";
+                echo "location.href='cadastro.html'";
                 echo '</script>';
             }else{
-                $queryInsert = "INSERT INTO usuario(nome_usu, cnpj_usu, email_usu, senha_usu, 
-                cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, tel_usu,  
-                categoria_usu)
+                $queryInsert = "INSERT INTO empresa(nome_empre, cnpj_empre, email_empre, senha_empre, 
+                cep_empre,  rua_empre, bairro_empre, cidade_empre, estado_empre, foto_empre, tel_empre,  
+                categoria_empre)
                          VALUES('$nomeEmpresa', '$cnpjEmpresa', '$emailEmpresa', '$senhaEmpresa', '$cepEmpresa'
-                         , '$ruaEmpresa', '$bairroEmpresa', '$cidadeEmpresa', '$ufEmpresa', '$imagemEmpresa',
+                         , '$ruaEmpresa', '$bairroEmpresa', '$cidadeEmpresa', '$ufEmpresa', '$destino',
                           '$telEmpresa', '$categoriaEmpresa')";
                 if(executeQuery($conn, $queryInsert)){
-                $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
+                $querySelect2 = executeSelect($conn, "SELECT cod_empresa FROM empresa ORDER BY cod_empresa DESC LIMIT 1");
                 //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
                 //$ultimoCod = $cod_usu->cod_usuario;
                 session_start();
@@ -66,13 +95,15 @@ try{
                     echo "location.href='login.html'";
                     echo '</script>';
                 }else{
+                    
                     echo '<script>';
                         echo 'alert("Ops, erro ao cadastrar")';
                         echo '</script>';
-
+                
                         echo '<script>';
-                        echo "location.href='index.php'";
+                        echo "location.href='index.html'";
                         echo '</script>';
+                        
                 }
             }
             
@@ -81,8 +112,8 @@ try{
     
     
   
-  var_dump($imagemEmpresa);  
 
-} catch (Exception $ex) {
 
-}
+    catch (Exception $ex) {
+
+} 
