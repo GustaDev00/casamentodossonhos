@@ -28,8 +28,8 @@
 
     <div class="top" > 
         <div  id="irineu">
-          <img class="perfil" src="imagens/galeria3.jpeg">   
-          <button>Alterar</button>   
+          <img class="perfil" id="imagem2" src="<?php echo $imagemL?>">   
+          <button action="attImgm.php">Alterar</button>   
         </div> 
     
     <div class="java">
@@ -42,7 +42,7 @@
        </div>        
 
        <div class="f1">
-            <p class="casal">Gabriela e Julio</p>    <br>    <br>  
+            <p class="casal"></p>    <br>    <br>  
             <div id="um">                                         
                     
                         <div class="tipo">
@@ -64,11 +64,11 @@
        </div>
 
                     <div class="f2">
-                            <p class="casal">Gabriela e Julio</p><br>
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p><br>
                          
                             <div class="princ">
                                    <label id="prin">Dia:</label>
-                                   <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10"> 
+                                   <input type="number" class="form" id="" placeholder="<?php echo $diaCas?>" size="10"> 
                                    <a href="" class="edit">Editar</a>
                                    <br>
                                                                                     

@@ -25,16 +25,20 @@
             <main>
                 <section id="vendedor">
                  <div id="TopoVendedor">
-                    <img src="imagens/galeria2.jpeg" width="102px">
-                    <h1>Nome Empresa</h1>
+                    <img src="<?php echo $imagemL?>" width="102px">
+                    <h1><?php echo $nome ?></h1>
                  </div>
                  <div id="InfoVendedor">
                      <h2>Description</h2>
                      <article>
-                       <h3>Funcção</h3>
-                       <h3>Telefone</h3>
-                       <h3>Endereço</h3>
-                       <a href="#"><h3>Site</h3></a>  
+                       <h3><?php echo $funcE ?></h3>                       
+                       <h3>Endereço:</h3>
+                       <h1>Estado: <?php echo $estadoE?></h1>
+                       <h1>Cidade: <?php echo $cidadeE?></h1>
+                       <h1>Bairro: <?php echo $bairroE?></h1>
+                       <h1>Rua: <?php echo $ruaE?></h1>
+                       <h1>Telefone: <?php echo $telE?></h1>
+                       <a href="#"><h3>Site Empresa</h3></a>  
                      </article>
                  </div>
                  <div id="MenuVendedor">

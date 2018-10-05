@@ -1,6 +1,7 @@
 <?php
 
 include_once './Db/daohelper.php';
+include_once 'funcoes.php';
 try{
     if(empty($_POST)){
         echo'<script>';
@@ -8,7 +9,7 @@ try{
         echo '</script>';
     }else{
         $nomeEmpresa = isset($_REQUEST['nomeEmpresa'])?$_REQUEST['nomeEmpresa']:null;
-        $cnpjEmpresa = isset($_REQUEST['cnpjEmpresa'])?$_REQUEST['cnpjEmpresa']:null;
+        $cnpj = isset($_REQUEST['cnpjEmpresa'])?$_REQUEST['cnpjEmpresa']:null;
         $emailEmpresa = isset($_REQUEST['emailEmpresa'])?$_REQUEST['emailEmpresa']:null;
         $senhaEmpresa = isset($_REQUEST['senhaEmpresa'])?$_REQUEST['senhaEmpresa']:null;
         $confirmaSenhaEmpresa = isset($_REQUEST['confirmar_senhaEmpresa'])?$_REQUEST['confirmar_senhaEmpresa']:null;
@@ -23,7 +24,7 @@ try{
     }
 
 
-        if($nomeEmpresa == null or $cnpjEmpresa == null or $emailEmpresa == null 
+        if($nomeEmpresa == null or $cnpj == null or $emailEmpresa == null 
         or $senhaEmpresa == null or $confirmaSenhaEmpresa == null or $cepEmpresa == null
          or $ruaEmpresa == null or $bairroEmpresa == null or $cidadeEmpresa == null
           or $ufEmpresa == null or $imagemEmpresa == null 
@@ -64,22 +65,33 @@ try{
                      @move_uploaded_file ( $arquivo_tmp, $destino );
 
             $conn = connection();
-            $verificar = "SELECT email_empre FROM empresa WHERE email_empre = '$emailEmpresa'";
+            $verificar = "SELECT * FROM empresa WHERE email_empre = '$emailEmpresa' or cnpj_empre = '$cnpj'";
             $querySelect = executeSelect($conn, $verificar);
             
             if($querySelect->rowCount() > 0){
                 echo '<script>';
-                echo 'alert("O email que você digitou ja esta cadastrado!")';
+                echo 'alert("O email ou Cnpj que você digitou ja esta cadastrado!")';
                 echo '</script>';
 
                 echo '<script>';
                 echo "location.href='cadastro.html'";
                 echo '</script>';
+               
             }else{
+                validar_cnpj($cnpj);
+           
+            if($cnpj == false){
+                echo '<script>';
+                echo 'alert("Cnpj Inválido!!!")';
+                echo '</script>';
+                echo '<script>';
+                echo "location.href='cadastro.html'";
+                echo '</script>';
+}else{
                 $queryInsert = "INSERT INTO empresa(nome_empre, cnpj_empre, email_empre, senha_empre, 
                 cep_empre,  rua_empre, bairro_empre, cidade_empre, estado_empre, foto_empre, tel_empre,  
                 categoria_empre)
-                         VALUES('$nomeEmpresa', '$cnpjEmpresa', '$emailEmpresa', '$senhaEmpresa', '$cepEmpresa'
+                         VALUES('$nomeEmpresa', '$cnpj', '$emailEmpresa', '$senhaEmpresa', '$cepEmpresa'
                          , '$ruaEmpresa', '$bairroEmpresa', '$cidadeEmpresa', '$ufEmpresa', '$destino',
                           '$telEmpresa', '$categoriaEmpresa')";
                 if(executeQuery($conn, $queryInsert)){
@@ -106,9 +118,13 @@ try{
                         
                 }
             }
-            
         }
+
     }
+            }
+            
+      
+    
     
     
   
