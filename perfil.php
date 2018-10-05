@@ -20,6 +20,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
+        include_once 'perfil_clienteL.html?perfil=12';
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
     }else if($_SESSION["defini"] == 1){
@@ -34,6 +35,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
+        include_once 'perfil_vendedorL.html';
         //echo ' <img src="' . $imagemL . '" >'. "<br>";
     }else if ($_SESSION["defini"] == 3){
         $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
