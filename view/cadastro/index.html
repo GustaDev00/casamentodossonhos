@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel=stylesheet type="text/css" media="screen and (max-width:480px)" href="../_css/style480.css">   
+<link rel=stylesheet type="text/css" media="screen and (min-width:481px) and (max-width:768px)" href="../_css/style760.css">  
+<link rel=stylesheet type="text/css" media="screen and (min-width:769px) and (max-width:1024px)" href="../_css/style1024.css">  
+<link rel=stylesheet type="text/css" media="screen and (min-width:1025px)" href="../_css/style1366.css">  
+<link rel="stylesheet" type="text/css" href="../_css/default.css">
+<script src="../_js/jquery-3.3.1.min.js"></script>
+<script src='../_js/jquery.min.js'></script>
+<script src='../_js/jquery.easing.min.js'></script>
+<script  src="../_js/passopasso.js"></script>
+</head>
+
+  
+
+<body style="background-color: #f6dddf" >
+  <!-- multistep form -->
+<form id="msform" action="" method="post" enctype="multipart/form-data">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active"></li>
+    <li></li>
+  </ul>
+  <!-- caixa 1 -->
+  <fieldset>
+    <h2 class="fs-title">Cadastre - se</h2>
+    <h3 class="fs-subtitle">Esse é o passo 1</h3>
+      <input type="button" name="tipoC" class="cadastroE action-button" value="Casal" onclick="testee(2);">
+      <input type="button" name="tipoC" class="cadastroE action-button" value="Empresa" onclick="testee(1);">
+      
+      <!-- -------Aqui começa o cadastro do casal------ -->
+      <div class="cadastro_casal">
+          <input type="text" name="nomeCasal" placeholder="Nome" id="NomedoCasal" maxlength="30" required>
+          <select id="SelecaoTipoC" name="casalDefinicao">
+              <option selected>Selecione</option>
+              <option value="Noivo">Noivo</option>
+              <option value="Noiva">Noiva</option>
+          </select>
+        <input type="email" name="emailCasal" placeholder="E-mail" required>
+          <input type="password" name="senhaCasal" placeholder="Senha" required>
+          <input type="password" name="confirma_senhaCasal" placeholder="Confirmar Senha" required>
+          <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data de Nascimento</label>
+          <input type="date" name="NascimentoCasal" required>
+      </div>
+      <!-- -------Aqui começa o cadastro da Empresa------ -->
+      <div class="cadastro_Empresa">
+          <input type="text" name="nomeEmpresa" placeholder="Nome Empresa" required>
+        <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
+          <input type="email" name="emailEmpresa" placeholder="E-mail" required>
+          <input type="password" name="senhaEmpresa" placeholder="Senha" required>
+          <input type="password" name="confirmar_senhaEmpresa" placeholder="Confirmar Senha" required>     
+      </div>
+      <div id="viaC" style="display: none">
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="CEP" required>
+        <input name="rua" type="text" id="rua" size="60" placeholder="Rua" required>
+        <input name="bairro" type="text" id="bairro" size="40" placeholder="Bairro" required>
+        <input name="cidade" type="text" id="cidade" size="40" placeholder="Cidade" required>
+        <input name="uf" type="text" id="uf" size="2" placeholder="Estado" required>
+      </div>
+      <input id="proximo" style="display: none" type="button" name="next" class="next action-button" value="Proximo" >
+  </fieldset>
+    
+    <!-- ------caixa 2 ----- -->
+    <fieldset>
+    <h2 class="fs-title">Quase lá</h2>
+    <h3 class="fs-subtitle">Esse é o passo 2</h3>
+        
+        <div id="quadro" >
+        <img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">
+        </div>
+        <input type=file id=imgChooser name=SImagem>
+        <!-- --------segunda caixa do cadastro casal ----- -->
+    <div class="cadastro_casal">
+        <div id="infoColoca">
+        <label class="InfodoC definiTamanhoL">Casal</label>
+        <label class="InfodoC definiTamanhoL">Casal</label>
+        </div>
+        <input type="text" name="segundoCasal" placeholder="Nome do Parceiro(a)" id="segundoCasal" required>
+          <select name="casalDefinicao2">
+              <option value="Noivo">Noivo</option>
+              <option value="Noiva">Noiva</option>
+          </select>
+        <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data de Nascimento</label>
+          <input type="date" name="NascimentoCasal2" required>
+        <br>
+        <hr><p style="font-family: arial, sans-serif; margin: 10px 0 10px 0"> Opcional</p><hr>
+        <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data do Casamento:</label>
+          <input type="date" name="DataCasal">
+        
+      </div>
+      <!-- --------segunda caixa do cadastro empresa ----- -->
+      <div class="cadastro_Empresa">
+          <input type=tel name=telEmpresa placeholder="Celular ou telefone ex 11912345678" maxlength="11" style="font-size: 15px" required>
+          <select name=cate>
+            <option selected>Selecione a Categoria:
+            <option value="joias">Jóias
+            <option value="acessoria">Acessórias
+            <option value="cerimonialista">Cerimonialista
+            <option value="automóveis">Automóveis
+            <option value="fotografia">Fotografia
+            <option value="flores">Flores
+            <option value="lembrancinhas">Lembracinhas
+            <option value="luademel">Lua de Mel
+            <option value="musica">Dj/Música
+            <option value="salaodebeleza">Salão de Beleza
+            <option value="ternos">Ternos
+            <option value="vestidos">Vestidos
+            <option value="salaodefesta">Salão de Festa
+          </select>
+      </div>
+        <input type="button" name="previous" class="previous action-button" value="Voltar" >
+    <input id="valor" type="submit" class="action-button" value="Enviar Cadastro" >
+  </fieldset>
+  <!--<fieldset>
+    <h2 class="fs-title">Personal Details</h2>
+    <h3 class="fs-subtitle">We will never sell it</h3>
+    <input type="text" name="fname" placeholder="First Name" >
+    <input type="text" name="lname" placeholder="Last Name" >
+    <input type="text" name="phone" placeholder="Phone" >
+    <textarea name="address" placeholder="Address"></textarea>
+    <input type="button" name="previous" class="previous action-button" value="Previous" >
+    <input type="submit" name="submit" class="submit action-button" value="Submit" >
+  </fieldset> -->
+</form>
+</body>
+</html>
