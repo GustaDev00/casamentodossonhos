@@ -18,12 +18,13 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $diaCas = $fetch2->data_casal; 
         $email = $fetch2->email_usu;
         $imagemL = $fetch2->foto_usu;
-        include ("perfil_clienteL.html");
+        
        /* echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
         */
+        include_once 'perfil_clienteL.html';
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
     }else if($_SESSION["defini"] == 1){
@@ -38,12 +39,14 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $telE = $fetch2->tel_empre;
         $funcE = $fetch2->categoria_empre;
         $imagemL = $fetch2->foto_empre;
-        include ("perfil_vendedorL.html");
+        
         /*echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
         //echo ' <img src="' . $imagemL . '" >'. "<br>";*/
+        include_once 'perfil_vendedorL.html';
+        //echo ' <img src="' . $imagemL . '" >'. "<br>";
     }else if ($_SESSION["defini"] == 3){
         $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
