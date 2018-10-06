@@ -492,5 +492,12 @@ font-size: 2.5vw;
      }
 
     h3{
-       font-size:  2.5vw;
-     }
+       font-size:  2.5vw; }
+
+      /* nao logado*/
+
+   #prod{float: left }
+   #prod img{
+    width: 30.5%;
+    margin-top: 10px;   
+    margin-left: 1%;}

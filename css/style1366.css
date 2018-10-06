@@ -475,7 +475,7 @@ input.form{
   font-size: 140%;   
 }
 
-/*----------PERFIL VENDEDOR-----------*/  
+/*----------PERFIL VENDEDOR -----------*/  
 #TopoVendedor h1{ 
   float: right;
   margin-right: 30%;
@@ -519,3 +519,11 @@ footer{
   h3{
      font-size:  2.5vw;
    }
+   
+      /* nao logado*/
+
+      #prod{float: left }
+      #prod img{       
+       width: 24%;
+       margin-top: 10px;
+       margin-left: 0.5%;}

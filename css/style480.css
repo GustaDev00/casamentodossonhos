@@ -507,7 +507,7 @@ button.pes{
 
 /*----------PERFIL VENDEDOR-----------*/
 
- #TopoVendedor h1{float: right; margin-right: 90px; font-size: 2.5vw;}
+ #TopoVendedor h1{float: right; margin-right: 97px; font-size: 2.5vw;}
  
 
 
@@ -545,3 +545,11 @@ li#uto{
   h3{
      font-size:  2vw;
    }
+
+   /* nao logado*/
+
+   #prod{margin-left: 3% }
+   #prod img{
+    width: 152px;
+    margin-top: 10px;
+    margin-left: 1%;  }
