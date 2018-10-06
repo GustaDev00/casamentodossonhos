@@ -48,18 +48,27 @@
                         <div class="tipo">
                             <p>Presente: Status: </p>                                    
                         </div> <br>
+                        <?php 
+                    $r = 0;
+                    while($r < count($dadosPres)){
+                        
+                      
+                 ?>  
                     <div class="l1">
                             <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                      <a class="pres"> Geladeira</a> 
-                     <a class="co">Confirmado</a>                                                        
-                            <INPUT type="button" class="cma" id="ma">Excluir</button>                               
+                            <form action="deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
+                     <a class="co">Confirmado</a>  
+                     <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                      
+                            <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
                     </div>                                                                             
-                                                      
+                    <?php  $r++; } ?>                                 
                 </div> <br><hr class="w">  
                 <form action="ListaPresente.php" method="post" id="campoAdd">
-                    <Input type="text" name="Nomepresente">
+                    <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente">
+                    <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira
+                    <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00
                     <Input type="submit" value="enviar" id="enviandoAdd">
-                    </Form>     
+                    </Form>    
                 <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>                          
        </div>
 
