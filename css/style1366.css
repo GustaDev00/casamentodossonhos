@@ -474,3 +474,48 @@ input.form{
   margin-left: -6px;
   font-size: 140%;   
 }
+
+/*----------PERFIL VENDEDOR-----------*/  
+#TopoVendedor h1{ 
+  float: right;
+  margin-right: 30%;
+  font-size: 3.2vw;
+}
+
+#tv{
+width:25%;
+}
+li#oto{ padding: 5px 21% 5px 21%;
+  font-size:  2.5vw;
+  font-family: arial, sans-serif
+}
+
+li#uto{
+  padding: 5px 15% 5px 15%;
+  font-size:  2.5vw;
+  font-family: arial, sans-serif
+
+}
+footer{
+  display: none;}
+
+  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
+
+  #FotosVendedor{margin-top: 15px; text-align: center}
+  #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
+
+  #FotosVendedor a, #ProdutosVendedorL a{
+    padding: 60px 12px;
+    border: 1px  dashed blue;
+    margin: 0 0 0 8px; float: left;
+    text-decoration: none; width: 22%;
+    font-size:  2.5vw;}
+
+  #ProdutosVendedorL form{display: none}
+
+  div#InfoVendedor h2{
+    font-size: 3.2vw; }
+
+  h3{
+     font-size:  2.5vw;
+   }
