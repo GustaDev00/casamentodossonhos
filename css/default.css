@@ -139,23 +139,26 @@ figure figcaption a:active{
   #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
   #SobreProduto{
     color:#5E5E5E;
-    font-family: Arial, Helvetica, sans-serif
-    }
-  #SobreProduto h1{font-size: 32px;}
+    font-family: Arial, Helvetica, sans-serif;  
+  }
+
   #valorP{
     display: flex;
-    margin-top: 10px;
+    margin-top: 4%;
     justify-content:space-around
     }
-  #valorP a{
-    padding:10px;
+    #valorP h2{
+    margin-top: 1%
+      }
+  #valorP a{    
+    padding:2.5%;
     background-color: #169BD5;
     color: white;
     border-radius: 5px;
     text-decoration: none
   }
   #descrip_produto{
-    width: 100%;
+    width: 104%;
     border: 1px solid black;
     margin-top: 30px;
     padding: 10px
@@ -183,6 +186,7 @@ figure figcaption a:active{
   #btnForm{position: absolute; top:410px; right: 19%;} 
 
   #all_icones{
+    margin-top: 1.5%;
     width: 65%;
     height: 50px;
     background-color: #f6dddf;
@@ -415,4 +419,34 @@ div.campo{
   margin-top: 15px;
 }
 
+
+  /*empresa*/
+
+  .ad{
+    margin-left: 8px;
+    padding: 0 
+}
+/*---------------------------------------------ALL USER--------------------*/
+
+div.adm{
+  margin-left: 3%;
+  margin-top: 3%;
+}
+img.abc{
+   width: 26%;
+   margin-top: 2%;
+   margin-left: 1%;
+   margin-right: 1%;
+   border-radius: 100%;
+   border-style: dashed;
+   padding: 1%;
+   border-color: #595959;
+   border-width: 0.6vw;
+}
+#ch{
+  margin-left: 3%; 
+  margin-top: 2%; 
+  padding-right: 20%;
+  margin-right: 10px;
+}
 

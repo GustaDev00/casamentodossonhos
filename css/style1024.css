@@ -452,7 +452,7 @@ font-size: 2.5vw;
 .pri{
   background-color:pink;
   border:solid grey 1px ;    
-  height: 6vw; 
+  height: 4vw;
   width: 33.6%;
   margin-left: -6px;
   font-size: 120%;   
@@ -511,3 +511,40 @@ footer{
       #prod img{
        width: 30.5%;
        margin: 1%;}
+
+       
+ /*---------------------------------------------ALL USER--------------------*/
+ .pes{
+  margin-top: 0px;
+  float: right;  
+  border-radius: 10px;
+  padding: 1% 2% 1% 2%;
+  font-size: 3vw;
+  border-color: pink;
+  background-color: pink;
+  }
+
+      
+  .fil{
+    width: 14%;
+  }
+  
+  .x{width: 10%; float: right}
+  
+  div.camp{
+    margin:2%;
+    padding: 0% 2% 2% 0%;
+  }
+  
+  #yz{
+    margin-left: 3%; 
+    margin-top: 2%; 
+    padding-right: 20%;
+    width: 400px;
+    height: 40px;
+    font-size: 2vw
+  }
+
+  .cli{
+    font-size: 1.5vw
+}
