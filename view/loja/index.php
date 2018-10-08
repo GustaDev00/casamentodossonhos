@@ -3,14 +3,14 @@
         echo "usuario logado";
         $footer = "roda logado";       
     }else{
-        echo "deslogado";
-        $footer = "roda deslogado";        
+        include_once '../header.html';
+        $footer = '../footer.html';        
     }
 
         include_once 'listaproduto.php';
         include_once 'index.html';
        
-        echo $footer;
+        include_once $footer;
             
 
       

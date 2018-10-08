@@ -37,7 +37,6 @@ $pagina = 1;
         }
         
     }
-    
 }catch (Exception $ex) {
  $ex = "nao esta pegando amiguinho";
     echo $ex;

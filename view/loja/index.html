@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-
-
-        <title>Casamento dos Sonhos</title>
-        <meta charset=UTF-8>
-        <meta name=viewport content="width=device-width, initial-scale=1.0">
-        <meta name=description content="Uma maneira simples de fazer seu casamento">
-        <meta name=keywords content="Casamento">
-        <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
-        <link href="../_css/default.css" rel=stylesheet>
-        <!-- Telas Responsivas -->
-        <link rel=stylesheet media="screen and (max-width:480px)" href="../_css/style480.css">
-        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="../_css/style760.css">
-        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="../_css/style1024.css">
-        <link rel=stylesheet media="screen and (min-width:1025px)" href="../_css/style1366.css">
-        <!-- Jquery-->
-        <script src="../_js/jquery-3.3.1.min.js"></script>
-        <script src="../_js/javascript.js"></script>
-       
-    
-        <div id="container">
-
-            <header>
-
-            </header>
-
-            <main>
-                
-                
+    <main>            
                <section id="filtro">
                   <!-- <img src="../_imagens/filtro.png" title="icone_filtro"> -->
                    <img src="../_imagens/filtro.gif" title="icone_filtro">
@@ -40,7 +12,7 @@
                             for($x=0; $x<=9; $x++){
                             $i = 1;
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
-                        echo '<a href="">';
+                        echo '<a href="../produto/index.php?codigo=' .$produto[$x]["produtoID"]. ' " >';
                         echo '<div class="oi">';
                             echo '<div class="hidde">';
                         echo '<img src="'. $produto[$x]["imgproduto"]. '" title="produto1">';
@@ -58,7 +30,7 @@
                                 for($x=0; $x< $max; $x++){
                             $i = 1;
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
-                        echo '<a href="">';
+                        echo '<a href="../produto/index.php?codigo=' .$produto[$x]["produtoID"]. ' " >';
                         echo '<div class="oi">';
                             echo '<div class="hidde">';
                         echo '<img src="'. $produto[$x]["imgproduto"]. '" title="produto1">';
@@ -110,12 +82,4 @@
                     
                 </section>
                     
-               
-            </main>  
-            <script>
-            </script>
-            <footer>
-                
-            </footer>   
-        </div>
-
+        
