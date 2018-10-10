@@ -1,80 +1,80 @@
 
 #container header{
-    height: 100px;
+  height: 100px;
+}
+#logo{width: 95px;}
+#logo{ margin:  10px}
+#user_icone, #loja_icone{margin: 0px 15px 0 5vw; width: 60px;}
+#icones_topo{ position: absolute;left: 70vw; top: 10px}
+#container header form input{
+  position: relative;
+  margin: 15px 0 0 56px;
+}
+#container header form input:first-child{
+  width: 480px;
+  padding-left: 68px;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 20px;
+}
+#container header form input:last-child{
+  top: 10px;
+  right: 510px;
  }
- #logo{width: 95px;}
- #logo{ margin:  10px}
-  #user_icone, #loja_icone{margin: 0px 15px 0 5vw; width: 60px;}
-  #icones_topo{ position: absolute;left: 70vw; top: 10px}
-  #container header form input{
-    position: relative;
-    margin: 15px 0 0 56px;
-  }
-  #container header form input:first-child{
-    width: 480px;
-    padding-left: 68px;
-    font-size: 20px;
-    height: 50px;
-    margin-top: 20px;
-  }
-  #container header form input:last-child{
-    top: 10px;
-    right: 510px;
-   }
 
 
 /*------------------------- pagina 1 --------------- */
 figure figcaption p{
-    width: 880px;
-    font-size: 40px;
+  width: 880px;
+  font-size: 40px;
 }
 figure figcaption{left: calc(48vw - 350px); top: 320px}
 
 figure figcaption a{
-  margin: 0px 90px 0 90px;
-  width: 880px;
-  font-size: 40px;
+margin: 0px 90px 0 90px;
+width: 880px;
+font-size: 40px;
 }
 #container main section figure{ height: 800px; overflow: hidden;}
 
-  /* ------------------------pagina 2 ---------------- */
+/* ------------------------pagina 2 ---------------- */
 
-    #nos h2{font-size: 42px}
-    #nos p{
-      font-size: 33px;
-    line-height: 50px;
-    width: 800px;
-    margin-left: calc(48vw - 480px);
-    }
+  #nos h2{font-size: 42px}
+  #nos p{
+    font-size: 33px;
+  line-height: 50px;
+  width: 800px;
+  margin-left: calc(48vw - 480px);
+  }
 
 
-  /* ---------------------- carrossel ------- */
+/* ---------------------- carrossel ------- */
 
-  #carrossel{ width: 99.8%; height: 400px; border: 1px solid black; background-color: white}
-  #caixa{top: 87.5px; left: calc(49vw - 9vw - 400px);}
-  #caixa img{width: 400px;}
-  #caixa img:nth-child(2){height: 225px;  padding-left: 18vw}
-  #caixa img:last-child, #caixa img:nth-child(3){display: none;}
-  
+#carrossel{ width: 99.8%; height: 400px; border: 1px solid black; background-color: white}
+#caixa{top: 87.5px; left: calc(49vw - 9vw - 400px);}
+#caixa img{width: 400px;}
+#caixa img:nth-child(2){height: 225px;  padding-left: 18vw}
+#caixa img:last-child, #caixa img:nth-child(3){display: none;}
 
-  /*-------------navegação---------*/
-  #container main section nav{display: none;}
- footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
+
+/*-------------navegação---------*/
+#container main section nav{display: none;}
+footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
 footer a{text-decoration: none; color: black; position: absolute; left: -65px;}
 footer p{margin-left: 85%}
-  /*--------------------------------loja----------------------*/
+/*--------------------------------loja----------------------*/
 
-    #caixa_produtos{display: flex}
-  .produto_loja {
-    width: 240px;
-    height: 240px;  
+  #caixa_produtos{display: flex}
+.produto_loja {
+  width: 240px;
+  height: 240px;  
 }
 
 .oi{
-  width: 200px;
-  height: 170px;
-  margin: 40px 10px 10px 10px ;
-  border-radius: 20px;
+width: 200px;
+height: 170px;
+margin: 40px 10px 10px 10px ;
+border-radius: 20px;
 }
 
 .nome_descricao{
@@ -90,387 +90,472 @@ left: 24px;
 }
 
 .nome_descricao p{
-  width: 190px;
-  height: 160px;
-  position: relative;
-  font-size: 20px;
-  left: 25px;
-  bottom:225px; 
-  display: none;
+width: 190px;
+height: 160px;
+position: relative;
+font-size: 20px;
+left: 25px;
+bottom:225px; 
+display: none;
 }
 .produto_loja:hover .oi img{opacity: 0.5;}
 
 .produto_loja:hover .nome_descricao p{display: block;}
-     /*-----------------------------------perfilCliente.html---------------------*/
+   /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
-    word-spacing: 120px;
-    padding-left: 28px; 
-  }
-  
-  div.lista1{     
-    padding-left: 2px;     
-    font-size: 16px;     
-  }
-  
-  div.lista2 {     
-    float: left;
-    padding-left: 12%;   
-  }
-  
-  a.presente{
-    float: left;   
-    padding-left: 14px;   
-    font-size: 35px;
-  }
-  
-  input.checkbox{   
-    display: inline;
-    padding: 0;
-  }
-  
-  select.custom-select{
-    float: right;
-    height: 5vw;
-    width: 17vw;
-    font-size: 2.5vw;
-    padding-top: 1px;
-   }
-  
-  div.email{    
-    float: right;    
-  }
-  
-  input.e{
-    margin-right: 3vw;
-    margin-left: 2vw;
-    height: 4vw;
-    width: 27vw;
-  }
-  
-  p.texto{
-    font-size: 3vw;
-  }
-  
-  /*botao enviar*/
-  .confirma{
-    border-radius: 6px;
-    background-color: pink;
-    border-color:pink;
-    width: 9vw;
-    height: 5vw;
-    float: right;
-    font-size: 2vw;
-  }
-  
-  hr{
-    margin-top: 3%;
-    padding: 0;
-    border-style: dotted;    
-    border-width: thin;
-    border-color: gray;
-  }
-  
-  
-  
-  div.form-row{
-    display: inline;
-  }
-  
-  /*PRINCIPAL*/
-  /* quadrado com dia local data */
-  div.prin{   
-    background-color: pink;    
-    width:57%;     
-    border-radius: 6px;
-    padding-left: 6px;
-    padding-top: 6px;
-    padding-bottom: 6px;          
-    margin-left:6px;
-    margin-top: 6px; 
-  }
-  
-  div.form2{
-    margin-left: auto;       
-  }
-   
-  div.principal{
-    text-align: center;    
-  }
-  
-  /*imagem*/
-  img.galeria3{
-    margin-top: -4%;    
-    margin-right: 10%;
-    width:40%;
-    float: right;
-    position: relative;     
-  }
-  
-  input.form{
-    width: 57%;
-  }
-  
-  /*botao de cima*/
-  button.btn.btn-primary{
-    background-color:pink;
-    border:solid grey 1px ;    
-    height: 6vw; 
-    width: 32%;
-    margin-left: -6px;
-    font-size: 3vw;           
-  }
-  
-  /*img perfil*/
-  img.perfil{
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;    
-    border-radius: 6px;
-    margin-bottom: -2vw;    
-  }
-  
-  /*CONFIRMAR PRESENÇA*/
-  div.form{
-    margin-top: 0px;    
-  }
-  
-  p#sua{
-    font-size: 3vw;
-  }
-  
-  div.group2{
-    border-color:grey;
-    border-style: dotted;    
-    border-width: thin;
-    border-top-width: 0px;
-    padding-top: 0;     
-  }
-  
-  div.conf1{       
-    float: left;
-  }
-  
-  div.conf{
-    float: right;
-    margin-right: 12vw;
-  }
-  
-  img.letra{   
-    float: right;
-    width: 14%;
-  }
-  
-  h3{
-    margin: 0;
-    text-align: left;
-  }
-  
-  p{
-     margin:0;    
-  }
-  
-  button.botao{   
-    background-color: pink;
-    border-radius: 6px;
-    border-color: pink;    
-    height: 6vw; 
-    width: 20%;   
-    font-size: 2vw;
-    margin: 70px 10px 10px 74vw;
-  }
-  
-  select.select1{
-     width: 382px;
-     height: 22px;
-     border-color: rgb(169, 169, 169);
-  }
-  
-  p.casal{
-     text-align: center;
-     font-size: 5vw;
-  }
-  
-  input.form-control{
-    width: 82vw;
-    height: 3vw;
-    font-size:25px;
-  }
-  
-  input#cel{
-    width: 40vw;
-    height: 3vw;
-  }
-  
-  select.select1{
-    width: 83vw;
-    height: 4vw;
-    font-size:25px;
-  }
-  
-  select.select2{
-    width: 120%;
-    height: 4vw;
-    border-color: rgb(169, 169, 169);
-    font-size:25px;
-  }
+  word-spacing: 120px;
+  padding-left: 28px; 
+}
 
+div.lista1{     
+  padding-left: 2px;     
+  font-size: 16px;     
+}
 
-  /*--------------LOGADO--------------*/
-a.edit{
-  text-decoration: none;
-  color: #4F4E4E;
+div.lista2 {     
+  float: left;
+  padding-left: 12%;   
+}
+
+a.presente{
+  float: left;   
+  padding-left: 14px;   
+  font-size: 35px;
+}
+
+input.checkbox{   
+  display: inline;
+  padding: 0;
+}
+
+select.custom-select{
   float: right;
-  padding-right: 6%;
+  height: 5vw;
+  width: 17vw;
+  font-size: 2.5vw;
+  padding-top: 1px;
+ }
+
+div.email{    
+  float: right;    
 }
 
-#b1{
+input.e{
+  margin-right: 3vw;
+  margin-left: 2vw;
+  height: 4vw;
+  width: 27vw;
+}
+
+p.texto{
+  font-size: 3vw;
+}
+
+/*botao enviar*/
+.confirma{
+  border-radius: 6px;
   background-color: pink;
-  border: solid grey 1px;
-  height: 6vw;  
-  margin-left: -2px;
-  font-size: 140%;
+  border-color:pink;
+  width: 9vw;
+  height: 5vw;
+  float: right;
+  font-size: 2vw;
 }
 
-.primary{   
+hr{
+  margin-top: 3%;
+  padding: 0;
+  border-style: dotted;    
+  border-width: thin;
+  border-color: gray;
+}
+
+
+
+div.form-row{
+  display: inline;
+}
+
+/*PRINCIPAL*/
+/* quadrado com dia local data */
+div.prin{   
+  background-color: pink;    
+  width:57%;     
+  border-radius: 6px;
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;          
+  margin-left:6px;
+  margin-top: 6px; 
+}
+
+div.form2{
+  margin-left: auto;       
+}
+ 
+div.principal{
+  text-align: center;    
+}
+
+/*imagem*/
+img.galeria3{
+  margin-top: -4%;    
+  margin-right: 10%;
+  width:40%;
+  float: right;
+  position: relative;     
+}
+
+input.form{
+  width: 57%;
+}
+
+/*botao de cima*/
+button.btn.btn-primary{
   background-color:pink;
   border:solid grey 1px ;    
   height: 6vw; 
-  width: 25%;
-  margin-right: -6px;
-  font-size: 140%;
+  width: 32%;
+  margin-left: -6px;
+  font-size: 3vw;           
+}
+
+/*img perfil*/
+img.perfil{
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;    
+  border-radius: 6px;
+  margin-bottom: -2vw;    
+}
+
+/*CONFIRMAR PRESENÇA*/
+div.form{
+  margin-top: 0px;    
+}
+
+p#sua{
+  font-size: 3vw;
+}
+
+div.group2{
+  border-color:grey;
+  border-style: dotted;    
+  border-width: thin;
+  border-top-width: 0px;
+  padding-top: 0;     
+}
+
+div.conf1{       
+  float: left;
+}
+
+div.conf{
+  float: right;
+  margin-right: 12vw;
+}
+
+img.letra{   
+  float: right;
+  width: 14%;
+}
+
+h3{
+  margin: 0;
+  text-align: left;
+}
+
+p{
+   margin:0;    
+}
+
+button.botao{   
+  background-color: pink;
+  border-radius: 6px;
+  border-color: pink;    
+  height: 6vw; 
+  width: 20%;   
+  font-size: 2vw;
+  margin: 70px 10px 10px 74vw;
+}
+
+select.select1{
+   width: 382px;
+   height: 22px;
+   border-color: rgb(169, 169, 169);
+}
+
+p.casal{
+   text-align: center;
+   font-size: 5vw;
+}
+
+input.form-control{
+  width: 82vw;
+  height: 3vw;
+  font-size:25px;
+}
+
+input#cel{
+  width: 40vw;
+  height: 3vw;
+}
+
+select.select1{
+  width: 83vw;
+  height: 4vw;
+  font-size:25px;
+}
+
+select.select2{
+  width: 120%;
+  height: 4vw;
+  border-color: rgb(169, 169, 169);
+  font-size:25px;
+}
+
+
+/*--------------LOGADO--------------*/
+a.edit{
+text-decoration: none;
+color: #4F4E4E;
+float: right;
+padding-right: 6%;
+}
+
+#b1{
+background-color: pink;
+border: solid grey 1px;
+height: 6vw;  
+margin-left: -2px;
+font-size: 140%;
+}
+
+.primary{   
+background-color:pink;
+border:solid grey 1px ;    
+height: 6vw; 
+width: 25%;
+margin-right: -6px;
+font-size: 140%;
 }
 
 div.conv{
-  border-color: grey;
-  border-style: dotted;
-  border-width: thin;  
-  margin: 2% 5% 2% 5%;
-  padding: 3% 8% 3% 8%;
+border-color: grey;
+border-style: dotted;
+border-width: thin;  
+margin: 2% 5% 2% 5%;
+padding: 3% 8% 3% 8%;
 }
 
 label.qtd{
-  float: right; 
-  font-size: 2.5vw;   
+float: right; 
+font-size: 2.5vw;   
 }
 
 label.nm{
-  font-size: 2.5vw;
+font-size: 2.5vw;
 }
 p.c{
-  padding-left: 5%;
-  font-size: 2.5vw;
+padding-left: 5%;
+font-size: 2.5vw;
 } 
 
 a.pres{
-  padding-left: 28px;
+padding-left: 28px;
 }
 a.co{
-  padding-left: 12%;
+padding-left: 12%;
 }
 
 hr.w{
-  margin: 0 auto;
-  margin-top: 2%;}
+margin: 0 auto;
+margin-top: 2%;}
 
 .cma{
-    border-radius: 6px;
-    background-color: pink;
-    border-color:pink;
-    padding:1% 2% 1% 2%;
-    float: right;
-    font-size: 1.5vw;
-  }
+  border-radius: 6px;
+  background-color: pink;
+  border-color:pink;
+  padding:1% 2% 1% 2%;
+  float: right;
+  font-size: 1.5vw;
+}
 
- div.princ{   
-    background-color: pink;    
-    width:57%;     
-    border-radius: 6px;
-    padding-left: 3%;
-    padding-top: 2%;
-    padding-bottom: 2%;          
-    margin-left:6px;
-    margin-top: 6px; 
- }  
+div.princ{   
+  background-color: pink;    
+  width:57%;     
+  border-radius: 6px;
+  padding-left: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;          
+  margin-left:6px;
+  margin-top: 6px; 
+}  
 
 label#prin{
-    font-size:2.5vw;
+  font-size:2.5vw;
 }
-    
+  
 .l1{
 font-size: 2.5vw;
 }
 
 .b {  
-  position:relative;
+position:relative;
 }
 .b button {
-  font-size: 2vw;
-  border: 0px;
-  position:absolute;
-  top: -3.5vw;
-  left: 81.5%;
-  background: #ffc0cb8c;
-  border-radius: 6px;
-  /*-webkit-transform:translate3d(-50%, -50%, 0); 
-  transform:translate3d(-55%, -50%, 0);*/
+font-size: 2vw;
+border: 0px;
+position:absolute;
+top: -3.5vw;
+left: 81.5%;
+background: #ffc0cb8c;
+border-radius: 6px;
+/*-webkit-transform:translate3d(-50%, -50%, 0); 
+transform:translate3d(-55%, -50%, 0);*/
 }
 
 #irineu{
-  position:relative;
-  margin-bottom: 2%;
+position:relative;
+margin-bottom: 2%;
 }
 
 #irineu button{
-  font-size: 2vw;
-  border: 0px;
-  position:absolute;
-  top: 1vw;
- left: 68%;
-  background: #ffc0cb8c;
-  border-radius: 6px;
-  /*-webkit-transform:translate3d(-50%, -50%, 0); 
-  transform:translate3d(-55%, -50%, 0);*/
+font-size: 2vw;
+border: 0px;
+position:absolute;
+top: 1vw;
+left: 68%;
+background: #ffc0cb8c;
+border-radius: 6px;
+/*-webkit-transform:translate3d(-50%, -50%, 0); 
+transform:translate3d(-55%, -50%, 0);*/
 }
 
 .add{
-  margin-top: 1%;
-  margin-left: 4%;
-  border-radius: 6px;
-  background-color: pink;
-  border-color:pink;
-  padding:1% 2% 1% 2%;
-  float: left;
-  font-size: 1.5vw;
+margin-top: 1%;
+margin-left: 4%;
+border-radius: 6px;
+background-color: pink;
+border-color:pink;
+padding:1% 2% 1% 2%;
+float: left;
+font-size: 1.5vw;
 }
 
 .edit{
-  font-size: 2vw;
+font-size: 2vw;
 }
 
 input.form{
-  background-color: pink;
-  border-color:pink;
-  border: 0px;   
-  font-size: 2vw;  
+background-color: pink;
+border-color:pink;
+border: 0px;   
+font-size: 2vw;  
 }
 
 /*favoritos*/
 
 #l{
-  width: 22%;
-  margin: 1%;
-  font-size: 2.5vw;
+width: 22%;
+margin: 1%;
+font-size: 2.5vw;
 }
 
 /*---------------CLIENTE ADM--------------*/
 
 .pri{
-  background-color:pink;
-  border:solid grey 1px ;    
-  height: 6vw; 
-  width: 33.5%;
-  margin-left: -6px;
-  font-size: 140%;   
+background-color:pink;
+border:solid grey 1px ;    
+height: 4vw;
+width: 33.5%;
+margin-left: -6px;
+font-size: 140%;   
+}
+
+/*----------PERFIL VENDEDOR -----------*/  
+#TopoVendedor h1{ 
+float: right;
+margin-right: 30%;
+font-size: 3.2vw;
+}
+
+#tv{
+width:25%;
+}
+li#oto{ padding: 5px 21% 5px 21%;
+font-size:  2.5vw;
+font-family: arial, sans-serif
+}
+
+li#uto{
+padding: 5px 15% 5px 15%;
+font-size:  2.5vw;
+font-family: arial, sans-serif
+
+}
+footer{
+display: none;}
+
+#FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
+
+#FotosVendedor{margin-top: 15px; text-align: center}
+#ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
+
+#FotosVendedor a, #ProdutosVendedorL a{
+  padding: 60px 12px;
+  border: 1px  dashed blue;
+  margin: 0 0 0 8px; float: left;
+  text-decoration: none; width: 22%;
+  font-size:  2.5vw;}
+
+#ProdutosVendedorL form{display: none}
+
+div#InfoVendedor h2{
+  font-size: 3.2vw; }
+
+h3{
+   font-size:  2.5vw;
+ }
+ 
+    /* nao logado*/
+
+    #prod{float: left }
+    #prod img{       
+     width: 24%;
+     margin-top: 10px;
+     margin-left: 0.5%;}
+
+/*---------------------------------------------ALL USER--------------------*/
+.pes{
+margin-top: 0px;
+float: right;  
+border-radius: 10px;
+padding: 1% 2% 1% 2%;
+font-size: 3vw;
+border-color: pink;
+background-color: pink;
+}
+
+    
+.fil{
+  width: 14%;
+}
+
+.x{width: 10%; float: right}
+
+div.camp{
+  margin:2%;
+  padding: 0% 2% 2% 0%;
+}
+
+#yz{
+  margin-left: 3%; 
+  margin-top: 2%; 
+  padding-right: 20%;
+  width: 500px;
+  height: 40px;
+  font-size: 2vw
 }
