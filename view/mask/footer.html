@@ -1,0 +1,27 @@
+<section id=c">
+        <nav>
+                <ol id="menu">
+                    <li><a href="index.html" class="item home">HOME</a>
+                    <li><a href="loja.html" class="item">LOJA</a>
+                   <?php 
+                   if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                       echo '<li><a href="perfil.php" class="item login" id="link">&nbsp;PERFIL&nbsp;</a>';
+                       $footer = "roda logado";       
+                   }else{
+                      echo '<li><a href="perfil.php" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+                   }
+                   ?> 
+                </ol>
+                </nav>
+</section>
+<footer>
+            <img src="_imagens/logo.png">
+            <a href="casamedosonhos.com"><p>Casamedosonhos.com</p></a>
+                <p>grupo 5 INI3A</p>
+</footer>
+           
+</main>  
+<footer>
+
+</footer>   
+</div>

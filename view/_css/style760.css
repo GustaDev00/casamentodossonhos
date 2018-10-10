@@ -1,0 +1,538 @@
+
+#container header{
+  height: 70px;
+}
+#logo{ margin:  10px}
+#icones_topo a img{width: 42px;} 
+#user_icone{margin: 10px 11px 0 2vw;}
+#ferramentas_topo{position: absolute; display: flex ;left: 17vw;}
+#container header form input{
+position: relative;
+margin: 15px 0 0 6px;
+}
+#container header form input:first-child{
+width: 45vw;
+padding-left: 7VW;
+height: 50px;
+bottom: 5px
+}
+#container header form input:last-child{
+top: 5px;
+right: 44vw;
+}
+
+ /*--------pagina 1 ---------*/
+ 
+ figure figcaption p{
+  width: 450px;
+  font-size: 38px;
+}
+figure figcaption{left: calc(48vw - 225px); top:  240px;}
+ /*-------carrossel----------*/
+
+  #carrossel{
+    overflow: hidden;
+     height: 270px;
+      width: 480px;
+      background-color: #F2F2F2;
+      left: calc(50vw - 240px);
+    }
+  #caixa{width: 200%; }
+  #caixa img{float: left;width: 480px;top:  240px;}
+       /*-------------navegação---------*/
+  #container main section nav {display: none;}
+  footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
+  footer a{text-decoration: none; color: black; position: absolute; left: -50px;}
+  footer p{margin-left: 70%}
+  /*-------------loja-----------------*/
+  .produto_loja {
+    width: 480px;
+    height: 200px;
+    margin: 25px  auto;
+}
+
+.produto_loja:first-child{
+  margin-top: 45px;
+}
+
+.oi{
+  width: 30vw;
+  height: 180px;
+}
+
+.nome_descricao{
+position: relative;
+width: 25vw;
+text-align: left;
+left:56%;
+bottom:186px;
+height: 170px;
+}
+
+.nome_descricao h3{
+font-size: 20px;
+padding-bottom: 10px
+}
+
+.nome_descricao p{
+font-size: 18px;
+}
+
+
+/*-----------------------------------perfilCliente.html---------------------*/
+/*LISTA DE PRESENTE*/
+div.tipo{
+word-spacing: 68px;
+padding-left: 28px; 
+}
+
+div.lista1{     
+padding-left: 2px;     
+font-size: 16px;     
+}
+
+div.lista2 {     
+float: left;
+padding-left: 12%;   
+}
+
+a.presente{
+float: left;   
+padding-left: 14px;   
+font-size: 23px;
+}
+
+input.checkbox{
+display: inline;
+margin: 0;
+padding: 0;
+}
+
+select.custom-select{
+float: right;
+height: 5vw;
+width: 17vw;
+font-size: 2.5vw;
+padding-top: 1px;
+}
+
+div.email{    
+float: right;    
+}
+
+input.e{
+margin-right: 3vw;
+margin-left: 2vw;
+height: 4vw;
+width: 27vw;
+}
+
+p.texto{
+font-size: 3vw;
+}
+
+/*botao enviar*/
+.confirma{
+border-radius: 6px;
+background-color: pink;
+border-color:pink;
+width: 9vw;
+height: 5vw;
+float: right;
+}
+
+hr{
+margin-top: 2%;
+padding: 0;
+border-style: dotted;    
+border-width: thin;
+border-color: gray;
+}
+
+div.form-row{
+display: inline;
+}
+
+/*PRINCIPAL*/
+/* quadrado com dia local data */
+div.prin{   
+background-color: pink;    
+width:57%;     
+border-radius: 6px;
+padding-left: 6px;
+padding-top: 6px;
+padding-bottom: 6px;          
+margin-left:6px;
+margin-top: 6px; 
+}
+
+div.form2{
+margin-left: auto;       
+}
+
+input.form{
+background-color: pink;
+border-color:pink;
+border: 0px;       
+}
+
+div.principal{
+text-align: center;    
+}
+
+/*imagem*/
+img.galeria3{
+margin-top: -4%;    
+margin-right: 10%;
+width:40%;
+float: right;
+position: relative;     
+}
+
+input.form{
+width: 57%;
+}
+
+/*botao de cima*/
+button.btn.btn-primary{
+background-color:pink;
+border:solid grey 1px ;    
+height: 6vw; 
+width: 32%;
+margin-left: -6px;
+font-size: 3vw;           
+}
+
+/*img perfil*/
+img.perfil{
+width: 55%;
+margin-left: auto;
+margin-right: auto;
+display: block;    
+border-radius: 6px;
+margin-bottom: -2vw;    
+}
+
+/*CONFIRMAR PRESENÇA*/
+div.form{
+margin-top: 0px;    
+}
+
+p#sua{
+font-size: 3vw;
+}
+
+div.group2{
+border-color:grey;
+border-style: dotted;    
+border-width: thin;
+border-top-width: 0px;
+padding-top: 0;     
+}
+
+div.conf1{       
+float: left;
+}
+
+div.conf{
+float: right;
+margin-right: 12vw;
+}
+
+img.letra{   
+float: right;
+width: 14%;
+}
+
+h3{
+margin: 0;
+text-align: left;
+}
+
+p{
+ margin:0;    
+}
+
+button.botao{
+background-color: pink;
+border-radius: 6px;
+border-color: pink;    
+height: 6vw; 
+width: 20%;   
+font-size: 2vw;
+margin: 30px 10px 10px 70vw;
+
+}
+
+select.select1{
+ width: 382px;
+ height: 22px;
+ border-color: rgb(169, 169, 169);
+}
+
+p.casal{
+ text-align: center;
+ font-size: 5vw;
+}
+
+input.form-control{
+width: 82vw;
+height: 3vw;
+}
+
+input#cel{
+width: 40vw;
+height: 3vw;
+}
+
+select.select1{
+width: 83vw;
+height: 4vw;
+}
+
+select.select2{
+width: 120%;
+height: 4vw;
+margin-top: 1vw;
+border-color: rgb(169, 169, 169);
+}
+
+/*----------------------LOGADO-----------------*/
+
+a.edit{
+text-decoration: none;
+color: #4F4E4E;
+float: right;
+padding-right: 6%;
+}
+
+#b1{
+background-color: pink;
+border: solid grey 1px;
+height: 6vw;
+width: 27%;
+margin-left: -7px;
+font-size: 85%;
+}
+
+.primary{   
+background-color:pink;
+border:solid grey 1px ;    
+height: 6vw; 
+width: 25%;
+margin-right: -6px;
+font-size: 85%;
+}
+
+div.conv{
+border-color: grey;
+border-style: dotted;
+border-width: thin;  
+margin: 2% 5% 2% 5%;
+padding: 3% 8% 3% 8%;
+}
+
+label.qtd{
+float: right; 
+font-size: 2.5vw;   
+}
+
+label.nm{
+font-size: 2.5vw;
+}
+p.c{
+padding-left: 5%;
+font-size: 2.5vw;
+} 
+
+a.pres{
+padding-left: 28px;
+}
+a.co{
+padding-left: 12%;
+}
+
+hr.w{
+margin: 0 auto;
+margin-top: 2%;}
+
+.cma{
+  border-radius: 6px;
+  background-color: pink;
+  border-color:pink;
+  padding:1% 2% 1% 2%;
+  float: right;
+}
+
+div.princ{   
+  background-color: pink;    
+  width:57%;     
+  border-radius: 6px;
+  padding-left: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;          
+  margin-left:6px;
+  margin-top: 6px; 
+}  
+
+label#prin{
+  font-size:2.5vw;
+}
+  
+.l1{
+font-size: 2.5vw;
+}
+
+.b {  
+position:relative;
+}
+.b button {
+font-size: 2vw;
+border: 0px;
+position:absolute;
+top: -3.5vw;
+left: 81.5%;
+background:#ffc0cb8c;
+border-radius: 6px;
+/*-webkit-transform:translate3d(-50%, -50%, 0); 
+transform:translate3d(-55%, -50%, 0);*/
+}
+
+#irineu{
+position:relative;
+}
+
+#irineu button{
+font-size: 2vw;
+border: 0px;
+position:absolute;
+top: 1vw;
+left: 68%;
+background: #ffc0cb8c;
+border-radius: 6px;
+/*-webkit-transform:translate3d(-50%, -50%, 0); 
+transform:translate3d(-55%, -50%, 0);*/
+}
+
+.add{
+margin-top: 1%;
+margin-left: 4%;
+border-radius: 6px;
+background-color: pink;
+border-color:pink;
+padding:1% 2% 1% 2%;
+float: left;
+}
+
+/*favoritos*/
+
+#l{
+  width: 30%;
+  margin: 1%;
+  font-size: 2.5vw;
+}
+
+/*---------------CLIENTE ADM--------------*/
+
+.pri{
+background-color:pink;
+border:solid grey 1px ;    
+height: 5vw;
+width: 33.7%;
+margin-left: -6px;
+font-size: 77%;   
+}
+
+/*----------PERFIL VENDEDOR-----------*/
+
+
+ #TopoVendedor h1{ 
+  float: right;
+  margin-right: 22%;
+  font-size:3.5vw;
+}
+
+
+#tv{
+width:25%;
+}
+li#oto{ padding: 5px 19% 5px 20%;
+  font-size:3vw;
+  font-family: arial, sans-serif
+}
+
+li#uto{
+  padding: 5px 15% 5px 15%;
+  font-size:3vw;
+  font-family: arial, sans-serif
+
+}
+
+  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
+
+  #FotosVendedor{margin-top: 15px; text-align: center}
+  #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
+
+  #FotosVendedor a, #ProdutosVendedorL a{
+     padding: 5vw 3vw;
+     border: 1px  dashed blue;
+     margin: 0 0 0 8px; 
+     float: left;
+     text-decoration: none;
+     width: 22%;
+     font-size:  2.2vw;}
+  #ProdutosVendedorL form{display: none}
+
+  footer{
+    display: none;
+  }
+
+  div#InfoVendedor h2{
+    font-size: 4vw;
+   }
+
+  h3{
+     font-size:  2.5vw; }
+
+    /* nao logado*/
+
+ #prod{float: left }
+ #prod img{
+  width: 30.5%;
+  margin-top: 10px;   
+  margin-left: 1%;}
+
+/*---------------------------------------------ALL USER--------------------*/
+.pes{
+margin-top: 0px;
+float: right;  
+border-radius: 10px;
+padding: 1% 2% 1% 2%;
+font-size: 3vw;
+border-color: pink;
+background-color: pink;
+}
+
+    
+.fil{
+  width: 14%;
+}
+
+.x{width: 10%; float: right}
+
+div.camp{
+  margin:2%;
+  padding: 0% 2% 2% 0%;
+}
+
+#yz{
+  margin-left: 3%; 
+  margin-top: 2%; 
+  padding-right: 20%;
+  width: 300px;
+  height: 30px;
+  font-size: 2vw
+}
+
+p#cli{font-size: 4vw}
+
