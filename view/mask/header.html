@@ -29,7 +29,12 @@
                     <input type="image" src="../_imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
                 </form> 
                 <div id="icones_topo">
-                <a href="#"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>
+                <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                    echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
+                }else{
+                    echo '<a href="../login/index.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
+                }
+                ?>
                 <a href="loja.html"><img id="loja_icone" src="../_imagens/loja.png" title="Casamento dos sonhos"></a>   
                 </div></div>
             </header>

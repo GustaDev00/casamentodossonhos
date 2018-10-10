@@ -1,5 +1,5 @@
 <?php
-require_once './Db/daohelper.php';
+require_once '../Db/daohelper.php';
 //require_once './processo.php';
 session_start();
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
