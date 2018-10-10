@@ -37,6 +37,37 @@
 /*----------------nfooter----------*/
 footer{display: none}
 /*---------------MENU FIXO---------------*/
+/*#container main section nav ol li{
+  list-style: none;
+}
+
+
+#container main section nav #menu{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: #f6dddf;
+  height: 60px;
+  width: 100%;
+  }
+  #container main section nav ol li a{
+      padding: 20px 8vw 20px 7vw; 
+      color: black;
+      font-size: 13px;
+      text-decoration: none;
+     font-family: 'Trebuchet MS', Arial, sans-serif    
+  }
+  #container main section nav ol li .item.home{
+      border-right:1px solid black;
+  }
+  #container main section nav ol li .item.login{
+    border-left:1px solid black;
+}
+
+#container main section nav ol li a:active{
+    background-color: #d1a7a7;
+    color: white;
+} */
 
 #container main section nav #menu{
     list-style: none;
@@ -415,41 +446,7 @@ img.letra{
 
 
  /*---------------------------------------------ALL USER--------------------*/
-
- div.adm{
-    margin-left: 3%;
-    margin-top: 3%;
- }
- img.abc{
-     width: 26%;
-     margin-top: 2%;
-     margin-left: 1%;
-     margin-right: 1%;
-     border-radius: 100%;
-     border-style: dashed;
-     padding: 1%;
-     border-color: #595959;
-     border-width: 0.6vw;
- }
-
- .fil{
-    width: 14%;
- }
-
-.x{width: 10%; float: right}
-
-div.camp{
-    margin:2%;
-    padding: 0% 2% 2% 0%;
-}
-
-#yz{
-    margin-left: 3%; 
-    margin-top: 2%; 
-    padding-right: 20%;
-}
-
-button.pes{
+ .pes{
     margin-top: 6px;
     float: right;  
     border-radius: 10px;
@@ -457,20 +454,88 @@ button.pes{
     font-size: 3vw;
     border-color: pink;
     background-color: pink;
-    
+    }
 
-}
-/*.cli{float: right}
-*/
+  
+      
+      .fil{
+        width: 14%;
+      }
+      
+      .x{width: 10%; float: right}
+      
+      div.camp{
+        margin:2%;
+        padding: 0% 2% 2% 0%;
+      }
+      
+      #yz{
+        margin-left: 3%; 
+        margin-top: 2%; 
+        padding-right: 20%;
+        
+      }    
+      
 
 /*---------------CLIENTE ADM--------------*/
-
 .pri{
     background-color:pink;
     border:solid grey 1px ;    
-    height: 6vw; 
+    height: 5vw; 
     width: 34%;
     margin-left: -6px;
     font-size: 77%;   
 }
 
+/*----------PERFIL VENDEDOR-----------*/
+
+ #TopoVendedor h1{float: right; margin-right: 97px; font-size: 2.5vw;}
+ 
+li#oto{ padding: 5px 21% 5px 21%;
+  font-size:  2.5vw;
+  font-family: arial, sans-serif
+}
+
+li#uto{
+  padding: 5px 16% 5px 16%;
+  font-size:  2.5vw;
+  font-family: arial, sans-serif
+}
+#tv{
+    width:102px;
+}
+ /*#MenuVendedor ol li{
+   padding: 5px 17% 5px 17%;
+   font-size: 16px;
+   font-family: arial, sans-serif
+  }*/
+  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
+
+  #FotosVendedor{margin-top: 15px; text-align: center}
+  #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
+
+  #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px;border: 1px  dashed blue; margin: 0 0 0 8px; float: left; text-decoration: none}
+  #ProdutosVendedorL form{display: none}
+
+  div#InfoVendedor h2{
+    font-size: 2.5vw;
+   }
+
+  h3{
+     font-size:  2vw;
+   }
+
+   /* nao logado*/
+
+   #prod{margin-left: 3% }
+   #prod img{
+    width: 152px;
+    margin-top: 10px;
+    margin-left: 1%;  }
+
+   /* produto*/
+    #SobreProduto h1{font-size: 5.5vw;}
+
+    
+
+ 
