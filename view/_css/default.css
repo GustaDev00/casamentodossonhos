@@ -139,36 +139,28 @@ figure figcaption a:active{
   #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
   #SobreProduto{
     color:#5E5E5E;
-    font-family: Arial, Helvetica, sans-serif
-    }
-#SobrProduto{
-    color:#5E5E5E;
-    font-family: Arial, Helvetica, sans-serif;
-}
-  #SobreProduto h1{font-size: 32px;}
+    font-family: Arial, Helvetica, sans-serif;  
+  }
+
   #valorP{
     display: flex;
-    margin-top: 10px;
+    margin-top: 4%;
     justify-content:space-around
     }
-  #valorP a{
-    padding:10px;
+    #valorP h2{
+    margin-top: 1%
+      }
+  #valorP a{    
+    padding:2.5%;
     background-color: #169BD5;
     color: white;
     border-radius: 5px;
     text-decoration: none
   }
   #descrip_produto{
-    width: 100%;
+    width: 104%;
     border: 1px solid black;
     margin-top: 30px;
-    padding: 10px
-  }
-
-  #des_produto textarea{
-    width: 100%;
-    margin-top: 30px;
-      resize: none;
     padding: 10px
   }
 
@@ -194,6 +186,7 @@ figure figcaption a:active{
   #btnForm{position: absolute; top:410px; right: 19%;} 
 
   #all_icones{
+    margin-top: 1.5%;
     width: 65%;
     height: 50px;
     background-color: #f6dddf;
@@ -205,36 +198,32 @@ figure figcaption a:active{
 
   #all_icones img{width: 42px;}
 
-  /*----------PERFIL VENDEDOR-----------*/
+ /*----------PERFIL VENDEDOR -----------*/
 
-    #vendedor{width: 85%; margin: 10px 5% 0 5%;}
-    #TopoVendedor{
-      padding: 10px;
-      background-color: #f6dddf;
-      width: 100%;
-     }
-     #TopoVendedor h1{float: right; margin-right: 70px}
-     #InfoVendedor{padding: 10px; width: 100%;}
-     #InfoVendedor article h3{margin-top: 5px}
-     #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
-     #MenuVendedor ol li{display: inline;}
-     #MenuVendedor ol li:first-child{border-right: 1px solid black;}
-     #MenuVendedor ol li{
-       padding: 5px 17% 5px 17%;
-       font-size: 16px;
-       font-family: arial, sans-serif
-      }
+ #vendedor{
+  width: 85%;
+  margin: 10px 5% 0 5%;
+  }
 
-      #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
+  #TopoVendedor{
+    padding: 10px;
+    background-color: #f6dddf;
+    width: 100%;
+   }
 
-      #FotosVendedor{margin-top: 15px; text-align: center}
-      #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
+   #InfoVendedor{padding: 10px; width: 100%;}
 
-      .btnP{padding: 35px 8px;border: 1px  dashed blue; margin: 0 0 0 8px; float: left; text-decoration: none}
-      #ProdutosVendedorL form{display: none}
+   #InfoVendedor article h3{margin-top: 5px}
 
-      #addProduto{display: none}
-      
+   #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
+   #MenuVendedor ol li{display: inline;}
+   #MenuVendedor ol li:first-child{border-right: 1px solid black;}
+
+   footer{
+    display: none;
+  }
+ 
+
       /*--------pagina de cadastro ------*/
       
 
@@ -430,4 +419,34 @@ div.campo{
   margin-top: 15px;
 }
 
+
+  /*empresa*/
+
+  .ad{
+    margin-left: 8px;
+    padding: 0 
+}
+/*---------------------------------------------ALL USER--------------------*/
+
+div.adm{
+  margin-left: 3%;
+  margin-top: 3%;
+}
+img.abc{
+   width: 26%;
+   margin-top: 2%;
+   margin-left: 1%;
+   margin-right: 1%;
+   border-radius: 100%;
+   border-style: dashed;
+   padding: 1%;
+   border-color: #595959;
+   border-width: 0.6vw;
+}
+#ch{
+  margin-left: 3%; 
+  margin-top: 2%; 
+  padding-right: 20%;
+  margin-right: 10px;
+}
 
