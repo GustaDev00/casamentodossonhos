@@ -78,7 +78,6 @@ padding-bottom: 10px
 font-size: 18px;
 }
 
-
 /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
@@ -182,11 +181,9 @@ text-align: center;
 
 /*imagem*/
 img.galeria3{
-margin-top: -4%;    
-margin-right: 10%;
-width:40%;
-float: right;
-position: relative;     
+  margin: 3% 1%;
+  width: 98%;    
+  position: relative;  
 }
 
 input.form{
@@ -383,19 +380,37 @@ label#prin{
 font-size: 2.5vw;
 }
 
-.b {  
-position:relative;
-}
-.b button {
-font-size: 2vw;
-border: 0px;
-position:absolute;
-top: -3.5vw;
-left: 81.5%;
-background:#ffc0cb8c;
+/* --------------botao editar de baixo---------*/
+/* Esconde o input */
+input.at[type='file'] {
+  display: none}      
+
+label.at { 
 border-radius: 6px;
-/*-webkit-transform:translate3d(-50%, -50%, 0); 
-transform:translate3d(-55%, -50%, 0);*/
+font-size: 3vw;
+cursor: pointer;
+margin: -68% 0% 0% 80%;
+padding: 7px 24px;
+position: absolute;
+background: #ffc0cbbd;
+/* 
+top: 75vw;
+left: 80%;
+*/    
+}
+/*botao alterar de cima*/
+input.cim[type='file'] {
+display: none}      
+
+label.cim { 
+border-radius: 6px;
+font-size: 3vw;
+cursor: pointer;
+margin: -4% 0% 0% 64%;
+padding: 4px 11px;
+position: absolute;
+background: #ffc0cbbd; 
+}%, -50%, 0);*/
 }
 
 #irineu{
