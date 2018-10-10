@@ -419,6 +419,9 @@ font-size: 2.5vw;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> gfg
 /* --------------botao editar de baixo---------*/
 /* Esconde o input */
 input.at[type='file'] {
@@ -449,6 +452,7 @@ margin: -3% 0% 0% 67%;
 padding: 4px 11px;
 position: absolute;
 background: #ffc0cbbd; 
+<<<<<<< HEAD
 =======
 .b {  
   position:relative;
@@ -464,6 +468,8 @@ background: #ffc0cbbd;
   /*-webkit-transform:translate3d(-50%, -50%, 0); 
   transform:translate3d(-55%, -50%, 0);*/
 >>>>>>> parent of b01e817... ultimo css
+=======
+>>>>>>> gfg
 }
 #irineu{
   position:relative;
