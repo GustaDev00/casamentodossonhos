@@ -333,7 +333,6 @@ a.edit{
   font-size: 140%;
 }
 
-<<<<<<< HEAD
 /*imagem*/
 img.galeria3{
   margin: 3% 1%;
@@ -347,9 +346,6 @@ input.form{
 
 /*botao de cima*/
 button.btn.btn-primary{
-=======
-.primary{   
->>>>>>> parent of b01e817... ultimo css
   background-color:pink;
   border:solid grey 1px ;    
   height: 6vw; 
@@ -418,10 +414,6 @@ label#prin{
 font-size: 2.5vw;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> gfg
 /* --------------botao editar de baixo---------*/
 /* Esconde o input */
 input.at[type='file'] {
@@ -451,9 +443,7 @@ cursor: pointer;
 margin: -3% 0% 0% 67%;
 padding: 4px 11px;
 position: absolute;
-background: #ffc0cbbd; 
-<<<<<<< HEAD
-=======
+background: #ffc0cbbd; }
 .b {  
   position:relative;
 }
@@ -467,9 +457,6 @@ background: #ffc0cbbd;
   border-radius: 6px;
   /*-webkit-transform:translate3d(-50%, -50%, 0); 
   transform:translate3d(-55%, -50%, 0);*/
->>>>>>> parent of b01e817... ultimo css
-=======
->>>>>>> gfg
 }
 #irineu{
   position:relative;
@@ -526,10 +513,7 @@ input.form{
   height: 4vw;
   width: 33.5%;
   margin-left: -6px;
-  font-size: 140%;   
-<<<<<<< HEAD:view/_css/style1366.css
-}
-=======
+  font-size: 140%;  
 }
 
 /*----------PERFIL VENDEDOR -----------*/  
@@ -584,9 +568,6 @@ footer{
        width: 24%;
        margin-top: 10px;
        margin-left: 0.5%;}
-<<<<<<< HEAD:view/_css/style1366.css
->>>>>>> vbfv:css/style1366.css
-=======
 
  /*---------------------------------------------ALL USER--------------------*/
  .pes{
@@ -619,4 +600,3 @@ footer{
     height: 40px;
     font-size: 2vw
   }
->>>>>>> fsdfd:css/style1366.css
