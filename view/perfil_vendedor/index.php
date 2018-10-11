@@ -1,9 +1,11 @@
-<?php 
-    require_once ("lib/raelgc/view/Template.php");
-    use raelgc\view\Template;
+<?php
+        include_once '../mask/header.html';
 
-    $tpl = new Template ("view/index.html");
+        include_once 'listaproduto.php';
+        include_once 'index.html';
+       
+        include_once '../mask/footer.html';
+            
 
-    $tpl ->show();
-
+      
 ?>
