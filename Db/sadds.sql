@@ -69,8 +69,8 @@ preco_prod varchar(100),
 desc_prod text,
 url_foto_prod varchar(100),
 local_prod varchar(199),																																			iz_prod varchar(100),
-codproduto int primary key auto_increment,
-cnpj varchar(100),
+cod_produto int primary key auto_increment,
+cnpj int,
 cod_categoria int ,
 foreign key(cnpj)references empresa(cnpj),
 foreign key(cod_categoria)references categoria(cod_categoria)
@@ -87,8 +87,7 @@ create table convidados(
 
 create table lista_presentes(
 cod_list_pres int primary key auto_increment,
-dinheiro varchar(80),
-material varchar(80),
+
 cod_conv int,
 foreign key(cod_conv)references convidados(cod_conv)
 );
@@ -108,5 +107,5 @@ cod_favorita int auto_increment,
 codproduto int,
 cod_usu int,
 foreign key(cod_usu) references usuario(cod_usu),
-primary key(cod_favorita, cod_prod_serv, cod_usu)
+primary key(cod_favorita, cod_produto, cod_usu)
 );
