@@ -7,9 +7,9 @@ try{
         echo"location.href='index.html'";
         echo '</script>';
     }else{
-$imagemCasal = isset($_FILES['img_perfil'])?$_FILES['img_perfil']:null;
+$imagemCasal = isset($_FILES['img_localCasamento'])?$_FILES['img_localCasamento']:null;
 
-if($_FILES['img_perfil'] == null){
+if($_FILES['img_localCasamento'] == null){
     echo "vazio porra";
 }else{
     $arquivo_tmp = $imagemCasal[ 'tmp_name' ];
@@ -37,7 +37,7 @@ if($_FILES['img_perfil'] == null){
             
 
             $conn = connection();
-            $query = "UPDATE USUARIO SET FOTO_USU = '$destino' where email_usu = '$email'";
+            $query = "UPDATE USUARIO SET FOTO_LOCAL = '$destino' where email_usu = '$email'";
             
             $execute = executeQuery($conn, $query);
             //echo'<script>';

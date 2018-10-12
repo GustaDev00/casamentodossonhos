@@ -18,7 +18,9 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $diaCas = $fetch2->data_casal; 
         $email = $fetch2->email_usu;
         $imagemL = $fetch2->foto_usu;
-        
+        $imagemLoc = $fetch2->foto_local;
+        $localCas = $fetch2->local_casal;
+        $horarioCas = $fetch2->horario_casal;
         $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
         $execute2 = executeSelect($pdo, $select2);
         $dadosPres = array();

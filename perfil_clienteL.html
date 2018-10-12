@@ -29,7 +29,12 @@
     <div class="top" > 
         <div  id="irineu">
           <img class="perfil" id="imagem2" src="<?php echo $imagemL?>">   
-          <a href="updates/img_perfil.php" name="img_perfil"><button name="img_perfil">Alterar</button></a>   
+          <a href="updates/img_perfil.php" name="img_perfil">
+            <form action="updates/img_perfil.php" enctype="multipart/form-data" method="POST">
+            <input type="file" name="img_perfil">
+            <input type="submit" value="Atualizar">
+            </form>
+            <button name="img_perfil">Alterar</button></a>   
         </div> 
     
     <div class="java">
@@ -82,18 +87,22 @@
                                    <br>
                                                                                     
                                    <label id="prin">Horário:</label>
-                                   <input type="text" class="form" id="" placeholder="19:00" size="10">
+                                   <input type="text" class="form" id="" placeholder="<?php echo $horarioCas?>" size="10">
                                   <!--<a href="" class="edit">Editar</a>-->
                                    <br>
                               
                                    <label id="prin">Local:</label>
-                                   <input type="text" class="form" id="" placeholder="Endereço" size="25">
+                                   <input type="text" class="form" id="" placeholder="<?php echo $localCas?>" size="25">
                                  <!--    <a href="" class="edit">Editar</a>-->
                                     <br>
                             </div>     
                             <div class="b">                  
-                            <img class="galeria3" src="imagens/galeria3.jpeg" >
+                            <img class="galeria3" src="<?php echo $imagemLoc ?>" >
                             <button class="e">Alterar</button>
+                            <form action="updates/img_localCasamento.php" enctype="multipart/form-data" method="POST">
+                            <input type="file" name="img_localCasamento">
+                            <input type="submit" value="Atualizar Local">
+                            </form>
                             </div>
                             
                             <br>      
