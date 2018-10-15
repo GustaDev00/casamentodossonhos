@@ -1,4 +1,5 @@
 <?php
+
 require_once '../Db/daohelper.php';
 //require_once './processo.php';
 session_start();
@@ -9,17 +10,33 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     $senha = $_SESSION["senha"];
     $pdo= connection();
     if($_SESSION["defini"] == 2){
-        $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";
+        $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
-        $nome = $fetch2->nome_usu;
+        $nome = $fetch2->nome_usu;      
+        $parceiro = $fetch2->nome_par_usu;
         $senha = $fetch2->senha_usu;
+        $diaCas = $fetch2->data_casal; 
         $email = $fetch2->email_usu;
         $imagemL = $fetch2->foto_usu;
-        echo "Seu id é: '{$_SESSION["id"]}' <br>";
+        $imagemLoc = $fetch2->foto_local;
+        $localCas = $fetch2->local_casal;
+        $horarioCas = $fetch2->horario_casal;
+        $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
+        $execute2 = executeSelect($pdo, $select2);
+        $dadosPres = array();
+        $dP = 0;
+        while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+            $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+            $dP++;
+        }
+        
+       /* echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
+        */
+        include_once "perfil_clienteL.html";
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
     }else if($_SESSION["defini"] == 1){
@@ -28,14 +45,20 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
         $nome = $fetch2->nome_empre;
-        $senha = $fetch2->senha_empre;
-        $email = $fetch2->email_empre;
+        $ruaE = $fetch2->rua_empre;
+        $bairroE = $fetch2->bairro_empre;
+        $cidadeE = $fetch2->cidade_empre;
+        $estadoE = $fetch2->estado_empre;
+        $telE = $fetch2->tel_empre;
+        $funcE = $fetch2->categoria_empre;
         $imagemL = $fetch2->foto_empre;
-        echo "Seu id é: '{$_SESSION["id"]}' <br>";
+        
+        /*echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
-        echo "<script>location.href='perfil_vendedor/index.php'</script>";
+        //echo ' <img src="' . $imagemL . '" >'. "<br>";*/
+        include_once 'perfil_vendedorL.html';
         //echo ' <img src="' . $imagemL . '" >'. "<br>";
     }else if ($_SESSION["defini"] == 3){
         $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";

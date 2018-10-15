@@ -6,9 +6,9 @@ function connection($tipoBanco = 'mysql'){
     try{
     $host = 'localhost';
     $port = '3306';
-    $dbname = 'cadastroTeste';
+    $dbname = 'casamentodossonhos';
     $user = 'root';
-    $password = '';
+    $password = 'toor';
     switch($tipoBanco){
         case 'mysql':
         $conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname",

@@ -79,10 +79,11 @@ try{
             }else{
                 $queryInsert = "INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
                 nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
-                tipo_par_usu, nascimento_par_usu, data_casal)
+                tipo_par_usu, nascimento_par_usu, data_casal, horario_casal, local_casal, foto_local)
                          VALUES('$nomeCasal', '$casalDefinicao' ,'$emailCasal', '$senhaCasal', '$NascimentoCasal', '$cepCasal'
                          , '$ruaCasal', '$bairroCasal', '$cidadeCasal', '$ufCasal', '$destino', '$NomeParceiro', '$casalDefinicao2'
-                         , '$NascimentoCasal2', '$DataCasal')";
+                         , '$NascimentoCasal2', '$DataCasal', 'Não Definido', 'Não Definido', 'imagens/galeria3.jpeg')";
+                        
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
                 //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
