@@ -40,9 +40,9 @@ if($_FILES['img_perfil'] == null){
             $query = "UPDATE USUARIO SET FOTO_USU = '$destino' where email_usu = '$email'";
             
             $execute = executeQuery($conn, $query);
-            //echo'<script>';
-        //echo"location.href='../perfil.php'";
-        //echo '</script>';
+            echo'<script>';
+        echo"location.href='../perfil.php'";
+        echo '</script>';
     }
 }
     }

@@ -34,15 +34,14 @@ if($_FILES['img_localCasamento'] == null){
         //WHERE foto_usu = some_value";
         
          @move_uploaded_file ( $arquivo_tmp, "../$destino" );
-            
 
             $conn = connection();
             $query = "UPDATE USUARIO SET FOTO_LOCAL = '$destino' where email_usu = '$email'";
             
             $execute = executeQuery($conn, $query);
-            //echo'<script>';
-        //echo"location.href='../perfil.php'";
-        //echo '</script>';
+            echo'<script>';
+        echo"location.href='../perfil.php'";
+        echo '</script>';
     }
 }
     }
