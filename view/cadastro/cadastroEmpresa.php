@@ -1,11 +1,11 @@
 <?php
 
-include_once './Db/daohelper.php';
+include_once '../../Db/daohelper.php';
 include_once 'funcoes.php';
 try{
     if(empty($_POST)){
         echo'<script>';
-        echo"location.href='index.html'";
+        echo"location.href='../cadastro/'";
         echo '</script>';
     }else{
         $nomeEmpresa = isset($_REQUEST['nomeEmpresa'])?$_REQUEST['nomeEmpresa']:null;
@@ -34,7 +34,7 @@ try{
             echo '</script>';
 
             echo '<script>';
-            echo "location.href='cadastro.html'";
+            echo "location.href='../cadastro/'";
             echo '</script>';
         }else{
 
@@ -74,7 +74,7 @@ try{
                 echo '</script>';
 
                 echo '<script>';
-                echo "location.href='cadastro.html'";
+                echo "location.href='../cadastro/'";
                 echo '</script>';
                
             }else{
@@ -85,7 +85,7 @@ try{
                 echo 'alert("Cnpj Inválido!!!")';
                 echo '</script>';
                 echo '<script>';
-                echo "location.href='cadastro.html'";
+                echo "location.href='../cadastro/'";
                 echo '</script>';
 }else{
                 $queryInsert = "INSERT INTO empresa(nome_empre, cnpj_empre, email_empre, senha_empre, 
@@ -104,7 +104,7 @@ try{
                     echo 'alert("Seu cadastro foi realizado com sucesso")';
                     echo '</script>';
                     echo '<script>';
-                    echo "location.href='login.html'";
+                    echo "location.href='../login/'";
                     echo '</script>';
                 }else{
                     
@@ -113,7 +113,7 @@ try{
                         echo '</script>';
                 
                         echo '<script>';
-                        echo "location.href='index.html'";
+                        echo "location.href='../cadastro/'";
                         echo '</script>';
                         
                 }

@@ -3,7 +3,7 @@ include_once '../../Db/daohelper.php';
 try{
 $pagina = 1;
  $conn = connection();
- $verificar = "SELECT count(produtoID) FROM produto";
+ $verificar = "SELECT count(cod_produto) FROM produto";
  $querySelect = executeSelect($conn, $verificar);
     $cod = array();
     $produto = array();
@@ -27,7 +27,7 @@ $pagina = 1;
     }else{
         $npl = 10;
         for($i=1;$i<=10;$i++){
-             $verificar2 = "SELECT * FROM produto where produtoID = {$i}";
+             $verificar2 = "SELECT * FROM produto where cod_produto = {$i}";
                 $querySelect = executeSelect($conn, $verificar2);
                 if($querySelect->rowCount() > 0){
                     while($fetch = $querySelect->fetch(PDO::FETCH_ASSOC)){

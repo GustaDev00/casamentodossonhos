@@ -1,4 +1,5 @@
 *{margin: 0px; padding: 0px}
+body{margin: 0px; padding: 0px}
 
 :root{
  --ajustes: 100vw;
@@ -218,11 +219,6 @@ figure figcaption a:active{
    #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
    #MenuVendedor ol li{display: inline;}
    #MenuVendedor ol li:first-child{border-right: 1px solid black;}
-
-   footer{
-    display: none;
-  }
- 
 
       /*--------pagina de cadastro ------*/
       

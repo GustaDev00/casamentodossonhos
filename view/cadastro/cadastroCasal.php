@@ -1,10 +1,10 @@
 <?php
 
-include_once './Db/daohelper.php';
+include_once '../../Db/daohelper.php';
 try{
     if(empty($_POST)){
         echo'<script>';
-        echo"location.href='index.html'";
+        echo"location.href='../cadastro/'";
         echo '</script>';
     }else{
         $nomeCasal = isset($_REQUEST['nomeCasal'])?$_REQUEST['nomeCasal']:null;
@@ -35,7 +35,7 @@ try{
             echo '</script>';
 
             echo '<script>';
-            echo "location.href='cadastro.html'";
+            echo "location.href='../cadastro/'";
             echo '</script>';
         }else{
             if ( isset( $imagemCasal[ 'name' ] ) && $imagemCasal[ 'error' ] == 0 ) {
@@ -74,7 +74,7 @@ try{
                 echo '</script>';
 
                 echo '<script>';
-                echo "location.href='cadastro.html'";
+                echo "location.href='../cadastro/'";
                 echo '</script>';
             }else{
                 $queryInsert = "INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
@@ -94,7 +94,7 @@ try{
                     echo 'alert("Seu cadastro foi realizado com sucesso")';
                     echo '</script>';
                     echo '<script>';
-                    echo "location.href='login.html'";
+                    echo "location.href='../login/'";
                     echo '</script>';
                 }else{
                     echo '<script>';
@@ -102,7 +102,7 @@ try{
                         echo '</script>';
 
                         echo '<script>';
-                        echo "location.href='index.php'";
+                        echo "location.href='../cadastro/'";
                         echo '</script>';
                 }
             }

@@ -1,5 +1,5 @@
 create database casamentodossonhos;
- -- drop database casamentodossonhos;
+  -- drop database casamentodossonhos;
 use casamentodossonhos;
 /*
 create table tipo_usuario(
@@ -74,7 +74,6 @@ preco_prod varchar(100),
 desc_prod text,
 url_foto_prod varchar(100),
 local_prod varchar(199),
-iz_prod varchar(100),
 cod_empresa int,
 cod_categoria int,
 foreign key(cod_empresa)references empresa(cod_empresa),

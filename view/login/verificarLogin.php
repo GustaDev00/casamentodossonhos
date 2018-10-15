@@ -1,14 +1,14 @@
 
 <script type="text/javascript">
 		function loginsucessfully(){
-			setTimeout("location.href='perfil.php'", 1);
+			setTimeout("location.href='../perfil.php'", 1);
                         
 		}
 
 	</script>
 <?php
 
-require_once './Db/daohelper.php';
+require_once '../../Db/daohelper.php';
 $email = isset($_REQUEST['email'])?$_REQUEST['email']:null;
 $senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
 $pdo= connection();
@@ -70,7 +70,7 @@ $pdo= connection();
                 
             }else{
                 echo "<script>alert('Usuarios Ou Senha Incorretos!');
-                top.location.href='login.html';
+                top.location.href='../login/';
                  </script>";
                 }
     }

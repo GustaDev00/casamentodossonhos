@@ -1,9 +1,6 @@
 <?php 
-    require_once ("lib/raelgc/view/Template.php");
-    use raelgc\view\Template;
-
-    $tpl = new Template ("view/index.html");
-
-    $tpl ->show();
+    require_once 'Db/daohelper.php';
+    
+    include_once 'view/index.html';
 
 ?>

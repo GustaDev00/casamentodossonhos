@@ -1,11 +1,9 @@
-<?php
-        include_once '../mask/header.html';
-
-        include_once 'listaproduto.php';
+;<?php
+        include_once '../../Db/daohelper.php';
+        
+        include_once 'listaproduto.php'
+    
         include_once 'index.html';
        
-        include_once '../mask/footer.html';
-            
-
-      
-?>
+          
+    ?>

@@ -7,26 +7,26 @@
         <meta name=description content="Uma maneira simples de fazer seu casamento">
         <meta name=keywords content="Casamento">
         <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
-        <link href="_css/default.css" rel=stylesheet>
+        <link href="view/_css/default.css" rel=stylesheet>
         <!-- Telas Responsivas -->
-        <link rel=stylesheet media="screen and (max-width:480px)" href="_css/style480.css">
-        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="_css/style760.css">
-        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="_css/style1024.css">
-        <link rel=stylesheet media="screen and (min-width:1025px)" href="_css/style1366.css">
+        <link rel=stylesheet media="screen and (max-width:480px)" href="view/_css/style480.css">
+        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="view/_css/style760.css">
+        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="view/_css/style1024.css">
+        <link rel=stylesheet media="screen and (min-width:1025px)" href="view/_css/style1366.css">
         <!-- Jquery-->
-        <script src="_js/jquery-3.3.1.min.js"></script>
-        <script src="js/javascript.js"></script>
-        <script src="js/passopasso.js"></script>
+        <script src="view/_js/jquery-3.3.1.min.js"></script>
+        <script src="view/_js/javascript.js"></script>
+        <script src="view/_js/passopasso.js"></script>
         <div id="container">
 
             <header>
-                <a href="index.html"><img src="_imagens/logo.png" title="Casamento dos sonhos" id="logo"></a>
+                <a href=""><img src="view/_imagens/logo.png" title="Casamento dos sonhos" id="logo"></a>
                 <div id="ferramentas_topo">
                     
-                <!--<form method="post" action="pesquisa.php">
-                <input type="search" name="pesquisar" id="pesquisar" maxlength="34">
-                    <input type="image" src="_imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
-                -->
+                <form method="post" action="pesquisa.php">
+                <input type="search" name="pesquisar" id="pesquisar" maxlength="100">
+                    <input type="image" src="view/_imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
+                
                 <!--
                 <form method="get" action="pesquisa/pesquisa.php">
                 <input type="search" name="pesquisar" id="pesquisar" maxlength="100">
@@ -35,8 +35,13 @@
                     -->
                 </form> 
                 <div id="icones_topo">
-                <a href="#"><img id="user_icone" src="_imagens/user.png" title="Casamento dos sonhos"></a>
-                <a href="loja.html"><img id="loja_icone" src="_imagens/loja.png" title="Casamento dos sonhos"></a>   
+                        <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                            echo '<a href="view/perfil.php"><img id="user_icone" src="view/_imagens/user.png" title="Casamento dos sonhos"></a>';
+                        }else{
+                            echo '<a href="view/login/"><img id="user_icone" src="view/_imagens/user.png" title="Casamento dos sonhos"></a>';
+                        }
+                        ?>
+                <a href="view/loja/"><img id="loja_icone" src="view/_imagens/loja.png" title="Casamento dos sonhos"></a>   
                 </div></div>
             </header>
                 
@@ -44,13 +49,22 @@
                 
                <section>
                 <figure>
-                    <img src="_imagens/fundo.png" title="Casal" >
+                    <img src="view/_imagens/fundo.png" title="Casal" >
                     <figcaption>
                         <p>Nosso sonho é realizar o seu. Venha fazer seu casamento 
                             com facilidade e do jeito que sempre sonhou.</p>
                             <br><br>
                     <a href="#nos">Começar</a>
-                    <a href="login.html"> Entrar </a>
+
+                    <?php 
+                    if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                        echo '<a href="view/perfil.php"> Perfil </a>';
+                        
+                    }else{
+                       echo '<a href="view/login/index.html"> Entrar </a>';        
+                    }
+                    ?> 
+                    
                     </figcaption>
                 </figure>
                 </section>
@@ -63,14 +77,14 @@
                            aqui você pode ter relações com empresas
                             e organizar seu casamento com facilidade
                              isso tudo da sua casa e através de um
-                              <a href="cadastro.html">clique</a>
+                              <a href="view/cadastro/">clique</a>
                 </section>
 
                 <section id="carrossel">
                     <div id="caixa">
-                        <img src="_imagens/galeria1.jpeg">
-                        <img src="_imagens/galeria2.jpeg">
-                        <img src="_imagens/galeria3.jpeg">
+                        <img src="view/_imagens/galeria1.jpeg">
+                        <img src="view/_imagens/galeria2.jpeg">
+                        <img src="view/_imagens/galeria3.jpeg">
                     </div>
                     
                 </section>
@@ -86,15 +100,13 @@
                                 </ol>
                                 </nav>
                 </section>
-                <footer>
-                            <img src="_imagens/logo.png">
-                            <a href="casamedosonhos.com"><p>Casamedosonhos.com</p></a>
-                                <p>grupo 5 INI3A</p>
-                </footer>
+               
                            
             </main>  
-            <footer>
-                
-            </footer>   
+             <footer>
+                <img src="view/_imagens/logo.png" style="margin-bottom: 10px;">
+                <a href="#"><p>Casamedosonhos.com</p></a>
+                    <p>grupo 5 INI3A</p>
+            </footer>  
         </div>
 

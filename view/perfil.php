@@ -36,7 +36,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
         */
-        include_once "perfil_clienteL.html";
+        //include_once "perfil_cliente/index.php";
+        echo "<script>location.href='perfil_cliente/'</script>";
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
     }else if($_SESSION["defini"] == 1){
@@ -82,7 +83,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
   <?php
 }else{
 	echo "<script>alert('Faça o Login para continuar!');</script>";
-    echo "<script>location.href='login.html'</script>";
+    echo "<script>location.href='login/index.html'</script>";
 }
 
 
