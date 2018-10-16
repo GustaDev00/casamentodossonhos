@@ -55,9 +55,14 @@
   <body>        
 
     <div class="top" > 
-        <div  id="irineu">
-          <img class="perfil" src="<?php echo $imagemL?>">
-          <button>Alterar</button>  
+            <div  id="irineu">   
+                    <form id="formu" action="teste.php">        
+              <img class="perfil" src="../_imagens/galeria3.jpeg">   
+              <label class="cim" for='selecao-arquivo'>alterar</label>
+              <input type="submit" onchange="submit();" name="imagem">
+              <input class="cim" id='selecao-arquivo' type='file' onchange="submit();"> 
+            </form>        
+        </div>  
           
           <!-- <img class="perfil" id="imagem2" src="<?php echo $imagemL?>">   
           <a href="updates/img_perfil.php" name="img_perfil">
@@ -66,7 +71,7 @@
             <input type="submit" value="Atualizar">
             </form>
             <button name="img_perfil">Alterar</button></a>   -->
-        </div> 
+
     
     <div class="java">
 <br><br>
@@ -113,29 +118,52 @@
                          
                             <div class="princ">
                                    <label id="prin">Dia:</label>
+<<<<<<< HEAD
                                    <input type="number" class="form" id="" placeholder="<?php echo $diaCas?>" size="10"> 
+=======
+                                   <span>     hjhgjghj</span>
+                                   <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10"> 
+>>>>>>> Amanda
                                    <a href="" class="edit">Editar</a>
                                    <br>
                                                                                     
                                    <label id="prin">Horário:</label>
+<<<<<<< HEAD
                                    <input type="text" class="form" id="" placeholder="<?php echo $horarioCas?>" size="10">
+=======
+                                   <span>     hjhgjghj</span>
+                                   <input type="text" class="form" id="" placeholder="19:00" size="10">
+>>>>>>> Amanda
                                   <!--<a href="" class="edit">Editar</a>-->
                                    <br>
                               
                                    <label id="prin">Local:</label>
+<<<<<<< HEAD
                                    <input type="text" class="form" id="" placeholder="<?php echo $localCas?>" size="25">
+=======
+                                   <span>     hjhgjghj</span>
+                                   <input type="text" class="form" id="" placeholder="Endereço" size="25">
+>>>>>>> Amanda
                                  <!--    <a href="" class="edit">Editar</a>-->
                                     <br>
-                            </div>     
+                            </div> 
+                            <form>    
                             <div class="b">                  
+<<<<<<< HEAD
                             <img class="galeria3" src="<?php echo $imagemLoc ?>" >
                             <button class="e">Alterar</button>
                             <form action="updates/img_localCasamento.php" enctype="multipart/form-data" method="POST">
                             <input type="file" name="img_localCasamento">
                             <input type="submit" value="Atualizar Local">
                             </form>
+=======
+                            <img class="galeria3" src="../_imagens/galeria3.jpeg" >
+
+                            <label class="at" for='selecao-arquivo'>alterar</label>
+                            <input class="at" id='selecao-arquivo' type='file'>
+>>>>>>> Amanda
                             </div>
-                            
+                            <form>
                             <br>      
                     </div>
 
@@ -237,6 +265,7 @@
              }else{document.getElementById(id).style.display = 'block'; }  
             }                             
                   
+<<<<<<< HEAD
              </script>    
              <section id=c">
         <nav>
@@ -265,3 +294,14 @@
 
 </footer>   
 </div>
+=======
+             </script>                       
+             
+             <script>
+             function submit(){
+                 document.formu.submit();
+             }
+             </script>
+  </body>
+</html>
+>>>>>>> Amanda
