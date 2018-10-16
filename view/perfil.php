@@ -85,6 +85,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     if(isset($_GET['codigo']) and isset($_GET['par'])){
         $codigo = $_GET['codigo'];
         echo $codigo. " / ". $_GET['par'];
+        
     }else{
 
     
