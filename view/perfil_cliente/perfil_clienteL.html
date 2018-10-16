@@ -26,12 +26,12 @@
   </head>
   <body> 
     <div class="top" >
-          <form id="formu">
+          <form id="formu" action="teste.php">
         <div  id="irineu">           
           <img class="perfil" src="../_imagens/galeria3.jpeg">   
           <label class="cim" for='selecao-arquivo'>alterar</label>
-          <input type="submit" onchange=submit() name="imagem">
-          <input class="cim" id='selecao-arquivo' type='file'> 
+          <input type="submit" onchange="submit();" name="imagem">
+          <input class="cim" id='selecao-arquivo' type='file' onchange="submit();"> 
         </div> 
     </form>
     <div class="java">
@@ -200,8 +200,8 @@
              
              <script>
              function submit(){
-                 document.formu.submit;
+                 document.formu.submit();
              }
-             </script>>
+             </script>
   </body>
 </html>
