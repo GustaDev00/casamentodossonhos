@@ -1,6 +1,5 @@
 <?php
-        include_once '../../Db/daohelper.php';
-
+        include_once '../Db/daohelper.php';
         if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 
         include_once 'perfil_clienteL.html';
