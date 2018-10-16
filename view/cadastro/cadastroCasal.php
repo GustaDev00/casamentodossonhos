@@ -55,7 +55,7 @@ try{
                     
                 // Cria um nome único para esta imagem, Evita nomes com acentos, espaços e caracteres
                     $novoNome = uniqid ( time () ) . '.' . $extensao;
-                    $destino = 'imagem_usuario / ' . $novoNome;
+                    $destino = '_imagem_usuario/' .$novoNome;
                     
                     }else{
                     echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
@@ -82,7 +82,7 @@ try{
                 tipo_par_usu, nascimento_par_usu, data_casal, horario_casal, local_casal, foto_local)
                          VALUES('$nomeCasal', '$casalDefinicao' ,'$emailCasal', '$senhaCasal', '$NascimentoCasal', '$cepCasal'
                          , '$ruaCasal', '$bairroCasal', '$cidadeCasal', '$ufCasal', '$destino', '$NomeParceiro', '$casalDefinicao2'
-                         , '$NascimentoCasal2', '$DataCasal', 'Não Definido', 'Não Definido', 'imagens/galeria3.jpeg')";
+                         , '$NascimentoCasal2', '$DataCasal', 'Não Definido', 'Não Definido', '_imagens/galeria3.jpeg')";
                         
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");

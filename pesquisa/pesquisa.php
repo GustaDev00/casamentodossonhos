@@ -34,7 +34,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Resultado da Busca - ULTIMATE PHP</title>
+        <title>Resultado da Busca</title>
     </head>
  
     <body>
@@ -83,17 +83,4 @@ Nenhum resultado encontrado
 }catch (Exception $ex) {
 
 }
-/*
-/// credenciais de acesso ao MySQL
- define('MYSQL_HOST', 'localhost'); define('MYSQL_USER', 'root' ); define('MYSQL_PASSWORD', '' ); define('MYSQL_DB_NAME', 'nome_do_banco');
- // palavra digitada na busca 
- $search = isset($_GET['search']) ? $_GET['search'] : ''; 
- $sql = "SELECT c.name AS category, 
-        p.name, p.description, p.price 
-        FROM products AS p 
-        INNER JOIN categories c ON c.id = p.category_id 
-        WHERE p.name LIKE :search OR p.description LIKE :search"; 
- // abre a conexão e define codificação 
- UTF-8
-  $PDO = new PDO('mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD); $PDO->exec("set names utf8");
- */
+
