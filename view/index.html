@@ -45,21 +45,65 @@
                 </div></div>
             </header>
                 
-           
-               
+            <main>
+                
+               <section>
+                <figure>
+                    <img src="view/_imagens/fundo.png" title="Casal" >
+                    <figcaption>
+                        <p>Nosso sonho é realizar o seu. Venha fazer seu casamento 
+                            com facilidade e do jeito que sempre sonhou.</p>
+                            <br><br>
+                    <a href="#nos">Começar</a>
+
+                    <?php 
+                    if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                        echo '<a href="view/perfil.php"> Perfil </a>';
+                        
+                    }else{
+                       echo '<a href="view/login/index.html"> Entrar </a>';        
+                    }
+                    ?> 
+                    
+                    </figcaption>
+                </figure>
+                </section>
+                    
+                <section id="nos">
+                    <h2>Casamento do Sonhos</h2>
+                    <p >O site casamentos dos sonhos vem para
+                         proporcionar uma aliviada e praticidade
+                          para sua data especial e importante,
+                           aqui você pode ter relações com empresas
+                            e organizar seu casamento com facilidade
+                             isso tudo da sua casa e através de um
+                              <a href="view/cadastro/">clique</a>
+                </section>
+
+                <section id="carrossel">
+                    <div id="caixa">
+                        <img src="view/_imagens/galeria1.jpeg">
+                        <img src="view/_imagens/galeria2.jpeg">
+                        <img src="view/_imagens/galeria3.jpeg">
+                    </div>
+                    
+                </section>
+                <section id="complemento">
+
+                </section>
+                <section id=c>
+                        <nav>
+                                <ol id="menu">
+                                    <li><a href="index.html" class="item home">HOME</a>
+                                    <li><a href="loja.html" class="item">LOJA</a>
+                                    <li><a href="login.html" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>
+                                </ol>
+                                </nav>
+                </section>
                
                            
             </main>  
              <footer>
-                    <section id=c">
-                            <nav>
-                                    <ol id="menu">
-                                        <li><a href="index.html" class="item home">HOME</a>
-                                        <li><a href="loja.html" class="item">LOJA</a>
-                                        <li><a href="login.html" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>
-                                    </ol>
-                                    </nav>
-                    </section>
                 <img src="view/_imagens/logo.png" style="margin-bottom: 10px;">
                 <a href="#"><p>Casamedosonhos.com</p></a>
                     <p>grupo 5 INI3A</p>

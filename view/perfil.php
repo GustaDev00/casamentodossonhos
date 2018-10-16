@@ -82,8 +82,15 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     </form>
   <?php
 }else{
+    if(isset($_GET['codigo']) and isset($_GET['par'])){
+        $codigo = $_GET['codigo'];
+        echo $codigo. " / ". $_GET['par'];
+    }else{
+
+    
 	echo "<script>alert('Faça o Login para continuar!');</script>";
     echo "<script>location.href='login/index.html'</script>";
+}
 }
 
 
