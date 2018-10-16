@@ -40,7 +40,7 @@ figure figcaption{left: calc(48vw - 225px); top:  240px;}
   #caixa{width: 200%; }
   #caixa img{float: left;width: 480px;top:  240px;}
        /*-------------navegação---------*/
-  #container main section nav {display: none;}
+  #c nav {display: none;}
   footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
   footer a{text-decoration: none; color: black; position: absolute; left: -50px;}
   footer p{margin-left: 70%}

@@ -50,7 +50,7 @@ margin-left: calc(48vw - 350px);
 #caixa img:last-child, #caixa img:nth-child(3){display: none;}
 
  /*-------------navegação---------*/
- #container main section nav{display: none;}
+ #c nav{display: none;}
  footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px;}
 footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
 footer p{margin-left: 75%}
