@@ -25,12 +25,15 @@
     </style>     
   </head>
   <body> 
-    <div class="top" > 
-        <div  id="irineu">
+    <div class="top" >
+          <form id="formu">
+        <div  id="irineu">           
           <img class="perfil" src="../_imagens/galeria3.jpeg">   
           <label class="cim" for='selecao-arquivo'>alterar</label>
+          <input type="submit" onchange=submit() name="imagem">
           <input class="cim" id='selecao-arquivo' type='file'> 
         </div> 
+    </form>
     <div class="java">
 <br><br>
                     <button class="primary" id="b1">   Lista de presente </button>
@@ -87,6 +90,7 @@
                             <form>    
                             <div class="b">                  
                             <img class="galeria3" src="../_imagens/galeria3.jpeg" >
+
                             <label class="at" for='selecao-arquivo'>alterar</label>
                             <input class="at" id='selecao-arquivo' type='file'>
                             </div>
@@ -192,6 +196,12 @@
              }else{document.getElementById(id).style.display = 'block'; }  
             }                             
                   
-             </script>                          
+             </script>                       
+             
+             <script>
+             function submit(){
+                 document.formu.submit;
+             }
+             </script>>
   </body>
 </html>
