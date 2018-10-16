@@ -1,0 +1,448 @@
+*{margin: 0px; padding: 0px}
+body{margin: 0px; padding: 0px}
+
+:root{
+ --ajustes: 100vw;
+    --equilibro: 50vw;
+}
+html{scroll-behavior:smooth}
+
+#container header{
+  background-color: #f6dddf;
+  width: 100%;
+  display: flex;
+}
+
+
+
+#container header form input:first-child{
+  height: 44px;
+  border: 2px solid #FF757F;
+  border-radius: 50px;
+  background-color: #f6dddf;
+
+}
+#complemento{height: 50px; width: 100%; background-color: #f2f2f2}
+
+/*---------------CONTEUDO 1PAG---------------*/
+figure figcaption p{
+font-size: 25px;
+color: #ED545B;
+}
+figure img{width: 100%}
+
+figure figcaption{
+ position: absolute;
+}
+figure figcaption a{
+  position: relative;
+  text-decoration: none;
+  border: 3px solid #ED545B;
+  top: 2rem;
+  border-radius: 20px;
+  color: #ED545B;
+  padding: 15px 30px;
+  margin: 7VW;
+}
+
+figure figcaption a:active{
+  color: #FF757F;
+  border-color: #FF757F;
+}
+
+/*---------------CONTEUDO 2PAG---------------*/
+#nos{ background-color: #F2F2F2; padding: 9vw; }
+#nos h2{
+   text-align: CENTER;
+}
+
+#nos p{
+  margin-top: 7vw;
+  line-height: 28px;
+}
+
+#carrossel{ position:relative; width:100%;  overflow: hidden;}
+#caixa{ position:absolute;}
+#caixa img{ float:left; }
+
+#container main #nav_fixo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+/*--------------------loja--------------*/
+
+.oi{
+    width: 40vw;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px 0 0 20px;
+}
+
+.hidde{ height: 90%; margin: 10px; }
+
+.produto_loja{
+    border: 1px solid #FF757F;
+    border-radius: 20px;
+    margin: 23px; 
+    background: #f6dddf;
+    
+}
+#filtro{
+  margin: 20px;
+}
+
+#filtro img{
+  width: 62px;
+}
+
+#filtro a{
+  position: relative;
+  bottom: 20px; 
+  margin-left: 14px
+}
+.produto_loja a{
+  text-decoration: none
+}
+#container main #setasConjunto{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+#Categoria_icones a img{
+  width: 30%;
+}
+ /* --------------------PERFIL CLIENTE--------------------*/
+
+ div.container{
+   margin: 2%;
+ }
+ 
+ div.group2{
+ padding-left: 2%;
+ padding-right: 2%; 
+ }
+
+ label, h3{
+   font-size: 3vw;
+ }
+  div#um{
+    font-size: 3vw;  
+    margin-left: 6%;
+   margin-top: 2%;
+  }
+
+
+  /*-------produto-------------*/
+
+  #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
+  #SobreProduto{
+    color:#5E5E5E;
+    font-family: Arial, Helvetica, sans-serif;  
+  }
+
+  #valorP{
+    display: flex;
+    margin-top: 4%;
+    justify-content:space-around
+    }
+    #valorP h2{
+    margin-top: 1%
+      }
+  #valorP a{    
+    padding:2.5%;
+    background-color: #169BD5;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none
+  }
+  #descrip_produto{
+    width: 104%;
+    border: 1px solid black;
+    margin-top: 30px;
+    padding: 10px
+  }
+
+  #PrimeiraCaixa{height: 115px; overflow: auto;}
+  #SegundaCaixa a img{width: 105px; margin: 30px 0px 40px 60px}
+  #SegundaCaixa article{float: left;}
+  #SegundaCaixa article h3{margin-top: 3px}
+  #MensagemEnviar form{font-family: Arial, sans-serif;}
+  #MensagemEnviar{display: none}
+  #MensagemEnviar form label{
+    border: 1px solid;
+    display: flex;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  #MensagemEnviar form textarea{
+    resize: none;
+    margin-top: 5px;
+    width: 99%;
+    height: 200px;
+
+  }
+  #btnForm{position: absolute; top:410px; right: 19%;} 
+
+  #all_icones{
+    margin-top: 1.5%;
+    width: 65%;
+    height: 50px;
+    background-color: #f6dddf;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+  }
+
+  #all_icones img{width: 42px;}
+
+ /*----------PERFIL VENDEDOR -----------*/
+
+ #vendedor{
+  width: 85%;
+  margin: 10px 5% 0 5%;
+  }
+
+  #TopoVendedor{
+    padding: 10px;
+    background-color: #f6dddf;
+    width: 100%;
+   }
+
+   #InfoVendedor{padding: 10px; width: 100%;}
+
+   #InfoVendedor article h3{margin-top: 5px}
+
+   #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
+   #MenuVendedor ol li{display: inline;}
+   #MenuVendedor ol li:first-child{border-right: 1px solid black;}
+
+      /*--------pagina de cadastro ------*/
+      
+
+/*form styles*/
+#msform {
+width: 400px;
+margin: 50px auto;
+text-align: center;
+position: relative;
+}
+#msform fieldset {
+background: white;
+border: 0 none;
+border-radius: 3px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding: 20px 30px;
+box-sizing: border-box;
+width: 80%;
+margin: 0 10%;
+
+/*stacking fieldsets above each other*/
+position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+#msform input, #msform textarea,  #msform select{
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+font-family: montserrat;
+color: #2C3E50;
+font-size: 13px;
+}
+
+#infoColoca{	
+padding: 5px;
+  display: flex;
+  justify-content: space-between;
+border-bottom: 1px solid black;
+margin-bottom: 15px;
+  margin-top: 5px;
+width: 100%;   
+box-sizing: border-box;
+} 
+
+#quadro{
+  width:100%;border: 1px solid; overflow: hidden;
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #27AE60;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 1px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+font-size: 15px;
+text-transform: uppercase;
+color: #2C3E50;
+margin-bottom: 10px;
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-left: 23%;
+margin-bottom: 30px;
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+}
+#progressbar li {
+list-style-type: none;
+color: black;
+text-transform: uppercase;
+font-size: 9px;
+width: 33.33%;
+float: left;
+position: relative;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color: #333;
+background: white;
+border-radius: 3px;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: white;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+background: #27AE60;
+color: white;
+}
+
+.definiTamanhoL{ font-size: 16px}
+
+/*---------escondendo as caixas de cadastro ---------*/
+
+.cadastro_Empresa, .cadastro_casal{display: none}
+
+
+  /*-------------------login.html-----------*/
+
+div.teste{
+  width: 336PX;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  }
+
+  .campo label{font-size: 22PX}
+  .campo form input{
+    padding: 10px;
+    border: 0px; 
+    border: 2px solid #f6dddf;
+    border-radius: 5px; 
+    border-bottom: 2px solid #FF757F;
+    background-color: white;
+    outline: none;
+    color: black
+  }
+
+  ::-webkit-input-placeholder {
+    color: black;
+ }
+ 
+ #btn_entrar{
+   border: 2px solid #f6dddf;
+   border-bottom: 2px solid #FF757F;
+   padding: 10px 40px 10px 40px;
+ }
+ #btn_entrar:hover, #btn_entrar:active{
+   border: 2px solid #FF757F;
+ }
+
+  #Campo_Login .teste a:last-child{
+    position: absolute;
+    top: 410PX;
+    left: calc(49% - 70PX);
+  }
+
+div.campo{
+  margin-top: 15px;
+}
+
+
+  /*empresa*/
+
+  .ad{
+    margin-left: 8px;
+    padding: 0 
+}
+/*---------------------------------------------ALL USER--------------------*/
+
+div.adm{
+  margin-left: 3%;
+  margin-top: 3%;
+}
+img.abc{
+   width: 26%;
+   margin-top: 2%;
+   margin-left: 1%;
+   margin-right: 1%;
+   border-radius: 100%;
+   border-style: dashed;
+   padding: 1%;
+   border-color: #595959;
+   border-width: 0.6vw;
+}
+#ch{
+  margin-left: 3%; 
+  margin-top: 2%; 
+  padding-right: 20%;
+  margin-right: 10px;
+}
+

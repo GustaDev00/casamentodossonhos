@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+        <title>Casamento dos Sonhos</title>
+        <meta charset=UTF-8>
+        <meta name=viewport content="width=device-width, initial-scale=1.0">
+        <meta name=description content="Uma maneira simples de fazer seu casamento">
+        <meta name=keywords content="Casamento">
+        <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
+        <link href="../_css/default.css" rel=stylesheet>
+        <!-- Telas Responsivas -->
+        <link rel=stylesheet media="screen and (max-width:480px)" href="../_css/style480.css">
+        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="../_css/style760.css">
+        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="../_css/style1024.css">
+        <link rel=stylesheet media="screen and (min-width:1025px)" href="../_css/style1366.css">
+        <!-- Jquery-->
+        <script src="../_js/jquery-3.3.1.min.js"></script>
+        <script src="../_js/javascript.js"></script>
+        <script src="../_js/passopasso.js"></script>
+        <script src="../_js/jquery.easing.min.js"></script>
+        <script src="../_js/jquery.min.js"></script>
+        <div id="container">
+
+            <header>
+                <a href="../../"><img src="../_imagens/logo.png" title="Casamento dos sonhos" id="logo"></a>
+                <div id="ferramentas_topo">
+                <form method="post" action="pesquisa.php">
+
+                <input type="search" name="pesquisar" id="pesquisar" maxlength="34">
+                <input type="image" src="../_imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
+
+                </form> 
+
+                <div id="icones_topo">
+                <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                    echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
+                }else{
+                    echo '<a href="../login/"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
+                }
+                ?>
+                <a href="../loja/"><img id="loja_icone" src="../_imagens/loja.png" title="Casamento dos sonhos"></a>   
+                </div></div>
+            </header>    
+        <div class="camp">
+          
+         <img class="fil" src="../_imagens/filtro.gif">
+          <a href=""><img class="x" src="../_imagens/seta_esquerda.png"></a><br>
+        <div id="some">
+         <form action="PesquisarUsuario.php" method="GET">
+          <input id="yz" type="text" placeholder="Nome" name="Nome" require d-size = ""><br>
+           <p class="cli" ><input id="yz" class="cli" type="checkbox" required-size = "">Cliente</p>
+      
+          <p><input id="yz"type="checkbox" required-size = "">Empresa<p>
+      
+          <input id="yz"type="tex" placeholder="E-mail" name="E-mail" required-size = "">
+          <input type="submit" value="Pesquisar" class="pes">
+        </form>
+        </div>
+          
+
+        </div>
+<div class="adm">
+    <a href=""><img class="abc" src="imagens_concerta/galeria3.jpeg"></a>
+    <a href=""><img class="abc" src="imagens_concerta/galeria3.jpeg"></a>
+    <a href=""><img class="abc" src="imagens_concerta/galeria3.jpeg"></a>
+    <a href=""><img class="abc" src="imagens_concerta/galeria3.jpeg"></a>
+    <script>
+      $(function(){
+           var y = 1;
+      $(".camp form").css("display","none");
+      $(".x").css("display","none");
+      $(".fil").on("click", function(){
+        $(".camp form").css("display","block");
+        $(".x").css("display","block");
+        $(".x").css("margin","5px");
+        $(".camp").css("border-radius", "10px");
+        $(".camp").css("border", "1px solid");
+    });
+    $(".x").on("click",function(){
+      $(".camp form").css("display","none");
+      $(".x").css("display","none");
+    });
+  });
+    </script>
+</div>
+<section id=c">
+    <nav>
+            <ol id="menu">
+                <li><a href="../../" class="item home">HOME</a>
+                <li><a href="../loja/" class="item">LOJA</a>
+               <?php 
+               if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                   echo '<li><a href="../perfil.php" class="item login" id="link">&nbsp;PERFIL&nbsp;</a>';
+                   
+               }else{
+                  echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+               }
+               ?> 
+            </ol>
+            </nav>
+</section>
+<footer>
+        <img src="_imagens/logo.png">
+        <a href="../../"><p>Casamedosonhos.com</p></a>
+            <p>grupo 5 INI3A</p>
+</footer>
+       
+</main>  
+<footer>
+
+</footer>   
+</div>
+

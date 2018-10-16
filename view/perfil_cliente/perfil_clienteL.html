@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+        <title>Casamento dos Sonhos</title>
+        <meta charset=UTF-8>
+        <meta name=viewport content="width=device-width, initial-scale=1.0">
+        <meta name=description content="Uma maneira simples de fazer seu casamento">
+        <meta name=keywords content="Casamento">
+        <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
+        <link href="_css/default.css" rel=stylesheet>
+        <!-- Telas Responsivas -->
+        <link rel=stylesheet media="screen and (max-width:480px)" href="_css/style480.css">
+        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="_css/style760.css">
+        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="_css/style1024.css">
+        <link rel=stylesheet media="screen and (min-width:1025px)" href="_css/style1366.css">
+        <!-- Jquery-->
+        <script src="_js/jquery-3.3.1.min.js"></script>
+        <script src="_js/javascript.js"></script>
+        <script src="_js/passopasso.js"></script>
+        <script src="_js/jquery.easing.min.js"></script>
+        <script src="_js/jquery.min.js"></script>
+        <script>
+            $(function(){
+        $("#campoAdd").css("display","none");
+        $("#abrirAdd").on("click", function(){
+            $("#campoAdd").css("display","block");
+            });
+        
+    });
+        </script>
+    <style>
+        .f1,.f2,.f3.f4{transition: width 2s;}
+    </style>     
+   <div id="container">
+
+        <header>
+            <a href="../"><img src="_imagens/logo.png" title="Casamento dos sonhos" id="logo"></a>
+            <div id="ferramentas_topo">
+            <form method="post" action="pesquisa.php">
+
+            <input type="search" name="pesquisar" id="pesquisar" maxlength="34">
+            <input type="image" src="_imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
+
+            </form> 
+
+            <div id="icones_topo">
+            <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                echo '<a href="perfil.php"><img id="user_icone" src="_imagens/user.png" title="Casamento dos sonhos"></a>';
+            }else{
+                echo '<a href="login/"><img id="user_icone" src="_imagens/user.png" title="Casamento dos sonhos"></a>';
+            }
+            ?>
+            <a href="loja/"><img id="loja_icone" src="_imagens/loja.png" title="Casamento dos sonhos"></a>   
+            </div></div>
+        </header>
+  <body>        
+
+    <div class="top" > 
+        <div  id="irineu">
+          <img class="perfil" src="<?php echo $imagemL?>">
+          <button>Alterar</button>  
+          
+          <!-- <img class="perfil" id="imagem2" src="<?php echo $imagemL?>">   
+          <a href="updates/img_perfil.php" name="img_perfil">
+            <form action="updates/img_perfil.php" enctype="multipart/form-data" method="POST">
+            <input type="file" name="img_perfil">
+            <input type="submit" value="Atualizar">
+            </form>
+            <button name="img_perfil">Alterar</button></a>   -->
+        </div> 
+    
+    <div class="java">
+<br><br>
+                    <button class="primary" id="b1">   Lista de presente </button>
+                    <button class="primary" id="b2">   Principal </button>
+                    <button class="primary" id="b3">   Convidados </button>
+                    <button class="primary" id="b4">   Favoritos</button>
+                    <br><br>
+       </div>        
+
+       <div class="f1">
+            <p class="casal"></p>    <br>    <br>  
+            <div id="um">                                         
+                    
+                        <div class="tipo">
+                            <p>Presente: Status: </p>                                    
+                        </div> <br>
+                        <?php 
+                    $r = 0;
+                    while($r < count($dadosPres)){
+                        
+                      
+                 ?>  
+                    <div class="l1">
+                            <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
+                            <form action="deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
+                     <a class="co">Confirmado</a>  
+                     <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                      
+                            <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
+                    </div>                                                                             
+                    <?php  $r++; } ?>                                 
+                </div> <br><hr class="w">  
+                <form action="ListaPresente.php" method="post" id="campoAdd">
+                    <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente">
+                    <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira
+                    <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00
+                    <Input type="submit" value="enviar" id="enviandoAdd">
+                    </Form>    
+                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>                          
+       </div>
+
+                    <div class="f2">
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p><br>
+                         
+                            <div class="princ">
+                                   <label id="prin">Dia:</label>
+                                   <input type="number" class="form" id="" placeholder="<?php echo $diaCas?>" size="10"> 
+                                   <a href="" class="edit">Editar</a>
+                                   <br>
+                                                                                    
+                                   <label id="prin">Horário:</label>
+                                   <input type="text" class="form" id="" placeholder="<?php echo $horarioCas?>" size="10">
+                                  <!--<a href="" class="edit">Editar</a>-->
+                                   <br>
+                              
+                                   <label id="prin">Local:</label>
+                                   <input type="text" class="form" id="" placeholder="<?php echo $localCas?>" size="25">
+                                 <!--    <a href="" class="edit">Editar</a>-->
+                                    <br>
+                            </div>     
+                            <div class="b">                  
+                            <img class="galeria3" src="<?php echo $imagemLoc ?>" >
+                            <button class="e">Alterar</button>
+                            <form action="updates/img_localCasamento.php" enctype="multipart/form-data" method="POST">
+                            <input type="file" name="img_localCasamento">
+                            <input type="submit" value="Atualizar Local">
+                            </form>
+                            </div>
+                            
+                            <br>      
+                    </div>
+
+                    <div class="f3">
+                            <p class="casal">Gabriela e Julio</p>    <br> 
+                            <p class="c">Meus convidados:</p>
+                            
+                            <div class="conv">
+                                <label class="nm">Gabriel Fernandes</label>
+                                <label class="qtd">2 Acompanhantes</label><br>
+
+                                <label class="nm">Arthur Silva</label>
+                                <label class="qtd">2 Acompanhantes</label><br>
+
+                                </div>
+                    </div>
+
+                    <div class="f4">
+                            <p class="casal">Gabriela e Julio</p>    <br> <br>
+
+                            <p id="l">Meus favoritos:</p>
+
+                           <a href="#"><img class="fav1" id="l" src="_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav2" id="l" src="_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav3" id="l" src="_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav4" id="l" src="_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav5" id="l" src="_imagens/galeria3.jpeg"></a>
+                           
+                    </div>                   
+    </div>
+              
+                            
+
+<script>
+    var b1 = document.querySelector("#b1");
+    var b2 = document.querySelector("#b2");
+    var b3 = document.querySelector("#b3");
+    var b4 = document.querySelector("#b4");
+
+    var f1 = document.querySelector(".f1");
+    var f2 = document.querySelector(".f2");
+    var f3 = document.querySelector(".f3");
+    var f4 = document.querySelector(".f4");
+
+    f1.style.display = "none";
+   // f2.style.display = "none";
+    f3.style.display = "none";
+    f4.style.display = "none"; 
+   
+
+
+    b1.addEventListener("click",function(){
+        f4.style.display = "none"; 
+        f3.style.display = "none";
+        f2.style.display = "none";
+        f1.style.display = "block";
+       
+    })
+
+     b2.addEventListener("click",function(){
+        f1.style.display = "none";
+        f3.style.display = "none"; 
+        f4.style.display = "none";         
+        f2.style.display = "block";
+       
+     
+    })
+    b3.addEventListener("click",function(){
+        f1.style.display = "none";
+        f2.style.display = "none";
+        f4.style.display = "none";         
+        f3.style.display = "block"; 
+                 
+    })  
+
+    b4.addEventListener("click",function(){
+        f1.style.display = "none";
+        f2.style.display = "none"; 
+        f3.style.display = "none";        
+        f4.style.display = "block";         
+    })  
+   //-------------------------------------------------------//
+</script> 
+
+   <style>
+            button#ma{
+                display: none;
+            }            
+          input.checkbox{
+                display: block;
+                
+            }
+            </style>
+            
+            <script>
+                  function mostra(id){
+                    if (document.getElementById(id).style.display == 'block'){
+                    document.getElementById(id).style.display = 'none';                       
+             }else{document.getElementById(id).style.display = 'block'; }  
+            }                             
+                  
+             </script>    
+             <section id=c">
+        <nav>
+                <ol id="menu">
+                    <li><a href="../" class="item home">HOME</a>
+                    <li><a href="loja/" class="item">LOJA</a>
+                   <?php 
+                   if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                       echo '<li><a href="perfil.php" class="item login" id="link">&nbsp;PERFIL&nbsp;</a>';
+                       
+                   }else{
+                      echo '<li><a href="login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+                   }
+                   ?> 
+                </ol>
+                </nav>
+</section>
+<footer>
+            <img src="_imagens/logo.png">
+            <a href="../"><p>Casamedosonhos.com</p></a>
+                <p>grupo 5 INI3A</p>
+</footer>
+           
+  </body>  
+<footer>
+
+</footer>   
+</div>
