@@ -216,10 +216,12 @@ footer{position: relative;}
    #InfoVendedor{padding: 10px; width: 100%;}
 
    #InfoVendedor article h3{margin-top: 5px}
-
-   #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
+   #MenuVendedor{ border: 1px  dashed blue;}
+   #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px;}
    #MenuVendedor ol li{display: inline;}
-   #MenuVendedor ol li:first-child{border-right: 1px solid black;}
+   #MenuVendedor ol li:first-child, #MenuVendedor ol li:nth-child(2),#MenuVendedor ol li:nth-child(3){border-right: 1px solid black; }
+   .btnP{ border: 1px  dashed blue;}
+  
 
       /*--------pagina de cadastro ------*/
       

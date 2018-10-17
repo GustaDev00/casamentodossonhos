@@ -496,6 +496,11 @@ li#uto{
   font-family: arial, sans-serif
 
 }
+#MenuVendedor ol li{
+  padding: 5px 10% 5px 12%;
+  font-size: 20px;
+  font-family: arial, sans-serif;
+ }
 
   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
 
@@ -504,7 +509,6 @@ li#uto{
 
   #FotosVendedor a, #ProdutosVendedorL a{
     padding: 5vw 0;
-    border: 1px  dashed blue;
     margin: 0 0 0 8px; float: left;
     text-decoration: none; width: 22%;
     font-size:  2vw;}

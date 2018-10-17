@@ -491,18 +491,21 @@ li#uto{
 #tv{
     width:102px;
 }
- /*#MenuVendedor ol li{
-   padding: 5px 17% 5px 17%;
-   font-size: 16px;
-   font-family: arial, sans-serif
-  }*/
-  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
+#MenuVendedor ol li{
+    padding: 5px 2%;
+    font-size: 20px;
+    font-family: arial, sans-serif;
+   }
 
-  #FotosVendedor{margin-top: 15px; text-align: center}
+  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 130px;}
+  #ProdutosVendedor, #ProdutosVendedorL{display: none}
+  #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px; color: blue}
+  /*#FotosVendedor{margin-top: 15px; text-align: center}
+
   #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
 
-  #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px;border: 1px  dashed blue; margin: 0 0 0 8px; float: left; text-decoration: none}
-  #ProdutosVendedorL form{display: none}
+  #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px; margin: 0 0 0 8px; text-decoration: none}
+  #ProdutosVendedorL form{display: none} */
 
   div#InfoVendedor h2{
     font-size: 2.5vw;

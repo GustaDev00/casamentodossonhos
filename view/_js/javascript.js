@@ -53,7 +53,7 @@ var TrocaLoja = 1;
         });
         //Função Vendedor
 
-        $("#MenuVendedor ol li:last-child").on("click",function(){
+        $("#MenuVendedor ol li:nth-child(2)").on("click",function(){
             $("#FotosVendedor").css("display","none");
             $("#ProdutosVendedor").css("display","block");
             $("#ProdutosVendedorL").css("display","block");
