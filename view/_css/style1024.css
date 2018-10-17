@@ -51,7 +51,7 @@ margin-left: calc(48vw - 350px);
 
  /*-------------navegação---------*/
  #c{display: none;}
- footer{background-color: #f6dddf; padding: 10px; display: flex; align-items: center; font-size: 21px; position: relative; bottom: 0;}
+ footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px; position: relative; bottom: 0;}
 footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
 footer p{margin-left: 75%}
 
@@ -427,6 +427,7 @@ background: #ffc0cbbd;
 
 #irineu{
   position:relative;
+  margin-top: 10px;
 }
 
 #irineu button{

@@ -353,21 +353,21 @@ div.princ{
         margin-left:6px;
         margin-top: 6px; 
   }
-
 .l1{
   font-size: 2.5vw;
  }
 
  /* --------------botao editar de baixo---------*/
 /* Esconde o input */
-input.at[type='file'] {
-        display: none}      
+    input.at[type='file'] {
+            display: none;
+        }      
 
  label.at { 
     border-radius: 6px;
     font-size: 3vw;
     cursor: pointer;
-    margin: -68% 0% 0% 80%;
+    margin: -68% 0% 0% 75%;
     padding: 7px 24px;
     position: absolute;
     background: #ffc0cbbd;
@@ -393,6 +393,7 @@ label.cim {
   
 #irineu{
     position:relative;
+    margin-top: 10px;
   }
   
   #irineu button{

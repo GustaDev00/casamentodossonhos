@@ -221,6 +221,7 @@ div.tipo{
     font-size: 3vw;           
   }
   
+  
   /*img perfil*/
   img.perfil{
     width: 55%;
@@ -353,6 +354,14 @@ button.btn.btn-primary{
   margin-right: -6px;
   font-size: 140%;
 }
+.primary{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 6vw; 
+  width: 25%;
+  margin-right: -5px;
+  font-size: 140%;
+}
 
 div.conv{
   border-color: grey;
@@ -423,7 +432,7 @@ label.at {
 border-radius: 6px;
 font-size: 3vw;
 cursor: pointer;
-margin: -68% 0% 0% 86%;
+margin: 5% 0% 0% 85%;
 padding: 7px 24px;
 position: absolute;
 background: #ffc0cbbd;
@@ -461,6 +470,7 @@ background: #ffc0cbbd; }
 #irineu{
   position:relative;
   margin-bottom: 2%;
+  margin-top: 10px;
 }
 
 #irineu button{
