@@ -49,6 +49,7 @@ figure figcaption a:active{
   color: #FF757F;
   border-color: #FF757F;
 }
+footer{position: relative;}
 
 /*---------------CONTEUDO 2PAG---------------*/
 #nos{ background-color: #F2F2F2; padding: 9vw; }
