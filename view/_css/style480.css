@@ -493,13 +493,6 @@ img.letra{
 
   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 130px;}
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
-  #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px; color: blue}
-  /*#FotosVendedor{margin-top: 15px; text-align: center}
-
-  #ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
-
-  #FotosVendedor a, #ProdutosVendedorL a{padding: 35px 8px; margin: 0 0 0 8px; text-decoration: none}
-  #ProdutosVendedorL form{display: none} */
 
   div#InfoVendedor h2{
     font-size: 4vw;

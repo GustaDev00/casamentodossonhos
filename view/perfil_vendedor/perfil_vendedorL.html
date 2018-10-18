@@ -22,14 +22,14 @@
                         <li onclick="adicionar();">Adicionar</li>
                         <li>deslogar</li>
                     </ol>
-                    <div id="FotosVendedor">                       
+                    <div id="FotosVendedor" style="display:none">                       
                             <a href="#"><img class= "carro" src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                             <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                             <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                             <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                     </div>
                      
-                    <div id="ProdutosVendedorL">
+                    <div id="ProdutosVendedorL" style="display:none">
                             <div class="ordenarV">
                                 <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                                 <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
@@ -38,38 +38,26 @@
                                 <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                             </div>
                     </div>
-                    <div id="ProdutosFotos">
-                        <form action="EscolheGarcia" method="POST">
+                    <div id="ProdutosFotos" >
+                        <fieldset class="btnPF">   
+                        <a href="#">FOTOS</a>
+                        <div class="cor"></div>
+                        </fieldset>
+                        <fieldset class="btnPF"> 
+                        <a href="#">PRODUTOS</a>
+                        <div class="cor"></div>
+                        </fieldset>
+                            <form action="EscolheGarcia" method="POST" id="ADDF"> 
+                                <input type="name" name="nomefoto" placeholder="Nome Foto">
                             
-                        </form>
+                            </form>
+                            <form action="EscolheGarcia" method="POST" id="ADDP">
+                            
+                            </form>
                     </div>
                  </div>
                    
-                </section>
-                    <div id="addProduto" style="display:none;">
-                        <div id="produto">
-                            <form action="adicionarprodutov.php" method="post">
-                                <section id="SobrProduto">
-            <h1 > <input type="text" name="nomeproduto" placeholder="Nome do Produto"></h1>
-            <img src="../_imagens/galeria1.jpeg" style="width:100%; margin-top:20px">
-            <input type="file" name="imgproduto">
-            <div id="valorP">
-                <h2>R$: <input type="number" name="precoproduto" placeholder="Preço do Produto" style="width: 100px;"></h2>
-                <input type="text" name="url" placeholder="Url do Produto">
-            </div>
-            
-    <div id="des_produto">
-            <textarea name="descricao" placeholder="Informe a Descrição do Produto"></textarea>
-    </div>
-                                    <a href="">cancela</a>
-            <input type="submit" value="Enviar Produto">
-                                    
-</section>
-                            </form>
-                        </div>
-                            
-                                
-                            </div>       
+                </section>       
             </main>
             <script>
                 function campoadd(){
@@ -77,7 +65,9 @@
                     $("#addProduto").css("display","block");                    
                 }
                 function adicionar(){
-                    alert("bunda");
+                    $("#FotosVendedor").css("display","none");
+                    $("#ProdutosVendedorL").css("display","none"); 
+                    $("#ProdutosFotos").css("display","block"); 
                 }
             </script>  
 

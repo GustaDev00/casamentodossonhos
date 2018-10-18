@@ -216,7 +216,6 @@ footer{position: relative;}
    #InfoVendedor{padding: 10px; width: 100%;}
 
    #InfoVendedor article h3{margin-top: 5px}
-   #MenuVendedor{}
    #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0;}
    #MenuVendedor ol li{
         width: calc(95% / 4);
@@ -225,6 +224,44 @@ footer{position: relative;}
         text-align: center; 
         cursor: pointer;
     }
+    .btnPF{display: inline-block; border: none; margin: 30px;}
+    .btnPF a{
+      text-decoration: none;
+      color: black;
+    }
+
+    div.cor{
+      width: 102%;
+      height: 6px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
+    background-size: 400%;
+    }
+    a:hover ~ .cor{
+      animation: animate 8s linear infinite;
+    }
+    #ProdutosFotos{width: 100%; border: 1px solid; text-align: center;}
+    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px}
+    #ProdutosFotos button{
+      box-sizing: border-box;
+      background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
+      background-size: 400%;
+    }
+
+    #ProdutosFotos button:hover{
+      animation: animate 8s linear infinite;
+    }
+    @keyframes animate{
+        0%
+        {
+          background-position: 0%;
+        }
+        100%
+        {
+          background-position: 400%;
+        }
+    }
+
    #MenuVendedor ol li:first-child, #MenuVendedor ol li:nth-child(2),#MenuVendedor ol li:nth-child(3){border-right: 1px solid black; }
    .btnP{ border: 1px  dashed blue;}
   
