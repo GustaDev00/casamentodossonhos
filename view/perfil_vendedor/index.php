@@ -10,7 +10,8 @@
         include_once 'perfil_vendedorL.html';
         }else{
             include_once 'index.html';
+            
+        include_once '../mask/footer.html';
         }
-        //include_once '../mask/footer.html';
           
     ?>

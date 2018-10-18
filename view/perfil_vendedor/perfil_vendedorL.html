@@ -7,9 +7,9 @@
                     <h1>Nome Empresa</h1>
                  </div>
                  <div id="InfoVendedor">
-                     <h2>Description</h2>
+                     <h2>Descrição</h2>
                      <article>
-                       <h3>Funcção</h3>
+                       <h3>Função</h3>
                        <h3>Telefone</h3>
                        <h3>Endereço</h3>
                        <a href="#"><h3>Site</h3></a>  
@@ -19,7 +19,7 @@
                     <ol>
                         <li>Fotos</li>
                         <li>Produto</li>
-                        <li>Adicionar</li>
+                        <li onclick="adicionar();">Adicionar</li>
                         <li>deslogar</li>
                     </ol>
                     <div id="FotosVendedor">                       
@@ -34,7 +34,14 @@
                                 <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                                 <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                                 <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                             </div>
+                    </div>
+                    <div id="ProdutosFotos">
+                        <form action="EscolheGarcia" method="POST">
+                            
+                        </form>
                     </div>
                  </div>
                    
@@ -67,8 +74,36 @@
             <script>
                 function campoadd(){
                     $("#vendedor").css("display","none");
-                    $("#addProduto").css("display","block");
-                    
+                    $("#addProduto").css("display","block");                    
+                }
+                function adicionar(){
+                    alert("bunda");
                 }
             </script>  
 
+<div id="branco" style="width: 50%;height: 70px"></div>
+<section id=c>
+    <nav>
+            <ol id="menu">
+                <li><a href="../../" class="item home">HOME</a>
+                <li><a href="../loja/" class="item">LOJA</a>
+               <?php 
+               if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                   echo '<li><a href="../perfil.php" class="item login" id="link" style="padding-left:50px;">&nbsp;PERFIL&nbsp;</a>';
+                   
+               }else{
+                  echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+               }
+               ?> 
+            </ol>
+            </nav>
+</section>      
+
+
+<div id="footer2" style="display:none">
+    <img src="../_imagens/logo.png">
+    <a href="../../"><p>Casamedosonhos.com</p></a>
+        <p>grupo 5 INI3A</p>
+       
+</footer>
+</div>

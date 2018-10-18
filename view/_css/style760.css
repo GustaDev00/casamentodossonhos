@@ -470,23 +470,7 @@ font-size: 77%;
 #tv{
 width:25%;
 }
-li#oto{ padding: 5px 19% 5px 20%;
-  font-size:3vw;
-  font-family: arial, sans-serif
-}
-
-li#uto{
-  padding: 5px 15% 5px 15%;
-  font-size:3vw;
-  font-family: arial, sans-serif
-
-}
-#MenuVendedor ol li{
-  padding: 5px 2%;
-  font-size: 20px;
-  font-family: arial, sans-serif;
- }
- #MenuVendedor ol li:last-child{padding-left: 10%}
+ 
 
   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
 
