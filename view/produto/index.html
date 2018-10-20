@@ -31,12 +31,13 @@
                 </form> 
 
                 <div id="icones_topo">
-                <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                <a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>
+                <!-- <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                     echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
                 }else{
                     echo '<a href="../login/"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
                 }
-                ?>
+                ?> --> 
                 <a href="../loja/"><img id="loja_icone" src="../_imagens/loja.png" title="Casamento dos sonhos"></a>   
                 </div></div>
             </header>
@@ -48,8 +49,9 @@
     <main id="produto">
      
         <section id="SobreProduto">
-            <h1 > <?php echo $fetch["nomeproduto"]; ?> </h1>
-            <img src="<?php echo  $fetch["imgproduto"]; ?>" style="width:100%; margin-top:20px">
+            <h1 > <!--<?php echo $fetch["nomeproduto"]; ?> --> nome produto </h1>
+            <img src="../_imagens/galeria1.jpeg" style="width:100%; margin-top:20px">
+           <!-- <img src="<?php echo  $fetch["imgproduto"]; ?>" style="width:100%; margin-top:20px"> -->
             <div id="valorP">
                 <h2>R$: 00,00</h2>
                 <a href="link_da_pagina">Ver no Site</a>   
@@ -57,7 +59,7 @@
     
     <div id="descrip_produto">
         <div id="PrimeiraCaixa">
-            <p><?php echo $fetch["descricaoproduto"]; ?></p>
+            <p><!--<?php echo $fetch["descricaoproduto"]; ?>-->mensagem </p>
         </div>
         <div id="SegundaCaixa">
             <article>
@@ -90,14 +92,16 @@
                     <ol id="menu">
                         <li><a href="../../" class="item home">HOME</a>
                         <li><a href="../loja/" class="item">LOJA</a>
-                       <?php 
+                        <li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>
+                            
+                       <!--<?php 
                        if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                            echo '<li><a href="../perfil.php" class="item login" id="link">&nbsp;PERFIL&nbsp;</a>';
                            
                        }else{
                           echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
                        }
-                       ?> 
+                       ?> -->
                     </ol>
                     </nav>
     </section>
