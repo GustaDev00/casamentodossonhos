@@ -13,10 +13,10 @@
                             for($x=0; $x<=9; $x++){
                             $i = 1;
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
-                        echo '<a href="../produto/index.php?codigo=' .$produto[$x]["produtoID"]. ' " >';
+                        echo '<a href="../produto/index.php?codigo=' .$produto[$x]['produtoID']. ' " >';
                         echo '<div class="oi">';
                             echo '<div class="hidde">';
-                        echo '<img src="'. $produto[$x]["imgproduto"]. '" title="produto1">';
+                        echo '<img src="'. $produto[$x]['imgproduto']. '" title="produto1">';
                         echo '</div></div>';
                         echo '<div class="nome_descricao">';
                         echo '<h3>'. $produto[$x]["nomeproduto"].'</h3>';
@@ -31,7 +31,7 @@
                                 for($x=0; $x< $max; $x++){
                             $i = 1;
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
-                        echo '<a href="../produto/index.php?codigo=' .$produto[$x]["produtoID"]. ' " >';
+                        echo '<a href="../produto/index.php?codigo='.$produto[$x]['produtoID']. ' " >';
                         echo '<div class="oi">';
                             echo '<div class="hidde">';
                         echo '<img src="'. $produto[$x]["imgproduto"]. '" title="produto1">';
