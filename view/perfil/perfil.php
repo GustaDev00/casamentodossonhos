@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Db/daohelper.php';
+require_once '../../Db/daohelper.php';
 //require_once './processo.php';
 session_start();
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
@@ -36,7 +36,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
         */
-        include_once "perfil_cliente/index.php";
+        include_once "../perfil_cliente/index.php";
         //echo "<script>location.href='perfil_cliente/'</script>";
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
@@ -76,10 +76,6 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 
     }
     ?>
-
-    <form action="deslogar.php">
-        <a href="deslogar.php"><button type="submit">DESLOGA</button></a>
-    </form>
   <?php
 }else{
     if(isset($_GET['codigo']) and isset($_GET['par'])){

@@ -1,8 +1,5 @@
 <?php
-        include_once 'mask/header.html';
-        session_start();
-        $_SESSION["email"]="";
-        $_SESSION["senha"]="";
+        include_once '../mask/header.html';
         
         if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 

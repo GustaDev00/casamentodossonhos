@@ -229,6 +229,30 @@ footer{position: relative;}
       text-decoration: none;
       color: black;
     }
+    .window{
+      display:none;
+      width:325px;
+      position:absolute;
+      left:0;
+      top:0;
+      background:#FFF;
+      z-index:9900;
+      padding:10px;
+      border-radius:10px;
+      text-align: center
+  }
+   
+  #mascara, #mascara2{
+      display:none;
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:9000;
+      background-color:#000;
+  }
+      .window form input,.window form textarea, .window form select{width: 80%; padding: 5px; border-color: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b)}
+      .window form input, .window form textarea{margin: 10px 0}
+  .fechar{display:block; text-align:right; }
 
     div.cor{
       width: 102%;
@@ -241,7 +265,7 @@ footer{position: relative;}
       animation: animate 8s linear infinite;
     }
     #ProdutosFotos{width: 100%; border: 1px solid; text-align: center;}
-    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px}
+    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
     #ProdutosFotos button{
       box-sizing: border-box;
       background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);

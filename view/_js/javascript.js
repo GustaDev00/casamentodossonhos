@@ -19,11 +19,11 @@ var TrocaLoja = 1;
 
         
         $('#caixa').append('<img>');
-        $('#caixa img:last').attr('src','../_imagens/galeria1.jpeg');
+        $('#caixa img:last').attr('src','view/_imagens/galeria1.jpeg');
         $('#caixa').css('width',largura);
 
     function Roda() {					
-            $('#caixa').animate({left:PassaTamanho},2000, function() {
+            $('#caixa').animate({left:PassaTamanho},3000, function() {
                 if (   $('#caixa').position().left == limite ) {
                     $('#caixa').css('left',0);
                 }
@@ -32,7 +32,7 @@ var TrocaLoja = 1;
         }
 
         if($(window).width() <= 768 ){
-            setInterval(Roda,6000)
+            setInterval(Roda,4000)
                 }else{
         }
         //funcao do index 
@@ -54,15 +54,18 @@ var TrocaLoja = 1;
         //Função Vendedor
 
         $("#MenuVendedor ol li:nth-child(2)").on("click",function(){
+            $("#ProdutosFotos").css("display","none");
             $("#FotosVendedor").css("display","none");
             $("#ProdutosVendedor").css("display","block");
             $("#ProdutosVendedorL").css("display","block");
+            
         });
 
         $("#MenuVendedor ol li:first-child").on("click",function(){
             $("#FotosVendedor").css("display","block");
             $("#ProdutosVendedor").css("display","none");
             $("#ProdutosVendedorL").css("display","none");
+            $("#ProdutosFotos").css("display","none");
         });
         var definiFuncao;
 

@@ -25,6 +25,7 @@
                     <button class="primary" id="b2">   Principal </button>
                     <button class="primary" id="b3">   Convidados </button>
                     <button class="primary" id="b4">   Favoritos</button>
+                    <button class="primary" id="b5">   Desloga</button>
                     <br><br>
        </div>        
 
@@ -60,7 +61,7 @@
        </div>
 
                     <div class="f2">
-                            <p class="casal"><!--<?php echo "$nome e $parceiro" ?>--> Ana e Robson</p><br>
+                            <p class="casal"><!--<?php echo "$nome e $parceiro" ?>--> <?php echo "$nome e $parceiro" ?></p><br>
                          
                             <div class="princ">
                                    <label id="prin">Dia:</label>
@@ -93,7 +94,7 @@
                     </div>
 
                     <div class="f3">
-                            <p class="casal">Gabriela e Julio</p>    <br> 
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br> 
                             <p class="c">Meus convidados:</p>
                             
                             <div class="conv">
@@ -107,15 +108,15 @@
                     </div>
 
                     <div class="f4">
-                            <p class="casal">Gabriela e Julio</p>    <br> <br>
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br> <br>
 
                             <p id="l">Meus favoritos:</p>
 
-                           <a href="#"><img class="fav1" id="l" src="_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav2" id="l" src="_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav3" id="l" src="_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav4" id="l" src="_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav5" id="l" src="_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav1" id="l" src="../_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav2" id="l" src="../_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav3" id="l" src="../_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav4" id="l" src="../_imagens/galeria3.jpeg"></a>
+                           <a href="#"><img class="fav5" id="l" src="../_imagens/galeria3.jpeg"></a>
                            
                     </div>                   
     </div>
@@ -181,6 +182,10 @@
     $("#abrirAdd").on("click", function(){
         $("#campoAdd").css("display","block");
         });
+
+         $("#b5").click( function(){
+                            location.href='../perfil/deslogar.php' ;
+                        });
     
 });
     </script>
@@ -208,5 +213,6 @@
              function submit(){
                  document.formu.submit();
              }
+             
              </script>
   </body>
