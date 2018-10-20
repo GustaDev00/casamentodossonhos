@@ -1,4 +1,4 @@
-
+<div id="branco" style="width: 50%;height: 30px"></div>
 <section id=c>
         <nav>
                 <ol id="menu">
@@ -6,7 +6,7 @@
                     <li><a href="../loja/" class="item">LOJA</a>
                    <?php 
                    if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                       echo '<li><a href="../perfil.php" class="item login" id="link" style="padding-left:50%;">&nbsp;PERFIL&nbsp;</a>';
+                       echo '<li><a href="../perfil/perfil.php" class="item login" id="link" style="padding-left:50px;">&nbsp;PERFIL&nbsp;</a>';
                        
                    }else{
                       echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        

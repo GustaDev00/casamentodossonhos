@@ -1,7 +1,7 @@
 
 <script type="text/javascript">
 		function loginsucessfully(){
-			setTimeout("location.href='../perfil.php'", 1);
+			setTimeout("location.href='../perfil/perfil.php'", 1);
                         
 		}
 

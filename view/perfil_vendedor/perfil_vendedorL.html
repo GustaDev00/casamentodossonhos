@@ -1,26 +1,4 @@
-<!DOCTYPE html>
 
-
-        <title>Casamento dos Sonhos</title>
-        <meta charset=UTF-8>
-        <meta name=viewport content="width=device-width, initial-scale=1.0">
-        <meta name=description content="Uma maneira simples de fazer seu casamento">
-        <meta name=keywords content="Casamento">
-        <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
-        <link href="../_css/default.css" rel=stylesheet>
-        <!-- Telas Responsivas -->
-        <link rel=stylesheet media="screen and (max-width:480px)" href="../_css/style480.css">
-        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="../_css/style760.css">
-        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="../_css/style1024.css">
-        <link rel=stylesheet media="screen and (min-width:1025px)" href="../_css/style1366.css">
-        <!-- Jquery-->
-        <script src="../_js/jquery-3.3.1.min.js"></script>
-        <script src="../_js/javascript.js"></script>
-    
-        <div id="container">
-
-            <header>
-            </header>
                 
             <main>
                 <section id="vendedor">
@@ -29,9 +7,9 @@
                     <h1>Nome Empresa</h1>
                  </div>
                  <div id="InfoVendedor">
-                     <h2>Description</h2>
+                     <h2>Descrição</h2>
                      <article>
-                       <h3>Funcção</h3>
+                       <h3>Função</h3>
                        <h3>Telefone</h3>
                        <h3>Endereço</h3>
                        <a href="#"><h3>Site</h3></a>  
@@ -41,51 +19,236 @@
                     <ol>
                         <li>Fotos</li>
                         <li>Produto</li>
+                        <li onclick="adicionar();">Adicionar</li>
+                        <li>deslogar</li>
                     </ol>
-                    <div id="FotosVendedor">
-                        <a  class="btnP">Adicionar Fotos</a>
+                    <div id="FotosVendedor" >                       
+                            <a href="#"><img class= "carro" src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
                     </div>
                      
                     <div id="ProdutosVendedorL">
-                          <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                            <a onclick="campoadd()" class="btnP">Adicionar Produto</a>
+                            <div class="ordenarV">
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                            </div>
+                    </div>
+                    <div id="ProdutosFotos" style="display:none"x>
+                        <fieldset class="btnPF">   
+                        <a href="#janela2" rel="modal2">FOTOS</a>
+                        <div class="cor"></div>
+                        </fieldset>
+                        <div class="window" id="janela2">
+                            <a href="#" class="fechar">&#215;</a>
+                            <h4>Cadastro do Foto</h4>
+                            <form action="EscolheGarcia" method="post" enctype="multipart/form-data">
+                                <input type="name" name="nomefoto" placeholder="Nome Foto" >
+                                <div id="quadrof" style="border:none">
+                                
+                                </div>
+                                <input type=file id=imgChooser name=SImagem onclick="criaimg()">
+                                <textarea style="resize: none; height: 50px; padding: 5px" placeholder="Legenda..."></textarea>
+                                <button class=".button">Salvar</button>
+                            </form>
+                        </div>
+                        <div id="mascara2"></div>
+
+                        <fieldset class="btnPF"> 
+                        <a href="#janela1" rel="modal">PRODUTOS</a>
+                        <div class="cor"></div>
+                        </fieldset>
+                        <div class="window" id="janela1">
+                            <a href="#" class="fechar">&#215;</a>
+                            <h4>Cadastro do Produto</h4>
+                            <form action="EscolheGarcia" method="post" enctype="multipart/form-data">
+                                <input type="name" name="nomefoto" placeholder="Nome Produto" >
+                                <div id="quadroP" >
+                                
+                                </div>
+                                <input type="text" name="localproduto" placeholder="Digite a localização do Produto">
+                                <input type="number" name="precoproduto" placeholder="Digite o Preço Ex: 99">
+                                <input type="url" name="linkproduto" placeholder="Digite o link do produto">
+                                <input type=file id=imgChooserP name=SImagemP onclick="criaimg2()">
+                                <textarea style="resize: none; height: 50px; padding: 5px" placeholder="Descrição..."></textarea>
+                                 <select name=cate>
+                                    <option selected>Selecione a Categoria:
+                                    <option value="joias">Jóias
+                                    <option value="acessoria">Acessórias
+                                    <option value="cerimonialista">Cerimonialista
+                                    <option value="automóveis">Automóveis
+                                    <option value="fotografia">Fotografia
+                                    <option value="flores">Flores
+                                    <option value="lembrancinhas">Lembracinhas
+                                    <option value="luademel">Lua de Mel
+                                    <option value="musica">Dj/Música
+                                    <option value="salaodebeleza">Salão de Beleza
+                                    <option value="ternos">Ternos
+                                    <option value="vestidos">Vestidos
+                                    <option value="salaodefesta">Salão de Festa
+                                  </select>
+                                <button class=".button">Salvar</button>
+                            </form>
+                        </div>
+                        <div id="mascara"></div>
                     </div>
                  </div>
                    
-                </section>
-                    <div id="addProduto">
-                        <div id="produto">
-                            <form action="adicionarprodutov.php" method="post">
-                                <section id="SobrProduto">
-            <h1 > <input type="text" name="nomeproduto" placeholder="Nome do Produto"></h1>
-            <img src="../_imagens/galeria1.jpeg" style="width:100%; margin-top:20px">
-            <input type="file" name="imgproduto">
-            <div id="valorP">
-                <h2>R$: <input type="number" name="precoproduto" placeholder="Preço do Produto" style="width: 100px;"></h2>
-                <input type="text" name="url" placeholder="Url do Produto">
-            </div>
-            
-    <div id="des_produto">
-            <textarea name="descricao" placeholder="Informe a Descrição do Produto"></textarea>
-    </div>
-                                    <a href="">cancela</a>
-            <input type="submit" value="Enviar Produto">
-                                    
-</section>
-                            </form>
-                        </div>
-                            
-                                
-                            </div>       
+                </section>       
             </main>
             <script>
-                function campoadd(){
-                    $("#vendedor").css("display","none");
-                    $("#addProduto").css("display","block");
-                    
+                function adicionar(){
+                    $("#FotosVendedor").css("display","none");
+                    $("#ProdutosVendedorL").css("display","none"); 
+                    $("#ProdutosFotos").css("display","block"); 
                 }
-            </script>
-            <footer>
-            </footer>   
-        </div>
 
+                    $(document).ready(function(){
+                        $("#MenuVendedor").click( function(){
+                            location.href='../perfil/deslogar.php' ;
+                        });
+
+    $("a[rel=modal]").click( function(ev){
+        ev.preventDefault();
+ 
+        var id = $(this).attr("href");
+ 
+        var alturaTela = "180%";
+        var larguraTela = "100%";
+     
+        //colocando o fundo preto
+        $('#mascara').css({'width':larguraTela,'height':alturaTela});
+        $('#mascara').fadeIn(1000); 
+        $('#mascara').fadeTo("slow",0.8);
+ 
+        var left = (($(window).width() /2) - ( $(id).width() / 2 )- 10);
+        var top = "10%"  ;
+     
+        $(id).css({'top':top,'left':left});
+        $(id).show();   
+    });
+ 
+    $("#mascara").click( function(){
+        $(this).hide();
+        $(".window").hide();
+    });
+ 
+    $('.fechar').click(function(ev){
+        ev.preventDefault();
+        $("#mascara").hide();
+        $(".window").hide();
+    });
+        
+        $("a[rel=modal2]").click( function(ev){
+        ev.preventDefault();
+ 
+        var id = $(this).attr("href");
+ 
+        var alturaTela = "120%";
+        var larguraTela ="100%";
+     
+        //colocando o fundo preto
+        $('#mascara2').css({'width':larguraTela,'height':alturaTela});
+        $('#mascara2').fadeIn(1000); 
+        $('#mascara2').fadeTo("fast",0.8);
+ 
+        var left = (($(window).width() /2) - ( $(id).width() / 2 )-10);
+        var top = "20%";
+     
+        $(id).css({'top':top,'left':left});
+        $(id).show();   
+    });
+ 
+    $("#mascara2").click( function(){
+        $(this).hide();
+        $(".window").hide();
+    });
+ 
+    $('.fechar').click(function(ev){
+        ev.preventDefault();
+        $("#mascara2").hide();
+        $(".window").hide();
+    });
+        
+        function readImage() {
+if (this.files && this.files[0]) {
+    var file = new FileReader();
+    file.onload = function(e) {
+        document.getElementById("preview").src = e.target.result;
+        
+    };       
+    file.readAsDataURL(this.files[0]);
+}
+}
+
+document.getElementById("imgChooser").addEventListener("change", readImage, false);
+
+
+    /* sei nao ein parceiro tem algo errao aqui */
+    
+    function readImage2() {
+if (this.files && this.files[0]) {
+    var file = new FileReader();
+    file.onload = function(e) {
+        document.getElementById("previewP").src = e.target.result;
+        
+    };       
+    file.readAsDataURL(this.files[0]);
+}
+}
+
+document.getElementById("imgChooserP").addEventListener("change", readImage2, false);
+});
+        var umaunicaimagem = 1, umaimagem = 1;
+    
+    function criaimg(){
+        if(umaunicaimagem == 1){
+            $("#quadrof").append('<img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">');
+                umaunicaimagem = 2;
+        }else{
+            
+        }
+            
+    }
+    
+    function criaimg2(){
+        if(umaimagem == 1){
+            $("#quadroP").append('<img id=previewP style="width:70%;" alt="Carregue Sua Foto Abaixo">');
+                umaimagem = 2;
+        }else{
+            
+        }
+            
+    }
+            </script>  
+
+<div id="branco" style="width: 50%;height: 70px"></div>
+<section id=c>
+    <nav>
+            <ol id="menu">
+                <li><a href="../../" class="item home">HOME</a>
+                <li><a href="../loja/" class="item">LOJA</a>
+               <?php 
+               if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                   echo '<li><a href="../perfil.php" class="item login" id="link" style="padding-left:50px;">&nbsp;PERFIL&nbsp;</a>';
+                   
+               }else{
+                  echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+               }
+               ?> 
+            </ol>
+            </nav>
+</section>      
+
+
+<div id="footer2" style="display:none">
+    <img src="../_imagens/logo.png">
+    <a href="../../"><p>Casamedosonhos.com</p></a>
+        <p>grupo 5 INI3A</p>
+       
+</footer>
+</div>

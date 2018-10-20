@@ -216,10 +216,79 @@ footer{position: relative;}
    #InfoVendedor{padding: 10px; width: 100%;}
 
    #InfoVendedor article h3{margin-top: 5px}
+   #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0;}
+   #MenuVendedor ol li{
+        width: calc(95% / 4);
+        padding: 5px 0; 
+        display: inline-block;
+        text-align: center; 
+        cursor: pointer;
+    }
+    .btnPF{display: inline-block; border: none; margin: 30px;}
+    .btnPF a{
+      text-decoration: none;
+      color: black;
+    }
+    .window{
+      display:none;
+      width:325px;
+      position:absolute;
+      left:0;
+      top:0;
+      background:#FFF;
+      z-index:9900;
+      padding:10px;
+      border-radius:10px;
+      text-align: center
+  }
+   
+  #mascara, #mascara2{
+      display:none;
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:9000;
+      background-color:#000;
+  }
+      .window form input,.window form textarea, .window form select{width: 80%; padding: 5px; border-color: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b)}
+      .window form input, .window form textarea{margin: 10px 0}
+  .fechar{display:block; text-align:right; }
 
-   #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0 5px 0; margin-bottom: 4px}
-   #MenuVendedor ol li{display: inline;}
-   #MenuVendedor ol li:first-child{border-right: 1px solid black;}
+    div.cor{
+      width: 102%;
+      height: 6px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
+    background-size: 400%;
+    }
+    a:hover ~ .cor{
+      animation: animate 8s linear infinite;
+    }
+    #ProdutosFotos{width: 100%; border: 1px solid; text-align: center;}
+    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
+    #ProdutosFotos button{
+      box-sizing: border-box;
+      background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
+      background-size: 400%;
+    }
+
+    #ProdutosFotos button:hover{
+      animation: animate 8s linear infinite;
+    }
+    @keyframes animate{
+        0%
+        {
+          background-position: 0%;
+        }
+        100%
+        {
+          background-position: 400%;
+        }
+    }
+
+   #MenuVendedor ol li:first-child, #MenuVendedor ol li:nth-child(2),#MenuVendedor ol li:nth-child(3){border-right: 1px solid black; }
+   .btnP{ border: 1px  dashed blue;}
+  
 
       /*--------pagina de cadastro ------*/
       
