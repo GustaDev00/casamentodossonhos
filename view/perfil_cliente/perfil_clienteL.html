@@ -3,20 +3,13 @@
 
     <div class="top" > 
             <div  id="irineu">   
-                    <form id="formu" action="gabriel.php">        
-              <img class="perfil" src="../_imagens/galeria3.jpeg">   
+                    <form id="formu" action="../updates/img_perfil.php" enctype="multipart/form-data" method="POST">        
+              <img class="perfil" src="<?php echo $imagemL?>">   
               <label class="cim" for='selecao-arquivo'>alterar</label>
-              <input class="cim" id='selecao-arquivo' type='file' onchange="submit();"> 
+              <input class="cim" id='selecao-arquivo' name="img_perfil" type='file' onchange="submit();"> 
             </form>        
         </div>  
           
-          <!-- <img class="perfil" id="imagem2" src="<?php echo $imagemL?>">   
-          <a href="updates/img_perfil.php" name="img_perfil">
-            <form action="updates/img_perfil.php" enctype="multipart/form-data" method="POST">
-            <input type="file" name="img_perfil">
-            <input type="submit" value="Atualizar">
-            </form>
-            <button name="img_perfil">Alterar</button></a>   -->
 
     
     <div class="java">
@@ -44,14 +37,14 @@
                  ?>  
                     <div class="l1">
                             <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                            <form action="deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
+                            <form action="../deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
                      <a class="co">Confirmado</a>  
                      <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                      
                             <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
                     </div>                                                                             
                     <?php  $r++; } ?>                                 
                 </div> <br><hr class="w">  
-                <form action="ListaPresente.php" method="post" id="campoAdd">
+                <form action="../perfil/ListaPresente.php" method="post" id="campoAdd">
                     <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente">
                     <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira
                     <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00
@@ -61,33 +54,33 @@
        </div>
 
                     <div class="f2">
-                            <p class="casal"><!--<?php echo "$nome e $parceiro" ?>--> <?php echo "$nome e $parceiro" ?></p><br>
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p><br>
                          
                             <div class="princ">
                                    <label id="prin">Dia:</label>
-                                   <span>     hjhgjghj</span>
+                                   <span></span>
                                    <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10">
                                    <a href="" class="edit">Editar</a>
                                    <br>
                                                                                     
                                    <label id="prin">Horário:</label>
-                                   <span>hjhgjghj</span>
+                                   <span></span>
                                    <input type="text" class="form" id="" placeholder="19:00" size="10">
                                   <!--<a href="" class="edit">Editar</a>-->
                                    <br>
                               
                                    <label id="prin">Local:</label>
-                                   <span>     hjhgjghj</span>
+                                   <span>     </span>
                                    <input type="text" class="form" id="" placeholder="Endereço" size="25">
                                  <!--    <a href="" class="edit">Editar</a>-->
                                     <br>
                             </div> 
-                            <form id="formu" action="trocalocal.php">    
+                            <form id="formu" action="../updates/img_localCasamento.php" method="POST" enctype="multipart/form-data">    
                             <div class="b">                  
-                            <img class="galeria3" src="../_imagens/galeria3.jpeg" >
+                            <img class="galeria3" src="<?php echo $imagemLoc ?>" >
 
                             <label class="at" for='selecao-arquivo2'>alterar</label>
-                            <input class="at" id='selecao-arquivo2' type='file' onchange="submit();"> 
+                            <input class="at" id='selecao-arquivo2' type='file' name="img_local" onchange="submit();"> 
                             </div>
                             <form>
                             <br>      

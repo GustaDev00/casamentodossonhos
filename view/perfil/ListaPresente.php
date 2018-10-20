@@ -1,5 +1,5 @@
 <?php 
-require_once './Db/daohelper.php';
+require_once "../../Db/daohelper.php";
 
 session_start();
 
