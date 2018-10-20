@@ -206,7 +206,8 @@ footer{position: relative;}
   width: 85%;
   margin: 10px 5% 0 5%;
   }
-
+  
+ #TopoVendedor img{ width: 150px;}
   #TopoVendedor{
     padding: 10px;
     background-color: #f6dddf;
@@ -224,6 +225,7 @@ footer{position: relative;}
         text-align: center; 
         cursor: pointer;
     }
+    #FotosVendedor, #ProdutosVendedor, #ProdutosVendedorL{text-align: center}
     .btnPF{display: inline-block; border: none; margin: 30px;}
     .btnPF a{
       text-decoration: none;

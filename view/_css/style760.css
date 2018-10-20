@@ -461,17 +461,12 @@ font-size: 77%;
 
 
 #TopoVendedor h1{float: right; margin-right: 70px; font-size: 5vw;}
+#TopoVendedor img{ width: 150px;}
  
 #tv{
     width:102px;
 }
- /* #MenuVendedor ol li{
-    padding: 5px 1vw;
-    font-size: 20px;
-    font-family: arial, sans-serif;
-   } */ 
-#MenuVendedor img{
-    border: 1px solid;
+#MenuVendedor img{  
     margin: 10px 10px;
 }
   #FotosVendedor{margin: 0 10%}
@@ -483,7 +478,7 @@ font-size: 77%;
    }
 
   h3{
-     font-size:  3.5vw;
+     font-size:  3vw;
    }
 
    /* nao logado*/

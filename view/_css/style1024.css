@@ -477,15 +477,11 @@ background: #ffc0cbbd;
 
   
 #TopoVendedor h1{float: right; margin-right: 70px; font-size: 5vw;}
+#TopoVendedor img{ width: 150px;}
  
 #tv{
     width:102px;
-}
- /* #MenuVendedor ol li{
-    padding: 5px 1vw;
-    font-size: 20px;
-    font-family: arial, sans-serif;
-   } */ 
+} 
 #MenuVendedor img{
     border: 1px solid;
     margin: 10px 10px;
@@ -495,11 +491,11 @@ background: #ffc0cbbd;
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 
   div#InfoVendedor h2{
-    font-size: 4vw;
+    font-size: 3vw;
    }
 
   h3{
-     font-size:  3.5vw;
+     font-size:  2vw;
    }
 
    /* nao logado*/
