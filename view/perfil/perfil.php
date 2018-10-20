@@ -59,7 +59,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
         //echo ' <img src="' . $imagemL . '" >'. "<br>";*/
-        include_once 'perfil_vendedorL.html';
+        include_once '../perfil_vendedor/index.php';
         //echo ' <img src="' . $imagemL . '" >'. "<br>";
     }else if ($_SESSION["defini"] == 3){
         $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
