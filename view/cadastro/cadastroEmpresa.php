@@ -56,7 +56,7 @@ try{
                     
                 // Cria um nome único para esta imagem, Evita nomes com acentos, espaços e caracteres
                     $novoNome = uniqid ( time () ) . '.' . $extensao;
-                    $destino = '_imagem_usuario/' .$novoNome;
+                    $destino = '../_imagem_usuario/' .$novoNome;
                     
                     }else{
                     echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';

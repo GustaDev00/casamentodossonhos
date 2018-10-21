@@ -28,7 +28,6 @@ $pdo= connection();
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
                 $id = $fetch->cod_usu;
                 $_SESSION["id"] = $id;
-
             echo "<script>alert('Logado Com Sucesso!');loginsucessfully(); </script>"; 
         }else{
 

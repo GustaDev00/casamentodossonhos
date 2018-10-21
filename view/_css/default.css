@@ -355,9 +355,9 @@ footer{position: relative;}
   cursor: pointer;
 }
 
-/* Next & previous buttons */
+/* next1 & previous buttons */
 .prev,
-.next {
+.next1 {
   cursor: pointer;
   position: absolute;
   top: 45%;
@@ -397,15 +397,15 @@ footer{position: relative;}
     border-radius: 10px
 }
 
-/* Position the "next button" to the right */
-.next {
+/* Position the "next1 button" to the right */
+.next1 {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
-.next:hover {
+.next1:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
