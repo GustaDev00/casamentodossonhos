@@ -15,7 +15,7 @@ if($_FILES['img_local'] == null){
     $arquivo_tmp = $imagemCasal[ 'tmp_name' ];
     $nome = $imagemCasal[ 'name' ];
     $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
-    //$extensao = strtolower ( $extensao );
+    $extensao = strtolower ( $extensao );
     $email = $_SESSION['email'];
 
 

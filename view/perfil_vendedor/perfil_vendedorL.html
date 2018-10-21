@@ -33,11 +33,12 @@
                      
                     <div id="ProdutosVendedorL">
                             <div class="ordenarV">
-                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                                <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                                    <?php 
+                                        $l = 0;while($l < count($dadosProd)){?>   
+                                <a href="../produto/index.php?id=<?php echo $dadosProd[$l]['cod_produto']; ?>"  >
+                                <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>"  alt="imagem 01">
+                                <h2><?php echo $dadosProd[$l]['nome_produto']; ?></h2>
+                                </a><?php $l++; } ?></form>
                             </div>
                     </div>
                     <div id="ProdutosFotos" style="display:none"x>
@@ -67,33 +68,24 @@
                         <div class="window" id="janela1">
                             <a href="#" class="fechar">&#215;</a>
                             <h4>Cadastro do Produto</h4>
-                            <form action="EscolheGarcia" method="post" enctype="multipart/form-data">
-                                <input type="name" name="nomefoto" placeholder="Nome Produto" >
+                            <form action="../perfil_vendedor/adicionarprodutov.php" method="post" enctype="multipart/form-data">
+                                <input type="name" name="nomeproduto" placeholder="Nome Produto" >
                                 <div id="quadroP" >
                                 
                                 </div>
                                 <input type="text" name="localproduto" placeholder="Digite a localização do Produto">
                                 <input type="number" name="precoproduto" placeholder="Digite o Preço Ex: 99">
                                 <input type="url" name="linkproduto" placeholder="Digite o link do produto">
-                                <input type=file id=imgChooserP name=SImagemP onclick="criaimg2()">
-                                <textarea style="resize: none; height: 50px; padding: 5px" placeholder="Descrição..."></textarea>
-                                 <select name=cate>
-                                    <option selected>Selecione a Categoria:
-                                    <option value="joias">Jóias
-                                    <option value="acessoria">Acessórias
-                                    <option value="cerimonialista">Cerimonialista
-                                    <option value="automóveis">Automóveis
-                                    <option value="fotografia">Fotografia
-                                    <option value="flores">Flores
-                                    <option value="lembrancinhas">Lembracinhas
-                                    <option value="luademel">Lua de Mel
-                                    <option value="musica">Dj/Música
-                                    <option value="salaodebeleza">Salão de Beleza
-                                    <option value="ternos">Ternos
-                                    <option value="vestidos">Vestidos
-                                    <option value="salaodefesta">Salão de Festa
+                                <input type="file" id="imgChooserP" name="SImagemP" onclick="criaimg2()">
+                                <textarea style="resize: none; height: 50px; padding: 5px" name="descricao" placeholder="Descrição..."></textarea>
+                                 <select name="cat">
+                                        <option selected>Selecione a Categoria:
+                                        <?php 
+                                        $r = 0;while($r < count($dadosCat)){?>                                      
+                                    <option  value="<?php echo $dadosCat[$r]['nome_categoria']  ?>"><?php echo $dadosCat[$r]['nome_categoria']  ?>
+                                            <?php  $r++; } ?>
                                   </select>
-                                <button class=".button">Salvar</button>
+                                <button>Salvar</button>
                             </form>
                         </div>
                         <div id="mascara"></div>

@@ -31,12 +31,7 @@
                 </form> 
 
                 <div id="icones_topo">
-                <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                    echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
-                }else{
-                    echo '<a href="../login/"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
-                }
-                ?>
+                
                 <a href="../loja/"><img id="loja_icone" src="../_imagens/loja.png" title="Casamento dos sonhos"></a>   
                 </div></div>
             </header>
@@ -48,27 +43,27 @@
     <main id="produto">
      
         <section id="SobreProduto">
-            <h1 > <?php echo $fetch["nomeproduto"]; ?> </h1>
-            <img src="<?php echo  $fetch['imgproduto']; ?>" style="width:100%; margin-top:20px">
+            <h1 ><?php echo $nome ?> </h1>
+            <img src="<?php echo $foto; ?>" style="width:100%; margin-top:20px">
             <div id="valorP">
-                <h2>R$: 00,00</h2>
+                <h2><?php echo $preco; ?></h2>
                 <a href="link_da_pagina">Ver no Site</a>   
             </div>
     
     <div id="descrip_produto">
         <div id="PrimeiraCaixa">
-            <p><?php echo $fetch["descricaoproduto"]; ?></p>
+            <p><?php echo $desc ?></p>
         </div>
         <div id="SegundaCaixa">
             <article>
-            <h2>Descrição</h2>
+            <h2>Descrição da Empresa/Vendedor</h2>
            
-            <h3>Vai vir do perfil vendedor</h3>
-            <h3>Vai vir do perfil vendedor</h3>
-            <h3>Vai vir do perfil vendedor</h3>
-            <a href="#"><h3>Vai vir do perfil vendedor</h3></a>
+            <h3>Nome: <?php echo $nomeE; ?></h3>
+            <h3>Localização: <?php echo "$locC  - $locEst" ?></h3>
+            <h3>Telefone para Contato: <?php echo $contato ?></h3>
+            <a href="#"><h3>Visitar Perfil</h3></a>
             </article>
-            <a href="#"><img src="../_imagens/galeria2.jpeg"></a>
+            <a href="#"><img src="<?php echo $fotoE ?>"></a>
         </div>
     </div>
 </section>

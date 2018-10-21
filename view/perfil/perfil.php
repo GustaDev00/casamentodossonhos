@@ -41,7 +41,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
     }else if($_SESSION["defini"] == 1){
-        
+        $id = $_SESSION['id'];
         $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
@@ -53,14 +53,29 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $telE = $fetch2->tel_empre;
         $funcE = $fetch2->categoria_empre;
         $imagemL = $fetch2->foto_empre;
+        $select2 = "select nome_categoria from categoria;";
+        $select3= "select * from produto where cod_empresa = '{$_SESSION["id"]}';";
+        $execute2 = executeSelect($pdo, $select2);
+        $execute3 = executeSelect($pdo, $select3);
+        $dadosCat = array();
+        $dC = 0;
+        while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+            $dadosCat[$dC]['nome_categoria'] = $fetch3->nome_categoria;
+            $dC++;
+        }
         
-        /*echo "Seu id é: '{$_SESSION["id"]}' <br>";
-        echo "Seu email é: $email <br>";
-        echo "Seu nome é: $nome <br>";
-        echo "Sua senha é: $senha <br>";
-        //echo ' <img src="' . $imagemL . '" >'. "<br>";*/
+        $dadosProd = array();
+        $dP = 0;
+        while($fetch4 = $execute3->fetch(PDO ::FETCH_OBJ)){
+            $dadosProd[$dP]['cod_produto'] = $fetch4->cod_produto;
+            $dadosProd[$dP]['nome_produto'] = $fetch4->nome_prod;
+            $dadosProd[$dP]['url_foto_prod'] = $fetch4->url_foto_prod;
+            
+            $dP++;
+        }
+
         include_once '../perfil_vendedor/index.php';
-        //echo ' <img src="' . $imagemL . '" >'. "<br>";
+     
     }else if ($_SESSION["defini"] == 3){
         $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
