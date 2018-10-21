@@ -527,56 +527,41 @@ input.form{
 }
 
 /*----------PERFIL VENDEDOR -----------*/  
-#TopoVendedor h1{ 
-  float: right;
-  margin-right: 30%;
-  font-size: 3.2vw;
-}
-#TopoVendedor img{ width: 180px;}
-
-#tv{
-width:25%;
-}
-li#oto{ padding: 5px 21% 5px 21%;
-  font-size:  2.5vw;
-  font-family: arial, sans-serif
-}
-
-li#uto{
-  padding: 5px 15% 5px 15%;
-  font-size:  2.5vw;
-  font-family: arial, sans-serif
-
-}
-
-
-#FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 156px;}
-
-#FotosVendedor{margin-top: 15px; text-align: center}
-#ProdutosVendedor, #ProdutosVendedorL{margin-top: 15px; display: none; text-align: center}
-
-#FotosVendedor a, #ProdutosVendedorL a{
-  padding: 60px 12px;
-  margin: 0 0 0 8px; float: left;
-  text-decoration: none; width: 22%;
-  font-size:  2.5vw;}
-
-#ProdutosVendedorL form{display: none}
-
-div#InfoVendedor h2{
-  font-size: 3.2vw; }
-
-h3{
-   font-size:  2.5vw;
+#TopoVendedor h1{float: right; margin-right: 30%; font-size: 4vw;}
+#TopoVendedor img{
+   width:220px
  }
- 
-    /* nao logado*/
+#tv{
+   width:102px;
+}
+#MenuVendedor img{
+   margin: 10px 10px;
+}
+#MenuVendedor ol{height: 40px; font-size: 27px}
 
-    #prod{float: left }
-    #prod img{       
-     width: 24%;
-     margin-top: 10px;
-     margin-left: 0.5%;}
+ #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 330px;}
+ #ProdutosVendedor, #ProdutosVendedorL{display: none}
+
+ div#InfoVendedor h2{
+   font-size: 2.5vw;
+  }
+
+ h3{
+    font-size:  1.5vw;
+  }
+  .btnPF a{
+    font-size: 35px
+  }
+  /* nao logado*/
+
+  #prod{margin-left: 3% }
+  #prod img{
+   width: 152px;
+   margin-top: 10px;
+   margin-left: 1%;  }
+
+  /* produto*/
+   #SobreProduto h1{font-size: 5.5vw;}
 
 /*---------------------------------------------ALL USER--------------------*/
 .pes{

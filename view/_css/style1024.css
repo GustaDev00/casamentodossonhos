@@ -476,18 +476,18 @@ background: #ffc0cbbd;
 /*----------PERFIL VENDEDOR -----------*/
 
   
-#TopoVendedor h1{float: right; margin-right: 70px; font-size: 5vw;}
-#TopoVendedor img{ width: 150px;}
+#TopoVendedor h1{float: right; margin-right: 25%; font-size: 5vw;}
+#TopoVendedor img{ width: 170px;}
  
 #tv{
     width:102px;
 } 
 #MenuVendedor img{
-    border: 1px solid;
     margin: 10px 10px;
 }
+#MenuVendedor ol{height: 40px; font-size: 27px}
   #FotosVendedor{ margin: 0 10%}
-  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 170px;}
+  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 220px;}
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 
   div#InfoVendedor h2{
@@ -498,6 +498,9 @@ background: #ffc0cbbd;
      font-size:  2vw;
    }
 
+   .btnPF a{
+    font-size: 35px
+  }
    /* nao logado*/
 
    #prod{margin-left: 3% }

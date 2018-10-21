@@ -460,7 +460,7 @@ font-size: 77%;
 /*----------PERFIL VENDEDOR-----------*/
 
 
-#TopoVendedor h1{float: right; margin-right: 70px; font-size: 5vw;}
+#TopoVendedor h1{float: right; margin-right: 25%; font-size: 4vw;}
 #TopoVendedor img{ width: 150px;}
  
 #tv{
@@ -470,17 +470,17 @@ font-size: 77%;
     margin: 10px 10px;
 }
   #FotosVendedor{margin: 0 10%}
-  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 130px;}
+  
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 
   div#InfoVendedor h2{
-    font-size: 4vw;
+    font-size: 3vw;
    }
 
   h3{
-     font-size:  3vw;
+     font-size: 2.6vw;
    }
-
+   #MenuVendedor ol{height: 35px; font-size: 22px}
    /* nao logado*/
 
    #prod{margin-left: 3% }

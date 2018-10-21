@@ -213,7 +213,7 @@ footer{position: relative;}
     background-color: #f6dddf;
     width: 100%;
    }
-
+   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 41.3%;}
    #InfoVendedor{padding: 10px; width: 100%;}
 
    #InfoVendedor article h3{margin-top: 5px}
@@ -230,6 +230,7 @@ footer{position: relative;}
     .btnPF a{
       text-decoration: none;
       color: black;
+      font-size: 25px
     }
     .window{
       display:none;
@@ -266,7 +267,7 @@ footer{position: relative;}
     a:hover ~ .cor{
       animation: animate 8s linear infinite;
     }
-    #ProdutosFotos{width: 100%; border: 1px solid; text-align: center;}
+    #ProdutosFotos{width: 100%; text-align: center;}
     #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
     #ProdutosFotos button{
       box-sizing: border-box;
