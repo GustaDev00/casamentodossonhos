@@ -7,7 +7,7 @@
         }else{
             include_once 'index.html';
             
-        include_once '../mask/footer.html';
+       
         }
-          
+        include_once '../mask/footer.html';
     ?>

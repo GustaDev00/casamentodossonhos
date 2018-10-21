@@ -3,17 +3,15 @@
             <main>
                 <section id="vendedor">
                  <div id="TopoVendedor">
-                    <img src="<?php echo $imagemL ?>" width="102px">
+                    <img src="<?php echo $imagemL ?>" >
                     <h1><?php echo $nome ?></h1>
                  </div>
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
-                     <article>
-                       <h3>Função: <?php echo $funcE ?></h3>
-                       <h3>Estado: <?php echo $estadoE ?></h3>
-                       <h3>Cidade: <?php echo $cidadeE ?></h3>
-                       <h3>Rua: <?php echo $ruaE ?></h3>
-                       <h3>Telefone: <?php echo $telE ?></h3>
+                     <article>  
+                       <h3><?php echo $funcE ?></h3>
+                       <h3><?php echo $telE ?></h3>
+                       <h3><?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
                        <a href="#"><h3>Site</h3></a>  
                      </article>
                  </div>
@@ -25,18 +23,21 @@
                         <li>deslogar</li>
                     </ol>
                     <div id="FotosVendedor" >                       
-                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                           
-                           
+                     <img src="../_imagens/galeria1.jpeg" alt="imagem 01" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+                     <img src="../_imagens/galeria2.jpeg" alt="imagem 01" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></a>
+                     <img src="../_imagens/galeria3.jpeg" alt="imagem 01" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></a>
+                    <img src="../_imagens/galeria1.jpeg" alt="imagem 01" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></a>
+                            
                     </div>
+                    
                      
                     <div id="ProdutosVendedorL">
                             <div class="ordenarV">
                                     <?php 
-                                        $l = 0;while($l < count($dadosProd)){?>   
-                                <a href="../produto/index.php?id=<?php echo $dadosProd[$l]['cod_produto']; ?>"  >
-                                <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>"  alt="imagem 01">
+                                        $l = 0;
+                                        while($l < count($dadosProd)){ ?>   
+                                <a href="../produto/?id=<?php echo $dadosProd[$l]['cod_produto']; ?>"  >
+                                <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>"  alt="imagem<?php echo $l ?>">
                                 <h2><?php echo $dadosProd[$l]['nome_produto']; ?></h2>
                                 </a><?php $l++; } ?></form>
                             </div>
@@ -92,7 +93,71 @@
                     </div>
                  </div>
                    
-                </section>       
+                </section> 
+                <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                      
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto">Nome1</h2>
+                            <img src="../_imagens/fundo.png" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdoasdjiasjaiosdjaoisdasdasdasdadasdasdaddassdadada
+                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                      asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsdasdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                      asdoasdjiasjaiosdjaoisdasdasdasdadasdasdaddassdadada
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasd
+                                      
+                                     
+                                      
+                                      
+                                  </p>
+                                  </div>
+                          </div>
+                      
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto">Nome2</h2>
+                            <img src="../_imagens/galeria2.jpeg" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasd
+                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                      asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                      asdoasdjiasjaiosdjaoisd
+                                  </p>
+                                  </div>
+                          </div>
+                      
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto">Nome3</h2>
+                            <img src="../_imagens/galeria3.jpeg" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdoasdjiasjaiosdjaoisdasdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                      
+                                      
+                                  </p>
+                                  </div>
+                          </div>
+                      
+                          <div class="mySlides">
+                                  <h2 class="nomedaFoto">Nome3</h2>
+                                <img src="../_imagens/galeria1.jpeg" style="width:100%">
+                                  <div class="dsFoto">
+                                      <p>
+                                          dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                          
+                                          asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                          asdoasdjiasjaiosdjaoisd
+                                      </p>
+                                      </div>
+                              </div>
+                          
+                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>      
             </main>
             <script>
                 function adicionar(){
@@ -218,31 +283,42 @@ document.getElementById("imgChooserP").addEventListener("change", readImage2, fa
         }
             
     }
+
+    function openModal() {
+  document.getElementById('myModal').style.display = "block";
+  $('html').addClass('classhtml');
+  
+}
+
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+  $('html').removeClass('classhtml')
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
             </script>  
 
 <div id="branco" style="width: 50%;height: 70px"></div>
-<section id=c>
-    <nav>
-            <ol id="menu">
-                <li><a href="../../" class="item home">HOME</a>
-                <li><a href="../loja/" class="item">LOJA</a>
-               <?php 
-               if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                   echo '<li><a href="../perfil.php" class="item login" id="link" style="padding-left:50px;">&nbsp;PERFIL&nbsp;</a>';
-                   
-               }else{
-                  echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
-               }
-               ?> 
-            </ol>
-            </nav>
-</section>      
-
-
-<div id="footer2" style="display:none">
-    <img src="../_imagens/logo.png">
-    <a href="../../"><p>Casamedosonhos.com</p></a>
-        <p>grupo 5 INI3A</p>
-       
-</footer>
-</div>

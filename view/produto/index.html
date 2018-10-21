@@ -31,7 +31,13 @@
                 </form> 
 
                 <div id="icones_topo">
-                
+                <a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>
+                <!-- <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                    echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
+                }else{
+                    echo '<a href="../login/"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
+                }
+                ?> --> 
                 <a href="../loja/"><img id="loja_icone" src="../_imagens/loja.png" title="Casamento dos sonhos"></a>   
                 </div></div>
             </header>
@@ -79,31 +85,5 @@
         <a href="#"><img src="../_imagens/descricao.png" alt="descrição"></a>
         <a href="#"><img src="../_imagens/msg.png" alt="mensagem"></a>
         <a href="#"><img src="../_imagens/favorito.png" alt="favorito"></a>
-    </div>
-    <section id=c">
-            <nav>
-                    <ol id="menu">
-                        <li><a href="../../" class="item home">HOME</a>
-                        <li><a href="../loja/" class="item">LOJA</a>
-                       <?php 
-                       if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                           echo '<li><a href="../perfil.php" class="item login" id="link">&nbsp;PERFIL&nbsp;</a>';
-                           
-                       }else{
-                          echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
-                       }
-                       ?> 
-                    </ol>
-                    </nav>
-    </section>
-    <footer>
-                <img src="_imagens/logo.png">
-                <a href="../../"><p>Casamedosonhos.com</p></a>
-                    <p>grupo 5 INI3A</p>
-    </footer>
-               
-    </main>  
-    <footer>
-    
-    </footer>   
+    </div>   
     </div>

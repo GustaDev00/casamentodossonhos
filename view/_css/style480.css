@@ -1,4 +1,4 @@
-﻿ /*---------------TOPO---------------*/
+﻿/*--------------TOPO---------------*/
  #container{min-width: 320px;}
 
 /*---------------alterar---------------*/
@@ -39,28 +39,32 @@ footer{display: none}
 /*---------------MENU FIXO---------------*/
 
 #c nav #menu{
-    list-style: none;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    align-items: center;
     width: 100%;
     height: 50px;
+    list-style: none;
     background-color: #f6dddf;
+    position: fixed;
+    bottom: 0;   
 }
-
-#c nav ol li a{
-    padding: 17px 8vw 20px 7vw;
-    color: black;
+#c nav ol li{
+    width: calc( 98.5% / 3);
+    padding: 17px 0 ;
+    display: inline-block;
+    text-align: center;
     font-size: 13px;
-    text-decoration: none;
 }
-#c nav ol li .item.home{
+ #c nav ol li a{
+    padding: 15px 5%; 
+    color: black;
+    text-decoration: none;
+} 
+
+#c nav ol li:first-child{
     border-right:1px solid black;
 }
-#c nav ol li .item.login{
+#c nav ol li:last-child{
   border-left:1px solid black;
-}
+} */
 /*---------------CARROSSEL---------------*/
 #carrossel{ height: 232px;}
 
@@ -477,17 +481,13 @@ img.letra{
 /*----------PERFIL VENDEDOR-----------*/
 
  #TopoVendedor h1{float: right; margin-right: 70px; font-size: 5vw;}
- 
+ #TopoVendedor img{
+    width:102px
+  }
 #tv{
     width:102px;
 }
- /* #MenuVendedor ol li{
-    padding: 5px 1vw;
-    font-size: 20px;
-    font-family: arial, sans-serif;
-   } */ 
 #MenuVendedor img{
-    border: 1px solid;
     margin: 10px 10px;
 }
 
@@ -499,9 +499,12 @@ img.letra{
    }
 
   h3{
-     font-size:  3.5vw;
+     font-size:  3vw;
    }
-
+ /* modal das imagens*/
+ .modal::-webkit-scrollbar {
+    width: 1px;
+  }
    /* nao logado*/
 
    #prod{margin-left: 3% }

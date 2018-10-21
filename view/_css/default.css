@@ -6,6 +6,10 @@ body{margin: 0px; padding: 0px}
     --equilibro: 50vw;
 }
 html{scroll-behavior:smooth}
+.classhtml::-webkit-scrollbar{
+  width:1px
+}
+
 
 #container header{
   background-color: #f6dddf;
@@ -200,19 +204,21 @@ footer{position: relative;}
 
   #all_icones img{width: 42px;}
 
+
  /*----------PERFIL VENDEDOR -----------*/
 
  #vendedor{
   width: 85%;
   margin: 10px 5% 0 5%;
   }
-
+  
+ #TopoVendedor img{ width: 150px;}
   #TopoVendedor{
     padding: 10px;
     background-color: #f6dddf;
     width: 100%;
    }
-
+   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 41.3%;}
    #InfoVendedor{padding: 10px; width: 100%;}
 
    #InfoVendedor article h3{margin-top: 5px}
@@ -224,10 +230,12 @@ footer{position: relative;}
         text-align: center; 
         cursor: pointer;
     }
+    #FotosVendedor, #ProdutosVendedor, #ProdutosVendedorL{text-align: center;}
     .btnPF{display: inline-block; border: none; margin: 30px;}
     .btnPF a{
       text-decoration: none;
       color: black;
+      font-size: 25px
     }
     .window{
       display:none;
@@ -264,7 +272,7 @@ footer{position: relative;}
     a:hover ~ .cor{
       animation: animate 8s linear infinite;
     }
-    #ProdutosFotos{width: 100%; border: 1px solid; text-align: center;}
+    #ProdutosFotos{width: 100%; text-align: center;}
     #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
     #ProdutosFotos button{
       box-sizing: border-box;
@@ -288,7 +296,141 @@ footer{position: relative;}
 
    #MenuVendedor ol li:first-child, #MenuVendedor ol li:nth-child(2),#MenuVendedor ol li:nth-child(3){border-right: 1px solid black; }
    .btnP{ border: 1px  dashed blue;}
-  
+  /*------- modal das imagens ----------*/
+
+.nomedaFoto{ color: white}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+    .dsFoto{
+        position: absolute;
+        width: 98%;
+        height: 115px;
+        margin-bottom: 100px;
+        overflow: auto;
+       /* background-color: rgba(220,290,255,0.4); */
+    }
+    .dsFoto p{color: white; margin-left:5px; word-wrap: break-word; font-size: 18px; padding: 6px}
+    .dsFoto::-webkit-scrollbar {
+        width:9px;
+        
+}
+ 
+.dsFoto::-webkit-scrollbar-track {
+    
+    background-color: rgba(255, 290, 255, 0.4);
+    border-radius: 10px
+}
+ 
+.dsFoto::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+    border-radius: 10px
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
       /*--------pagina de cadastro ------*/
       
