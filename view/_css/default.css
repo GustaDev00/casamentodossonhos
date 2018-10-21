@@ -373,16 +373,14 @@ footer{position: relative;}
   -webkit-user-select: none;
 }
     .dsFoto{
-        top: 100%;
+        position: absolute;
         width: 98%;
         height: 115px;
-        text-overflow: ellipsis;
         margin-bottom: 100px;
-        border: 1px solid white;
-        overflow: auto
+        overflow: auto;
        /* background-color: rgba(220,290,255,0.4); */
     }
-    .dsFoto p{color: white; margin-left:5px; word-wrap: break-word;}
+    .dsFoto p{color: white; margin-left:5px; word-wrap: break-word; font-size: 18px; padding: 6px}
     .dsFoto::-webkit-scrollbar {
         width:9px;
         
