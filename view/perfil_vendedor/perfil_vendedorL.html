@@ -330,28 +330,3 @@ function showSlides(n) {
             </script>  
 
 <div id="branco" style="width: 50%;height: 70px"></div>
-<section id=c>
-    <nav>
-            <ol id="menu">
-                <li><a href="../../" class="item home">HOME</a>
-                <li><a href="../loja/" class="item">LOJA</a>
-               <?php 
-               if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                   echo '<li><a href="../perfil/perfil.php" class="item login" id="link">PERFIL</a>';
-                   
-               }else{
-                  echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
-               }
-               ?> 
-            </ol>
-            </nav>
-</section>      
-
-
-<div id="footer2" style="display:none">
-    <img src="../_imagens/logo.png">
-    <a href="../../"><p>Casamedosonhos.com</p></a>
-        <p>grupo 5 INI3A</p>
-       
-</footer>
-</div>
