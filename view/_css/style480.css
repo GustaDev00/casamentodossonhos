@@ -1,4 +1,4 @@
-﻿ /*---------------TOPO---------------*/
+﻿/*--------------TOPO---------------*/
  #container{min-width: 320px;}
 
 /*---------------alterar---------------*/
@@ -497,7 +497,10 @@ img.letra{
   h3{
      font-size:  3vw;
    }
-
+ /* modal das imagens*/
+ .modal::-webkit-scrollbar {
+    width: 1px;
+  }
    /* nao logado*/
 
    #prod{margin-left: 3% }

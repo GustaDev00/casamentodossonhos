@@ -552,6 +552,11 @@ input.form{
   .btnPF a{
     font-size: 35px
   }
+  /*modal das imagens*/
+  .modal-content {
+    width: 30%;
+  }
+
   /* nao logado*/
 
   #prod{margin-left: 3% }

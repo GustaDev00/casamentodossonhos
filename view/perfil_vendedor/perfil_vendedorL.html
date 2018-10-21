@@ -8,7 +8,7 @@
                  </div>
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
-                     <article>
+                     <article>  
                        <h3>Função</h3>
                        <h3>Telefone</h3>
                        <h3>Endereço</h3>
@@ -23,13 +23,13 @@
                         <li>deslogar</li>
                     </ol>
                     <div id="FotosVendedor" >                       
-                            <a href="#"><img class= "carro" src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                            <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
+                     <img src="../_imagens/galeria1.jpeg" alt="imagem 01" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+                     <img src="../_imagens/galeria2.jpeg" alt="imagem 01" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></a>
+                     <img src="../_imagens/galeria3.jpeg" alt="imagem 01" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></a>
+                    <img src="../_imagens/galeria1.jpeg" alt="imagem 01" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></a>
                             
                     </div>
+                    
                      
                     <div id="ProdutosVendedorL">
                             <div class="ordenarV">
@@ -101,7 +101,71 @@
                     </div>
                  </div>
                    
-                </section>       
+                </section> 
+                <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                      
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto">Nome1</h2>
+                            <img src="../_imagens/fundo.png" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdoasdjiasjaiosdjaoisdasdasdasdadasdasdaddassdadada
+                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                      asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsdasdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                      asdoasdjiasjaiosdjaoisdasdasdasdadasdasdaddassdadada
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasd
+                                      
+                                     
+                                      
+                                      
+                                  </p>
+                                  </div>
+                          </div>
+                      
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto">Nome2</h2>
+                            <img src="../_imagens/galeria2.jpeg" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasd
+                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                      asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                      asdoasdjiasjaiosdjaoisd
+                                  </p>
+                                  </div>
+                          </div>
+                      
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto">Nome3</h2>
+                            <img src="../_imagens/galeria3.jpeg" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdoasdjiasjaiosdjaoisdasdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                      
+                                      
+                                  </p>
+                                  </div>
+                          </div>
+                      
+                          <div class="mySlides">
+                                  <h2 class="nomedaFoto">Nome3</h2>
+                                <img src="../_imagens/galeria1.jpeg" style="width:100%">
+                                  <div class="dsFoto">
+                                      <p>
+                                          dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
+                                          
+                                          asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
+                                          asdoasdjiasjaiosdjaoisd
+                                      </p>
+                                      </div>
+                              </div>
+                          
+                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>      
             </main>
             <script>
                 function adicionar(){
@@ -227,6 +291,42 @@ document.getElementById("imgChooserP").addEventListener("change", readImage2, fa
         }
             
     }
+
+    function openModal() {
+  document.getElementById('myModal').style.display = "block";
+  $('html').addClass('classhtml');
+  
+}
+
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+  $('html').removeClass('classhtml')
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
             </script>  
 
 <div id="branco" style="width: 50%;height: 70px"></div>
