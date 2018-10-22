@@ -200,11 +200,9 @@ div.tipo{
   
   /*imagem*/
   img.galeria3{
-    margin-top: -4%;    
-    margin-right: 10%;
-    width:40%;
-    float: right;
-    position: relative;     
+    display: block;
+    margin: 4% auto;
+    width: 70%;       
   }
   
   input.form{
@@ -335,11 +333,7 @@ a.edit{
 }
 
 /*imagem*/
-img.galeria3{
-  margin: 3% 1%;
-  width: 98%;    
-  position: relative; 
-}
+
 
 input.form{
   width: 57%;
@@ -354,11 +348,12 @@ button.btn.btn-primary{
   margin-right: -6px;
   font-size: 140%;
 }
+.java{margin-left: 10px}
 .primary{   
   background-color:pink;
   border:solid grey 1px ;    
   height: 6vw; 
-  width: 25%;
+  width: calc( 100% / 5) ;
   margin-right: -5px;
   font-size: 140%;
 }
@@ -432,7 +427,7 @@ label.at {
 border-radius: 6px;
 font-size: 3vw;
 cursor: pointer;
-margin: 5% 0% 0% 85%;
+margin: -50% 0% 0% 70%;
 padding: 7px 24px;
 position: absolute;
 background: #ffc0cbbd;
