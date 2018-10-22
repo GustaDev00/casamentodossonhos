@@ -14,22 +14,43 @@
     
     <div class="java">
 <br><br>
-                    <button class="primary  " id="b1">   Lista de presente </button>
-                    <button class="primary" id="b2">   Principal </button>
-                    <button class="primary" id="b3">   Convidados </button>
-                    <button class="primary" id="b4">   Favoritos</button>
-                    <button class="primary" id="b5">   Desloga</button>
+                    <button class="primary" id="b1"> Lista de presente </button>
+                    <button class="primary" id="b2"> Principal </button>
+                    <button class="primary" id="b3"> Convidados </button>
+                    <button class="primary" id="b4"> Favoritos</button>
+                    <button class="primary" id="b5"> Desloga</button>
                     <br><br>
        </div>        
 
-       <div class="f1">
-            <p class="casal"></p>    <br>    <br>  
+       <div class="f1" style="border:1px solid">
+              
             <div id="um">                                         
                     
                         <div class="tipo">
                             <p>Presente: Status: </p>                                    
                         </div> <br>
-                        <?php 
+
+                        <div class="l1">
+                            <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
+                            <form action="../deletes/list_pres.php" method="POST"></form><a class="pres"> Andre</a> 
+                            <a class="co"> --- </a>  
+                            <input type='hidden' name='nomePres' value="carro">                                                                                   
+                        </div>
+                    <div class="l1">
+                        <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
+                        <a class="pres"> Andre</a> 
+                 <a class="co"> --- </a>  
+                 <input type='hidden' name='nomePres' value="carro">                                                      
+
+                </div>
+                <div class="l1">
+                    <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
+                    <form action="../deletes/list_pres.php" method="POST"><a class="pres"> Andre</a> 
+             <a class="co"> --- </a>  
+             <input type='hidden' name='nomePres' value="carro">                                                      
+                    <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
+            </div>
+                       <!-- <?php 
                     $r = 0;
                     while($r < count($dadosPres)){
                         
@@ -42,12 +63,13 @@
                      <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                      
                             <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
                     </div>                                                                             
-                    <?php  $r++; } ?>                                 
+                    <?php  $r++; } ?> --> 
+
                 </div> <br><hr class="w">  
                 <form action="../perfil/ListaPresente.php" method="post" id="campoAdd">
-                    <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente">
+                    <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente"><br>
                     <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira
-                    <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00
+                    <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00<br>
                     <Input type="submit" value="enviar" id="enviandoAdd">
                     </Form>    
                 <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>                          
@@ -107,7 +129,7 @@
 
                            <a href="#"><img class="fav1" id="l" src="../_imagens/galeria3.jpeg"></a>
                            <a href="#"><img class="fav2" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav3" id="l" src="../_imagens/galeria3.jpeg"></a>
+                           <a hef="#"><img class="fav3" id="l" src="../_imagens/galeria3.jpeg"></a>
                            <a href="#"><img class="fav4" id="l" src="../_imagens/galeria3.jpeg"></a>
                            <a href="#"><img class="fav5" id="l" src="../_imagens/galeria3.jpeg"></a>
                            

@@ -310,12 +310,12 @@ height: 6vw;
 width: 27%;
 margin-left: -7px;
 }
-
+.java{margin-left: 12px}
 .primary{   
 background-color:pink;
 border:solid grey 1px ;    
 height: 6vw; 
-width: 25%;
+width: calc( 92% / 5) ;
 margin-right: -6px;
 font-size: 85%;
 }

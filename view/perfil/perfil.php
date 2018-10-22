@@ -101,7 +101,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 
     
 	echo "<script>alert('Faça o Login para continuar!');</script>";
-    echo "<script>location.href='login/index.html'</script>";
+    echo "<script>location.href='../login/index.html'</script>";
 }
 }
 

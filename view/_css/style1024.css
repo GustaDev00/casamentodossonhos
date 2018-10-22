@@ -194,10 +194,11 @@ div.principal{
 }
 
 /*imagem*/
-img.galeria3{
-  margin: 3% 1%;
-  width: 98%;  
-  position: relative;   
+ /*imagem*/
+ img.galeria3{
+  display: block;
+  margin: 4% auto;
+  width: 70%;       
 }
 
 input.form{
@@ -330,7 +331,7 @@ a.edit{
   background-color:pink;
   border:solid grey 1px ;    
   height: 6vw; 
-  width: 25%;
+  width: calc( 94% / 5) ;
   margin-right: -6px;
   font-size: 120%;
 }
@@ -402,7 +403,7 @@ label.at {
 border-radius: 6px;
 font-size: 3vw;
 cursor: pointer;
-margin: -68% 0% 0% 84%;
+margin: -50% 0% 0% 70%;
 padding: 7px 24px;
 position: absolute;
 background: #ffc0cbbd;
