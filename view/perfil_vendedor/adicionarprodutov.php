@@ -40,6 +40,7 @@ try{
                 $insert = executeQuery($conn, $sql);
                 @move_uploaded_file ( $arquivo_tmp, "$destino" );
                 
+                
                
                echo'<script>';
                echo"location.href='../perfil/perfil.php'";

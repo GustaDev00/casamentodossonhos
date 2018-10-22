@@ -49,13 +49,13 @@
                         <div class="window" id="janela2">
                             <a href="#" class="fechar">&#215;</a>
                             <h4>Cadastro do Foto</h4>
-                            <form action="EscolheGarcia" method="post" enctype="multipart/form-data">
-                                <input type="name" name="nomefoto" placeholder="Nome Foto" >
+                            <form action="../foto/cadastroFotoVendedor.php" method="post" enctype="multipart/form-data">
+                                <input type="name" name="nomeFoto" placeholder="Nome Foto" >
                                 <div id="quadrof" style="border:none">
                                 
                                 </div>
-                                <input type=file id=imgChooser name=SImagem onclick="criaimg()">
-                                <textarea style="resize: none; height: 50px; padding: 5px" placeholder="Legenda..."></textarea>
+                                <input type=file id=imgChooser name="imgEsc" onclick="criaimg()">
+                                <textarea style="resize: none; height: 50px; padding: 5px" name="descFoto" placeholder="Legenda..."></textarea>
                                 <button class=".button">Salvar</button>
                             </form>
                         </div>
