@@ -32,15 +32,14 @@
                     
                      
                     <div id="ProdutosVendedorL">
-                            <div class="ordenarV">
                                     <?php 
                                         $l = 0;
                                         while($l < count($dadosProd)){ ?>   
                                 <a href="../produto/?id=<?php echo $dadosProd[$l]['cod_produto']; ?>"  >
+                                    
                                 <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>"  alt="imagem<?php echo $l ?>">
-                                <h2><?php echo $dadosProd[$l]['nome_produto']; ?></h2>
+                                
                                 </a><?php $l++; } ?></form>
-                            </div>
                     </div>
                     <div id="ProdutosFotos" style="display:none"x>
                         <fieldset class="btnPF">   
