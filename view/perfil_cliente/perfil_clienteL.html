@@ -29,41 +29,31 @@
                         <div class="tipo">
                             <p>Presente: Status: </p>                                    
                         </div> <br>
-
+                        <?php 
+                        $r = 0;
+                        while($r < count($dadosPres)){
+                        
+                     ?>  
                         <div class="l1">
                             <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                            <form action="../deletes/list_pres.php" method="POST"></form><a class="pres"> Andre</a> 
+                            <form action="../deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
                             <a class="co"> --- </a>  
-                            <input type='hidden' name='nomePres' value="carro">                                                                                   
+                            <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                                                   
                         </div>
-                    <div class="l1">
-                        <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                        <a class="pres"> Andre</a> 
-                 <a class="co"> --- </a>  
-                 <input type='hidden' name='nomePres' value="carro">                                                      
+                        <?php  $r++; } ?>                                             
 
-                </div>
-                <div class="l1">
-                    <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                    <form action="../deletes/list_pres.php" method="POST"><a class="pres"> Andre</a> 
-             <a class="co"> --- </a>  
-             <input type='hidden' name='nomePres' value="carro">                                                      
+                                                                    
                     <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
             </div>
-                       <!-- <?php 
-                    $r = 0;
-                    while($r < count($dadosPres)){
-                        
-                      
-                 ?>  
+                       <!-- 
                     <div class="l1">
                             <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                            <form action="../deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
+                            <form action="../deletes/list_pres.php" method="POST"><a class="pres"></a> 
                      <a class="co">Confirmado</a>  
                      <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                      
                             <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
                     </div>                                                                             
-                    <?php  $r++; } ?> --> 
+                    --> 
 
                 </div> <br><hr class="w">  
                 <form action="../perfil/ListaPresente.php" method="post" id="campoAdd">
