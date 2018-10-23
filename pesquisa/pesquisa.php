@@ -13,7 +13,7 @@ $pesquisa = isset($_GET['pesquisar'])?$_GET['pesquisar']:'';
 $PDO = connection();
 $PDO->exec("set names utf8");
 
-$sql = "SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
+$sql = "SELECT DISTINCT(p.cod_produto), p.nome_prod, p.preco_prod, p.desc_prod, 
 p.local_prod, c.nome_categoria, c.desc_categoria,
 e.nome_empre
 FROM PRODUTO p
@@ -24,7 +24,7 @@ ON e.cod_empresa = e.cod_empresa
 where nome_prod like '%$pesquisa%';";
 
 $stmt = $PDO->prepare($sql);
-$stmt->bindValue(':search', '%' . $pesquisa . '%');
+$stmt->bindValue(':search',  $pesquisa );
 $stmt->execute();
  
 // cria um array com os resultados
