@@ -69,23 +69,23 @@
                             <p class="casal"><?php echo "$nome e $parceiro" ?></p><br>
                          
                             <div class="princ">
-                                <form action="Escolhe ai Garcia" method="POST" id="formula">
+                                <form action="../updates/attLocCas.php" method="POST" id="formula">
                                     <a href="#" class="edit" onclick="formulario();">Editar</a>
 
                                     <label id="prin">Dia:</label>
-                                   <span class="principal_esconde"> xx/xx/xxxx </span>
-                                   <input type="date" class="form">
+                                   <span class="principal_esconde"><?php echo $diaCas; ?></span>
+                                   <input type="date" name="dia" class="form">
                                     <br>
                                                                                     
                                    <label id="prin">Horário:</label>
-                                   <span class="principal_esconde">  19:00</span>
-                                   <input type="datetime" class="form">
+                                   <span class="principal_esconde"><?php echo $horarioCas ?></span>
+                                   <input type="datetime" name="hora" class="form">
                                   <!--<a href="" class="edit">Editar</a>-->
                                    <br>
                               
                                    <label id="prin">Local:</label>
-                                   <span class="principal_esconde"> Endereço </span>
-                                   <input type="text" class="form"><br><br>
+                                   <span class="principal_esconde"> <?php echo $localCas; ?></span>
+                                   <input type="text" name="local" class="form"  ><br><br>
                                   <input type="submit" class="form" value="Salvar">
                                     <br>
                                 </form>
