@@ -1,7 +1,7 @@
 <?php
     include_once '../../Db/daohelper.php';
     
-    $idProd = $_GET['id'];
+    $idProd = $_GET['cod'];
     if(empty($idProd)){
         echo " DEU CU";
     }else{
