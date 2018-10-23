@@ -658,3 +658,8 @@ img.abc{
   margin-right: 10px;
 }
 
+/*-------------lista presente---------*/
+
+.listapresentecampo{border: 1px solid; padding: 10px; margin: 10px}
+.listapresentecampo input{ margin: 10px}
+.listapresentecampo input:last-child{margin: 0 100px}
