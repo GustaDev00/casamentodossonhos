@@ -25,7 +25,7 @@ if(empty($_POST)){
             $sql = "INSERT INTO fotos_empresa(nome_foto, desc_foto, url_foto_empresa, cod_empresa)
             VALUES('$nomeFoto', '$descFoto','$destino', '$id');";
             $insert = executeQuery($conn, $sql);
-           // @move_uploaded_file ( $arquivo_tmp, "$destino" );
+            @move_uploaded_file ( $arquivo_tmp, "$destino" );
             
             
            

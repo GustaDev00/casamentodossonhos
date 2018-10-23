@@ -74,20 +74,53 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dP++;
         }
 
+        $selectFoto = "select * from fotos_empresa where cod_empresa = '{$_SESSION["id"]}';";
+        $execFoto = executeSelect($pdo, $selectFoto);
+        $dadosFoto = array();
+        $df = 0;
+        while($fetchFoto = $execFoto->fetch(PDO::FETCH_OBJ)){
+            $dadosFot[$df]['nome_foto'] = $fetchFoto->nome_foto;
+            $dadosFot[$df]['url_foto_empresa'] = $fetchFoto->url_foto_empresa;
+            $dadosFot[$df]['desc_foto'] = $fetchFoto->desc_foto;
+            
+            $df++;
+        }
+
+
         include_once '../perfil_vendedor/index.php';
      
     }else if ($_SESSION["defini"] == 3){
-        $select = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
-        $execute = executeSelect($pdo, $select);
-        $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
-        $nome = $fetch2->nome_adm;
-        $senha = $fetch2->senha_adm;
-        $email = $fetch2->email_adm;
+        $selectAdm = "select * from adm where cod_adm = '{$_SESSION["id"]}'";
+        $execute = executeSelect($pdo, $selectAdm);
+        $fetchAdm = $execute->fetch(PDO ::FETCH_OBJ);
+        $nomeAdm = $fetchAdm->nome_adm;
+        $senhaAdm = $fetchAdm->senha_adm;
+        $emailAdm = $fetchAdm->email_adm;
         echo "Seu id é: '{$_SESSION["id"]}' <br>";
-        echo "Seu email é: $email <br>";
-        echo "Seu nome é: $nome <br>";
-        echo "Sua senha é: $senha <br>";
-        echo "<script>location.href='index.html'</script>";
+        echo "Seu email é: $emailAdm <br>";
+        echo "Seu nome é: $nomeAdm <br>";
+        echo "Sua senha é: $senhaAdm <br>";
+        $selectUsu = "select * from usuario;";
+        $executeU = executeSelect($pdo, $selectUsu);
+        $fetchU = $executeU->fetch(PDO::FETCH_OBJ);
+        $nomeU = $fetchU->nome_usu;
+        $tipoU = $fetchU->tipo_usu;      
+        $parceiroU = $fetchU->nome_par_usu;
+        $senhaU = $fetchU->senha_usu;
+        $diaCasU = $fetchU->data_casal; 
+        $emailU = $fetchU->email_usu;
+        $imagemLU = $fetchU->foto_usu;
+        $imagemLocU = $fetchU->foto_local;
+        $localCasU = $fetchU->local_casal;
+        $horarioCasU = $fetchU->horario_casal;
+        $nascimentoU = $fetchU->nascimento_usu;
+        $cepU = $fetchU->cep_usu;
+        $ruaU = $fetchU->rua_usu;
+        $bairroU = $fetchU->bairro_usu;
+        $cidadeU = $fetchU->cidade_usu;
+        $estadoU = $fetchU->estado_usu;
+        $tipo_parU = $fetchU->tipo_par_usu;
+        $nascimento_parU = $fetchU->nascimento_par_usu; 
 
     }
     ?>

@@ -9,7 +9,7 @@
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
                      <article>  
-                       <h3><?php echo $funcE ?></h3>
+                       <h3>Categoria da Empresa/Vendedor: <?php echo $funcE ?></h3>
                        <h3>Telefone: <?php echo $telE ?></h3>
                        <h3>Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
                        <a href="#"><h3>Site</h3></a>  
@@ -22,12 +22,13 @@
                         <li onclick="adicionar();">Adicionar</li>
                         <li>deslogar</li>
                     </ol>
-                    <div id="FotosVendedor" >                       
-                     <img src="../_imagens/galeria1.jpeg" alt="imagem 01" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
-                     <img src="../_imagens/galeria2.jpeg" alt="imagem 01" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></a>
-                     <img src="../_imagens/galeria3.jpeg" alt="imagem 01" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></a>
-                    <img src="../_imagens/galeria1.jpeg" alt="imagem 01" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></a>
-                            
+                    <div id="FotosVendedor" >
+                        <?php  $cF2=0; $d=0; 
+                            if($d<=$cF2){ 
+                                while($cF2 < count($dadosFot)){ ?>                       
+                     <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" alt="imagem 01" onclick="openModal();currentSlide($d)" class="hover-shadow cursor"></a>
+                     
+                            <?php $cF2++; $d++; } }?>
                     </div>
                     
                      
@@ -96,63 +97,20 @@
                 <div id="myModal" class="modal">
                         <span class="close cursor" onclick="closeModal()">&times;</span>
                         <div class="modal-content">
-                      
+                      <?php $cF=0; while($cF < count($dadosFot)){ ?>
                           <div class="mySlides">
-                              <h2 class="nomedaFoto">Nome1</h2>
-                            <img src="../_imagens/fundo.png" style="width:100%">
+                              <h2 class="nomedaFoto"><?php echo $dadosFot[$cF]['nome_foto']; ?></h2>
+                            <img src="<?php echo $dadosFot[$cF]['url_foto_empresa']; ?>" style="width:100%">
                               <div class="dsFoto">
                                   <p>
-                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdoasdjiasjaiosdjaoisdasdasdasdadasdasdaddassdadada
-                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
-                                      asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsdasdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
-                                      asdoasdjiasjaiosdjaoisdasdasdasdadasdasdaddassdadada
-                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasd
                                       
-                                     
-                                      
-                                      
+                                      <?php echo $dadosFot[$cF]['desc_foto']; ?>                                 
+                                                                            
                                   </p>
                                   </div>
                           </div>
-                      
-                          <div class="mySlides">
-                              <h2 class="nomedaFoto">Nome2</h2>
-                            <img src="../_imagens/galeria2.jpeg" style="width:100%">
-                              <div class="dsFoto">
-                                  <p>
-                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasd
-                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
-                                      asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
-                                      asdoasdjiasjaiosdjaoisd
-                                  </p>
-                                  </div>
-                          </div>
-                      
-                          <div class="mySlides">
-                              <h2 class="nomedaFoto">Nome3</h2>
-                            <img src="../_imagens/galeria3.jpeg" style="width:100%">
-                              <div class="dsFoto">
-                                  <p>
-                                      dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdoasdjiasjaiosdjaoisdasdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
-                                      asdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
-                                      
-                                      
-                                  </p>
-                                  </div>
-                          </div>
-                      
-                          <div class="mySlides">
-                                  <h2 class="nomedaFoto">Nome3</h2>
-                                <img src="../_imagens/galeria1.jpeg" style="width:100%">
-                                  <div class="dsFoto">
-                                      <p>
-                                          dasdouadhausdihauisdhaiusdhaiusdasdasdaksdasdasdasdausdjiaosidjaisodjaodjaiosjdiaosdjaoisdjaoisd
-                                          
-                                          asdasjdaiosjaodisdjoaisjdaiosdjaoisdjaiodajsiodajsd
-                                          asdoasdjiasjaiosdjaoisd
-                                      </p>
-                                      </div>
-                              </div>
+                      <?php  $cF++; } ?>
+                    
                           
                           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                           <a class="next1" onclick="plusSlides(1)">&#10095;</a>
