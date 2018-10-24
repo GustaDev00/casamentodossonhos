@@ -1,3 +1,10 @@
+<?php 
+if(session_start() == true){
+    $idUsu = $_SESSION['id'];
+    echo $idUsu;
+    //$idProd = isset($_GET['cod'])?$_GET['cod']:null;
+     //echo $idProd;
+}else{session_start();} ?>
 <!DOCTYPE html>
 
         <title>Casamento dos Sonhos</title>
@@ -84,6 +91,7 @@
     <div id="all_icones">
         <a href="#"><img src="../_imagens/descricao.png" alt="descrição"></a>
         <a href="#"><img src="../_imagens/msg.png" alt="mensagem"></a>
-        <a href="#"><img src="../_imagens/favorito.png" alt="favorito"></a>
+        
+        <a href="favorita.php?id=<?php echo $idUsu;?>&?cod=<?php echo$idProd; ?>"><img src="../_imagens/favorito.png" alt="favorito"></a>
     </div>   
     </div>
