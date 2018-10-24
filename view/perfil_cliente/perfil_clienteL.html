@@ -1,6 +1,5 @@
 
-  <body>        
-
+  <body>
     <div class="top" > 
             <div  id="irineu">   
                     <form id="formu" action="../updates/img_perfil.php" enctype="multipart/form-data" method="POST">        
@@ -22,47 +21,46 @@
                     <br><br>
        </div>        
 
-       <div class="f1" style="border:1px solid">
+       <div class="f1">
               
             <div id="um">                                         
-                    
-                        <div class="tipo">
-                            <p>Presente: Status: </p>                                    
-                        </div> <br>
+                    <table>                          
+                                <tr>
+                                    <th>Presente:</th>
+                                    <th>Status:</th>
+                                    <th>Deletar</th>
+                                </tr>
                         <?php 
                         $r = 0;
                         while($r < count($dadosPres)){
                         
                      ?>  
-                        <div class="l1">
-                            <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                            <form action="../deletes/list_pres.php" method="POST"><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> 
-                            <a class="co"> --- </a>  
-                            <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                                                   
+                     
+                        <div class="l1">  
+                        <tr>                         
+                            <form action="../deletes/list_pres.php" method="POST">
+                                <td><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> </td>
+                            <td><a class="co"> --- </a>  </td>
+                            <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">
+                           <td> <INPUT type="submit" value="Excluir" class="cma" id="ma"></td>   </form>                                                                                
+                        </tr>
                         </div>
-                        <?php  $r++; } ?>                                             
+                    
+                        <?php  $r++; } ?> 
+                    </table>                                          
 
                                                                     
-                    <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
-            </div>
-                       <!-- 
-                    <div class="l1">
-                            <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                            <form action="../deletes/list_pres.php" method="POST"><a class="pres"></a> 
-                     <a class="co">Confirmado</a>  
-                     <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">                                                      
-                            <INPUT type="submit" value="Excluir" class="cma" id="ma"><button></button>      </form>                         
-                    </div>                                                                             
-                    --> 
-
-                </div> <br><hr class="w">   
+                    </div>
+                    <br><hr class="w">   
                 <form action="../perfil/ListaPresente.php" method="post" id="campoAdd" class="listapresentecampo">
                     <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente"><br>
                     <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira
                     <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00<br>
                         <button class=".button" id="enviandoAdd">Salvar Lista</button>
                     </Form>    
-                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>     <br> <br> <br> <br>                  
+                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>     <br> <br> <br> <br>
+
+                </div>                   
        </div>
 
                     <div class="f2">

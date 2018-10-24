@@ -304,11 +304,12 @@ a.edit{
     width: 29.5%;
     margin-left: -7px;
 }
+.java{margin-left: 10px}
 .primary{   
     background-color:pink;
     border:solid grey 1px ;    
     height: 6vw; 
-    width: calc( 92% / 5) ;
+    width: calc( 91% / 5) ;
     margin-right: -5px;
 }
 
