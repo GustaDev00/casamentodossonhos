@@ -130,12 +130,6 @@ footer{position: relative;}
  padding-right: 2%; 
  }
 
- label, h3{
-   font-size: 3vw;
- }
-  div#um{
-    font-size: 3vw;  
-  }
   .form{display: none;}
   #formula input:not(:nth-child(15)){background-color: white; border: 1px solid}
   table {
@@ -672,6 +666,5 @@ img.abc{
 
 /*-------------lista presente---------*/
 
-.listapresentecampo{border: 1px solid; padding: 10px; margin: 10px}
-.listapresentecampo input{ margin: 10px}
-.listapresentecampo input:last-child{margin: 0 100px}
+
+.listapresentecampo input{ margin:20px}

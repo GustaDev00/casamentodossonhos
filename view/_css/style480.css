@@ -173,6 +173,12 @@ div.prin{
 div.form2{
     margin-left: auto;       
 }
+label, h3{
+    font-size: 3vw;
+  }
+   div#um{
+     font-size: 3vw;  
+   }
 
 input.form{
     background-color: pink;

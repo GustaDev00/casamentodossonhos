@@ -51,16 +51,26 @@
 
                                                                     
                     </div>
-                    <br><hr class="w">   
-                <form action="../perfil/ListaPresente.php" method="post" id="campoAdd" class="listapresentecampo">
-                    <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente"><br>
-                    <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira
-                    <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00<br>
-                        <button class=".button" id="enviandoAdd">Salvar Lista</button>
-                    </Form>    
-                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>     <br> <br> <br> <br>
+                    <br><hr class="w">
+                    <div class="listapresentecampo" id="campoAdd">
+                        <table>
+                        <form action="../perfil/ListaPresente.php" method="post"  >
+                            <tr>
+                                <td> <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente"></td>
+                                <td> <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira</td>
+                                <td>  <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00</td>
+                                <td> <a id="cancelaadd">Cancela</a></td>
+                                <td> <button class=".button" id="enviandoAdd">Salvar Lista</button></td>
+                            </tr>
+                        </Form>
+                        </table>  
+                    </div>
+                    
+                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>
+                <br> <br> <br> <br>  
 
-                </div>                   
+                </div>   
+                           
        </div>
 
                     <div class="f2">
@@ -72,12 +82,12 @@
 
                                     <label id="prin">Dia:</label>
                                    <span class="principal_esconde"><?php echo $diaCas; ?></span>
-                                   <input type="date" name="dia" class="form">
+                                   <input type="datetime" name="dia" class="form" placeholder="Ex: xx:xx">
                                     <br>
                                                                                     
                                    <label id="prin">Horário:</label>
                                    <span class="principal_esconde"><?php echo $horarioCas ?></span>
-                                   <input type="datetime" name="hora" class="form">
+                                   <input type="datetime" name="hora" class="form" placeholder="">
                                   <!--<a href="" class="edit">Editar</a>-->
                                    <br>
                               
