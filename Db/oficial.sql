@@ -1,5 +1,5 @@
 create database casamentodossonhos;
-  -- drop database casamentodossonhos;
+ -- drop database casamentodossonhos;
 use casamentodossonhos;
 /*
 create table tipo_usuario(
@@ -30,7 +30,7 @@ horario_casal varchar(20),
 local_casal varchar(60),
 foto_local varchar(60)
 );
--- select * from usuario;
+ select * from usuario;
 /*
 create table email(
 titulo_email varchar(100),
@@ -57,6 +57,15 @@ tel_empre varchar(50),
 categoria_empre varchar(60)
 );
 
+create table fotos_empresa(
+cod_foto int primary key auto_increment,
+nome_foto varchar(50),
+url_foto_empresa varchar(80),
+desc_foto text,
+cod_empresa int,
+foreign key(cod_empresa) references empresa(cod_empresa)
+);
+
 create table categoria(
 cod_categoria int primary key auto_increment,
 nome_categoria varchar(100),
@@ -74,12 +83,13 @@ preco_prod varchar(100),
 desc_prod text,
 url_foto_prod varchar(100),
 local_prod varchar(199),
+iz_prod varchar(100),
 cod_empresa int,
 cod_categoria int,
 foreign key(cod_empresa)references empresa(cod_empresa),
 foreign key(cod_categoria)references categoria(cod_categoria)
 );
-
+select * from usuario;
 create table convidados(
  cod_conv int primary key auto_increment,
  email_conv varchar(80),
@@ -117,13 +127,15 @@ desc_coment varchar(100)
 */
 
 create table favorita(
+cod_favorita int primary key auto_increment,
 cod_status_favorita char(2),
-cod_favorita int auto_increment,
 cod_produto int,
 cod_usu int,
 foreign key(cod_usu) references usuario(cod_usu),
-primary key(cod_favorita, cod_produto, cod_usu)
-);
+foreign key(cod_produto) references produto(cod_produto)
+); 
+
+select * from favorita;
 
 create table adm(
 cod_adm int primary key auto_increment,
@@ -131,6 +143,8 @@ nome_adm varchar(100),
 email_adm varchar(100),
 senha_adm varchar(60)
 );
+insert into adm(nome_adm, email_adm, senha_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm');
+
 /*INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
                 nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
                 tipo_par_usu, nascimento_par_usu, data_casal) 
@@ -146,7 +160,30 @@ UPDATE USUARIO SET FOTO_USU = '$novoNome.$extensao' where email_usu = 'gusta@gg.
 	   INNER JOIN EMPRESA e
 	   ON e.cod_empresa = e.cod_empresa
 	   where nome_prod like '%n%';
-       select * from produto;*/
        
-       insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
-      
+       select * from empresa;
+	select * from categoria;
+    SELECT COD_CATEGORIA FROM CATEGORIA WHERE NOME_CATEGORIA = 'Flores';
+
+       
+INSERT INTO PRODUTO(NOME_PROD, PRECO_PROD, DESC_PROD,
+                                    URL_FOTO_PROD, LOCAL_PROD, COD_EMPRESA, COD_CATEGORIA)
+                                    VALUES('$nome', '$preco', '$descricao', '$destino', '$local', 1, 2);
+                                    select * from produto where cod_empresa = 2;
+                                    select * from produto where cod_produto = 9;
+select * from produto;
+
+SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
+        p.local_prod, p.url_foto_prod, 
+        c.nome_categoria, c.desc_categoria,
+        e.nome_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
+        FROM PRODUTO p
+        INNER JOIN CATEGORIA c
+        ON p.cod_categoria = c.cod_categoria 
+        INNER JOIN EMPRESA e
+        ON e.cod_empresa = p.cod_empresa
+        WHERE p.COD_PRODUTO = 10;*/
+        
+        insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
+       insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
+       
