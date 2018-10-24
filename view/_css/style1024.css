@@ -326,12 +326,12 @@ a.edit{
   margin-left: -7px;
   font-size: 120%;
 }
-
+.java{margin-left: 15px}
 .primary{   
   background-color:pink;
   border:solid grey 1px ;    
   height: 6vw; 
-  width: calc( 94% / 5) ;
+  width: calc( 92% / 5) ;
   margin-right: -6px;
   font-size: 120%;
 }
@@ -350,7 +350,7 @@ label.qtd{
 }
 
 label.nm{
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 p.c{
   padding-left: 5%;
@@ -385,11 +385,8 @@ hr.w{
     padding-bottom: 2%;          
     margin-left:6px;
     margin-top: 6px; 
+    font-size:2vw;
  }  
-
-label#prin{
-    font-size:2.5vw;
-}
     
 .l1{
 font-size: 2.5vw;
