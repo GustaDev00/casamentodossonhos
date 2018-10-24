@@ -138,6 +138,19 @@ footer{position: relative;}
   }
   .form{display: none;}
   #formula input:not(:nth-child(15)){background-color: white; border: 1px solid}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    top: 0%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+} 
 
   /*-------produto-------------*/
 
