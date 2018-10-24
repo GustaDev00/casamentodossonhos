@@ -119,17 +119,14 @@
                             <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br> <br>
 
                             <p id="l">Meus favoritos:</p>
-
-                           <a href="#"><img class="fav1" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav2" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a hef="#"><img class="fav3" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav4" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav5" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           
+                            <?php  $fC=0; while($fC < count($dadosFav)){ 
+                                 ?>
+                           <a href="../produto/index.php?cod=<?php echo $dadosFav[$fC]['cod_produto']; ?>"><img class="fav1" id="l" src="<?php echo$dadosFav[$fC]['url_foto_prod']; ?>"></a>
+                           <?php  $fC++;}?>
                     </div>                   
     </div>
               
-                            
+   
 
 <script>
     var b1 = document.querySelector("#b1");

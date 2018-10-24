@@ -2,6 +2,7 @@
     include_once '../../Db/daohelper.php';
     
     $idProd = $_GET['cod'];
+    
     if(empty($idProd)){
         echo " DEU CU";
     }else{
@@ -28,6 +29,7 @@
         $locEst = $fetch->estado_empre;
         $contato = $fetch->tel_empre;
         $fotoE = $fetch->foto_empre;
+        
         include_once 'index.html';
     }
  

@@ -31,6 +31,26 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dP++;
         }
         
+        $selectFavorita = "SELECT p.cod_produto, p.url_foto_prod, p.nome_prod,
+        f.cod_status_favorita
+        from produto p
+        inner join favorita f
+        on f.cod_produto = p.cod_produto
+        inner join usuario u
+        on f.cod_usu = u.cod_usu
+        where f.cod_usu = '{$_SESSION["id"]}'
+        and   f.cod_produto = p.cod_produto
+        and   f.cod_status_favorita = 'A';";
+
+        $execFav = executeSelect($pdo, $selectFavorita);
+        $dadosFav = array();
+        $dFav = 0;
+        while($fetchFav = $execFav->fetch(PDO::FETCH_OBJ)){
+            $dadosFav[$dFav]['url_foto_prod'] = $fetchFav->url_foto_prod;
+            $dadosFav[$dFav]['cod_produto'] = $fetchFav->cod_produto;
+            $dFav++;
+        }
+
        /* echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
@@ -86,6 +106,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $df++;
         }
 
+       
 
         include_once '../perfil_vendedor/index.php';
      
