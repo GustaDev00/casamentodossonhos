@@ -18,7 +18,15 @@ $fetch = $execute->fetch(PDO ::FETCH_OBJ);
         $imagemLoc = $fetch->foto_local;
         $localCas = $fetch->local_casal;
         $horarioCas = $fetch->horario_casal;
-        include_once 'cadastroConvidado.html';
+        $select2 = "select * from lista_presentes where cod_usu = '$id'";
+        $execute2 = executeSelect($conn, $select2);
+        $dadosPres = array();
+        $dP = 0;
+        while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+            $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+            $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
+            $dP++;
+        }
+        include_once 'index.php';
 ?>
-    <h2>Casamento de: <?php echo " $nome e $parceiro"; ?></h2>
-        <img class="galeria3" src="<?php echo $imagemLoc ?>">
+    

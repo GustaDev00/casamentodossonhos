@@ -5,7 +5,8 @@ session_start();
 // Caso contrario, redireciona o visitante pra home
 try{
 if (empty($_GET['pesquisar'])) {
-  header("Location: /");
+  //header("Location: /");
+  echo "ta vazio o GET";
   exit;
 }else{
 

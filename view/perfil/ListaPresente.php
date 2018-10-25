@@ -14,7 +14,7 @@ try{
             echo "<script>alert('Preencha o Campo!')</script>";
             echo "<script>location.href='perfil.php'</script>";
         }else{
-       $insert = "INSERT INTO LISTA_PRESENTES(nome_valor_presente, tipo_presente, cod_usu) values('$nomePres', '$tipoPres', '$id');";
+       $insert = "INSERT INTO LISTA_PRESENTES(nome_valor_presente, tipo_presente, status_presente, cod_usu) values('$nomePres', '$tipoPres', 'Em Aberto', '$id');";
        $conn = connection();
        $query = executeQuery($conn, $insert);
        echo "<script>location.href='perfil.php'</script>";
