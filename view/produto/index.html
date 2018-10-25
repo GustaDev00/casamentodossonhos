@@ -2,8 +2,8 @@
 if(session_start() == true){
     $idUsu = $_SESSION['id'];
     
-    //$idProd = isset($_GET['cod'])?$_GET['cod']:null;
-     
+   $idProd = isset($_GET['cod'])?$_GET['cod']:null;
+     echo $idProd;
 }else{session_start();} ?>
 <!DOCTYPE html>
 
@@ -81,11 +81,12 @@ if(session_start() == true){
     </div>
 </section>
 <section id="MensagemEnviar">
-    <form action="EnviarMensagem.php" method="POST">
-        <label>EmailUsuario@exemplo.com</label>
-        <label>EmailVendedor@exemplo.com</label>
-        <textarea placeholder="Digite aqui sua mensagem"></textarea>
-        <input type="image" src="../_imagens/EnviarP.png" width="40px" name="Enviar" id="btnForm">
+    <form action="../email/enviarEmail.php?cod=<?php echo $idProd; ?>" method="POST">
+        <input type="text" name="Email" placeholder="Digite seu E-mail Aqui!" required>
+        <input type="text" name="Assunto" placeholder="Assunto" required>
+        <textarea placeholder="Digite aqui sua mensagem" name="mensagem"></textarea>
+        <input type="submit" value="Enviar Mensagem">
+        <!-- ta estranho isso<input type="image" src="../_imagens/EnviarP.png" width="40px" name="Enviar" id="btnForm">-->
     </form>
 </section>
     <div id="all_icones">
