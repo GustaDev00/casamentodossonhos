@@ -1,4 +1,7 @@
-
+<?php 
+$id = $_SESSION['id'];
+//echo $id;
+?>
   <body>
     <div class="top" > 
             <div  id="irineu">   
@@ -91,7 +94,7 @@
                             <form id="formu" action="../updates/img_localCasamento.php" method="POST" enctype="multipart/form-data">    
                             <div class="b">                  
                             <img class="galeria3" src="<?php echo $imagemLoc ?>" >
-
+                            <a href="../perfil_cliente/convite.php?id=<?php echo $id;?>">Gerar Convite</a>
                             <label class="at" for='selecao-arquivo2'>alterar</label>
                             <input class="at" id='selecao-arquivo2' type='file' name="img_local" onchange="submit();"> 
                             </div>
@@ -104,12 +107,11 @@
                             <p class="c">Meus convidados:</p>
                             
                             <div class="conv">
-                                <label class="nm">Gabriel Fernandes</label>
-                                <label class="qtd">2 Acompanhantes</label><br>
-
-                                <label class="nm">Arthur Silva</label>
-                                <label class="qtd">2 Acompanhantes</label><br>
-
+                                <?php  $cConv = 0; while($cConv < count($dadosConv)){    ?>
+                                <label class="nm">Nome: <?php   echo $dadosConv[$cConv]['nome_convi']?></label>
+                                <label class="nm">Presença: <?php   echo $dadosConv[$cConv]['presenca']?></label>
+                                <label class="qtd">Acompanhantes: <?php     echo $dadosConv[$cConv]['num_acomp'] ?></label><br>
+                                    <?php $cConv++; } ?>
                                 </div>
                     </div>
 

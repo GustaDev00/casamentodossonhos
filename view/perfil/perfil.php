@@ -51,11 +51,25 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dFav++;
         }
 
+        $selectConvi = "SELECT * FROM CONVIDADOS WHERE COD_USU = '{$_SESSION["id"]}'";
+        $executeConv = executeSelect($pdo, $selectConvi);
+        $dadosConv = array();
+        $dConv = 0;
+        while($fetchConv = $executeConv->fetch(PDO::FETCH_OBJ)){
+            $dadosConv[$dConv]['email_conv'] = $fetchConv->email_conv;
+            $dadosConv[$dConv]['num_acomp'] = $fetchConv->num_acomp;
+            $dadosConv[$dConv]['nome_convi'] = $fetchConv->nome_convi;
+            $dadosConv[$dConv]['presenca'] = $fetchConv->presenca;
+            $dadosConv[$dConv]['celular_conv'] = $fetchConv->celular_conv;
+
+            $dConv++;
+        }
        /* echo "Seu id é: '{$_SESSION["id"]}' <br>";
         echo "Seu email é: $email <br>";
         echo "Seu nome é: $nome <br>";
         echo "Sua senha é: $senha <br>";
         */
+        
         include_once "../perfil_cliente/index.php";
         //echo "<script>location.href='perfil_cliente/'</script>";
         //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
