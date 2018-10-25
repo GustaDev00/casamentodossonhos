@@ -219,7 +219,8 @@ img.perfil{
     margin-right: auto;
     display: block;    
     border-radius: 6px;
-    margin-bottom: -2vw;    
+    margin-bottom: -2vw;
+    
 }
 
 /*CONFIRMAR PRESENÇA*/
@@ -522,3 +523,7 @@ img.letra{
 
    /* produto*/
     #SobreProduto h1{font-size: 5.5vw;}
+
+    #preview{
+        height: 30vw;
+    }

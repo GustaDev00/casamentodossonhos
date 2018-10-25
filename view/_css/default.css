@@ -668,3 +668,14 @@ img.abc{
 
 
 .listapresentecampo input{ margin:20px}
+.edit, #poin{cursor: pointer;}
+
+.perfil{
+  height: 30vw;
+  object-fit:cover ;
+  object-position: center;}
+  #preview{
+    width: 100%;
+    object-fit:cover ;
+     object-position: center;
+  }

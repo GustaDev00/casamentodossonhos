@@ -555,3 +555,7 @@ background: #ffc0cbbd;
   .cli{
     font-size: 1.5vw
 }
+#preview{
+  height: 15vw;
+}
+

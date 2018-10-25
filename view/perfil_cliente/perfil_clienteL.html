@@ -78,23 +78,23 @@
                          
                             <div class="princ">
                                 <form action="../updates/attLocCas.php" method="POST" id="formula">
-                                    <a href="#" class="edit" onclick="formulario();">Editar</a>
+                                    <a  class="edit" onclick="formulario();">Editar</a>
 
                                     <label id="prin">Dia:</label>
                                    <span class="principal_esconde"><?php echo $diaCas; ?></span>
-                                   <input type="datetime" name="dia" class="form" placeholder="Ex: xx:xx">
+                                   <input type="date" name="dia" class="form" >
                                     <br>
                                                                                     
                                    <label id="prin">Horário:</label>
                                    <span class="principal_esconde"><?php echo $horarioCas ?></span>
-                                   <input type="datetime" name="hora" class="form" placeholder="">
+                                   <input type="datetime" name="hora" class="form" placeholder="Ex: xx:xx">
                                   <!--<a href="" class="edit">Editar</a>-->
                                    <br>
                               
                                    <label id="prin">Local:</label>
                                    <span class="principal_esconde"> <?php echo $localCas; ?></span>
                                    <input type="text" name="local" class="form"  ><br><br>
-                                  <input type="submit" class="form" value="Salvar">
+                                  <input type="submit" class="form" id="poin" value="Salvar">
                                     <br>
                                 </form>
                             </div> 
@@ -212,6 +212,7 @@
          $("#b5").click( function(){
                             location.href='../perfil/deslogar.php' ;
                         });
+        //ddg
     
 });
     </script>

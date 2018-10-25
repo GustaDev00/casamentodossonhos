@@ -37,7 +37,7 @@ var TrocaLoja = 1;
         }
         //funcao do index 
         var trocaV = 1;
-        $("#descrip_produto div:last-child").css("display","none");
+
         $("#all_icones a:first-child").on("click",function(){
                 
                 if(trocaV == 1){
