@@ -30,7 +30,7 @@ horario_casal varchar(20),
 local_casal varchar(60),
 foto_local varchar(60)
 );
- select * from usuario;
+
 /*
 create table email(
 titulo_email varchar(100),
@@ -89,13 +89,14 @@ cod_categoria int,
 foreign key(cod_empresa)references empresa(cod_empresa),
 foreign key(cod_categoria)references categoria(cod_categoria)
 );
-select * from usuario;
+
+
 create table convidados(
  cod_conv int primary key auto_increment,
  email_conv varchar(80),
  num_acomp varchar(80),
  nome_convi char(80),
- presenca char(30),
+ presenca char(40),
  celular_conv varchar(15),
  cod_usu int,
  foreign key(cod_usu) references usuario(cod_usu)
@@ -107,12 +108,15 @@ create table lista_presentes(
 cod_list_pres int primary key auto_increment,
 nome_valor_presente varchar(40),
 tipo_presente varchar(50),
+status_presente varchar(30),
 cod_conv int,
 cod_usu int not null,
 foreign key(cod_conv)references convidados(cod_conv),
 foreign key(cod_usu) references usuario(cod_usu)
 );
--- drop table lista_presentes;
+
+-- UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '1';
+
 /*INSERT INTO LISTA_PRESENTES(nome_valor_presente, tipo_presente, cod_usu) values($nomePres, $tipoPres, $id);
 select * from lista_presentes where cod_usu = 4;
 DELETE FROM LISTA_PRESENTES WHERE NOME_VALOR_PRESENTE = 'Foguete' AND COD_USU = '4';
@@ -135,7 +139,6 @@ foreign key(cod_usu) references usuario(cod_usu),
 foreign key(cod_produto) references produto(cod_produto)
 ); 
 
-select * from favorita;
 
 create table adm(
 cod_adm int primary key auto_increment,
@@ -184,6 +187,14 @@ SELECT p.nome_prod, p.preco_prod, p.desc_prod,
         ON e.cod_empresa = p.cod_empresa
         WHERE p.COD_PRODUTO = 10;*/
         
-        insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
+   /*     insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
        insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
-       
+       SELECT E.EMAIL_EMPRE 
+                FROM EMPRESA E
+                INNER JOIN PRODUTO P
+                ON E.COD_EMPRESA = P.COD_EMPRESA
+                WHERE E.COD_EMPRESA = P.COD_EMPRESA
+                AND P.COD_PRODUTO = '10';
+                
+                INSERT INTO CONVIDADOS(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu)
+                                VALUES('$email', '$acomp', '$nome', '$confirm', '$celular', '1')*/
