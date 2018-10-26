@@ -24,6 +24,7 @@ try{
         }else if(empty($idProd)){
            
         }else{
+            if($_SESSION["defini"] == 2){
             $verific = "SELECT * FROM FAVORITA WHERE COD_PRODUTO = '$idProd' AND COD_USU = '$idUsu'";
             $executeSelect = executeSelect($pdo, $verific);
             if($executeSelect->rowCount() > 0){
@@ -34,6 +35,7 @@ try{
                 echo '<script>';
                 echo "location.href='../loja/index.php'";
                 echo '</script>';
+                
             }else{
             $query = "INSERT INTO   FAVORITA(cod_produto, cod_status_favorita, cod_usu)
                         VALUES('$idProd', 'A', '$idUsu');";
@@ -42,10 +44,13 @@ try{
                 echo "location.href='../loja/index.php'";
                 echo '</script>';}
         }
-       
+    else{
+        echo "você não é um cliente!";
+    }
         
     }
 
+}
 }
  catch(Exeption $ex){
 

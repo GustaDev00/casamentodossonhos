@@ -10,22 +10,18 @@
                <div class="form1">
                     <p class="casal"></p><br>
                     <p class="texto">Marque o presente!</p><br><br>
-                <form id="um" method="POST" action="confirmConvite.php?cod=<?php echo $id?>">     
+                
                                            
                     <div class="form-row">
                         <div class="tipo">
                             <p>Presente: Status: </p>                                    
                         </div> <br>
                         <?php $p = 0; while($p < count($dadosPres)){ ?>
+                            <form id="um" method="POST" action="confirmConvite.php?cod=<?php echo $id?>&?pres=<?php echo $dadosPres[$p]['cod_list_pres']; ?>">     
                     <div class="lista1">
                         <input type="checkbox" class="checkbox" onclick="mostra('mb')"/> <a class="presente"> <?php echo $dadosPres[$p]['nome_valor_presente']  ?></a>
                         
-                         <div id="mb" class="email">
-                              <input type="text" id="b" class="e"  size="12" name="confirmEmail" placeholder="Digite seu e-mail">
-                             
-                            <button type="submit" id="b"class="confirma" onclick="asd();">Enviar</button>
-                           
-                          </div>
+                        
                     </div>
                                                           
                        <div class="lista2">                                    
@@ -33,6 +29,12 @@
                       </div>
                            <?php $p++; } ?>
                     </div> 
+                    <div id="mb" class="email">
+                        <input type="text" id="b" class="e"  size="12" name="confirmEmail" placeholder="Digite seu e-mail">
+                       
+                      <button type="submit" id="b"class="confirma" onclick="asd();">Enviar</button>
+                     
+                    </div>
                     
                 </form>   <br><br><hr>                    
             </div>

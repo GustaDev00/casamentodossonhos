@@ -24,6 +24,9 @@ try{
         }else{
              if($execute->rowCount() > 0){
             echo "convidado ja cadastrado";
+            /*echo '<script>';
+            echo "location.href='index.php?id=<?php echo $id ?>'";
+            echo '</script>';*/
         }else{
        session_start();
        
@@ -32,10 +35,12 @@ try{
        $sql = "INSERT INTO CONVIDADOS(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu)
                            VALUES('$email', '$acomp', '$nome', '$confirm', '$celular', '$id')";
     $executeInsert = executeQuery($conn, $sql);
-     
-   /* echo '<script>';
-    echo "location.href='../index.php'";
-    echo '</script>';*/
+    echo "<script>alert('Convidado Cadastrado!');
+   
+</script>";
+   /*echo "<script>
+    location.href='index.php?id=<?php echo $id?>';
+    echo </script>";*/
     
     }
 
