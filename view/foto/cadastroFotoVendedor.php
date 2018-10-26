@@ -29,9 +29,9 @@ if(empty($_POST)){
             
             
            
-           /*echo'<script>';
+           echo'<script>';
            echo"location.href='../perfil/perfil.php'";
-           echo '</script>';*/
+           echo '</script>';
     }
 
 }

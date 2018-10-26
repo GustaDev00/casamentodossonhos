@@ -1,6 +1,9 @@
 select * from usuario;
 
 select * from empresa;
-delete from usuario where cod_usu = 3;
-DELETE FROM empresa where cod_empresa in(1,3);
+drop database casamentodossonhos;
 /*'10.623.708/0001-52'*/
+
+select * from fotos_empresa;
+insert into fotos_empresa(nome_foto, url_foto_empresa, desc_foto, cod_empresa)values("cachorro", "../_imagens/fundo.jpg", "descrição", 1);
+select * from categoria;
