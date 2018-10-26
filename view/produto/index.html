@@ -1,10 +1,10 @@
 <?php 
-if(session_start() == true){
+if(session_start() === true){
     $idUsu = $_SESSION['id'];
     
    $idProd = isset($_GET['cod'])?$_GET['cod']:null;
      echo $idProd;
-}else{session_start();} ?>
+}else{} ?>
 <!DOCTYPE html>
 
         <title>Casamento dos Sonhos</title>
@@ -38,7 +38,7 @@ if(session_start() == true){
                 </form> 
 
                 <div id="icones_topo">
-                <a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>
+                <a href="../perfil/perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>
                 <!-- <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                     echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
                 }else{

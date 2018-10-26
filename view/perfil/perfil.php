@@ -10,38 +10,48 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     $email = $_SESSION["email"];
     $senha = $_SESSION["senha"];
     $pdo= connection();
-        if($_SESSION["defini"] == 2){
-            $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
-            $execute = executeSelect($pdo, $select);
-            $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
-            $nome = $fetch2->nome_usu;      
-            $parceiro = $fetch2->nome_par_usu;
-            $senha = $fetch2->senha_usu;
-            $diaCas = $fetch2->data_casal; 
-            $email = $fetch2->email_usu;
-            $imagemL = $fetch2->foto_usu;
-            $imagemLoc = $fetch2->foto_local;
-            $localCas = $fetch2->local_casal;
-            $horarioCas = $fetch2->horario_casal;
-            $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
-            $execute2 = executeSelect($pdo, $select2);
-            $dadosPres = array();
-            $dP = 0;
-            while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
-                $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
-                $dP++;
-            }
-            
-            $selectFavorita = "SELECT p.cod_produto, p.url_foto_prod, p.nome_prod,
-            f.cod_status_favorita
-            from produto p
-            inner join favorita f
-            on f.cod_produto = p.cod_produto
-            inner join usuario u
-            on f.cod_usu = u.cod_usu
-            where f.cod_usu = '{$_SESSION["id"]}'
-            and   f.cod_produto = p.cod_produto
-            and   f.cod_status_favorita = 'A';";
+    if($_SESSION["defini"] == 2){
+        $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
+        $execute = executeSelect($pdo, $select);
+        $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
+        $nome = $fetch2->nome_usu;      
+        $parceiro = $fetch2->nome_par_usu;
+        $senha = $fetch2->senha_usu;
+        $diaCas = $fetch2->data_casal; 
+        $email = $fetch2->email_usu;
+        $imagemL = $fetch2->foto_usu;
+        $imagemLoc = $fetch2->foto_local;
+        $localCas = $fetch2->local_casal;
+        $horarioCas = $fetch2->horario_casal;
+        $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
+        $execute2 = executeSelect($pdo, $select2);
+        $dadosPres = array();
+        $dP = 0;
+        while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+            $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+            $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
+            $dP++;
+        }
+        
+        $selectFavorita = "SELECT p.cod_produto, p.url_foto_prod, p.nome_prod,
+        f.cod_status_favorita
+        from produto p
+        inner join favorita f
+        on f.cod_produto = p.cod_produto
+        inner join usuario u
+        on f.cod_usu = u.cod_usu
+        where f.cod_usu = '{$_SESSION["id"]}'
+        and   f.cod_produto = p.cod_produto
+        and   f.cod_status_favorita = 'A';";
+
+        $execFav = executeSelect($pdo, $selectFavorita);
+        $dadosFav = array();
+        $dFav = 0;
+        while($fetchFav = $execFav->fetch(PDO::FETCH_OBJ)){
+            $dadosFav[$dFav]['url_foto_prod'] = $fetchFav->url_foto_prod;
+            $dadosFav[$dFav]['cod_produto'] = $fetchFav->cod_produto;
+            $dFav++;
+        }
 
             $execFav = executeSelect($pdo, $selectFavorita);
             $dadosFav = array();

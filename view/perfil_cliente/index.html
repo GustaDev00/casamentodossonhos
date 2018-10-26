@@ -1,5 +1,6 @@
+  <?php  $id = $_GET['id']; ?>
   <body> 
-      <div class="container"> <img class="perfil" src="../_imagens/galeria2.jpeg" >       
+      <div class="container"> <img class="perfil" src="<?php echo $imagemL ?>" >       
     <div class="principal">
 <br/><br/>
             <button class="btn btn-primary" id="btn1">   Lista de presente </button>
@@ -8,68 +9,66 @@
             <br/><br/>
     </div>        
                <div class="form1">
-                    <p class="casal">Gabriela e Julio</p><br>
+                    <p class="casal"></p><br>
                     <p class="texto">Marque o presente!</p><br><br>
-                <form id="um">      
+                <form id="um" method="POST" action="confirmConvite.php?cod=<?php echo $id?>">     
                                            
                     <div class="form-row">
                         <div class="tipo">
                             <p>Presente: Status: </p>                                    
                         </div> <br>
-
+                        <?php $p = 0; while($p < count($dadosPres)){ ?>
                     <div class="lista1">
-                        <input type="checkbox" class="checkbox" onclick="mostra('mb')"/> <a class="presente"> Geladeira</a>
-        
+                        <input type="checkbox" class="checkbox" onclick="mostra('mb')"/> <a class="presente"> <?php echo $dadosPres[$p]['nome_valor_presente']  ?></a>
+                        
                          <div id="mb" class="email">
-                              <input type="text" id="b" class="e"  size="12" placeholder="Digite seu e-mail">
-                            <button type="button" id="b"class="confirma" onclick="asd();">Enviar</button>
+                              <input type="text" id="b" class="e"  size="12" name="confirmEmail" placeholder="Digite seu e-mail">
+                             
+                            <button type="submit" id="b"class="confirma" onclick="asd();">Enviar</button>
                            
                           </div>
                     </div>
                                                           
                        <div class="lista2">                                    
-                          <p class="custom-select" > ------ </p>
+                          <p class="custom-select" ><?php echo $dadosPres[$p]['status_presente'] ?></p>
                       </div>
-                         
-                       <div class="lista3">                           
-                            
-                        </div>    
+                           <?php $p++; } ?>
                     </div> 
                     
                 </form>   <br><br><hr>                    
             </div>
 
                 <div class="form2">
-                        <p class="casal">Gabriela e Julio</p>
+                        <p class="casal"><?php echo " $nome e $parceiro"; ?></p>
                  
                      <div class="prin">
-                            <label id="prin">Dia: 21/12/2030</label><br>
+                            <label id="prin">Dia: <?php echo $diaCas ?></label><br>
                           <!--   <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10"><br>-->
                                                                              
-                            <label id="prin">Horário: 19h</label><br>
+                            <label id="prin">Horário: <?php echo $horarioCas ?></label><br>
                           <!--  <input type="text" class="form" id="" placeholder="19:00" size="10"> -->
                        
-                            <label id="prin">Local: Igreja </label><br>
+                            <label id="prin">Local: <?php echo $localCas ?></label><br>
                            <!-- <input type="text" class="form" id="" placeholder="Endereço" size="25"><br>-->
                      </div>                       
-                     <img class="galeria3" src="../_imagens/galeria3.jpeg" ><br>                                                                                                                                          
+                     <img class="galeria3" src="<?php echo $imagemLoc ?>" ><br>                                                                                                                                          
                 </div>
 
                        <div class="form3">
-                            <p class="casal">Gabriela e Julio</p>
-                              <form>
+                            <p class="casal"><?php echo " $nome e $parceiro"; ?></p>
+                              <form method="POST" action="cadastroConvidado.php?id=<?php echo $id?>">
                          <div class="group2">
-                                            <img class="letra" src="../_imagens/logo.png"><br><br>
+                                            <img class="letra" src="<?php echo $imagemLoc ?>"><br><br>
 
                                             <h3>Convite</h3>                                                
                                             <p id="sua">Sua presença é muito importante em um momento tão especial.</p>
                                             <br>
                                       <label >Nome:</label><br>
-                                      <input type="nome" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" size="50">
+                                      <input type="nome" name="nome_convi" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" size="50">
                                     <br><br>
                                     <div>
                                             <label >Acompanhantes:</label><br>
-                                            <select class="select1" size="">
+                                            <select class="select1" size="" name="acomp">
                                                     <option selected >Selecione</option>
                                                     <option value="1" > 1 acompanhante</option>
                                                     <option value="2"> 2 acompanhantes</option>  
@@ -80,20 +79,21 @@
 
                                     <div class="">
                                       <label >E-mail:</label><br>
-                                      <input type="email" class="form-control" id="email" placeholder="casamentodossonhos@gmail.com" size="50" >
+                                      <input type="email" name="email" class="form-control" id="email" placeholder="casamentodossonhos@gmail.com" size="50" >
                                     </div><br>
 
                                     <div class="conf1">                                                
                                             <label>Celular:</label><br>
-                                            <input type="number" class="form-control" id="cel" placeholder="(xx)xxxx-xxxx">
+                                            <input type="number" name="celular" class="form-control" id="cel" placeholder="(xx)xxxx-xxxx">
                                     </div>
 
                                 <div class="conf">
                                     <label>Presença:</label><br>
-                                    <select class="select2" >
-                                            <option class="a"selected >Selecione</option>
-                                            <option class="a" value="1" >Confirmada</option>
-                                            <option class="a" value="2">Cancelada</option>              
+                                    <select class="select2" name="confirm">
+                                            <option class="a" selected >Selecione</option>
+                                            <option class="a" value="Confirmo Presença" >Confirmada</option>
+                                            <option class="a" value="A decidir" >A decidir</option>
+                                            <option class="a" value="Não poderei Comparecer">Cancelada</option>              
                                     </select>
                                 </div>                 <br><br><br><br>
                                     <button type="submit" class="botao">Confirmar</button>
