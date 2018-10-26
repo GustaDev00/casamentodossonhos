@@ -1,5 +1,5 @@
 <?php
-include_once '../Db/daohelper.php';
+include_once '../../Db/daohelper.php';
 session_start();
 // Verifica se foi feita alguma busca
 // Caso contrario, redireciona o visitante pra home
