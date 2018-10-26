@@ -10,6 +10,8 @@ try{
         $emailConvidado = isset($_POST['confirmEmail'])?$_POST['confirmEmail']:null;
         echo $emailConvidado;
         $id = $_GET['cod'];
+        $idPres = $_GET['?pres'];
+        echo $idPres .'<br>';
         echo $id;
         $conn = connection();
         $select = "select * from convidados where email_conv = '$emailConvidado' and cod_usu = '$id';";
@@ -18,7 +20,7 @@ try{
         $idConv = $fetch4->cod_conv;
         
         if($executeSelect->rowCount() > 0){
-            $verific = "SELECT * FROM LISTA_PRESENTES WHERE COD_CONV = '$idConv' AND STATUS_PRESENTE = 'Confirmado';";
+            $verific = "SELECT * FROM LISTA_PRESENTES WHERE COD_lIST_PRES = '$idPres' AND STATUS_PRESENTE = 'Confirmado';";
             $executeVerific = executeSelect($conn, $verific);
             if($executeVerific->rowCount() > 0){
                 echo '<script>';
