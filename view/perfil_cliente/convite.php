@@ -25,6 +25,7 @@ $fetch = $execute->fetch(PDO ::FETCH_OBJ);
         while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
             $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
             $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
+            $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
             $dP++;
         }
         include_once 'index.php';

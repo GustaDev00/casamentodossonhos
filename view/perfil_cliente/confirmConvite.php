@@ -8,12 +8,15 @@ try{
         echo "ta vazio";
     }else{
         $emailConvidado = isset($_POST['confirmEmail'])?$_POST['confirmEmail']:null;
+        echo $emailConvidado;
         $id = $_GET['cod'];
+        echo $id;
         $conn = connection();
-        $select = "SELECT * FROM CONVIDADOS WHERE EMAIL_CONV = '$emailConvidado'";
+        $select = "select * from convidados where email_conv = '$emailConvidado' and cod_usu = '$id';";
         $executeSelect = executeSelect($conn, $select);
-        $fetch = $executeSelect->fetch(PDO::FETCH_OBJ);
-        $idConv = $fetch->cod_conv;
+        $fetch4 = $executeSelect->fetch(PDO::FETCH_OBJ);
+        $idConv = $fetch4->cod_conv;
+        
         if($executeSelect->rowCount() > 0){
             $verific = "SELECT * FROM LISTA_PRESENTES WHERE COD_CONV = '$idConv' AND STATUS_PRESENTE = 'Confirmado';";
             $executeVerific = executeSelect($conn, $verific);
@@ -25,8 +28,8 @@ try{
                 echo "alguem ja vai da o presente seu lixo";
                 
             }else{
-           $update = "UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '$id'";
-           $sql = executeQuery($conn, $update);
+          /* $update = "UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '$id'";
+           $sql = executeQuery($conn, $update);*/
             }
         }else{
             echo '<script>';
@@ -34,9 +37,9 @@ try{
                         Por favor Confirme a Presença Primeiro!")';
             echo '</script>';
 
-            echo '<script>';
+           /* echo '<script>';
             echo "location.href='../index.php.'";
-            echo '</script>';
+            echo '</script>';*/
         }
     }
 
