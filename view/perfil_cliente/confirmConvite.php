@@ -28,8 +28,8 @@ try{
                 echo "alguem ja vai da o presente seu lixo";
                 
             }else{
-          /* $update = "UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '$id'";
-           $sql = executeQuery($conn, $update);*/
+           $update = "UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '$id'";
+           $sql = executeQuery($conn, $update);
             }
         }else{
             echo '<script>';
