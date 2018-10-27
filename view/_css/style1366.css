@@ -288,7 +288,7 @@ div.tipo{
   
   p.casal{
      text-align: center;
-     font-size: 5vw;
+     font-size: 3vw;
   }
   
   input.form-control{
@@ -327,9 +327,9 @@ a.edit{
 #b1{
   background-color: pink;
   border: solid grey 1px;
-  height: 6vw;  
+  height: 4vw;  
   margin-left: -2px;
-  font-size: 140%;
+  font-size: 110%;
 }
 
 /*imagem*/
@@ -352,10 +352,10 @@ button.btn.btn-primary{
 .primary{   
   background-color:pink;
   border:solid grey 1px ;    
-  height: 6vw; 
+  height: 4vw; 
   width: calc( 100% / 5) ;
   margin-right: -5px;
-  font-size: 140%;
+  font-size: 110%;
 }
 
 div.conv{
@@ -604,3 +604,8 @@ background-color: pink;
     height: 10vw;
   }
   
+   /*fatality*/
+ #campocopia{width: 100%; height: 35px;position: relative; margin: auto;}
+ #campocopia input{ font-size: 20px}
+ #campoAdd:nth-child(6){ width: 350px; height: 25px; border: 1px solid}
+ 

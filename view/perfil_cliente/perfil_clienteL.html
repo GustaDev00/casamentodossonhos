@@ -60,16 +60,19 @@ $id = $_SESSION['id'];
                         <form action="../perfil/ListaPresente.php" method="post"  >
                             <tr>
                                 <td> <Input type="text" name="nomePresente" placeholder="Nome ou Valor do Presente"></td>
-                                <td> <Input type="radio" name="tipoPresente" value="Material" checked>Material Ex: Geladeira</td>
-                                <td>  <Input type="radio" name="tipoPresente" value="Dinheiro">Dinheiro Ex: R$100,00</td>
-                                <td> <a id="cancelaadd">Cancela</a></td>
-                                <td> <button class=".button" id="enviandoAdd">Salvar Lista</button></td>
+                                <td> <Input type="radio" name="tipoPresente" id="campo002" value="Material" checked><label for="campo002">Material Ex: Geladeira</label></td>
+                                <td>  <Input type="radio" name="tipoPresente" id="campo001" value="Dinheiro"><label for="campo001">Dinheiro Ex: R$100,00</label></td>
+                            </tr>
+
+                            <tr>
+                                <td> <a id="cancelaadd" onclick="asd(2);">Cancela</a></td>
+                                <td> <button class="add" id="enviandoAdd">Salvar Lista</button></td>
                             </tr>
                         </Form>
                         </table>  
                     </div>
                     
-                <button type="button" class="add" onclick="asd();" id="abrirAdd">Adicionar</button>
+                <button type="button" class="add" onclick="asd(1);" id="abrirAdd">Adicionar</button>
                 <br> <br> <br> <br>  
 
                 </div>   
@@ -82,41 +85,46 @@ $id = $_SESSION['id'];
                             <div class="princ">
                                 <form action="../updates/attLocCas.php" method="POST" id="formula">
                                     <a  class="edit" onclick="formulario();">Editar</a>
-
-                                    <label id="prin">Dia:</label>
-                                   <span class="principal_esconde"><?php echo $diaCas; ?></span>
-                                   <input type="date" name="dia" class="form" >
                                     <br>
+                                    <label id="prin">Dia:</label>
+                                   <span class="principal_esconde"><?php echo date('d/m/Y', strtotime($diaCas)); ?></span>
+                                   <input type="date" name="dia" class="form" >
+                                    <br><br>
                                                                                     
                                    <label id="prin">Horário:</label>
                                    <span class="principal_esconde"><?php echo $horarioCas ?></span>
                                    <input type="datetime" name="hora" class="form" placeholder="Ex: xx:xx">
                                   <!--<a href="" class="edit">Editar</a>-->
-                                   <br>
+                                   <br><br>
                               
                                    <label id="prin">Local:</label>
                                    <span class="principal_esconde"> <?php echo $localCas; ?></span>
                                    <input type="text" name="local" class="form"  ><br><br>
                                   <input type="submit" class="form" id="poin" value="Salvar">
-                                    <br>
+                                    
                                 </form>
                             </div> 
                             <form id="formu" action="../updates/img_localCasamento.php" method="POST" enctype="multipart/form-data">    
                             <div class="b">                  
-                            <img class="galeria3" src="<?php echo $imagemLoc ?>" >
-                            <a href="../perfil_cliente/convite.php?id=<?php echo $id;?>">Gerar Convite</a>
+                            <img class="galeria3" src="<?php echo $imagemLoc ?>">
                             <label class="at" for='selecao-arquivo2'>alterar</label>
                             <input class="at" id='selecao-arquivo2' type='file' name="img_local" onchange="submit();"> 
                             </div>
-                            <form>
+                            </form>
                             <br>      
                     </div>
 
                     <div class="f3">
-                            <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br> 
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br>
                             <p class="c">Meus convidados:</p>
                             
+                    
                             <div class="conv">
+                                    <div id="campocopia">
+                                            <input type="text" id="link" name="link" value='<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]?codigo={$_SESSION["id"]}&par={$_SESSION["defini"]}";?>'  readonly="true">
+                                            
+                                            <button onclick="copiarTexto()" class="btncopia">Copiar Link</button>
+                                            </div>
                                 <?php  $cConv = 0; while($cConv < count($dadosConv)){    ?>
                                 <label class="nm">Nome: <?php   echo $dadosConv[$cConv]['nome_convi']?></label>
                                 <label class="nm">Presença: <?php   echo $dadosConv[$cConv]['presenca']?></label>
@@ -186,6 +194,11 @@ $id = $_SESSION['id'];
         f3.style.display = "none";        
         f4.style.display = "block";         
     })
+    function copiarTexto() {
+    var textoCopiado = document.getElementById("link");
+    textoCopiado.select();
+    document.execCommand("Copy");
+  }
     var xs = 1;
     function formulario(){
        
@@ -206,15 +219,11 @@ $id = $_SESSION['id'];
     </style> 
 <script>
         $(function(){
-    $("#campoAdd").css("display","none");
-    $("#abrirAdd").on("click", function(){
-        $("#campoAdd").css("display","inline");
-        });
-
+    
          $("#b5").click( function(){
                             location.href='../perfil/deslogar.php' ;
                         });
-        //ddg
+   
     
 });
     </script>
@@ -243,5 +252,13 @@ $id = $_SESSION['id'];
                  document.formu.submit();
              }
              
+
+             function asd(x) {
+                 if(x == 1){
+                    $("#campoAdd").css("display","inline");
+                 }else{
+                    $("#campoAdd").css("display","none");
+                 }
+        }
              </script>
   </body>

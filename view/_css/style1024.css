@@ -285,7 +285,7 @@ select.select1{
 
 p.casal{
    text-align: center;
-   font-size: 5vw;
+   font-size: 3vw;
 }
 
 input.form-control{
@@ -321,19 +321,19 @@ a.edit{
 #b1{
   background-color: pink;
   border: solid grey 1px;
-  height: 6vw;
+  height: 4vw;
   width: 26.5%;
   margin-left: -7px;
-  font-size: 120%;
+  font-size: 110%;
 }
 .java{margin-left: 15px}
 .primary{   
   background-color:pink;
   border:solid grey 1px ;    
-  height: 6vw; 
+  height: 4vw; 
   width: calc( 92% / 5) ;
   margin-right: -6px;
-  font-size: 120%;
+  font-size: 110%;
 }
 
 div.conv{
@@ -559,3 +559,6 @@ background: #ffc0cbbd;
   height: 15vw;
 }
 
+ /*fatality*/
+ #campocopia{width: 100%; height: 25px;position: relative; margin: auto;}
+ #campocopia input{ font-size: 16px}

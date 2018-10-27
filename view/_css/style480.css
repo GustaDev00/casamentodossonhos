@@ -311,12 +311,12 @@ a.edit{
     width: 29.5%;
     margin-left: -7px;
 }
-.java{margin-left: 10px}
+.java{margin-left: 8px}
 .primary{   
     background-color:pink;
     border:solid grey 1px ;    
     height: 6vw; 
-    width: calc( 91% / 5) ;
+    width: calc( 91.2% / 5) ;
     margin-right: -5px;
 }
 
@@ -435,7 +435,7 @@ label.cim {
 #l{
     width: 30%;
     margin: 1%;
-    font-size: 2.5vw;
+    font-size: 16px;
 }
 
 img.letra{   
@@ -527,3 +527,6 @@ img.letra{
     #preview{
         height: 30vw;
     }
+
+    /*fatality*/
+    #campocopia{width: 280px; height: 20px;position: relative; margin: auto;}

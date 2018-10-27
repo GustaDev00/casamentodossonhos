@@ -131,7 +131,8 @@ footer{position: relative;}
  }
 
   .form{display: none;}
-  #formula input:not(:nth-child(15)){background-color: white; border: 1px solid}
+  #formula input:not(:nth-child(18)){background-color: white; border: 1px solid}
+
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -142,9 +143,9 @@ footer{position: relative;}
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-} 
+    text-align: center;
+    padding: 0 5px;
+}
 
   /*-------produto-------------*/
 
@@ -677,5 +678,28 @@ img.abc{
   #preview{
     width: 100%;
     object-fit:cover ;
-     object-position: center;
+    object-position: center;
   }
+
+  
+  #campocopia input{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      padding-left: 15px;
+      border: 1px solid #FF757F;
+  }
+  .btncopia{
+      width: 80px;
+      height: 100%;   
+      border: NONE;
+      color: white;
+      border-radius: 0px 10px 10px 0px;
+      position: absolute;
+      font-family: sans-serif, serif;
+      background-color: #FF757F;
+      right: -18px;
+      top: 1px;
+  }
+  #cancelaadd:hover{cursor: pointer; text-decoration: underline}
+  #campoAdd{display: none}

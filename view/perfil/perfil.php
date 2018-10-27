@@ -172,6 +172,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     ?>
   <?php
 }else{
+
+    //verifica se existe  codigo para carrega outro pagina de perfil.... a deslogada
     if(isset($_GET['codigo']) and isset($_GET['par'])){
         $_SESSION["id"] = $_GET['codigo'];
         $_SESSION["defini"] = $_GET['par'];

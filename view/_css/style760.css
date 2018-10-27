@@ -269,7 +269,7 @@ select.select1{
 
 p.casal{
  text-align: center;
- font-size: 5vw;
+ font-size: 4vw;
 }
 
 input.form-control{
@@ -338,7 +338,7 @@ font-size: 2.5vw;
 }
 p.c{
 padding-left: 5%;
-font-size: 2.5vw;
+font-size: 16px;
 } 
 
 a.pres{
@@ -533,3 +533,7 @@ p#cli{font-size: 4vw}
 #preview{
   height: 23vw;
 }
+
+ /*fatality*/
+ #campocopia{width: 100%; height: 25px;position: relative; margin: auto;}
+ #campocopia input{ font-size: 16px}
