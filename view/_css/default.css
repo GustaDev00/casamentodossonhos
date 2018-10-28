@@ -358,8 +358,14 @@ td, th {
   display: none;
 }
 
-.cursor {
-  cursor: pointer;
+ .cursor {
+  height: 25vw;
+  object-fit:cover ;
+  object-position: center;
+  border: 1px solid;
+} 
+.mcmz{
+  border: 1px solid;
 }
 
 /* next1 & previous buttons */

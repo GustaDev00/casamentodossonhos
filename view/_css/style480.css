@@ -499,7 +499,11 @@ img.letra{
     margin: 10px 10px;
 }
 
-  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 130px;}
+  #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{
+      width: 130px;
+      object-fit:cover ;
+      object-position: center;
+    }
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 
   div#InfoVendedor h2{

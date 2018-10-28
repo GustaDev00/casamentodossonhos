@@ -23,12 +23,17 @@
                         <li>deslogar</li>
                     </ol>
                     <div id="FotosVendedor" >
-                        <?php  $cF2=0; $d=0; 
+                        <?php  $cF2=0; $d=0; $nufo=1;
                             if($d<=$cF2){ 
-                                while($cF2 < count($dadosFot)){ ?>                       
-                     <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" alt="imagem 01" onclick="openModal();currentSlide($d)" class="hover-shadow cursor"></a>
-                     
-                            <?php $cF2++; $d++; } }?>
+                                while($cF2 < count($dadosFot)){ ?>
+                    <form action="escolhe garcia" method="post" class="mcmz">                            
+                    <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" alt="imagem 01" <?php echo 'onclick="openModal();currentSlide('. $nufo. ')"' ?> class="hover-shadow cursor">
+                    <div class="mcmz">
+                    <input type="hidden" name="nomeFoto" value="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>">
+                    <input type="submit" name="alterar" value="Alterar">
+                    <input type="submit" name="Excluir" value="Excluir">
+                    </div> 
+                            <?php $cF2++; $d++; $nufo++;} }?>
                     </div>
                     
                      
