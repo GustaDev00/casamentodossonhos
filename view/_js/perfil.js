@@ -4,7 +4,7 @@ function adicionar(){
     $("#ProdutosFotos").css("display","block"); 
 }
 
-    $(document).ready(function(){
+    $(document).ready(function(){   
         $("#MenuVendedor ol li:last-child").click( function(){
             location.href='../perfil/deslogar.php' ;
         });
@@ -99,83 +99,7 @@ file.readAsDataURL(this.files[0]);
 }
 
 document.getElementById("imgChooserP").addEventListener("change", readImage2, false);
-});
-var umaunicaimagem = 1, umaimagem = 1;
 
-function criaimg(){
-if(umaunicaimagem == 1){
-$("#quadrof").append('<img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">');
-umaunicaimagem = 2;
-}else{
-
-}
-
-}
-
-function criaimg2(){
-if(umaimagem == 1){
-$("#quadroP").append('<img id=previewP style="width:70%;" alt="Carregue Sua Foto Abaixo">');
-umaimagem = 2;
-}else{
-
-}
-
-}
-
-function openModal() {
-document.getElementById('myModal').style.display = "block";
-$('html').addClass('classhtml');
-
-}
-
-
-function closeModal() {
-document.getElementById('myModal').style.display = "none";
-$('html').removeClass('classhtml')
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-var i;
-var slides = document.getElementsByClassName("mySlides");
-var captionText = document.getElementById("caption");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-slides[i].style.display = "none";
-}
-slides[slideIndex-1].style.display = "block";
-captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-function myfunction(xyz){   
-    var fu = ".Fcampo:nth-child(" + xyz + ") img";
-    var sr = $(fu).attr("src");
-    //alert(sr);
-    $("#veja").attr("src",sr);
-    $("#valorimg").val(sr);
-    $(".moda").css("display","block");
-    var left = (($(window).width() /2) - ( $(".moda").width() / 2 )- 10);
-    var top = "10%";
-    $(".moda").css({'top':top,'left':left});
-    var alturaTela = "180%";
-    var larguraTela = "100%";
-    $('#fundoE').css({'width':larguraTela,'height':alturaTela});
-    $('#fundoE').fadeIn(1000); 
-    $('#fundoE').fadeTo("fast",0.8);
-}
-
-$(function(){
     $(".isoclose").on("click",function(){
        $(".moda").css("display","none");
         $("#fundoE").hide();
@@ -196,7 +120,7 @@ file.readAsDataURL(this.files[0]);
 }
 
 document.getElementById("Trocaimagem").addEventListener("change", readImage3, false);
-});
+
 
 function functionmy(xyz){   
     var fu = ".Pcampo:nth-child(" + xyz + ") img";
@@ -211,7 +135,6 @@ function functionmy(xyz){
     $(".modinha").show();
 }
 
-$(function(){
     $(".isoclose").on("click",function(){
        $(".modinha").css("display","none");
         $("#fundoP").hide();
@@ -230,6 +153,77 @@ $(function(){
 file.readAsDataURL(this.files[0]);
 }
 }
-
 document.getElementById("TrocaPimagem").addEventListener("change", readImage4, false);
 });
+var umaunicaimagem = 1, umaimagem = 1;
+
+var slideIndex = 1;
+showSlides(slideIndex);
+function criaimg(){
+    if(umaunicaimagem == 1){
+    $("#quadrof").append('<img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">');
+    umaunicaimagem = 2;
+    }else{
+    
+    }
+    
+    }
+    
+    function criaimg2(){
+    if(umaimagem == 1){
+    $("#quadroP").append('<img id=previewP style="width:70%;" alt="Carregue Sua Foto Abaixo">');
+    umaimagem = 2;
+    }else{
+    
+    }
+    
+    }
+    
+    function openModal() {
+    document.getElementById('myModal').style.display = "block";
+    $('html').addClass('classhtml');
+    
+    }
+    
+    
+    function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+    $('html').removeClass('classhtml')
+    }
+    function myfunction(xyz){   
+        var fu = ".Fcampo:nth-child(" + xyz + ") img";
+        var sr = $(fu).attr("src");
+        //alert(sr);
+        $("#veja").attr("src",sr);
+        $("#valorimg").val(sr);
+        $(".moda").css("display","block");
+        var left = (($(window).width() /2) - ( $(".moda").width() / 2 )- 10);
+        var top = "10%";
+        $(".moda").css({'top':top,'left':left});
+        var alturaTela = "180%";
+        var larguraTela = "100%";
+        $('#fundoE').css({'width':larguraTela,'height':alturaTela});
+        $('#fundoE').fadeIn(1000); 
+        $('#fundoE').fadeTo("fast",0.8);
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
