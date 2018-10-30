@@ -140,6 +140,7 @@ file.readAsDataURL(this.files[0]);
 }
 document.getElementById("TrocaPimagem").addEventListener("change", readImage4, false);
 });
+
 var umaunicaimagem = 1, umaimagem = 1;
 
 var slideIndex = 1;
