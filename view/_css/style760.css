@@ -469,7 +469,7 @@ font-size: 77%;
 #MenuVendedor img{  
     margin: 10px 10px;
 }
-  #FotosVendedor{margin: 0 10%}
+  /*#FotosVendedor{margin: 0 10%}*/
   
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 

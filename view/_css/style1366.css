@@ -533,7 +533,7 @@ input.form{
 }
 #MenuVendedor ol{height: 40px; font-size: 27px}
 
- #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 330px;}
+ #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 220px;}
  #ProdutosVendedor, #ProdutosVendedorL{display: none}
 
  div#InfoVendedor h2{

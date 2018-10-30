@@ -484,7 +484,7 @@ background: #ffc0cbbd;
     margin: 10px 10px;
 }
 #MenuVendedor ol{height: 40px; font-size: 27px}
-  #FotosVendedor{ margin: 0 10%}
+  /*#FotosVendedor{ margin: 0 10%}*/
   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 220px;}
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 

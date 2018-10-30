@@ -219,13 +219,97 @@ td, th {
   margin: 10px 5% 0 5%;
   }
   
- #TopoVendedor img{ width: 150px;}
+ #TopoVendedor img{ 
+   width: 150px;
+  object-fit:cover ;
+  object-position: center;}
   #TopoVendedor{
     padding: 10px;
     background-color: #f6dddf;
     width: 100%;
    }
-   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{width: 41.3%;}
+   #FotosVendedor img, #ProdutosVendedor img, #ProdutosVendedorL img{
+     width: 128px; height: 128px; 
+    object-fit:cover ;
+    object-position: center;
+  }
+  /*---------------------------------------------------------*/
+  .Fcampo{display: inline-block}
+    .Fcampo img{width: 130px; height: 130px;
+    object-fit:cover ;
+    object-position: center;
+     margin: 12.5px
+     }
+     .orta{width: 80%; margin: 0 auto;}
+     .orta input{margin: 0 5px}
+     .orta a{margin-top: 10px;}
+     .orta input, .orta a{
+         border: none;
+         text-decoration: none;
+         color: black;
+         height: 23px;
+         background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
+         background-size: 400%;
+         padding: 3px 6px;
+         border-radius: 5px;
+     }
+     .orta input:hover, .orta a:hover{
+      animation: animating 8s linear infinite;
+    }
+    @keyframes animating{
+        0%
+        {
+          background-position: 0%;
+        }
+        100%
+        {
+          background-position: 400%;
+        }
+    }
+     
+    /*------- caixa contendo as imagens e os botões -------*/
+     #FEditar{ border-radius: 10px}
+    .isoclose{display: block; float: right; padding: 5px; font-size: 25px}
+     .moda{
+         display: none;
+    border: 1px solid;
+    width:300px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:#FFF;
+    z-index:9900;
+    padding:10px;
+    border-radius:10px;
+    text-align: center
+    }
+     
+     
+     
+    #fundoE{
+    display: none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    opacity: 0.8;
+}
+     
+     #formeditar input,#formeditar div, #formeditar textarea{
+         width: 100%;
+         margin: 5px 0;
+     }
+     #formeditar img{
+         width: 130px;
+         height: 130px;
+         object-fit: cover;
+         object-position: center
+     }
+     #formeditar textarea{
+         height: 80px
+     }
+  /*--------------------------------------------------------*/
    #InfoVendedor{padding: 10px; width: 100%;}
 
    #InfoVendedor article h3{margin-top: 5px}
@@ -237,7 +321,7 @@ td, th {
         text-align: center; 
         cursor: pointer;
     }
-    #FotosVendedor, #ProdutosVendedor, #ProdutosVendedorL{text-align: center;}
+    #FotosVendedor, #ProdutosVendedor, #ProdutosVendedorL{width: 90%; margin: auto; text-align: center}
     .btnPF{display: inline-block; border: none; margin: 30px;}
     .btnPF a{
       text-decoration: none;
@@ -276,11 +360,12 @@ td, th {
     background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
     background-size: 400%;
     }
+  X
     a:hover ~ .cor{
       animation: animate 8s linear infinite;
     }
     #ProdutosFotos{width: 100%; text-align: center;}
-    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
+    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 2  5px; float: right}
     #ProdutosFotos button{
       box-sizing: border-box;
       background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
