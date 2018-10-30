@@ -31,30 +31,12 @@
                                 <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>"  <?php echo 'onclick="openModal();currentSlide('. $nufo. ')"' ?> class="hover-shadow cursor"><br>
                                 <form class="orta">
                                 <input type="hidden" value="1">
-                                <input type="submit" name="Excluir">
+                                <input type="submit" value="Excluir">
                                     <a href="#" <?php echo 'onclick="myfunction('. $nufo. ')"' ?> >Editar</a>
                                     </form>
                                 </div>
                             <?php $cF2++; $d++; $nufo++;} }?>
-                           
-                            <!--
-                                <div class="Fcampo">
-                                <img src="_imagens/fundo.png"><br>
-                                <form class="orta">
-                                <input type="hidden" value="1">
-                                <input type="submit" name="Excluir">
-                                    <a href="#" onclick="myfunction(2)" >Editar</a>
-                                    </form>
-                                </div>
-                                <div class="Fcampo">
-                                <img src="_imagens/fundo.png"><br>
-                                <form class="orta">
-                                <input type="hidden" value="1">
-                                <input type="submit" name="Excluir">
-                                    <a href="#" onclick="myfunction(3)">Editar</a>
-                                    </form>
-                                </div>
-                                 -->
+
                                 <div class="moda" id="FEditar">
                                     <a href="#" class="isoclose">&#215;</a>
                                     <h4>Editar Foto</h4>
@@ -77,11 +59,42 @@
                                     <?php 
                                         $l = 0;
                                         while($l < count($dadosProd)){ ?>   
-                                <a href="../produto/index.php?cod=<?php echo $dadosProd[$l]['cod_produto']; ?>"  >
-                                    
-                                <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>"  alt="imagem<?php echo $l ?>">
+                                            <div class="Pcampo">
+                                                    <a href="../produto/index.php?cod=<?php echo $dadosProd[$l]['cod_produto']; ?>"  >
+                                                    <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>" alt="imagem<?php echo $l ?>">
+                                                    </a>
+                                                    <br>
+                                                    <form class="orta">
+                                                    <input type="hidden" value="1">
+                                                    <input type="submit" value="Excluir">
+                                                        <a href="#" onclick="functionmy(2)">Editar</a>
+                                                        </form>
+                                                    </div>
+                                                    <?php $l++; } ?>
                                 
-                                </a><?php $l++; } ?></form>
+                               
+
+                                    <div class="modinha" id="FEditar">
+                                        <a href="#" class="isoclose">&#215;</a>
+                                        <h4>Editar Produto</h4>
+                                        <form action="EscolheGarcia" method="post" enctype="multipart/form-data" id="produtoform">
+                                            <input type="name" name="nomeproduto" placeholder="Novo Nome">
+                                            <input type="text" name="endereconome" placeholder="Novo Localização">
+                                            <input type="text" name="nomepreco" placeholder="Novo Preço Ex: 98">
+                                            <input type="url" name="linknome" placeholder="Novo Link">
+                                            <div id="PQuadro" >
+                                            <img id="VejaProduto" alt="Nova imagem" width=" 50px">
+                                            </div>
+                                            <input type=file id=TrocaPimagem name=EImagen >
+                                            <textarea name="nomedescricao" style="resize: none" placeholder="Nova Descrição"></textarea>
+                                            <select name="novacat">
+                                                <option selected>Nova Categoria</option>
+                                            </select>
+                                            <input type="hidden" id="valorimg">
+                                            <input type="button" value="Salvar">
+                                        </form>
+                                        </div>
+                                        <div id="fundoP"></div> 
                     </div>
                     <div id="ProdutosFotos" style="display:none"x>
                         <fieldset class="btnPF">   
@@ -357,6 +370,43 @@ function showSlides(n) {
             }
             
             document.getElementById("Trocaimagem").addEventListener("change", readImage3, false);
+                });
+            </script>
+            <script>
+                function functionmy(xyz){   
+                    var fu = ".Pcampo:nth-child(" + xyz + ") img";
+                    var sr = $(fu).attr("src");
+                    alert(sr);
+                    $("#VejaProduto").attr("src",sr);
+                    $("#valorimg").attr("value", sr);
+                    var left = (($(window).width() /2) - ( $(".modinha").width() / 2 )- 10);
+                    var top = "10%";
+                    $(".modinha").css({'top':top,'left':left});
+                    $("#fundoP").show();
+                    $(".modinha").show();
+                }
+                
+                $(function(){
+                    $(".isoclose").on("click",function(){
+                       $(".modinha").css("display","none");
+                        $("#fundoP").hide();
+                    });
+                    $("#fundoP").on("click",function(){
+                       $(".modinha").css("display","none");
+                        $("#fundoP").hide();
+                    });
+                    
+                        function readImage4() {
+                        if (this.files && this.files[0]) {
+                        var file = new FileReader();
+                        file.onload = function(e) {
+                        document.getElementById("VejaProduto").src = e.target.result;        
+                }
+                file.readAsDataURL(this.files[0]);
+            }
+            }
+            
+            document.getElementById("TrocaPimagem").addEventListener("change", readImage4, false);
                 });
             </script>
 

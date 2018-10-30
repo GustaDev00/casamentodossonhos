@@ -309,6 +309,84 @@ td, th {
      #formeditar textarea{
          height: 80px
      }
+     /*-------------- produto ----------------------------*/
+     .Pcampo{display: inline-block}
+    .Pcampo img{width: 130px; height: 130px;
+    object-fit:cover ;
+    object-position: center;
+     margin: 12.5px
+     }
+     .orta{width: 80%; margin: 0 auto;}
+     .orta input{margin: 0 5px}
+     .orta a{margin-top: 10px;}
+     .orta input, .orta a{
+         border: none;
+         text-decoration: none;
+         color: black;
+         height: 23px;
+         background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
+         background-size: 400%;
+         padding: 3px 6px;
+         border-radius: 5px;
+     }
+     .orta input:hover, .orta a:hover{
+      animation: animating 8s linear infinite;
+    }
+    @keyframes animating{
+        0%
+        {
+          background-position: 0%;
+        }
+        100%
+        {
+          background-position: 400%;
+        }
+    }
+     
+    /*------- caixa contendo as imagens e os botões -------*/
+     #FEditar{ border-radius: 10px}
+    .isoclose{display: block; float: right; padding: 5px; font-size: 25px}
+     .modinha{
+    display: none;
+    border: 1px solid;
+    width:300px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:#FFF;
+    z-index:9900;
+    padding:10px;
+    border-radius:10px;
+    text-align: center
+    }
+     
+     
+     
+    #fundoP{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    opacity: 0.8;
+}
+     
+     #produtoform input,#produtoform div, #produtoform textarea, #produtoform select{
+         width: 100%;
+         margin: 5px 0;
+     }
+     #produtoform img{
+         width: 130px;
+         height: 130px;
+         object-fit: cover;
+         object-position: center
+     }
+     #produtoform textarea{
+         height: 80px
+     }  
   /*--------------------------------------------------------*/
    #InfoVendedor{padding: 10px; width: 100%;}
 
