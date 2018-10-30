@@ -120,21 +120,6 @@ file.readAsDataURL(this.files[0]);
 }
 
 document.getElementById("Trocaimagem").addEventListener("change", readImage3, false);
-
-
-function functionmy(xyz){   
-    var fu = ".Pcampo:nth-child(" + xyz + ") img";
-    var sr = $(fu).attr("src");
-    alert(sr);
-    $("#VejaProduto").attr("src",sr);
-    $("#valorimg").attr("value", sr);
-    var left = (($(window).width() /2) - ( $(".modinha").width() / 2 )- 10);
-    var top = "10%";
-    $(".modinha").css({'top':top,'left':left});
-    $("#fundoP").show();
-    $(".modinha").show();
-}
-
     $(".isoclose").on("click",function(){
        $(".modinha").css("display","none");
         $("#fundoP").hide();
@@ -226,4 +211,17 @@ function criaimg(){
         }
         slides[slideIndex-1].style.display = "block";
         captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+        function functionmy(xyz){   
+            var fu = ".Pcampo:nth-child(" + xyz + ") img";
+            var sr = $(fu).attr("src");
+            //alert(sr);
+            $("#VejaProduto").attr("src",sr);
+            $("#valorimg").attr("value", sr);
+            var left = (($(window).width() /2) - ( $(".modinha").width() / 2 )- 10);
+            var top = "10%";
+            $(".modinha").css({'top':top,'left':left});
+            $("#fundoP").show();
+            $(".modinha").show();
         }
