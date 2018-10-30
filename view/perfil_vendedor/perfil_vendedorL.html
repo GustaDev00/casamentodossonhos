@@ -3,16 +3,20 @@
             <main>
                 <section id="vendedor">
                  <div id="TopoVendedor">
-                    <img src="<?php echo $imagemL ?>" >
-                    <h1><?php echo $nome ?></h1>
+                    <p class="btnAlterar">Editar</p>
+                    <form>
+                    <img src="<?php echo $imagemL ?>" id="VTopo">
+                    <h1 class="BTopo"><?php echo $nome ?></h1>
+                    </form>
                  </div>
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
                      <article>  
-                       <h3>Categoria da Empresa/Vendedor: <?php echo $funcE ?></h3>
-                       <h3>Telefone: <?php echo $telE ?></h3>
-                       <h3>Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
-                       <a href="#"><h3>Site</h3></a>  
+                       <h3 class="btnXá">Categoria da Empresa/Vendedor: <?php echo $funcE ?></h3>
+                       <h3 class="btnXá">Telefone: <?php echo $telE ?></h3>
+                       <h3 class="btnXá">Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
+                       <p class="btnAlterar">Editar</p>
+                       <a href="#" class="btnXá"><h3>Site</h3></a>
                      </article>
                  </div>
                  <div id="MenuVendedor">

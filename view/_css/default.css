@@ -222,7 +222,10 @@ td, th {
  #TopoVendedor img{ 
    width: 150px;
   object-fit:cover ;
-  object-position: center;}
+  object-position: center;
+}
+.btnAlterar{position:absolute; right: 10%; cursor: pointer;}
+.btnAlterar:hover{text-decoration: underline}
   #TopoVendedor{
     padding: 10px;
     background-color: #f6dddf;
@@ -309,7 +312,7 @@ td, th {
      #formeditar textarea{
          height: 80px
      }
-     /*-------------- produto ----------------------------*/
+     /*-------------- M.produto ----------------------------*/
      .Pcampo{display: inline-block}
     .Pcampo img{width: 130px; height: 130px;
     object-fit:cover ;
@@ -439,11 +442,11 @@ td, th {
     background-size: 400%;
     }
   X
-    a:hover ~ .cor{
+  .btnPF a:hover ~ .cor{
       animation: animate 8s linear infinite;
     }
     #ProdutosFotos{width: 100%; text-align: center;}
-    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 2  5px; float: right}
+    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
     #ProdutosFotos button{
       box-sizing: border-box;
       background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
@@ -525,7 +528,6 @@ td, th {
   height: 25vw;
   object-fit:cover ;
   object-position: center;
-  border: 1px solid;
 } 
 .mcmz{
   border: 1px solid;
