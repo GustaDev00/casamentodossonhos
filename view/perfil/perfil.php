@@ -9,7 +9,6 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     //exit;
     $email = $_SESSION["email"];
     $senha = $_SESSION["senha"];
-    $pdo= connection();
     if($_SESSION["defini"] == 2){
         $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
         $execute = executeSelect($pdo, $select);
