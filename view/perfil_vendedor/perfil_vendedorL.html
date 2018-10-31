@@ -28,32 +28,37 @@
                     </ol>
                     <div id="FotosVendedor">
                         
-                         <?php  $cF2=0; $d=0; $nufo=1;
+                         <?php  $cF2=0; $d=0; $nufo = 1;
                             if($d<=$cF2){ 
                                 while($cF2 < count($dadosFot)){ ?>
                                     <div class="Fcampo">
-                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>"  <?php echo 'onclick="openModal();currentSlide('. $nufo. ')"' ?> class="hover-shadow cursor"><br>
+                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor"><br>
                             <!-- ------- ------------- garcia esse é o excluir foto  --------------- ---------->    
                                 <form class="orta">
-                                <input type="hidden" value="1">
-                                <input type="submit" value="Excluir">
-                                    <a href="#" <?php echo 'onclick="myfunction('. $nufo. ')"' ?> >Editar</a>
+                                
+                                <a href="../deletes/foto_vend.php?cod_foto_empre=<?php  echo $dadosFot[$cF2]['cod_foto_empre']; ?>">Excluir</a>
+                                
+                                <a href="#" <?php echo 'onclick="myfunction('. $nufo. ')"' ?> 
+                                    Editar</a>
                                     </form>
                                 </div>
-                            <?php $cF2++; $d++; $nufo++;} }?>
+                                <?php $cF2++; $d++; $nufo++;} }?>
                              <!-- ------- ------------- garcia esse é o editar foto  --------------- ---------->   
                                 <div class="moda" id="FEditar">
                                     <a href="#" class="isoclose">&#215;</a>
                                     <h4>Editar Foto</h4>
-                                    <form action="EscolheGarcia" method="post" enctype="multipart/form-data" id="formeditar">
+                           
+                                    <form action="../updates/foto_vend.php" method="post" enctype="multipart/form-data" id="formeditar">
                                         <input type="name" name="nomefoto" placeholder="Novo Nome">
-                                        <div id="quadrof" >
+                                        <div id="quadrof">
                                         <img id="veja" alt="Nova imagem" width=" 50px">
                                         </div>
-                                        <input type=file id=Trocaimagem name=EImagen >
-                                        <textarea style="resize: none" placeholder="Nova Legenda"></textarea>
-                                        <input type="button" value="Salvar">
+                                        <input type=file id=Trocaimagem name="EImagem" >
+                                        <textarea style="resize: none" placeholder="Nova Legenda" name="descFoto"></textarea>
+                                        
+                                        <input type="submit" value="Salvar">
                                     </form>
+                                    
                                     </div>
                                     
                                     <div id="fundoE"></div> 
@@ -70,8 +75,8 @@
                                                     </a>
                                         <!-- ------- ------------- garcia esse é o excluir produto  --------------- ---------->            
                                                     <form class="orta">
-                                                    <input type="hidden" value="1">
-                                                    <input type="submit" value="Excluir">
+                                                    
+                                                        <a href="../deletes/prod_vend.php?cod_prod=<?php  echo $dadosProd[$l]['cod_produto']; ?>">Excluir</a>
                                                         <a href="#" onclick="functionmy(2)">Editar</a>
                                                         </form>
                                                     </div>
