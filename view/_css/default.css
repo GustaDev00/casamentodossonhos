@@ -224,7 +224,10 @@ td, th {
   object-fit:cover ;
   object-position: center;
 }
+.btnXa, .SumiuTopo, .EDescricao, .ETopo{display:none}
 .btnAlterar{position:absolute; right: 10%; cursor: pointer;}
+#LNIP{padding: 3px; border: 1px solid; border-radius: 3px}
+#LNIP:hover{ color: #ED545B}
 .btnAlterar:hover{text-decoration: underline}
   #TopoVendedor{
     padding: 10px;

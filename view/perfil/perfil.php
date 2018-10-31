@@ -3,7 +3,7 @@
 require_once '../../Db/daohelper.php';
 //require_once './processo.php';
 session_start();
-$pdo= connection();
+$pdo = connection();
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 	//header("Location: login_usuarios/login.php");
     //exit;
