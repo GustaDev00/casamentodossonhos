@@ -6,18 +6,29 @@
                     <p class="btnAlterar">Editar</p>
                     <form>
                     <img src="<?php echo $imagemL ?>" id="VTopo">
-                    <h1 class="BTopo"><?php echo $nome ?></h1>
+                    <input type="file" name="nip" style="display:none" id="NIP">
+                    <h1 class="SumiuTopo"><?php echo $nome ?></h1>
+                    <h1><input type="text" name="NN" placeholder="Novo Nome" class="ETopo"></h1>
+                     <label for="NIP" id="LNIP" class="ETopo">Escolher Arquivo</label>
+                     <input type="submit" value="salvar" class="ETopo">
                     </form>
                  </div>
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
                      <article>  
-                       <h3 class="btnXá">Categoria da Empresa/Vendedor: <?php echo $funcE ?></h3>
-                       <h3 class="btnXá">Telefone: <?php echo $telE ?></h3>
-                       <h3 class="btnXá">Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
+                         <form>
+                       <h3 class="btnXa" >Categoria do Vendedor: <?php echo $funcE ?></h3>
+                       <select name="NS" class="EDescricao">
+                           <option selected>Nova Categoria</option>
+                       </select>
+                       <h3 class="btnXa">Telefone: <?php echo $telE ?></h3>
+                       <input type="tel" name="NT" class="EDescricao">
                        <p class="btnAlterar">Editar</p>
-                       <a href="#" class="btnXá"><h3>Site</h3></a>
-                     </article>
+                       <h3 class="btnXa">Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
+                       <input type="text" name="NR" class="EDescricao"><input type="text" name="NC" class="EDescricao"><input type="text" name="NE" class="EDescricao">
+                       <input type="submit" value="Salvar" class="EDescricao">
+                    </form> 
+                    </article>
                  </div>
                  <div id="MenuVendedor">
                     <ol>

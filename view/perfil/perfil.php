@@ -3,13 +3,12 @@
 require_once '../../Db/daohelper.php';
 //require_once './processo.php';
 session_start();
-$pdo= connection();
+$pdo = connection();
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 	//header("Location: login_usuarios/login.php");
     //exit;
     $email = $_SESSION["email"];
     $senha = $_SESSION["senha"];
-    $pdo= connection();
     if($_SESSION["defini"] == 2){
         $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
         $execute = executeSelect($pdo, $select);
