@@ -5,7 +5,7 @@
         
         include_once 'listaproduto.php';
     
-        include_once 'index.html';
+        include_once 'loja.html';
 
         include_once '../mask/footer.html';
        

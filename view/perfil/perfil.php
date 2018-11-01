@@ -62,7 +62,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                 $dFav++;
             }
 
-            $selectConvi = "SELECT * FROM CONVIDADOS WHERE COD_USU = '{$_SESSION["id"]}'";
+            $selectConvi = "SELECT * FROM convidados WHERE cod_usu = '{$_SESSION["id"]}'";
             $executeConv = executeSelect($pdo, $selectConvi);
             $dadosConv = array();
             $dConv = 0;
