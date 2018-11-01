@@ -176,12 +176,8 @@ function criaimg(){
     document.getElementById('myModal').style.display = "none";
     $('html').removeClass('classhtml')
     }
-    function myfunction(xyz){   
-        var fu = ".Fcampo:nth-child(" + xyz + ") img";
-        var sr = $(fu).attr("src");
-        //alert(sr);
-        $("#veja").attr("src",sr);
-        $("#valorimg").val(sr);
+    function myfunction(sr){   
+        $("#codfoto").val(sr);
         $(".moda").css("display","block");
         var left = (($(window).width() /2) - ( $(".moda").width() / 2 )- 10);
         var top = "10%";
@@ -193,12 +189,8 @@ function criaimg(){
         $('#fundoE').fadeTo("fast",0.8);
     }
 
-        function functionmy(xyz){   
-            var fu = ".Pcampo:nth-child(" + xyz + ") img";
-            var sr = $(fu).attr("src");
-            //alert(sr);
-            $("#VejaProduto").attr("src",sr);
-            $("#valorimg").attr("value", sr);
+        function functionmy(sr){   
+            $("#codproduto").val(sr);
             var left = (($(window).width() /2) - ( $(".modinha").width() / 2 )- 10);
             var top = "10%";
             $(".modinha").css({'top':top,'left':left});

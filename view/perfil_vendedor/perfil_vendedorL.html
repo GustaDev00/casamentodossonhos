@@ -46,9 +46,9 @@
                                 <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor"><br>
                             <!-- ------- ------------- garcia esse é o excluir foto  --------------- ---------->    
                                 <form class="orta">
-                                
+                                    
                                 <a href="../deletes/foto_vend.php?cod_foto_empre=<?php  echo $dadosFot[$cF2]['cod_foto_empre']; ?>">Excluir</a>
-                                <a href="#" <?php echo 'onclick="myfunction('. $nufo. ')"' ?>>Editar</a>
+                                <a href="#" <?php  echo "onclick='myfunction(". $nufo . "," . $dadosFot[$cF2]['cod_foto_empre'] . ")'";  ?> >Editar</a>
                                     </form>
                                 </div>
                                 <?php $cF2++; $d++; $nufo++;} }?>
@@ -58,13 +58,13 @@
                                     <h4>Editar Foto</h4>
                            
                                     <form action="../updates/foto_vend.php" method="post" enctype="multipart/form-data" id="formeditar">
-                                        <input type="name" name="nomefoto" placeholder="Novo Nome">
+                                        <input type="name" name="nomefoto" placeholder="Novo Nome" id="novonomejj">
                                         <div id="quadrof">
                                         <img id="veja" alt="Nova imagem" width=" 50px">
                                         </div>
                                         <input type=file id=Trocaimagem name="EImagem" >
                                         <textarea style="resize: none" placeholder="Nova Legenda" name="descFoto"></textarea>
-                                        
+                                        <input type="hidden" id="codfoto" name="codfoto">
                                         <input type="submit" value="Salvar">
                                     </form>
                                     
@@ -86,7 +86,7 @@
                                                     <form class="orta">
                                                     
                                                         <a href="../deletes/prod_vend.php?cod_prod=<?php  echo $dadosProd[$l]['cod_produto']; ?>">Excluir</a>
-                                                        <a href="#" onclick="functionmy(2)">Editar</a>
+                                                        <a href="#" <?php  echo "onclick='functionmy(" . $dadosProd[$l]['cod_produto'] . ")'";  ?> >Editar</a>
                                                         </form>
                                                     </div>
                                                     <?php $l++; } ?>
@@ -109,7 +109,7 @@
                                             <select name="novacat">
                                                 <option selected>Nova Categoria</option>
                                             </select>
-                                            <input type="hidden" id="valorimg">
+                                            <input type="hidden" id="codproduto" name="codproduto">
                                             <input type="button" value="Salvar">
                                         </form>
                                         </div>

@@ -10,12 +10,11 @@ try{
     $img= isset($_FILES['EImagem'])?$_FILES['EImagem']:null;
     $desc = isset($_POST['descFoto'])?$_POST['descFoto']:null;
     $id = $_SESSION['id'];
-    $idFoto = isset($_POST['codFoto'])?$_POST['codFoto']:null;
+    $idFoto = isset($_POST['codfoto'])?$_POST['codfoto']:null;
     if($_FILES['EImagem'] == null){
         echo "vazio";
     }else{
-        echo $idFoto;
-        var_dump($idFoto);
+        echo $_POST['codfoto'];
        /* $arquivo_tmp = $img[ 'tmp_name' ];
     $nome = $img[ 'name' ];
     $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
@@ -25,7 +24,7 @@ try{
             $novoNome = uniqid ( time () ) . '.' . $extensao;
             $destino = '../_imagem_usuario/'.$novoNome;
            
-            $sql = "UPDATE FOTOS_EMPRESA
+            $sql = "UPDATE fotos_empresa
                     SET NOME_FOTO = '$nomeF', DESC_FOTO = '$desc', URL_FOTO_EMPRESA='$destino'
                     WHERE";
           
