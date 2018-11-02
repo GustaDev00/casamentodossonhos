@@ -492,13 +492,15 @@ img.letra{
  #TopoVendedor img{
     width:102px
   }
+  #LNIP{width: 22vw;}
+  #FonT{font-size: 16px}
+  .ETeste{bottom: 80px; left: 10px}
 #tv{
     width:102px;
 }
 #MenuVendedor img{
     margin: 10px 10px;
 }
-
 
   #ProdutosVendedor, #ProdutosVendedorL{display: none}
 

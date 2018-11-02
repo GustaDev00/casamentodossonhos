@@ -141,20 +141,20 @@ file.readAsDataURL(this.files[0]);
 document.getElementById("TrocaPimagem").addEventListener("change", readImage4, false);
 });
 
-var umaunicaimagem = 1, umaimagem = 1;
-
+var umaunicaimagem = 1, umaimagem = 1, abreEdit = 1, abreDE = 1;
 var slideIndex = 1;
-showSlides(slideIndex);
+
+
 function criaimg(){
     if(umaunicaimagem == 1){
-    $("#quadrof").append('<img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">');
+       
+    $("#quadroft").append('<img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo">');
     umaunicaimagem = 2;
     }else{
-    
     }
     
     }
-    
+    showSlides(slideIndex);
     function criaimg2(){
     if(umaimagem == 1){
     $("#quadroP").append('<img id=previewP style="width:70%;" alt="Carregue Sua Foto Abaixo">');
@@ -176,7 +176,7 @@ function criaimg(){
     document.getElementById('myModal').style.display = "none";
     $('html').removeClass('classhtml')
     }
-    function myfunction(sr){   
+    function myfunction(sr){      
         $("#codfoto").val(sr);
         $(".moda").css("display","block");
         var left = (($(window).width() /2) - ( $(".moda").width() / 2 )- 10);
@@ -217,4 +217,21 @@ function criaimg(){
             }
             slides[slideIndex-1].style.display = "block";
             captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+
+            
+            
+            function editarTopo(){
+                if(abreEdit == 1){
+                    $('.ETopo').css("display", "block");
+                    $(".SumiuTopo").css("display", "none");
+                    $(".btnPF").css("display", "inline");
+                    $("#btnFe").text("Fechar");
+                    abreEdit = 2;
+                }else{
+                    $('.ETopo').css("display", "none");
+                    $(".SumiuTopo").css("display", "block");
+                    $("#btnFe").text("Editar");
+                    abreEdit = 1;
+                }
             }

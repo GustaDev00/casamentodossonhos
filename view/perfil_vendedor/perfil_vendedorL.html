@@ -3,14 +3,20 @@
             <main>
                 <section id="vendedor">
                  <div id="TopoVendedor">
-                    <p class="btnAlterar">Editar</p>
-                    <form>
-                    <img src="<?php echo $imagemL ?>" id="VTopo">
-                    <input type="file" name="nip" style="display:none" id="NIP">
+                    <p class="btnAlterar" id="btnFe" onclick="editarTopo()">Editar</p>
                     <h1 class="SumiuTopo"><?php echo $nome ?></h1>
-                    <h1><input type="text" name="NN" placeholder="Novo Nome" class="ETopo"></h1>
-                     <label for="NIP" id="LNIP" class="ETopo">Escolher Arquivo</label>
-                     <input type="submit" value="salvar" class="ETopo">
+                    <img src="<?php echo $imagemL ?>" class="SumiuTopo">
+                    <form>
+
+                    <img src="<?php echo $imagemL ?>" class="ETopo">
+                    <label for="nip" id="LNIP" class="ETopo">Escolhe Arquivo</label>
+                    <input type="file" name="nip" id="nip">
+                    
+                    <h1 class="ETeste"><input type="text" name="NN" placeholder="Novo Nome" class="ETopo" ></h1>
+                     <fieldset class="ETopo btnPF" style="margin: 10px 0 0 0;">   
+                            <button class="SalvarA" id="FonT">Salvar</button>
+                            <div class="cor"></div>
+                            </fieldset>
                     </form>
                  </div>
                  <div id="InfoVendedor">
@@ -110,14 +116,14 @@
                                                 <option selected>Nova Categoria</option>
                                             </select>
                                             <input type="hidden" id="codproduto" name="codproduto">
-                                            <input type="button" value="Salvar">
+                                            <input type="button" value="Salvar"> 
                                         </form>
                                         </div>
                                         <div id="fundoP"></div> 
                     </div>
                     <div id="ProdutosFotos" style="display:none"x>
                         <fieldset class="btnPF">   
-                        <a href="#janela2" rel="modal2">FOTOS</a>
+                        <button><a href="#janela2" rel="modal2" class="butn">FOTOS</a></button>
                         <div class="cor"></div>
                         </fieldset>
                         <div class="window" id="janela2">
@@ -125,18 +131,18 @@
                             <h4>Cadastro do Foto</h4>
                             <form action="../foto/cadastroFotoVendedor.php" method="post" enctype="multipart/form-data">
                                 <input type="name" name="nomeFoto" placeholder="Nome Foto" >
-                                <div id="quadrof" style="border:none">
+                                <div id="quadroft" style="border:none">
                                 
                                 </div>
                                 <input type=file id=imgChooser name="imgEsc" onclick="criaimg()">
                                 <textarea style="resize: none; height: 50px; padding: 5px" name="descFoto" placeholder="Legenda..."></textarea>
-                                <button class=".button">Salvar</button>
+                                <button class="button">Salvar</button>
                             </form>
                         </div>
                         <div id="mascara2"></div>
 
                         <fieldset class="btnPF"> 
-                        <a href="#janela1" rel="modal">PRODUTOS</a>
+                        <button><a href="#janela1" rel="modal">PRODUTOS</a></button>
                         <div class="cor"></div>
                         </fieldset>
                         <div class="window" id="janela1">
@@ -159,7 +165,7 @@
                                     <option  value="<?php echo $dadosCat[$r]['nome_categoria']  ?>"><?php echo $dadosCat[$r]['nome_categoria']  ?>
                                             <?php  $r++; } ?>
                                   </select>
-                                <button>Salvar</button>
+                                <button class="button">Salvar</button>
                             </form>
                         </div>
                         <div id="mascara"></div>

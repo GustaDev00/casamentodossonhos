@@ -224,10 +224,12 @@ td, th {
   object-fit:cover ;
   object-position: center;
 }
-.btnXa, .SumiuTopo, .EDescricao, .ETopo{display:none}
+.ETeste{position: relative;}
+.EDescricao, .ETopo{display:none}
 .btnAlterar{position:absolute; right: 10%; cursor: pointer;}
-#LNIP{padding: 3px; border: 1px solid; border-radius: 3px}
-#LNIP:hover{ color: #ED545B}
+#nip{display: none}
+#LNIP{padding: 3px; border: 1px solid; margin-top: 4px;border-radius: 3px; background-color: rgb(226, 226, 226);}
+#LNIP:hover{ color: #ED545B; background: none}
 .btnAlterar:hover{text-decoration: underline}
   #TopoVendedor{
     padding: 10px;
@@ -407,9 +409,17 @@ td, th {
     }
     #FotosVendedor, #ProdutosVendedor, #ProdutosVendedorL{width: 90%; margin: auto; text-align: center}
     .btnPF{display: inline-block; border: none; margin: 30px;}
+    .ETopo{display: none;}
     .btnPF a{
       text-decoration: none;
       color: black;
+      font-size: 25px
+    }
+    .btnPF button{
+      text-decoration: none;
+      color: black;
+      background: none;
+      border: none;
       font-size: 25px
     }
     .window{
@@ -438,25 +448,29 @@ td, th {
   .fechar{display:block; text-align:right; }
 
     div.cor{
-      width: 102%;
-      height: 6px;
+    width: 102%;
+    height: 6px;
     box-sizing: border-box;
     background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
     background-size: 400%;
     }
   X
-  .btnPF a:hover ~ .cor{
+  .btnPF a:hover{
+      color: red; 
+      animation: animate 8s linear infinite;
+    }
+    .btnPF button:hover ~ .cor{
       animation: animate 8s linear infinite;
     }
     #ProdutosFotos{width: 100%; text-align: center;}
-    #ProdutosFotos button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
-    #ProdutosFotos button{
+     .button{ margin: 20px; width: 30%; padding:  15px 0px; border: none;border-radius: 25px; float: right}
+     .button{
       box-sizing: border-box;
       background: linear-gradient(90deg, #f2717b, #fbcaa7, #f69c79, #f2717b);
       background-size: 400%;
     }
 
-    #ProdutosFotos button:hover{
+    .button:hover{
       animation: animate 8s linear infinite;
     }
     @keyframes animate{

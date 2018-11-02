@@ -463,6 +463,10 @@ font-size: 77%;
 #TopoVendedor h1{float: right; margin-right: 25%; font-size: 4vw;}
 #TopoVendedor img{ width: 150px;}
  
+
+#LNIP{width: 22.5vw;}
+#FonT{font-size: 17px}
+.ETeste{bottom: 105px; left: 30px; font-size: 17px; height: 30px;}
 #tv{
     width:102px;
 }
