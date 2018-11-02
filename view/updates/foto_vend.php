@@ -12,16 +12,17 @@ try{
     $id = $_SESSION['id'];
     $idFoto = isset($_POST['codfoto'])?$_POST['codfoto']:null;
     $conn = connection();
-    echo $id.'<br>';
-    echo $idFoto;
-    /*
-    if($_FILES['EImagem'] == null){}else{
+    if(empty($img)){
+       
+    }else{
      $arquivo_tmp = $img[ 'tmp_name' ];
     $nome = $img[ 'name' ];
     $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
     $extensao = strtolower ( $extensao );
-  
-        if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+    if(empty($extensao)){
+
+    }else{
+    if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
             $novoNome = uniqid ( time () ) . '.' . $extensao;
             $destino = '../_imagem_usuario/'.$novoNome;
            
@@ -32,8 +33,10 @@ try{
              @move_uploaded_file ( $arquivo_tmp, "$destino" );
                 
         }
-    }
-    if(empty($nomeF)){}else{
+    }}
+    if(empty($nomeF)){
+      
+        }else{
         $upN = "update fotos_empresa
                 set nome_foto = '$nomeF'
                 where cod_foto ='$idFoto' and cod_empresa='$id'";
@@ -48,7 +51,7 @@ try{
 
     echo'<script>';
     echo"location.href='../perfil/perfil.php'";
-    echo '</script>';*/
+    echo '</script>';
  
 }
 } catch (Exception $ex) {

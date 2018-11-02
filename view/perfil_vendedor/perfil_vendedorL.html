@@ -96,21 +96,25 @@
                                     <div class="modinha" id="FEditar">
                                         <a href="#" class="isoclose">&#215;</a>
                                         <h4>Editar Produto</h4>
-                                        <form action="EscolheGarcia" method="post" enctype="multipart/form-data" id="produtoform">
+                                        <form action="../updates/produto.php" method="post" enctype="multipart/form-data" id="produtoform">
                                             <input type="name" name="nomeproduto" placeholder="Novo Nome">
-                                            <input type="text" name="endereconome" placeholder="Novo Localização">
-                                            <input type="text" name="nomepreco" placeholder="Novo Preço Ex: 98">
-                                            <input type="url" name="linknome" placeholder="Novo Link">
+                                            <input type="text" name="enderecoproduto" placeholder="Novo Localização">
+                                            <input type="text" name="precoproduto" placeholder="Novo Preço Ex: 98">
+                                            <input type="url" name="linkprod" placeholder="Novo Link">
                                             <div id="PQuadro" >
                                             <img id="VejaProduto" alt="Nova imagem" width=" 50px">
                                             </div>
-                                            <input type=file id=TrocaPimagem name=EImagen >
-                                            <textarea name="nomedescricao" style="resize: none" placeholder="Nova Descrição"></textarea>
+                                            <input type=file id=TrocaPimagem name=EImagem >
+                                            <textarea name="descricaoproduto" style="resize: none" placeholder="Nova Descrição"></textarea>
                                             <select name="novacat">
                                                 <option selected>Nova Categoria</option>
+                                                <?php 
+                                        $p = 0;while($p < count($dadosCat)){?>                                      
+                                        <option  value="<?php echo $dadosCat[$p]['nome_categoria']  ?>"><?php echo $dadosCat[$p]['nome_categoria']  ?>
+                                            <?php  $p++; } ?>
                                             </select>
                                             <input type="hidden" id="codproduto" name="codproduto">
-                                            <input type="button" value="Salvar">
+                                            <input type="submit" value="Salvar">
                                         </form>
                                         </div>
                                         <div id="fundoP"></div> 
