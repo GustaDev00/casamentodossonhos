@@ -120,7 +120,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 
         $selectFoto = "select * from fotos_empresa where cod_empresa = '{$_SESSION["id"]}';";
         $execFoto = executeSelect($pdo, $selectFoto);
-        $dadosFoto = array();
+        $dadosFot = array();
         $df = 0;
         while($fetchFoto = $execFoto->fetch(PDO::FETCH_OBJ)){
             $dadosFot[$df]['nome_foto'] = $fetchFoto->nome_foto;
