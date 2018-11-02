@@ -224,12 +224,14 @@ td, th {
   object-fit:cover ;
   object-position: center;
 }
+#InserirN{padding: 3px; border:none;border-bottom: 3px solid #ED545B; background:none;}
+#InserirN:focus{transition: 2s; border-radius: 5px;border-bottom: 3px solid #f2717b;}
 .ETeste{position: relative;}
 .EDescricao, .ETopo{display:none}
 .btnAlterar{position:absolute; right: 10%; cursor: pointer;}
 #nip{display: none}
-#LNIP{padding: 3px; border: 1px solid; margin-top: 4px;border-radius: 3px; background-color: rgb(226, 226, 226);}
-#LNIP:hover{ color: #ED545B; background: none}
+#LNIP{border: 1px solid #ED545B ;border-radius: 5px;padding: 3px;margin-top: 4px;color: #ED545B; background: none}
+#LNIP:hover{color: white; background-color: #ED545B}
 .btnAlterar:hover{text-decoration: underline}
   #TopoVendedor{
     padding: 10px;

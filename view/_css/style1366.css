@@ -525,6 +525,10 @@ input.form{
 #TopoVendedor img{
    width:220px
  }
+ #LNIP{width: 210px;}
+#FonT{font-size: 17px}
+#InserirN{width: 35vw; font-size: 20px}
+.ETeste{bottom: 145px; left: 20px; font-size: 17px; height: 30px;}
 #tv{
    width:102px;
 }

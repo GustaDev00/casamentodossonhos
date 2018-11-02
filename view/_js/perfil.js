@@ -235,3 +235,20 @@ function criaimg(){
                     abreEdit = 1;
                 }
             }
+
+            function editarDescricao(){
+                $(".btnXa").css("display", "none");
+                $(".EDescricao").css("display", "block");
+                if(abreDE == 1){
+                    $('.EDescricao').css("display", "block");
+                    $(".btnXa").css("display", "none");
+                    $("#FechaD").text("Fechar");
+                    abreDE = 2;
+                }else{
+                    $('.ETopo').css("display", "none");
+                    $(".SumiuTopo").css("display", "block");
+                    $("#FechaD").text("Editar");
+                    abreDE = 1;
+                }
+
+            }

@@ -476,7 +476,10 @@ background: #ffc0cbbd;
   
 #TopoVendedor h1{float: right; margin-right: 25%; font-size: 5vw;}
 #TopoVendedor img{ width: 170px;}
- 
+#LNIP{width: 160px;}
+#InserirN{width: 30vw;}
+#FonT{font-size: 17px}
+.ETeste{bottom: 115px; left: 0px; font-size: 17px; height: 40px;}
 #tv{
     width:102px;
 } 

@@ -12,7 +12,7 @@
                     <label for="nip" id="LNIP" class="ETopo">Escolhe Arquivo</label>
                     <input type="file" name="nip" id="nip">
                     
-                    <h1 class="ETeste"><input type="text" name="NN" placeholder="Novo Nome" class="ETopo" ></h1>
+                    <h1 class="ETeste"><input type="text" name="NN" placeholder="Novo Nome" class="ETopo" id="InserirN"></h1>
                      <fieldset class="ETopo btnPF" style="margin: 10px 0 0 0;">   
                             <button class="SalvarA" id="FonT">Salvar</button>
                             <div class="cor"></div>
@@ -28,10 +28,10 @@
                            <option selected>Nova Categoria</option>
                        </select>
                        <h3 class="btnXa">Telefone: <?php echo $telE ?></h3>
-                       <input type="tel" name="NT" class="EDescricao">
-                       <p class="btnAlterar">Editar</p>
+                       <input type="tel" name="NT" class="EDescricao" placeholder="Novo Telefone">
+                       <p class="btnAlterar" id="FechaD" onclick="editarDescricao()">Editar</p>
                        <h3 class="btnXa">Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
-                       <input type="text" name="NR" class="EDescricao"><input type="text" name="NC" class="EDescricao"><input type="text" name="NE" class="EDescricao">
+                       <input type="text" name="NR" class="EDescricao" placeholder="Nova Rua"><input type="text" name="NC" class="EDescricao" placeholder="Nova Cidade"><input type="text" name="NE" class="EDescricao" placeholder="Novo Estado">
                        <input type="submit" value="Salvar" class="EDescricao">
                     </form> 
                     </article>
