@@ -523,7 +523,8 @@ input.form{
 /*----------PERFIL VENDEDOR -----------*/  
 #TopoVendedor h1{float: right; margin-right: 30%; font-size: 4vw;}
 #TopoVendedor img{
-   width:220px
+   width:220px;
+   height: 123px;
  }
  #LNIP{width: 210px;}
 #FonT{font-size: 17px}

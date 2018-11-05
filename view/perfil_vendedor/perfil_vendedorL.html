@@ -8,7 +8,7 @@
                     <img src="<?php echo $imagemL ?>" class="SumiuTopo">
                     <form>
 
-                    <img src="<?php echo $imagemL ?>" class="ETopo">
+                    <img src="<?php echo $imagemL ?>" class="ETopo" id="vejanovafoto">
                     <label for="nip" id="LNIP" class="ETopo">Escolhe Arquivo</label>
                     <input type="file" name="nip" id="nip">
                     
@@ -22,6 +22,7 @@
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
                      <article>  
+                         <p class="btnAlterar" id="FechaD" onclick="editarDescricao()">Editar</p>
                          <form>
                        <h3 class="btnXa" >Categoria do Vendedor: <?php echo $funcE ?></h3>
                        <select name="NS" class="EDescricao">
@@ -29,7 +30,7 @@
                        </select>
                        <h3 class="btnXa">Telefone: <?php echo $telE ?></h3>
                        <input type="tel" name="NT" class="EDescricao" placeholder="Novo Telefone">
-                       <p class="btnAlterar" id="FechaD" onclick="editarDescricao()">Editar</p>
+                       
                        <h3 class="btnXa">Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
                        <input type="text" name="NR" class="EDescricao" placeholder="Nova Rua"><input type="text" name="NC" class="EDescricao" placeholder="Nova Cidade"><input type="text" name="NE" class="EDescricao" placeholder="Novo Estado">
                        <input type="submit" value="Salvar" class="EDescricao">
@@ -49,7 +50,7 @@
                             if($d<=$cF2){ 
                                 while($cF2 < count($dadosFot)){ ?>
                                     <div class="Fcampo">
-                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor"><br>
+                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $nufo;?>)"><br>
                             <!-- ------- ------------- garcia esse é o excluir foto  --------------- ---------->    
                                 <form class="orta">
                                     
@@ -152,7 +153,7 @@
                         <div class="window" id="janela1">
                             <a href="#" class="fechar">&#215;</a>
                             <h4>Cadastro do Produto</h4>
-                            <form action="../perfil_vendedor/adicionarprodutov.php" method="post" enctype="multipart/form-data">
+                            <form action="../perfil_vendedor/adicionarprodutov.php" method="post" enctype="multipart/form-data" id="formastro">
                                 <input type="name" name="nomeproduto" placeholder="Nome Produto" >
                                 <input type="text" name="localproduto" placeholder="Digite a localização do Produto">
                                 <input type="number" name="precoproduto" placeholder="Digite o Preço Ex: 99">
