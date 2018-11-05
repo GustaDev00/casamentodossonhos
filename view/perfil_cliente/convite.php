@@ -3,7 +3,7 @@ include_once '../../Db/daohelper.php';
 
 $id = $_GET['id'];
 $conn = connection();
-$sql = "SELECT * FROM USUARIO WHERE COD_USU = '$id'";
+$sql = "select * from usuario where cod_usu = '$id'";
 
 $execute = executeSelect($conn, $sql);
 

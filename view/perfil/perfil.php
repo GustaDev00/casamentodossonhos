@@ -32,7 +32,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dP++;
         }
         
-        $selectFavorita = "SELECT p.cod_produto, p.url_foto_prod, p.nome_prod,
+        $selectFavorita = "select p.cod_produto, p.url_foto_prod, p.nome_prod,
         f.cod_status_favorita
         from produto p
         inner join favorita f

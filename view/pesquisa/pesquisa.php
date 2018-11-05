@@ -14,14 +14,14 @@ $pesquisa = isset($_GET['pesquisar'])?$_GET['pesquisar']:'';
 $PDO = connection();
 $PDO->exec("set names utf8");
 
-$sql = "SELECT DISTINCT(p.cod_produto), p.nome_prod, p.preco_prod, p.desc_prod, 
+$sql = "select distinct(p.cod_produto), p.nome_prod, p.preco_prod, p.desc_prod, 
 p.local_prod, c.nome_categoria, c.desc_categoria,
 e.nome_empre
-FROM PRODUTO p
-INNER JOIN CATEGORIA c
-ON p.cod_categoria = c.cod_categoria 
-INNER JOIN EMPRESA e
-ON e.cod_empresa = e.cod_empresa
+from produto p
+inner join categoria c
+on p.cod_categoria = c.cod_categoria 
+inner join empresa e
+on e.cod_empresa = e.cod_empresa
 where nome_prod like '%$pesquisa%';";
 
 $stmt = $PDO->prepare($sql);

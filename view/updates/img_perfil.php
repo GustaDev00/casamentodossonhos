@@ -37,7 +37,7 @@ if($_FILES['img_perfil'] == null){
             
 
             $conn = connection();
-            $query = "UPDATE USUARIO SET FOTO_USU = '$destino' where email_usu = '$email'";
+            $query = "update usuario set foto_usu = '$destino' where email_usu = '$email'";
             
             $execute = executeQuery($conn, $query);
             echo'<script>';
