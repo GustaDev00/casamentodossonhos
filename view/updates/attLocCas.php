@@ -16,17 +16,17 @@ try{
     
         if($_POST['dia'] > 0){
             
-            $updateDia =  "UPDATE usuario 
-                SET data_casal = '$dia'  
-                WHERE cod_usu = '$id'; ";   
+            $updateDia =  "update usuario 
+                set data_casal = '$dia'  
+                where cod_usu = '$id'; ";   
             $executeD = executeQuery($conn, $updateDia);
         }else{}
         
         if($_POST['hora'] > 0){
             
-            $updateHora =  "UPDATE usuario
-                            SET horario_casal = '$horario'
-                            WHERE cod_usu = '$id';";
+            $updateHora =  "update usuario
+                            set horario_casal = '$horario'
+                            where cod_usu = '$id';";
             $executeH = executeQuery($conn, $updateHora);
             
 
@@ -34,9 +34,9 @@ try{
 
             if(empty($local)){}else{ 
 
-                $updateLocal =  "UPDATE usuario
-                            SET local_casal = '$local'
-                            WHERE cod_usu = '$id';";
+                $updateLocal =  "update usuario
+                            set local_casal = '$local'
+                            where cod_usu = '$id';";
             $executeH = executeQuery($conn, $updateLocal);
             
             }

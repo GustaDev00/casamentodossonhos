@@ -20,7 +20,7 @@ try{
         $idConv = $fetch4->cod_conv;
         
         if($executeSelect->rowCount() > 0){
-            $verific = "SELECT * FROM LISTA_PRESENTES WHERE COD_lIST_PRES = '$idPres' AND STATUS_PRESENTE = 'Confirmado';";
+            $verific = "select * from lista_presentes where cod_list_pres = '$idPres' and status_presente = 'Confirmado';";
             $executeVerific = executeSelect($conn, $verific);
             if($executeVerific->rowCount() > 0){
                 echo '<script>';
@@ -30,7 +30,7 @@ try{
                 echo "alguem ja vai da o presente seu lixo";
                 
             }else{
-           $update = "UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '$id'";
+           $update = "update lista_presentes set status_presente = 'Confirmado', COD_CONV = '$idConv' where cod_usu = '$id'";
            $sql = executeQuery($conn, $update);
             }
         }else{

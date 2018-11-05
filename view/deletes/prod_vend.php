@@ -7,7 +7,7 @@ try{
     $id = $_SESSION['id'];
     echo $id.'<br>';
     echo 'cod prod =  '.$idProd;
-    $sql = "DELETE FROM PRODUTO WHERE COD_PRODUTO = '$idProd' AND COD_EMPRESA = '$id'";
+    $sql = "DELETE FROM produto WHERE cod_produto = '$idProd' AND cod_empresa = '$id'";
     $conn = connection();
     $execute = executeQuery($conn, $sql);
     

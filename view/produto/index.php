@@ -7,16 +7,16 @@
         echo " DEU CU";
     }else{
         $conn = connection();
-        $select = "   SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
+        $select = "   select p.nome_prod, p.preco_prod, p.desc_prod, 
         p.local_prod, p.url_foto_prod, 
         c.nome_categoria, c.desc_categoria,
         e.nome_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
-        FROM PRODUTO p
-        INNER JOIN CATEGORIA c
-        ON p.cod_categoria = c.cod_categoria 
-        INNER JOIN EMPRESA e
-        ON e.cod_empresa = p.cod_empresa
-        WHERE COD_PRODUTO = $idProd;";
+        from produto p
+        inner join categoria c
+        on p.cod_categoria = c.cod_categoria 
+        inner join empresa e
+        on e.cod_empresa = p.cod_empresa
+        where cod_produto = $idProd;";
         $go = executeSelect($conn, $select);
         $fetch = $go->fetch(PDO::FETCH_OBJ);
         $nome = $fetch->nome_prod;

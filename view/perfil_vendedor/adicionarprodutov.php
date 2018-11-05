@@ -29,14 +29,14 @@ try{
             $destino = '../_imagem_usuario/'.$novoNome;
 
                 $conn = connection();
-                $categoria = "SELECT * FROM categoria WHERE nome_categoria = '$cat';";
+                $categoria = "select * from categoria where nome_categoria = '$cat';";
                 $execute = executeSelect($conn, $categoria);
                 $fetch = $execute->fetch(PDO ::FETCH_OBJ);
                 $codCat = $fetch->cod_categoria;
                 
-                $sql = "INSERT INTO produto(nome_prod, preco_prod, desc_prod,
+                $sql = "insert into produto(nome_prod, preco_prod, desc_prod,
                 url_foto_prod, local_prod, cod_empresa, cod_categoria)
-                VALUES('$nome', '$preco', '$descricao', '$destino', '$local', $id, $codCat);";
+                values('$nome', '$preco', '$descricao', '$destino', '$local', $id, $codCat);";
                 $insert = executeQuery($conn, $sql);
                 @move_uploaded_file ( $arquivo_tmp, "$destino" );
                 

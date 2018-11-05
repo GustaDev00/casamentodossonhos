@@ -25,20 +25,20 @@ try{
            
         }else{
             if($_SESSION["defini"] == 2){
-            $verific = "SELECT * FROM FAVORITA WHERE COD_PRODUTO = '$idProd' AND COD_USU = '$idUsu'";
+            $verific = "select * from favorita where cod_produto = '$idProd' and cod_usu = '$idUsu'";
             $executeSelect = executeSelect($pdo, $verific);
             if($executeSelect->rowCount() > 0){
                 
-               $delete = " DELETE FROM favorita
-                           WHERE cod_produto='$idProd' and cod_usu ='$idUsu';";
+               $delete = " delete from favorita
+                           where cod_produto='$idProd' and cod_usu ='$idUsu';";
                 $sql = executeQuery($pdo, $delete);
                 echo '<script>';
                 echo "location.href='../loja/index.php'";
                 echo '</script>';
                 
             }else{
-            $query = "INSERT INTO   FAVORITA(cod_produto, cod_status_favorita, cod_usu)
-                        VALUES('$idProd', 'A', '$idUsu');";
+            $query = "insert into favorita(cod_produto, cod_status_favorita, cod_usu)
+                        values('$idProd', 'A', '$idUsu');";
             $execute = executeQuery($pdo, $query);
             echo '<script>';
                 echo "location.href='../loja/index.php'";

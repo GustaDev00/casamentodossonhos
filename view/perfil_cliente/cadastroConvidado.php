@@ -11,7 +11,7 @@ try{
         $confirm = isset($_REQUEST['confirm'])?$_REQUEST['confirm']:null;
         $celular = isset($_REQUEST['celular'])?$_REQUEST['celular']:null;
         $id = $_GET['id'];
-        $select = "SELECT * FROM CONVIDADOS WHERE EMAIL_CONV = '$email'";
+        $select = "select * from convidados where email_conv = '$email'";
         $conn = connection();
         $execute = executeSelect($conn, $select);
         //echo "$nome , $email , $acomp, $confirm, $celular, $id";

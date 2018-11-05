@@ -7,7 +7,7 @@ try{
     $id = $_SESSION['id'];
    // echo $id;
     //echo $idFoto;
-    $sql = "DELETE FROM FOTOS_EMPRESA WHERE COD_FOTO = '$idFoto' AND COD_EMPRESA = '$id'";
+    $sql = "DELETE FROM fotos_empresa WHERE cod_foto = '$idFoto' AND cod_empresa = '$id'";
     $conn = connection();
     $execute = executeQuery($conn, $sql);
     echo "<script>location.href='../perfil/perfil.php'</script>";

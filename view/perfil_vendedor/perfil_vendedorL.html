@@ -6,13 +6,13 @@
                     <p class="btnAlterar" id="btnFe" onclick="editarTopo()">Editar</p>
                     <h1 class="SumiuTopo"><?php echo $nome ?></h1>
                     <img src="<?php echo $imagemL ?>" class="SumiuTopo">
-                    <form>
+                    <form method="POST" enctype="multipart/form-data" action="../updates/img_nome_perfil_vendedor.php">
 
                     <img src="<?php echo $imagemL ?>" class="ETopo" id="vejanovafoto">
                     <label for="nip" id="LNIP" class="ETopo">Escolhe Arquivo</label>
-                    <input type="file" name="nip" id="nip">
+                    <input type="file" name="fotoPV" id="nip">
                     
-                    <h1 class="ETeste"><input type="text" name="NN" placeholder="Novo Nome" class="ETopo" id="InserirN"></h1>
+                    <h1 class="ETeste"><input type="text" name="nomePV" placeholder="Novo Nome" class="ETopo" id="InserirN"></h1>
                      <fieldset class="ETopo btnPF" style="margin: 10px 0 0 0;">   
                             <button class="SalvarA" id="FonT">Salvar</button>
                             <div class="cor"></div>
@@ -22,17 +22,23 @@
                  <div id="InfoVendedor">
                      <h2>Descrição</h2>
                      <article>  
-                         <p class="btnAlterar" id="FechaD" onclick="editarDescricao()">Editar</p>
-                         <form>
+                         <form method="POST" action="../updates/descricao_vendedor.php">
                        <h3 class="btnXa" >Categoria do Vendedor: <?php echo $funcE ?></h3>
-                       <select name="NS" class="EDescricao">
+                       <select name="novaCategoria" class="EDescricao">
                            <option selected>Nova Categoria</option>
+                           <?php 
+                              $p = 0;while($p < count($dadosCat)){?>                                      
+                              <option  value="<?php echo $dadosCat[$p]['nome_categoria']  ?>"><?php echo $dadosCat[$p]['nome_categoria']  ?>
+                           <?php  $p++; } ?>
                        </select>
                        <h3 class="btnXa">Telefone: <?php echo $telE ?></h3>
-                       <input type="tel" name="NT" class="EDescricao" placeholder="Novo Telefone">
-                       
-                       <h3 class="btnXa">Endereço: <?php echo $ruaE. " - ". $cidadeE. " - ". $estadoE ?></h3>
-                       <input type="text" name="NR" class="EDescricao" placeholder="Nova Rua"><input type="text" name="NC" class="EDescricao" placeholder="Nova Cidade"><input type="text" name="NE" class="EDescricao" placeholder="Novo Estado">
+                       <input type="tel" name="novoTel" class="EDescricao" placeholder="Novo Telefone">
+                       <p class="btnAlterar" id="FechaD" onclick="editarDescricao()">Editar</p>
+                       <h3 class="btnXa">Endereço: <?php echo $ruaE. " - ".$bairroE." - ". $cidadeE. " - ". $estadoE ?></h3>
+                       <input type="text" name="novaRua" class="EDescricao" placeholder="Nova Rua">
+                       <input type="text" name="novoBairro" class="EDescricao" placeholder="Novo Bairro">
+                       <input type="text" name="novaCidade" class="EDescricao" placeholder="Nova Cidade">
+                       <input type="text" name="novoEstado" class="EDescricao" placeholder="Novo Estado">
                        <input type="submit" value="Salvar" class="EDescricao">
                     </form> 
                     </article>
