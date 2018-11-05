@@ -229,8 +229,8 @@ td, th {
  object-fit:cover ;
  object-position: center;
 }
-#InserirN{padding: 3px; border:none;border-bottom: 3px solid #ED545B; background:none;}
-#InserirN:focus{transition: 2s; border-radius: 5px;border-bottom: 3px solid #f2717b;}
+#InserirN{padding: 3px; border:none;border-bottom: 3px solid #f2717b; background:none;}
+#InserirN:focus{transition: 2s; border-radius: 5px;border-bottom: 3px solid red;}
 .ETeste{position: relative;}
 .EDescricao, .ETopo{display:none}
 .btnAlterar{position:absolute; right: 10%; cursor: pointer;}
@@ -905,3 +905,5 @@ input.checkbox{
     
 }
 .f1,.f2,.f3.f4{transition: width 2s;}
+
+.produto_loja img{width: 100px; object-position: center; object-fit: cover}
