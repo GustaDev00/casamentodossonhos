@@ -1,18 +1,15 @@
 
     <main>            
                <section id="filtro">
-                  <!-- <img src="../_imagens/filtro.png" title="icone_filtro"> -->
                    <img src="../_imagens/filtro.gif" title="icone_filtro">
                    <a href="#" id="ClickLoja">Categoria</a>
                 </section>
                 <section id="caixa_produtos">
                     
-                    
-                    <?php 
-                    
-                        if($npl <= $qtd[0]){
-                            for($x=0; $x< 9;$x++){
-                            $i = 1;
+                  
+                    <?php
+                            for($x=0; $x < $CR ; $x++){
+                            $i = 0;
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
                         echo '<a href="../produto/index.php?cod=' .$produto[$x]['cod_produto']. ' " >';
                         echo '<div class="oi">';
@@ -20,32 +17,14 @@
                         echo '<img src="'. $produto[$x]['url_foto_prod']. '" title="produto1">';
                         echo '</div></div>';
                         echo '<div class="nome_descricao">';
-                        echo '<h3>'. $produto[$x]["nome_prod"].'</h3>';
-                        echo '<p>'. $produto[$x]["desc_prod"];
+                        echo '<h3>'. $produto[$x]['nome_prod'].'</h3>';
+                        echo '<p>'. $produto[$x]['desc_prod'];
                     echo '</div>';
                 echo '</a>';
                     echo '</div>';
                             $i ++;
                             }
-                        }else{
-                            $max = $qtd[0] - ($npl - 10);
-                                for($x=0; $x< $max; $x++){
-                            $i = 1;
-                                echo '<div id="produto'. $i. '" class="produto_loja">';
-                        echo '<a href="../produto/index.php?cod='.$produto[$x]['cod_produto']. ' " >';
-                        echo '<div class="oi">';
-                            echo '<div class="hidde">';
-                        echo '<img src="'. $produto[$x]["url_foto_prod"]. '" title="produto1">';
-                        echo '</div></div>';
-                        echo '<div class="nome_descricao">';
-                        echo '<h3>'. $produto[$x]["nome_prod"].'</h3>';
-                        echo '<p>'. $produto[$x]["desc_prod"];
-                    echo '</div>';
-                echo '</a>';
-                    echo '</div>';
-                            $i ++;
-                            }
-                        }
+                        
                     ?>
                     
                    
@@ -67,7 +46,7 @@
                     <a href="#"><img src="../_imagens/icones/Prancheta 13.png"></a>
                 </section>
                 <section id=setasConjunto>
-                    <?php $troca = isset($_GET['pagina'])?$_GET['pagina']:1; // echo $npl."<br>".$qtd[0]; 
+                    <?php $troca = isset($_GET['pagina'])?$_GET['pagina']:1; // echo $npl."<br>".$CR; 
                         if($troca <= 1){}else{
                             $pagina --;
                             echo '<a href="index.php?pagina='. $pagina. '"><img src="../_imagens/seta_esquerda.png"></a>';
@@ -76,7 +55,7 @@
                     
                     <label id="valorTroca"><?php if(isset($_GET['pagina'])){echo $_GET['pagina'];}else{echo "1";} ?></label>
                     
-                    <?php if($npl < $qtd[0]){
+                    <?php if($npl < $CR){
                         $troca ++;
                         echo '<a href="index.php?pagina='. $troca. '"><img src="../_imagens/seta_direita.png"></a>';
                         }else{}
