@@ -67,6 +67,20 @@ var TrocaLoja = 1;
             $("#ProdutosVendedorL").css("display","none");
             $("#ProdutosFotos").css("display","none");
         });
+        $("#MenuVendedorD ol li:nth-child(2)").on("click",function(){
+            $("#ProdutosFotos").css("display","none");
+            $("#FotosVendedor").css("display","none");
+            $("#ProdutosVendedor").css("display","block");
+            $("#ProdutosVendedorL").css("display","block");
+            
+        });
+
+        $("#MenuVendedorD ol li:first-child").on("click",function(){
+            $("#FotosVendedor").css("display","block");
+            $("#ProdutosVendedor").css("display","none");
+            $("#ProdutosVendedorL").css("display","none");
+            $("#ProdutosFotos").css("display","none");
+        });
     
     var ComparaTamanho, produto, ComparaLargura, teste123;
 for(aume=1;aume<=10;aume++){

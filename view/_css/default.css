@@ -405,6 +405,7 @@ td, th {
 
    #InfoVendedor article h3{margin-top: 5px}
    #MenuVendedor ol{width: 100%; background-color: #f6dddf; padding: 5px 0;}
+   #MenuVendedorD ol{width: 100%; background-color: #f6dddf; padding: 5px 0;}
    #MenuVendedor ol li{
         width: calc(95% / 4);
         padding: 5px 0; 
@@ -412,6 +413,13 @@ td, th {
         text-align: center; 
         cursor: pointer;
     }
+    #MenuVendedorD ol li{
+      width: calc(95% / 2);
+      padding: 5px 0; 
+      display: inline-block;
+      text-align: center; 
+      cursor: pointer;
+  }
     #FotosVendedor, #ProdutosVendedor, #ProdutosVendedorL{width: 90%; margin: auto; text-align: center}
     .btnPF{display: inline-block; border: none; margin: 30px;}
     .ETopo{display: none;}
@@ -490,6 +498,7 @@ td, th {
     }
 
    #MenuVendedor ol li:first-child, #MenuVendedor ol li:nth-child(2),#MenuVendedor ol li:nth-child(3){border-right: 1px solid black; }
+   #MenuVendedorD ol li:first-child{border-right: 1px solid black; }
    .btnP{ border: 1px  dashed blue;}
   /*------- modal das imagens ----------*/
 
