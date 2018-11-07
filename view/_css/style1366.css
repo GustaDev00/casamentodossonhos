@@ -124,11 +124,6 @@ div.tipo{
     font-size: 35px;
   }
   
-  input.checkbox{   
-    display: inline;
-    padding: 0;
-  }
-  
   select.custom-select{
     float: right;
     height: 5vw;
@@ -144,8 +139,10 @@ div.tipo{
   input.e{
     margin-right: 3vw;
     margin-left: 2vw;
-    height: 4vw;
-    width: 27vw;
+    height: 3vw;
+    width: 24vw;
+    margin: 10px 0;
+    font-size: 1.5vw;
   }
   
   p.texto{
@@ -157,10 +154,11 @@ div.tipo{
     border-radius: 6px;
     background-color: pink;
     border-color:pink;
-    width: 9vw;
-    height: 5vw;
+    width: 7vw;
+    height: 3vw;
     float: right;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    margin: 10px 0;
   }
   
   hr{

@@ -13,28 +13,35 @@
                 
                                            
                     <div class="form-row">
-                        <div class="tipo">
-                            <p>Presente: Status: </p>                                    
-                        </div> <br>
-                        <?php $p = 0; while($p < count($dadosPres)){ ?>
-                            <form id="um" method="POST" action="confirmConvite.php?cod=<?php echo $id?>&?pres=<?php echo $dadosPres[$p]['cod_list_pres']; ?>">     
-                    <div class="lista1">
-                        <input type="checkbox" class="checkbox" onclick="mostra('mb')"/> <a class="presente"> <?php echo $dadosPres[$p]['nome_valor_presente']  ?></a>
-                        
-                        
-                    </div>
-                                                          
-                       <div class="lista2">                                    
-                          <p class="custom-select" ><?php echo $dadosPres[$p]['status_presente'] ?></p>
-                      </div>
+                                <table>                          
+                                            <tr>
+                                                <th>Presente:</th>
+                                                <th>Status:</th>
+                                                <th>Confirma</th>
+                                            </tr>        
+                                            <br>
+                        <?php $p = 0; while($p < count($dadosPres)){ ?>   
+                                <tr>
+                                 <form id="um" method="POST" action="../perfil_cliente/confirmConvite.php">
+                                    <td class="lista1">
+                                        <a class="presente"> <?php echo $dadosPres[$p]['nome_valor_presente']  ?></a> 
+                                    </td>                                 
+                                    <td >                                    
+                                        <p class="custom-select" ><?php echo $dadosPres[$p]['status_presente'] ?></p>
+                                    </td>
+                                    <td id="mb" class="Email">
+                                        <input type="hidden" name="iDD" value="<?php echo $dadosPres[$p]['cod_list_pres'];?>">
+                                        <input type="hidden" name="idD" value="<?php echo $_GET['codigo'];?>">
+                                        <input type="text" id="b" class="e"  size="12" name="confirmEmail" placeholder="Digite seu e-mail">
+                                        <button type="submit" id="b"class="confirma">Enviar</button>
+                                     </td>
+                                 </form>
+                                </tr>
+                                
                            <?php $p++; } ?>
+                        </table>
                     </div> 
-                    <div id="mb" class="email">
-                        <input type="text" id="b" class="e"  size="12" name="confirmEmail" placeholder="Digite seu e-mail">
-                       
-                      <button type="submit" id="b"class="confirma" onclick="asd();">Enviar</button>
-                     
-                    </div>
+
                     
                 </form>   <br><br><hr>                    
             </div>
@@ -42,13 +49,13 @@
                 <div class="form2">
                         <p class="casal"><?php echo " $nome e $parceiro"; ?></p>
                  
-                     <div class="prin">
+                     <div class="princ">
                             <label id="prin">Dia: <?php echo $diaCas ?></label><br>
                           <!--   <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10"><br>-->
-                                                                             
+                          <br>                             
                             <label id="prin">Horário: <?php echo $horarioCas ?></label><br>
                           <!--  <input type="text" class="form" id="" placeholder="19:00" size="10"> -->
-                       
+                          <br>
                             <label id="prin">Local: <?php echo $localCas ?></label><br>
                            <!-- <input type="text" class="form" id="" placeholder="Endereço" size="25"><br>-->
                      </div>                       
@@ -57,7 +64,7 @@
 
                        <div class="form3">
                             <p class="casal"><?php echo " $nome e $parceiro"; ?></p>
-                              <form method="POST" action="cadastroConvidado.php?id=<?php echo $id?>">
+                              <form method="POST" action="../perfil_cliente/cadastroConvidado.php">
                          <div class="group2">
                                             <img class="letra" src="<?php echo $imagemLoc ?>"><br><br>
 
@@ -97,7 +104,8 @@
                                             <option class="a" value="Não poderei Comparecer">Cancelada</option>              
                                     </select>
                                 </div>                 <br><br><br><br>
-                                    <button type="submit" class="botao">Confirmar</button>
+                                    <input type="hidden" name="idD" value="<?php echo $_GET['codigo'];?>">
+                                    <button class="botao">Confirmar</button>
                              </div>
                                 </form>
                            </div>     
@@ -159,11 +167,6 @@ form3.style.display = "block";
 
        }else{document.getElementById(id).style.display = 'block'}
     }
-
-        function asd() {
-            var carro = document.getElementById('crro');
-            carro.innerText = "confirmado";
-        }
 </script>                         
            
 </body>

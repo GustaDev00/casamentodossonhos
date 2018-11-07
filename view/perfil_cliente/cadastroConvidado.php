@@ -10,7 +10,8 @@ try{
         $acomp = isset($_REQUEST['acomp'])?$_REQUEST['acomp']:null;
         $confirm = isset($_REQUEST['confirm'])?$_REQUEST['confirm']:null;
         $celular = isset($_REQUEST['celular'])?$_REQUEST['celular']:null;
-        $id = $_GET['id'];
+        $id = isset($_REQUEST['idD'])?$_REQUEST['idD']:NULL;
+        echo $id;
         $select = "select * from convidados where email_conv = '$email'";
         $conn = connection();
         $execute = executeSelect($conn, $select);
