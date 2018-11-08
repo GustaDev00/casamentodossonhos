@@ -51,7 +51,7 @@ margin-left: calc(48vw - 350px);
 
  /*-------------navegação---------*/
  #c{display: none;}
- footer{background-color: #f6dddf; padding: 10px 0 0 10px; display: flex; align-items: center; font-size: 21px; position: relative; bottom: 0;}
+ footer{background-color: #f6dddf; padding: 10px; display: flex; align-items: center; font-size: 21px; position: relative;}
 footer a{text-decoration: none; color: black; position: absolute; left: -60px;}
 footer p{margin-left: 75%}
 
@@ -83,11 +83,25 @@ height: 170px;
 
 .nome_descricao h3{
 font-size: 28px;
-padding-bottom: 10px
+padding-bottom: 10px;
+padding-bottom: 10px; 
+width: 280px; 
+height: 26px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow:  ellipsis;
 }
 
 .nome_descricao p{
-font-size: 25px;
+font-size: 20px;
+margin-top:10px;  
+display: block; 
+display: -webkit-box;
+max-width: 280px;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
      /*-----------------------------------perfilCliente.html---------------------*/

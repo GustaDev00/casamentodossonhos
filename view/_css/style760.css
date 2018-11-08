@@ -62,20 +62,35 @@ figure figcaption{left: calc(48vw - 225px); top:  240px;}
 
 .nome_descricao{
 position: relative;
-width: 25vw;
+width: 40vw;
 text-align: left;
-left:56%;
+left:50%;
 bottom:186px;
 height: 170px;
 }
 
 .nome_descricao h3{
 font-size: 20px;
-padding-bottom: 10px
+padding-bottom: 10px; 
+width: 210px;
+height: 26px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow:  ellipsis;
 }
 
 .nome_descricao p{
 font-size: 18px;
+}
+.nome_descricao p{
+  margin-top: 20px;
+  display: block; 
+  display: -webkit-box;
+  max-width: 210px;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*-----------------------------------perfilCliente.html---------------------*/

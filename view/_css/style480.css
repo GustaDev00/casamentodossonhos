@@ -83,11 +83,30 @@ footer{display: none}
 
 .nome_descricao{
     position: relative;
-    width: 38vw;
+    width: 40vw;
     text-align: left;  
-    left:55%;
+    left:50%;
     bottom: 160px;
     height: 150px;
+ 
+ }
+ .nome_descricao h3{
+     font-size: 18px; 
+     width: 150px; 
+     height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:  ellipsis;
+}
+ .nome_descricao p{
+     margin-top: 10px;
+     display: block; 
+     display: -webkit-box;
+     max-width: 150px;
+     -webkit-line-clamp: 6;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
  }
 
 

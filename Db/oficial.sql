@@ -115,7 +115,6 @@ foreign key(cod_conv)references convidados(cod_conv),
 foreign key(cod_usu) references usuario(cod_usu)
 );
 
--- UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '1';
 
 /*INSERT INTO LISTA_PRESENTES(nome_valor_presente, tipo_presente, cod_usu) values($nomePres, $tipoPres, $id);
 select * from lista_presentes where cod_usu = 4;
@@ -168,33 +167,8 @@ UPDATE USUARIO SET FOTO_USU = '$novoNome.$extensao' where email_usu = 'gusta@gg.
 	select * from categoria;
     SELECT COD_CATEGORIA FROM CATEGORIA WHERE NOME_CATEGORIA = 'Flores';
 
-       
-INSERT INTO PRODUTO(NOME_PROD, PRECO_PROD, DESC_PROD,
-                                    URL_FOTO_PROD, LOCAL_PROD, COD_EMPRESA, COD_CATEGORIA)
-                                    VALUES('$nome', '$preco', '$descricao', '$destino', '$local', 1, 2);
-                                    select * from produto where cod_empresa = 2;
-                                    select * from produto where cod_produto = 9;
-select * from produto;
-
-SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
-        p.local_prod, p.url_foto_prod, 
-        c.nome_categoria, c.desc_categoria,
-        e.nome_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
-        FROM PRODUTO p
-        INNER JOIN CATEGORIA c
-        ON p.cod_categoria = c.cod_categoria 
-        INNER JOIN EMPRESA e
-        ON e.cod_empresa = p.cod_empresa
-        WHERE p.COD_PRODUTO = 10;*/
+*/
         
-   /*     insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
+       insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
        insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
-       SELECT E.EMAIL_EMPRE 
-                FROM EMPRESA E
-                INNER JOIN PRODUTO P
-                ON E.COD_EMPRESA = P.COD_EMPRESA
-                WHERE E.COD_EMPRESA = P.COD_EMPRESA
-                AND P.COD_PRODUTO = '10';
-                
-                INSERT INTO CONVIDADOS(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu)
-                                VALUES('$email', '$acomp', '$nome', '$confirm', '$celular', '1')*/
+      

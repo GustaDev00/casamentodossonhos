@@ -53,7 +53,7 @@ figure figcaption a:active{
   color: #FF757F;
   border-color: #FF757F;
 }
-footer{position: relative;}
+footer{position: relative; bottom: -100px}
 
 /*---------------CONTEUDO 2PAG---------------*/
 #nos{ background-color: #F2F2F2; padding: 9vw; }
@@ -109,7 +109,17 @@ footer{position: relative;}
   margin-left: 14px
 }
 .produto_loja a{
-  text-decoration: none
+  text-decoration: none;
+  color: black;
+}
+.produto_loja a:hover{
+  color: #ED545B;
+}
+.produto_loja a:active{
+  color: black;
+}
+.produto_loja a:visited{
+  color: black
 }
 #container main #setasConjunto{
 	display:flex;

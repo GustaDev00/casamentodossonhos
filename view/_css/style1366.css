@@ -64,10 +64,11 @@ footer a{text-decoration: none; color: black; position: absolute; left: -65px;}
 footer p{margin-left: 85%}
   /*--------------------------------loja----------------------*/
 
-    #caixa_produtos{display: flex}
+  #caixa_produtos{border: 1px solid; padding: 10px 60px}
   .produto_loja {
     width: 240px;
-    height: 240px;  
+    height: 240px; 
+    display: inline-block; 
 }
 
 .oi{
@@ -86,21 +87,33 @@ position: relative;
 font-size: 25px;
 text-align: left;
 bottom:235px;
-left: 24px;
+left: 10px;
+width: 220px;
+height: 27px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow:  ellipsis;
 }
 
 .nome_descricao p{
-  width: 190px;
-  height: 160px;
+  float: left;
   position: relative;
   font-size: 20px;
-  left: 25px;
-  bottom:225px; 
-  display: none;
-}
-.produto_loja:hover .oi img{opacity: 0.5;}
+  left: 10px;
+  bottom:225px;
+  display: none; 
 
-.produto_loja:hover .nome_descricao p{display: block;}
+}
+.produto_loja:hover .oi img{opacity: 0.2;}
+
+.produto_loja:hover .nome_descricao p{  
+  display: -webkit-box;
+  max-width: 220px;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
      /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{

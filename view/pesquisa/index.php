@@ -5,7 +5,7 @@
         
         include_once 'pesquisa.php';
     
-        include_once 'pesquisa.html';
+       // include_once 'pesquisa.html';
 
         include_once '../mask/footer.html';
        

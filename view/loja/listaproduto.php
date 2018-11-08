@@ -9,7 +9,7 @@ $pagina = 1;
     $produto = array();
     if($querySelect->rowCount() > 0){
          $qtd = $querySelect->fetch();
-        }else{echo "erro"; }
+        }else{}
     //aqui farei a veriicação da url para pegar o codigo
     if(isset($_GET['pagina'])){
         $pagina = $_GET['pagina'];
@@ -26,7 +26,7 @@ $pagina = 1;
         }
     }else{
         $npl = 10;
-        for($i=1;$i<=10;$i++){
+        for($i=1;$i<=$qtd[0];$i++){
              $verificar2 = "SELECT * FROM produto where cod_produto = {$i}";
                 $querySelect = executeSelect($conn, $verificar2);
                 if($querySelect->rowCount() > 0){
