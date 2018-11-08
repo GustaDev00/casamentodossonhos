@@ -118,7 +118,10 @@ text-overflow:  ellipsis;
   /*-------produto------------*/
    
   img.ffr{
-    width:55%;;
+    width:55%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
     margin-top:20px;}
 
       #valorP{
@@ -155,8 +158,8 @@ text-overflow:  ellipsis;
       #PrimeiraCaixa{height: 144px; overflow: auto;}
       #SegundaCaixa{width: 130%;display: block; float: left; margin: 41% 0% 0% -162%;border: 1px solid black;
          padding: 4% 8% 9% 4%;}
-      #SegundaCaixa a img{width: 105px; margin-left: 22px; margin-top: 22px;}
-      #SegundaCaixa article{float: left;}
+      #SegundaCaixa a img{width: 105px; margin-left: 22px; margin-top: 22px;float: right;}
+      #SegundaCaixa article{}
       #SegundaCaixa article h3{margin-top: 3px; font-size: 15px}
       #SegundaCaixa article h2{ font-size: 20px}
 

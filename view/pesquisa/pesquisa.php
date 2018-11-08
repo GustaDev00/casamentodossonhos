@@ -56,11 +56,11 @@ for($l = 0; $l < $CR; $l++){
     $quebra = explode(",", $total);
     //echo "O valor quebrado foi: ".$quebra[0]."<br>". "Nome Produto: ".$produto[$quebra[1]]["nome_prod"]."produto". "<br>". "O valor nome empresa: ". $nome[$quebra[1]]["nome_empre"]. "<hr>";
     $produt = $produto[$quebra[1]]["nome_prod"]."produto";
-    echo $produt; 
+    //echo $produt. "<br>"; 
     if($quebra[0] == $produto[$quebra[1]]["nome_prod"]."."."produto"){
-      echo "produto"; 
-    }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"]."empresa"){
-      echo "empresa";
+      echo "produto"."<br>"; 
+    }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"].".". "empresa"){
+      echo "empresa"."<br>";
     }else{}
   }
   /*

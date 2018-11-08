@@ -2,26 +2,26 @@
     <main id="produto">
            
         <section id="SobreProduto">
-            <h1 > Nome produto </h1>
-            <img src="../_imagens/galeria1.jpeg" class="ffr"><br>
+            <h1 > <?php echo $nome; ?> </h1>
+            <img src="<?php echo $foto;?>" class="ffr"><br>
            
-              <label class="am">Endereço: SP, Barueri, Engenho Novo</label>     
+              <label class="am">Endereço: <?php echo $loc; ?></label>     
            <div id="valorP">
-                <h2>R$: 00,00</h2>
+                <h2>R$: <?php echo $preco; ?></h2>
                 <a class="ver" href="link_da_pagina">Ver no Site</a>   
             </div>
     
     <div id="descrip_produto">
         <div id="PrimeiraCaixa">
-            <p>mensagem </p>
+            <p><?php echo $desc; ?></p>
         </div>
         <div id="SegundaCaixa">
-                <a href="#"><img src="../_imagens/galeria2.jpeg"></a>
+                <a href="<?php echo '../perfil_vendedor/index.php?codigo=1&par=1' ; ?>"><img src="<?php echo $fotoE; ?>"></a>
             <article>
             <h2>Descrição</h2>               
-            <h3>Vai vir do perfil vendedor</h3>
-            <h3>Vai vir do perfil vendedor</h3>
-            <h3>Vai vir do perfil vendedor</h3>
+            <h3><?php echo $nomeE;?></h3>
+            <h3>Tel: <?php echo $contato; ?></h3>
+            <h3><?php echo $locC.", ". $locEst; ?></h3>
             </article>
           
        
