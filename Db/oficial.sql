@@ -1,5 +1,5 @@
 create database casamentodossonhos;
- -- drop database casamentodossonhos;
+  -- drop database casamentodossonhos;
 use casamentodossonhos;
 /*
 create table tipo_usuario(
@@ -70,9 +70,7 @@ create table categoria(
 cod_categoria int primary key auto_increment,
 nome_categoria varchar(100),
 desc_categoria text,
--- senha_empresa varchar(100), NÃO ENTENDI --
 url_foto_categoria varchar(100),
--- cep varchar(50), --
  cod_status char(1)
 );
 
@@ -147,23 +145,8 @@ senha_adm varchar(60)
 );
 insert into adm(nome_adm, email_adm, senha_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm');
 
-/*INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
-                nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
-                tipo_par_usu, nascimento_par_usu, data_casal) 
-values("gustavo", "tipodanado", "gusta@gg.com", "gusta", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1");
-select * from usuario;
-UPDATE USUARIO SET FOTO_USU = '$novoNome.$extensao' where email_usu = 'gusta@gg.com';*/
-/*SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
-	   p.local_prod, c.nome_categoria, c.desc_categoria,
-	   e.nome_empre
-	   FROM PRODUTO p
-	   INNER JOIN CATEGORIA c
-	   ON p.cod_categoria = c.cod_categoria 
-	   INNER JOIN EMPRESA e
-	   ON e.cod_empresa = e.cod_empresa
-	   where nome_prod like '%n%';
-       
-       select * from empresa;
+/*   
+    select * from empresa;
 	select * from categoria;
     SELECT COD_CATEGORIA FROM CATEGORIA WHERE NOME_CATEGORIA = 'Flores';
 
