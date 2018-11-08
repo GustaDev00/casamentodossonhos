@@ -64,7 +64,7 @@ footer a{text-decoration: none; color: black; position: absolute; left: -65px;}
 footer p{margin-left: 85%}
   /*--------------------------------loja----------------------*/
 
-  #caixa_produtos{border: 1px solid; padding: 10px 60px}
+  #caixa_produtos{padding: 10px 60px}
   .produto_loja {
     width: 240px;
     height: 240px; 
@@ -744,4 +744,4 @@ background-color: pink;
  #campocopia input{ font-size: 20px}
  #campoAdd:nth-child(6){ width: 350px; height: 25px; border: 1px solid}
  
- .produto_loja img{width: 197px; height: 150px;}
+ .produto_loja img{width: 197px; margin-left: -10px;height: 150px;}

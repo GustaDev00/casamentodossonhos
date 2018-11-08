@@ -17,6 +17,7 @@ try{
         $descricao = isset($_POST['descricao'])?$_POST['descricao']:NULL;
         $cat = isset($_POST['cat'])?$_POST['cat']:null;
         $local = isset($_POST['localproduto'])?$_POST['localproduto']:null;
+        $sprod = isset($_POST['linkproduto'])?$_POST['linkproduto']:NULL;
         $id = $_SESSION['id'];
 
         $arquivo_tmp = $img[ 'tmp_name' ];
@@ -35,8 +36,8 @@ try{
                 $codCat = $fetch->cod_categoria;
                 
                 $sql = "insert into produto(nome_prod, preco_prod, desc_prod,
-                url_foto_prod, local_prod, cod_empresa, cod_categoria)
-                values('$nome', '$preco', '$descricao', '$destino', '$local', $id, $codCat);";
+                url_foto_prod, local_prod, iz_prod, cod_empresa, cod_categoria)
+                values('$nome', '$preco', '$descricao', '$destino', '$local', $sprod ,$id, $codCat);";
                 $insert = executeQuery($conn, $sql);
                 @move_uploaded_file ( $arquivo_tmp, "$destino" );
                 

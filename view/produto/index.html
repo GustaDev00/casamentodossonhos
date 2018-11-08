@@ -8,7 +8,7 @@
               <label class="am">Endereço: <?php echo $loc; ?></label>     
            <div id="valorP">
                 <h2>R$: <?php echo $preco; ?></h2>
-                <a class="ver" href="link_da_pagina">Ver no Site</a>   
+                <a class="ver" href="<?php echo $sprod; ?>">Ver no Site</a>   
             </div>
     
     <div id="descrip_produto">
@@ -16,7 +16,7 @@
             <p><?php echo $desc; ?></p>
         </div>
         <div id="SegundaCaixa">
-                <a href="<?php echo '../perfil_vendedor/index.php?codigo=1&par=1' ; ?>"><img src="<?php echo $fotoE; ?>"></a>
+                <a href="<?php echo '../perfil/perfil.php?codigo=1&par=1' ; ?>"><img src="<?php echo $fotoE; ?>"></a>
             <article>
             <h2>Descrição</h2>               
             <h3><?php echo $nomeE;?></h3>

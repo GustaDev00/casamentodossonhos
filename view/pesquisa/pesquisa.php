@@ -50,43 +50,6 @@ for($l = 0; $l < $CR; $l++){
   }
 
  uasort($arry2, "strnatcmp");
- echo "Quantidade de produto: ". count($produto). "<br>". "Quantidade de empresa: ". count($nome)."<br>".count($arry2)."<br>";
-  foreach($arry2 as $total){
-    //echo $total. "<br>";
-    $quebra = explode(",", $total);
-    //echo "O valor quebrado foi: ".$quebra[0]."<br>". "Nome Produto: ".$produto[$quebra[1]]["nome_prod"]."produto". "<br>". "O valor nome empresa: ". $nome[$quebra[1]]["nome_empre"]. "<hr>";
-    $produt = $produto[$quebra[1]]["nome_prod"]."produto";
-    //echo $produt. "<br>"; 
-    if($quebra[0] == $produto[$quebra[1]]["nome_prod"]."."."produto"){
-      echo "produto"."<br>"; 
-    }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"].".". "empresa"){
-      echo "empresa"."<br>";
-    }else{}
-  }
-  /*
- for($x=0; $x < count($arry2); $x++){
-  $quebra = explode(",", $arry2[$x]);
-  echo $quebra[0]."<br>". $produto[$quebra[1]]["nome_prod"]. "<hr>". "<hr>". $quebra[0]."<br>". $nome[$quebra[1]]["nome_empre"]. "<hr>";  //73  = 657 = 702 
- } */
-
- //$teste = $arry2[0];
- //$quebra = array(".", ",");
-
- //print_r(explode($quebra[0], $teste));
- //$pos = strpos($teste, ".");
- //echo $pos;
- //$pos1 = strpos($teste, ",") + 1 ;
-//echo $pos1;    
- //$tipo = substr($teste, $pos+1);
- //echo $tipo;
-// var_dump($arry2);
- 
-
-
-
-
-
-
 ?>
 
 <?php

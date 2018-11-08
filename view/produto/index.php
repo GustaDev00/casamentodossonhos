@@ -7,7 +7,7 @@
         echo " DEU CU";
     }else{
         $conn = connection();
-        $select = "   select p.nome_prod, p.preco_prod, p.desc_prod, 
+        $select = "   select p.nome_prod, p.preco_prod, p.desc_prod, p.iz_prod, 
         p.local_prod, p.url_foto_prod, 
         c.nome_categoria, c.desc_categoria,
         e.nome_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
@@ -24,6 +24,7 @@
         $desc = $fetch->desc_prod;
         $foto = $fetch->url_foto_prod;
         $loc = $fetch->local_prod;
+        $sprod = $fetch->iz_prod;
         $nomeE = $fetch->nome_empre;
         $locC = $fetch->cidade_empre;
         $locEst = $fetch->estado_empre;

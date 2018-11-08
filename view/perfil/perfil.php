@@ -245,7 +245,6 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dadosFot[$df]['nome_foto'] = $fetchFoto->nome_foto;
             $dadosFot[$df]['url_foto_empresa'] = $fetchFoto->url_foto_empresa;
             $dadosFot[$df]['desc_foto'] = $fetchFoto->desc_foto;
-            
             $df++;
         }
 

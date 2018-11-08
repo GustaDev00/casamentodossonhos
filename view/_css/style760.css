@@ -635,4 +635,5 @@ p#cli{font-size: 4vw}
  #campocopia{width: 100%; height: 25px;position: relative; margin: auto;}
  #campocopia input{ font-size: 16px}
 
- .produto_loja img{width: 177px; height: 100px;}
+ .produto_loja img{width: 177px; margin: 25px 15px;height: 100px;}
+ .nome_descricao{width: 200px; margin-left: 20px}

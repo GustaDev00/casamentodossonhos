@@ -6,23 +6,40 @@
                 </section>
                 <section id="caixa_produtos">
                     
-                  
                     <?php
                    
-                            for($x=0; $x < $CR ; $x++){
+                    foreach($arry2 as $total){
+                        $quebra = explode(",", $total);
                             $i = 0;
+                            if($quebra[0] == $produto[$quebra[1]]["nome_prod"]."."."produto"){
+
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
-                        echo '<a href="../produto/index.php?cod=' .$produto[$x]['cod_produto']. ' " >';
-                        echo '<div class="oi">';
-                            echo '<div class="hidde">';
-                        echo '<img src="'. $produto[$x]['url_foto_prod']. '" title="produto1">';
-                        echo '</div></div>';
-                        echo '<div class="nome_descricao">';
-                        echo '<h3>'. $produto[$x]['nome_prod'].'</h3>';
-                        echo '<p>'. $produto[$x]['desc_prod'];
-                    echo '</div>';
-                echo '</a>';
-                    echo '</div>';
+                                echo '<a href="../produto/index.php?cod=' .$produto[$quebra[1]]['cod_produto']. ' " >';
+                                echo '<div class="oi">';
+                                echo '<div class="hidde">';
+                                echo '<img src="'. $produto[$quebra[1]]['url_foto_prod']. '" title="produto1">';
+                                echo '</div></div>';
+                                echo '<div class="nome_descricao">';
+                                echo '<h3>'. $produto[$quebra[1]]['nome_prod'].'</h3>';
+                                echo '<p>'. $produto[$quebra[1]]['desc_prod'];
+                                echo '</div>';
+                                echo '</a>';
+                                echo '</div>';
+                                
+                              }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"].".". "empresa"){
+                                echo '<div id="produto'. $i. '" class="produto_loja">';
+                                    echo '<a href="../perfil/perfil.php?codigo=' .$nome[$quebra[1]]['cod_empresa'].'&par=1" >';
+                                    echo '<div class="oi">';
+                                    echo '<div class="hidde">';
+                                    echo '<img src="'. $nome[$quebra[1]]['foto_empre'].'" title="produto1">';
+                                    echo '</div></div>';
+                                    echo '<div class="nome_descricao">';
+                                    echo '<h3>'. $nome[$quebra[1]]['nome_empre'].'</h3>';
+                                    echo '</div>';
+                                    echo '</a>';
+                                    echo '</div>'; 
+                              }else{}
+                               
                             $i ++;
                             }
                         
@@ -46,7 +63,8 @@
                     <a href="#"><img src="../_imagens/icones/Prancheta 12.png"></a>
                     <a href="#"><img src="../_imagens/icones/Prancheta 13.png"></a>
                 </section>
-                <section id=setasConjunto>
+
+                <!-- <section id=setasConjunto> 
                     <?php $troca = isset($_GET['pagina'])?$_GET['pagina']:1; // echo $npl."<br>".$CR; 
                         if($troca <= 1){}else{
                             $pagina --;
@@ -63,6 +81,7 @@
                         ?>
                     
                 </section>
+                -->
            
                        
             </main>

@@ -22,12 +22,13 @@
                     <div id="FotosVendedor">
                         
                          <?php  $cF2=0; $d=0; $nufo = 1;
+                         if(!(isset($dadosFot))){}else{
                             if($d<=$cF2){ 
                                 while($cF2 < count($dadosFot)){ ?>
                                     <div class="Fcampo">
                                 <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $nufo;?>)"><br>
                                 </div>
-                                <?php $cF2++; $d++; $nufo++;} }?>
+                                <?php $cF2++; $d++; $nufo++;} } }?>
                      </div>
                     
                      

@@ -144,7 +144,7 @@ email_adm varchar(100),
 senha_adm varchar(60)
 );
 insert into adm(nome_adm, email_adm, senha_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm');
-
+select * from adm;
 /*   
     select * from empresa;
 	select * from categoria;
