@@ -93,6 +93,81 @@ font-size: 18px;
   text-overflow: ellipsis;
 }
 
+
+  /*-------produto-------------*/
+ 
+  img.ffr{
+    width:100%;
+     margin-top:20px;
+      }
+    
+      #valorP{
+        display: flex;
+        margin-top: 4%;
+        justify-content:space-around
+        }
+        #valorP h2 {
+            margin-top: 1%}
+    
+      #valorP a{      
+        padding: 2.5% 3% 2.5% 3%;
+        background-color: #169BD5;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    
+      #all_icones{
+        margin-top: 1.5%;
+        width: 65%;
+        height: 50px;
+        background-color: #f6dddf;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+      }
+      #PrimeiraCaixa{height: 115px; word-break: break-all; overflow: auto;}
+      #SegundaCaixa{display: none;}
+      #SegundaCaixa a img{width: 125px; margin: 20px 30px 30px 0px; float: right;}
+      #SegundaCaixa article{ width: 55%; word-break: break-all; padding: 5px; }
+      #SegundaCaixa article h3{margin-top: 5px; font-size: 14px}
+      #SegundaCaixa article h2{ font-size: 18px}
+
+      #descrip_produto{
+        width: 104%;
+        border: 1px solid black;
+        margin-top: 30px;
+        padding: 10px
+      }  
+      #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
+      #SobreProduto{
+        color:#5E5E5E;
+        font-family: Arial, Helvetica, sans-serif;  
+      }
+     
+      #MensagemEnviar form{font-family: Arial, sans-serif;}
+      #MensagemEnviar{display: none}
+      #MensagemEnviar form label{
+        border: 1px solid;
+        display: flex;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      #MensagemEnviar form textarea{
+        resize: none;
+        margin-top: 5px;
+        width: 99%;
+        height: 200px;
+    
+      }
+      #btnForm{position: absolute; top:410px; right: 19%;}   
+    
+      #all_icones img{width: 42px;}
+
+      div.msg2{
+        display: none;
+    }
 /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{

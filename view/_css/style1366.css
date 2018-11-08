@@ -114,6 +114,122 @@ text-overflow:  ellipsis;
   overflow: hidden;
   text-overflow: ellipsis;
   }
+  
+  /*-------produto------------*/
+   
+  img.ffr{
+    width:55%;;
+    margin-top:20px;}
+
+      #valorP{
+        display: flex;
+        margin-top: 6%;
+        justify-content:space-around
+        }
+        #valorP h2 {
+          margin-top: -11%;
+          margin-left: 77%;}
+    
+      #valorP a{  
+        margin-top: 10%;
+        margin-left: -23%;   
+        padding: 2.5% 3% 2.5% 3%;
+        background-color: #169BD5;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    
+      #all_icones{
+        margin-top: 10.5%;
+        width: 43%;
+        height: 40px;
+        background-color: #f6dddf;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 48%;
+        position: absolute;
+      }
+      #PrimeiraCaixa{height: 144px; overflow: auto;}
+      #SegundaCaixa{width: 130%;display: block; float: left; margin: 41% 0% 0% -162%;border: 1px solid black;
+         padding: 4% 8% 9% 4%;}
+      #SegundaCaixa a img{width: 105px; margin-left: 22px; margin-top: 22px;}
+      #SegundaCaixa article{float: left;}
+      #SegundaCaixa article h3{margin-top: 3px; font-size: 15px}
+      #SegundaCaixa article h2{ font-size: 20px}
+
+      #descrip_produto{
+        width: 39%;
+        border: 1px solid black;
+        margin-top: -55%;
+        margin-left: 60%;
+        padding: 2% 15% 3% 3%;   
+      }  
+      #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
+      #SobreProduto{
+        color:#5E5E5E;
+        font-family: Arial, Helvetica, sans-serif;  
+        font-size: 2vw;
+      }
+     
+      #MensagemEnviar{display: none;}
+      .digi{display: none;}
+      
+      #btnForm{position: absolute; top:410px; right: 19%;}   
+    
+      #all_icones img{width: 42px;}
+
+      .one{
+        display: none;
+      }
+
+      #all_icones a img{ width: 55px;}
+/*mensagem*/ 
+.msg2{
+  display:none;
+  background-color: pink;
+  width: 400px;
+  height: 300px;
+  border: 1px solid;
+  position: absolute;
+  left: calc(50vw - 200px);
+  bottom:0;
+  border-radius: 10px;
+  
+}
+  .clos{
+    background-color: antiquewhite;
+    padding:2% 7% 5% 7%;
+    text-decoration: none;
+    color: black;
+    word-spacing:6px;    
+    float: right;
+    border-radius: 10px 10px 0px 0;
+  }
+
+  label.name{
+   text-align: center;
+   padding-top:11px;
+   border-radius: 10px 10px 0px 0;
+   display: block;
+   font-size: 23px;
+  }
+  .ms{
+  width: 95%;
+  height: 200px;
+  font-size: 16px;
+  padding: 10px;
+  }
+  /*Enviar*/
+  .go{
+    width:28px;
+    float: right;
+    margin-right: 2%
+  }
+
+    
      /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{

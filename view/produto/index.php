@@ -2,7 +2,7 @@
     include_once '../../Db/daohelper.php';
     
     $idProd = $_GET['cod'];
-    
+    include_once '../mask/header.html';
     if(empty($idProd)){
         echo " DEU CU";
     }else{
@@ -32,7 +32,6 @@
         
         include_once 'index.html';
     }
- 
     
    
       

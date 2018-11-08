@@ -133,14 +133,26 @@ function DefinirOrientacao480(){
 
     //loja trocando para sessão enviar mensage
     x = 1;
+    $(".clos").on("click", function(){
+        $(".msg2").css("display","none");
+        x = 1;
+    });
     $("#all_icones a:nth-child(2)").on("click", function(){
         if(x == 1){
+            if($(window).width() >= 769){
+                $(".msg2").css("display","block");
+            }else{
         $("#SobreProduto").css("display","none");
         $("#MensagemEnviar").css("display","block");
+    }
         x =2;
         }else {
+            if($(window).width() >= 769){
+                $(".msg2").css("display","none");
+            }else{
         $("#SobreProduto").css("display","block");
         $("#MensagemEnviar").css("display","none");
+        }
         x = 1;
         }
     });
