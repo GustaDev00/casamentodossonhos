@@ -37,7 +37,11 @@
                 </form> 
                 <div id="icones_topo">
                         <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                        if($_SESSION["defini"]!= 3){
                             echo '<a href="view/perfil/perfil.php"><img id="user_icone" src="view/_imagens/user.png" title="Casamento dos sonhos"></a>';
+                        }else{
+                            echo '<a href="view/allUser/"><img id="user_icone" src="view/_imagens/user.png" title="Casamento dos sonhos"></a>';
+                        }
                         }else{
                             echo '<a href="view/login/"><img id="user_icone" src="view/_imagens/user.png" title="Casamento dos sonhos"></a>';
                         }
@@ -56,15 +60,18 @@
                             com facilidade e do jeito que sempre sonhou.</p>
                             <br><br>
                     <a href="#nos">Começar</a>
-
                     <?php 
                     if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                        echo '<a href="view/perfil/perfil.php"> Perfil </a>';
-                        
+                        if($_SESSION["defini"]!= 3){
+                            echo '<a href="view/perfil/perfil.php"> Perfil </a>';
+                        }else{
+                         echo '<a href="view/allUser/"> Perfils </a>';
+                        }
                     }else{
-                       echo '<a href="view/login/"> Entrar </a>';        
+                     echo '<a href="view/login/"> Entrar </a>';         
                     }
                     ?> 
+                    
                     
                     </figcaption>
                 </figure>
@@ -98,13 +105,17 @@
                                     <li><a href="" class="item home">HOME</a>
                                     <li><a href="view/loja/" class="item">LOJA</a>
                                         <?php 
-                                        if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                                            echo '<li><a href="view/perfil/perfil.php" class="item login" id="link" style="padding-left:50px;">&nbsp;PERFIL&nbsp;</a>';
-                                            
-                                        }else{
-                                           echo '<li><a href="view/login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
-                                        }
-                                        ?> 
+                   if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                       if($_SESSION["defini"]!= 3){
+                           echo $_SESSION['defini'];
+                       echo '<li><a href="../perfil/perfil.php" class="item login" id="link">PERFIL</a>';
+                       }else{
+                        echo '<li><a href="view/allUser/" class="item login" id="link">PERFILS</a>';
+                       }
+                   }else{
+                      echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+                   }
+                   ?> 
                                 </ol>
                                 </nav>
                 </section>

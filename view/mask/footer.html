@@ -6,8 +6,11 @@
                     <li><a href="../loja/" class="item">LOJA</a>
                    <?php 
                    if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                       if($_SESSION["defini"]!= 3){
                        echo '<li><a href="../perfil/perfil.php" class="item login" id="link">PERFIL</a>';
-                       
+                       }else{
+                        echo '<li><a href="../allUser/" class="item login" id="link">PERFILS</a>';
+                       }
                    }else{
                       echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
                    }

@@ -75,15 +75,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 
                 $dConv++;
             }
-        /* echo "Seu id é: '{$_SESSION["id"]}' <br>";
-            echo "Seu email é: $email <br>";
-            echo "Seu nome é: $nome <br>";
-            echo "Sua senha é: $senha <br>";
-            */
             
             include_once "../perfil_cliente/index.php";
-            //echo "<script>location.href='perfil_cliente/'</script>";
-            //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
     }else if($_SESSION["defini"] == 1){
         $id = $_SESSION['id'];
@@ -130,9 +123,6 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dadosFot[$df]['cod_foto_empre'] = $fetchFoto->cod_foto;
             $df++;
         }
-
-       
-
         include_once '../perfil_vendedor/index.php';
      
     }else if ($_SESSION["defini"] == 3){
@@ -146,28 +136,13 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Seu email é: $emailAdm <br>";
         echo "Seu nome é: $nomeAdm <br>";
         echo "Sua senha é: $senhaAdm <br>";
-        $selectUsu = "select * from usuario;";
+        echo $_SESSION["defini"];
+        $selectUsu = "select * from adm;";
         $executeU = executeSelect($pdo, $selectUsu);
         $fetchU = $executeU->fetch(PDO::FETCH_OBJ);
-        $nomeU = $fetchU->nome_usu;
-        $tipoU = $fetchU->tipo_usu;      
-        $parceiroU = $fetchU->nome_par_usu;
-        $senhaU = $fetchU->senha_usu;
-        $diaCasU = $fetchU->data_casal; 
-        $emailU = $fetchU->email_usu;
-        $imagemLU = $fetchU->foto_usu;
-        $imagemLocU = $fetchU->foto_local;
-        $localCasU = $fetchU->local_casal;
-        $horarioCasU = $fetchU->horario_casal;
-        $nascimentoU = $fetchU->nascimento_usu;
-        $cepU = $fetchU->cep_usu;
-        $ruaU = $fetchU->rua_usu;
-        $bairroU = $fetchU->bairro_usu;
-        $cidadeU = $fetchU->cidade_usu;
-        $estadoU = $fetchU->estado_usu;
-        $tipo_parU = $fetchU->tipo_par_usu;
-        $nascimento_parU = $fetchU->nascimento_par_usu; 
-
+        echo '<script>';
+        echo "location.href='../../'";
+        echo '</script>';
     }
     ?>
   <?php
@@ -259,8 +234,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     echo "<script>location.href='../login/index.html'</script>";
 }
 }
-
-
+?>
+<html></html>
 
 
 
