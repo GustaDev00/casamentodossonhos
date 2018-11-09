@@ -866,3 +866,15 @@ input.checkbox{
 div.msg2{
   display: none;
 }
+.somenteE{
+  border: 1px solid;
+  background-color: white;
+  width: 350px;
+  padding: 10px;
+  margin: 5%;
+  box-shadow: -2px 2px 5px 1px #000;
+  position: absolute;
+}
+.x2{width: 50px; float: right; filter: saturate(10%);}
+.x2:hover{filter: saturate(100%);}
+

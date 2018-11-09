@@ -466,7 +466,15 @@ a.edit{
   height: 4vw; 
   width: calc( 92% / 5) ;
   margin-right: -6px;
-  font-size: 110%;
+  font-size: 100%;
+}
+.primaryA{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 4vw; 
+  width: calc( 92% / 4) ;
+  margin-right: -6px;
+  font-size: 100%;
 }
 
 div.conv{

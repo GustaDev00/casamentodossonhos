@@ -412,7 +412,14 @@ width: calc( 92% / 5) ;
 margin-right: -6px;
 font-size: 85%;
 }
-
+.primaryA{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 6vw; 
+  width: calc( 95% / 4) ;
+  margin-right: -6px;
+  font-size: 85%;
+  }
 div.conv{
 border-color: grey;
 border-style: dotted;

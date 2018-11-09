@@ -1,149 +1,131 @@
-<!DOCTYPE html>
-
-        <title>Casamento dos Sonhos</title>
-        <meta charset=UTF-8>
-        <meta name=viewport content="width=device-width, initial-scale=1.0">
-        <meta name=description content="Uma maneira simples de fazer seu casamento">
-        <meta name=keywords content="Casamento">
-        <meta name=author content='Amanda Isabeli, Gustavo Felipe, Hellen Cristina, Hiago Victor, Leonardo Amorim, Nathan Garcia INI3A'>         
-        <link href="../_css/default.css" rel=stylesheet>
-        <!-- Telas Responsivas -->
-        <link rel=stylesheet media="screen and (max-width:480px)" href="../_css/style480.css">
-        <link rel=stylesheet media="screen and (min-width:481px) and (max-width:768px)" href="../_css/style760.css">
-        <link rel=stylesheet media="screen and (min-width:769px) and (max-width:1024px)" href="../_css/style1024.css">
-        <link rel=stylesheet media="screen and (min-width:1025px)" href="../_css/style1366.css">
-        <!-- Jquery-->
-        <script src="../_js/jquery-3.3.1.min.js"></script>
-        <script src="../_js/javascript.js"></script>
-        <script src="../_js/passopasso.js"></script>
-        <script src="../_js/jquery.easing.min.js"></script>
-        <script src="../_js/jquery.min.js"></script>
-        <div id="container">
-
-            <header>
-                <a href="../../"><img src="../_imagens/logo.png" title="Casamento dos sonhos" id="logo"></a>
-                <div id="ferramentas_topo">
-                <form method="post" action="pesquisa.php">
-
-                <input type="search" name="pesquisar" id="pesquisar" maxlength="34">
-                <input type="image" src="../_imagens/pesquisar.png" style="width: 28px; height: 28px;" name="pesquisar">  
-
-                </form> 
-
-                <div id="icones_topo">
-                <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                    echo '<a href="../perfil.php"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
-                }else{
-                    echo '<a href="../login/"><img id="user_icone" src="../_imagens/user.png" title="Casamento dos sonhos"></a>';
-                }
-                ?>
-                <a href="../loja/"><img id="loja_icone" src="../_imagens/loja.png" title="Casamento dos sonhos"></a>   
-                </div></div>
-            </header>
-  <body>        
-
+<?php 
+$id = $_SESSION['id'];
+//echo $id;
+?>
+  <body>
     <div class="top" > 
-        <div  id="irineu">
-          <img class="perfil" src="../_imagens/galeria3.jpeg">   
-          <button>Alterar</button>   
-        </div> 
+            <div  id="irineu">   
+                    <form id="formu" action="../updates/img_perfil.php" enctype="multipart/form-data" method="POST">        
+              <img class="perfil" src="<?php echo $imagemL?>">   
+              <input class="cim" id='selecao-arquivo' name="img_perfil" type='file' onchange="submit();"> 
+            </form>        
+        </div>  
+          
+
     
     <div class="java">
 <br><br>
-                    <button class="primary" id="b1">   Lista de presente </button>
-                    <button class="primary" id="b2">   Principal </button>
-                    <button class="primary" id="b3">   Convidados </button>
-                    <button class="primary" id="b4">   Favoritos</button>
+                    <button class="primaryA" id="b1"> Lista de presente </button>
+                    <button class="primaryA" id="b2"> Principal </button>
+                    <button class="primaryA" id="b3"> Convidados </button>
+                    <button class="primaryA" id="b4"> Favoritos </button>
                     <br><br>
-       </div> 
-       
-       
-<div class="ad">       
+       </div>  
+       <div class="ad">       
         <button class="pri" id="">Excluir </button>
         <button class="pri" id=""> Banir </button>
-        <button class="pri" id=""> Denunciar</button>
+        <button class="pri" id=""> Alertar </button>
         <br><br>
-</div>
+</div>      
 
        <div class="f1">
-            <p class="casal">Gabriela e Julio</p>    <br>    <br>  
+              
             <div id="um">                                         
+                    <table>                          
+                                <tr>
+                                    <th>Presente:</th>
+                                    <th>Status:</th>
+                                </tr>
+                        <?php 
+                        $r = 0;
+                        while($r < count($dadosPres)){
+                        
+                     ?>  
+                     
+                        <div class="l1">  
+                        <tr>                         
+                            <form action="../deletes/list_pres.php" method="POST">
+                                <td><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> </td>
+                            <td><a class="co">  <?php echo $dadosPres[$r]['status_presente'] ?></a>  </td>
+                            <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">
+                              </form>                                                                                
+                        </tr>
+                        </div>
                     
-                        <div class="tipo">
-                            <p>Presente: Status: </p>                                    
-                        </div> <br>
-                    <div class="l1">
-                            <input type="checkbox" class="checkbox" onclick="mostra('ma')"/>                             
-                      <a class="pres"> Geladeira</a> 
-                     <a class="co">Confirmado</a>                                                        
-                            <button type="button" class="cma" id="ma">Excluir</button>                               
-                    </div>                                                                             
-                                                      
-                </div> <br><hr class="w">  
-                <form action="ListaPresente.php" method="post">
-                    <Input type="text" name="Nomepresente">
-                    <Input type="submit" value="enviar">
-                    </Form>     
-                <button type="button" class="add" onclick="asd();">Adicionar</button>                          
+                        <?php  $r++; } ?> 
+                    </table>                                          
+
+                                                                    
+                    </div>
+                    <br><hr class="w">
+                    
+                <br> <br> <br> <br>  
+
+                </div>   
+                           
        </div>
 
                     <div class="f2">
-                            <p class="casal">Gabriela e Julio</p><br>
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p><br>
                          
                             <div class="princ">
-                                   <label id="prin">Dia:</label>
-                                   <input type="number" class="form" id="" placeholder="xx/xx/xxxx" size="10"> 
-                                   <a href="" class="edit">Editar</a>
-                                   <br>
+                                <form action="../updates/attLocCas.php" method="POST" id="formula">
+                                    <br>
+                                    <label id="prin">Dia:</label>
+                                   <span class="principal_esconde"><?php echo date('d/m/Y', strtotime($diaCas)); ?></span>
+                                   <input type="date" name="dia" class="form" >
+                                    <br><br>
                                                                                     
                                    <label id="prin">Horário:</label>
-                                   <input type="text" class="form" id="" placeholder="19:00" size="10">
-                                  <!--<a href="" class="edit">Editar</a>-->
-                                   <br>
+                                   <span class="principal_esconde"><?php echo $horarioCas ?></span>
+                                   <input type="datetime" name="hora" class="form" placeholder="Ex: xx:xx">
+                                   <br><br>
                               
                                    <label id="prin">Local:</label>
-                                   <input type="text" class="form" id="" placeholder="Endereço" size="25">
-                                 <!--    <a href="" class="edit">Editar</a>-->
-                                    <br>
-                            </div>     
+                                   <span class="principal_esconde"> <?php echo $localCas; ?></span>
+                                   <input type="text" name="local" class="form"  ><br><br>
+                                  <input type="submit" class="form" id="poin" value="Salvar">
+                                    
+                                </form>
+                            </div> 
+                            <form id="formu" action="../updates/img_localCasamento.php" method="POST" enctype="multipart/form-data">    
                             <div class="b">                  
-                            <img class="galeria3" src="../_imagens/galeria3.jpeg" >
-                            <button class="e">Alterar</button>
+                            <img class="galeria3" src="<?php echo $imagemLoc ?>">
+                            <input class="at" id='selecao-arquivo2' type='file' name="img_local" onchange="submit();"> 
                             </div>
-                            
+                            </form>
                             <br>      
                     </div>
 
                     <div class="f3">
-                            <p class="casal">Gabriela e Julio</p>    <br> 
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br>
                             <p class="c">Meus convidados:</p>
                             
+                    
                             <div class="conv">
-                                <label class="nm">Gabriel Fernandes</label>
-                                <label class="qtd">2 Acompanhantes</label><br>
-
-                                <label class="nm">Arthur Silva</label>
-                                <label class="qtd">2 Acompanhantes</label><br>
-
+                                    <div id="campocopia">
+                                            <input type="text" id="link" name="link" value='<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>'  readonly="true">
+                                            </div>
+                                <?php  $cConv = 0; while($cConv < count($dadosConv)){    ?>
+                                <label class="nm">Nome: <?php   echo $dadosConv[$cConv]['nome_convi']?></label>
+                                <label class="nm">Presença: <?php   echo $dadosConv[$cConv]['presenca']?></label>
+                                <label class="qtd">Acompanhantes: <?php     echo $dadosConv[$cConv]['num_acomp'] ?></label><br>
+                                    <?php $cConv++; } ?>
                                 </div>
                     </div>
 
                     <div class="f4">
-                            <p class="casal">Gabriela e Julio</p>    <br> <br>
+                            <p class="casal"><?php echo "$nome e $parceiro" ?></p>    <br> <br>
 
                             <p id="l">Meus favoritos:</p>
-
-                           <a href="#"><img class="fav1" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav2" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav3" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav4" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           <a href="#"><img class="fav5" id="l" src="../_imagens/galeria3.jpeg"></a>
-                           
+                            <?php  $fC=0; while($fC < count($dadosFav)){ 
+                                 ?>
+                           <a href="../produto/index.php?cod=<?php echo $dadosFav[$fC]['cod_produto']; ?>"><img class="fav1" id="l" src="<?php echo$dadosFav[$fC]['url_foto_prod']; ?>"></a>
+                           <?php  $fC++;}?>
                     </div>                   
     </div>
-    
               
-                            
+   
 
 <script>
     var b1 = document.querySelector("#b1");
@@ -157,7 +139,6 @@
     var f4 = document.querySelector(".f4");
 
     f1.style.display = "none";
-   // f2.style.display = "none";
     f3.style.display = "none";
     f4.style.display = "none"; 
    
@@ -192,52 +173,49 @@
         f2.style.display = "none"; 
         f3.style.display = "none";        
         f4.style.display = "block";         
-    })  
-   //-------------------------------------------------------//
-</script> 
+    })
+    function copiarTexto() {
+    var textoCopiado = document.getElementById("link");
+    textoCopiado.select();
+    document.execCommand("Copy");
+  }
 
-   <style>
-            button#ma{
-                display: none;
-            }            
-          input.checkbox{
-                display: block;
-                
-            }
-            </style>
-            
-            <script>
+  function deslogar(){
+    location.href='../perfil/deslogar.php' ;
+  }
+    var xs = 1;
+    function formulario(){
+       
+       if(xs == 1){
+           $(".form").css("display", "inline");
+           $(".principal_esconde").css("display", "none");
+           $("#editbtn").text("Fechar");
+           xs ++;
+       }else{
+        $(".form").css("display", "none");
+           $(".principal_esconde").css("display", "inline");
+           $("#editbtn").text("Editar");
+           xs -- ;
+       }
+    }  
+   //-------------------------------------------------------//
                   function mostra(id){
                     if (document.getElementById(id).style.display == 'block'){
                     document.getElementById(id).style.display = 'none';                       
              }else{document.getElementById(id).style.display = 'block'; }  
-            }                             
-                  
-             </script> 
-  <section id=c">
-        <nav>
-                <ol id="menu">
-                    <li><a href="../../" class="item home">HOME</a>
-                    <li><a href="../loja/" class="item">LOJA</a>
-                   <?php 
-                   if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                       echo '<li><a href="../perfil.php" class="item login" id="link">&nbsp;PERFIL&nbsp;</a>';
-                       
-                   }else{
-                      echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
-                   }
-                   ?> 
-                </ol>
-                </nav>
-</section>
-<footer>
-            <img src="_imagens/logo.png">
-            <a href="../../"><p>Casamedosonhos.com</p></a>
-                <p>grupo 5 INI3A</p>
-</footer>
-           
-  </body>  
-<footer>
+            }           
 
-</footer>   
-</div>
+             function submit(){
+                 document.formu.submit();
+             }
+             
+
+             function asd(x) {  
+                 if(x == 1){
+                    $("#campoAdd").css("display","inline");
+                 }else{
+                    $("#campoAdd").css("display","none");
+                 }
+        }
+             </script>
+  </body>

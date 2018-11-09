@@ -306,6 +306,14 @@ button.btn.btn-primary{
     margin-left: -6px;
     font-size: 3vw;           
 }
+button.primaryA{
+    background-color:pink;
+    border:solid grey 1px ;    
+    height: 6vw; 
+    width: calc(92vw / 4);
+    margin-left: -6px;
+    font-size: 3vw;           
+}
 
 /*img perfil*/
 img.perfil{

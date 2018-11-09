@@ -487,6 +487,14 @@ button.btn.btn-primary{
   margin-right: -5px;
   font-size: 110%;
 }
+.primaryA{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 4vw; 
+  width: calc( 99.7% / 4) ;
+  margin-right: -5px;
+  font-size: 110%;
+}
 
 div.conv{
   border-color: grey;
