@@ -801,7 +801,6 @@ img.abc{
    margin-left: 1%;
    margin-right: 1%;
    border-radius: 100%;
-   border-style: dashed;
    padding: 1%;
    border-color: #595959;
    border-width: 0.6vw;
@@ -874,7 +873,12 @@ div.msg2{
   margin: 5%;
   box-shadow: -2px 2px 5px 1px #000;
   position: absolute;
+  top: 20%;
+  left: 2vw;
 }
 .x2{width: 50px; float: right; filter: saturate(10%);}
 .x2:hover{filter: saturate(100%);}
+.LadoLado{display: inline-block; margin: 0 10px}
+#AU{ padding: 5px ;border-radius: 7px; border:none;background-color: #f2717b; color: white}
+#AU:hover{padding: 4px;background-color: white; border: 1px solid #f2717b; color: black}
 

@@ -187,9 +187,9 @@ text-overflow: ellipsis;
   width: 400px;
   height: 300px;
   border: 1px solid;
-  position: absolute;
+  position: fixed;
   left: calc(50vw - 200px);
-  bottom:0;
+  bottom:10vw;
   border-radius: 10px;
   
 }

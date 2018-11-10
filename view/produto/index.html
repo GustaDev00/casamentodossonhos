@@ -32,10 +32,10 @@
 
 <section id="MensagemEnviar">
         <form action="EnviarMensagem.php" method="POST" class="digi">
-            <label>EmailUsuario@exemplo.com</label>
-            <label>EmailVendedor@exemplo.com</label><br>
-            <label>Nome produto</label>
-            <textarea placeholder="Digite aqui sua mensagem"></textarea>
+            <label><?php echo $_SESSION["email"]; ?></label>
+            <label><?php echo $emailE ;?></label><br>
+            <label><?php echo $nome; ?></label>
+            <textarea placeholder="Digite aqui sua mensagem"  style="resize:none;"></textarea>
             <input type="image" src="../_imagens/EnviarP.png" width="40px" name="Enviar" id="btnForm">
         </form>
     </section>
@@ -49,8 +49,8 @@
    <div class="msg2">
        <form class="two" action="">
              <a href="#" class="clos"> X  Fechar</a>
-            <label class="name">Nome produto</label>
-            <textarea class="ms" placeholder="Digite aqui sua mensagem"></textarea>
+            <label class="name" style="white-space: nowrap; overflow: hidden;text-overflow:  ellipsis;"> <?php echo $nome; ?></label>
+            <textarea class="ms" placeholder="Digite aqui sua mensagem" style="resize:none;"></textarea>
             <input type="image" src="../_imagens/EnviarP.png" class="go">
         </form>
         </div>
@@ -60,14 +60,17 @@
                         <ol id="menu">
                             <li><a href="../../" class="item home">HOME</a>
                             <li><a href="../loja/" class="item">LOJA</a>
-                           <?php 
-                           if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                               echo '<li><a href="../perfil/perfil.php" class="item login" id="link">PERFIL</a>';
-                               
-                           }else{
-                              echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
-                           }
-                           ?> 
+                                <?php 
+                                if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
+                                    if($_SESSION["defini"]!= 3){
+                                    echo '<li><a href="../perfil/perfil.php" class="item login" id="link">PERFIL</a>';
+                                    }else{
+                                     echo '<li><a href="../allUser/" class="item login" id="link">PERFILS</a>';
+                                    }
+                                }else{
+                                   echo '<li><a href="../login/" class="item login" id="link">LOGIN&nbsp;/&nbsp;CADASTRO</a>';        
+                                }
+                                ?> 
                         </ol>
                         </nav>
         </section>      

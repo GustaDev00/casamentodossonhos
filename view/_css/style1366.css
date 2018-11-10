@@ -196,9 +196,9 @@ text-overflow:  ellipsis;
   width: 400px;
   height: 300px;
   border: 1px solid;
-  position: absolute;
+  position: fixed;
   left: calc(50vw - 200px);
-  bottom:0;
+  bottom:10vw;
   border-radius: 10px;
   
 }
@@ -753,3 +753,22 @@ background-color: pink;
  #campoAdd:nth-child(6){ width: 350px; height: 25px; border: 1px solid}
  
  .produto_loja img{width: 197px; margin-left: -10px;height: 150px;}
+
+ .somenteE{
+  border: 1px solid;
+  background-color: white;
+  width: 550px;
+  padding: 10px;
+  margin: 5%;
+  box-shadow: -2px 2px 5px 1px #000;
+  position: absolute;
+  top: 20%;
+  left: 2vw;
+}
+#cC{ width: 300px; font-size: 20px}
+.x2{width: 50px; float: right; filter: saturate(10%);}
+.x2:hover{filter: saturate(100%);}
+.LadoLado{display: inline-block; margin: 0 10px;}
+.LadoLado input{ margin: 0 10px}
+#AU{ padding: 5px ;border-radius: 7px; border:none;background-color: #f2717b; color: white}
+#AU:hover{padding: 4px;background-color: white; border: 1px solid #f2717b; color: black}
