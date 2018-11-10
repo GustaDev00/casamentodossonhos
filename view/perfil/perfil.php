@@ -142,24 +142,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $nomeAdm = $fetchAdm->nome_adm;
         $senhaAdm = $fetchAdm->senha_adm;
         $emailAdm = $fetchAdm->email_adm;
-        echo "Seu id é: '{$_SESSION["id"]}' <br>";
-        echo "Seu email é: $emailAdm <br>";
-        echo "Seu nome é: $nomeAdm <br>";
-        echo "Sua senha é: $senhaAdm <br>";
-        $selectUsu = "select * from usuario;";
-        $executeU = executeSelect($pdo, $selectUsu);
-        $dadosUsu = array();
-        $r = 0;
-        while($fetchU = $executeU->fetch(PDO::FETCH_OBJ)){
-        $dadosUsu[$r]['nome_usu'] = $fetchU->nome_usu;
-        $dadosUsu[$r]['nome_usu'] = $fetchU->tipo_usu;      
-        $dadosUsu[$r]['nome_usu'] = $fetchU->nome_par_usu;
-        $dadosUsu[$r]['nome_usu'] = $fetchU->senha_usu;
-        $dadosUsu[$r]['nome_usu'] = $fetchU->email_usu;
-            $r++;
-        }
-        
-
+        include_once '../adm/index.php';
     }
     ?>
   <?php
@@ -170,7 +153,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $_SESSION["id"] = $_GET['codigo'];
         $_SESSION["defini"] = $_GET['par'];
         
-        if($_SESSION["defini"] == 2){
+        if($_SESSION["defini"] == 1){
             $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
             $execute = executeSelect($pdo, $select);
             $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
@@ -195,7 +178,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             
             include_once "../perfil_cliente/index.php";
 
-    }else if($_SESSION["defini"] == 1){
+    }else if($_SESSION["defini"] == 2){
         $id = $_SESSION['id'];
         $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
