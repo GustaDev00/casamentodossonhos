@@ -139,6 +139,18 @@ file.readAsDataURL(this.files[0]);
 }
 }
 document.getElementById("TrocaPimagem").addEventListener("change", readImage4, false);
+
+    
+function readImage5() {
+    if (this.files && this.files[0]) {
+    var file = new FileReader();
+    file.onload = function(e) {
+    document.getElementById("vejanovafoto").src = e.target.result;        
+}
+file.readAsDataURL(this.files[0]);
+}
+}
+document.getElementById("nip").addEventListener("change", readImage5, false);
 });
 
 var umaunicaimagem = 1, umaimagem = 1, abreEdit = 1, abreDE = 1;
@@ -186,6 +198,7 @@ function criaimg(){
         var larguraTela = "100%";
         $('#fundoE').css({'width':larguraTela,'height':alturaTela});
         $('#fundoE').fadeIn(1000); 
+        $("footer").css("margin-top", "390px");
         $('#fundoE').fadeTo("fast",0.8);
     }
 
@@ -195,6 +208,14 @@ function criaimg(){
             var top = "10%";
             $(".modinha").css({'top':top,'left':left});
             $("#fundoP").show();
+            var alturaTela = "180%";
+            var larguraTela = "100%";
+
+            //colocando o fundo preto
+            $('#fundoP').css({'width':larguraTela,'height':alturaTela});
+            $('#fundoP').fadeIn(1000); 
+            $("footer").css("margin-top", "390px");
+            $('#fundoP').fadeTo("slow",0.8);
             $(".modinha").show();
         }
 
@@ -245,8 +266,8 @@ function criaimg(){
                     $("#FechaD").text("Fechar");
                     abreDE = 2;
                 }else{
-                    $('.ETopo').css("display", "none");
-                    $(".SumiuTopo").css("display", "block");
+                    $('.EDescricao').css("display", "none");
+                    $(".btnXa").css("display", "block");
                     $("#FechaD").text("Editar");
                     abreDE = 1;
                 }

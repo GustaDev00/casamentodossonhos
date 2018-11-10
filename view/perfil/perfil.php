@@ -27,6 +27,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $dadosPres = array();
         $dP = 0;
         while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+            $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
             $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
             $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
             $dP++;

@@ -20,7 +20,7 @@ $id = $_SESSION['id'];
                     <button class="primary" id="b2"> Principal </button>
                     <button class="primary" id="b3"> Convidados </button>
                     <button class="primary" id="b4"> Favoritos</button>
-                    <button class="primary" id="b5"> Desloga</button>
+                    <button class="primary" id="b5" onclick="deslogar()"> Desloga</button>
                     <br><br>
        </div>        
 
@@ -84,7 +84,7 @@ $id = $_SESSION['id'];
                          
                             <div class="princ">
                                 <form action="../updates/attLocCas.php" method="POST" id="formula">
-                                    <a  class="edit" onclick="formulario();">Editar</a>
+                                    <a  class="edit" id="editbtn" onclick="formulario();">Editar</a>
                                     <br>
                                     <label id="prin">Dia:</label>
                                    <span class="principal_esconde"><?php echo date('d/m/Y', strtotime($diaCas)); ?></span>
@@ -158,7 +158,6 @@ $id = $_SESSION['id'];
     var f4 = document.querySelector(".f4");
 
     f1.style.display = "none";
-   // f2.style.display = "none";
     f3.style.display = "none";
     f4.style.display = "none"; 
    
@@ -199,61 +198,38 @@ $id = $_SESSION['id'];
     textoCopiado.select();
     document.execCommand("Copy");
   }
+
+  function deslogar(){
+    location.href='../perfil/deslogar.php' ;
+  }
     var xs = 1;
     function formulario(){
        
        if(xs == 1){
            $(".form").css("display", "inline");
            $(".principal_esconde").css("display", "none");
+           $("#editbtn").text("Fechar");
            xs ++;
        }else{
         $(".form").css("display", "none");
            $(".principal_esconde").css("display", "inline");
+           $("#editbtn").text("Editar");
            xs -- ;
        }
     }  
    //-------------------------------------------------------//
-</script> 
-<style>
-        .f1,.f2,.f3.f4{transition: width 2s;}
-    </style> 
-<script>
-        $(function(){
-    
-         $("#b5").click( function(){
-                            location.href='../perfil/deslogar.php' ;
-                        });
-   
-    
-});
-    </script>
-
-   <style>
-            button#ma{
-                display: none;
-            }            
-          input.checkbox{
-                display: block;
-                
-            }
-            </style>
-            
-            <script>
                   function mostra(id){
                     if (document.getElementById(id).style.display == 'block'){
                     document.getElementById(id).style.display = 'none';                       
              }else{document.getElementById(id).style.display = 'block'; }  
-            }                             
-                  
-            </script>                       
-             
-             <script>
+            }           
+
              function submit(){
                  document.formu.submit();
              }
              
 
-             function asd(x) {
+             function asd(x) {  
                  if(x == 1){
                     $("#campoAdd").css("display","inline");
                  }else{

@@ -490,7 +490,8 @@ img.letra{
 
  #TopoVendedor h1{float: right; margin-right: 70px; font-size: 5vw;}
  #TopoVendedor img{
-    width:102px
+    width:102px;
+    height: 57.5px;
   }
   #LNIP{width: 92px; font-size: 12px}
   #FonT{font-size: 16px}
@@ -532,3 +533,5 @@ img.letra{
 
     /*fatality*/
     #campocopia{width: 280px; height: 20px;position: relative; margin: auto;}
+
+    .produto_loja img{width: 157px; height: 100px;}

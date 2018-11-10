@@ -67,35 +67,39 @@ var TrocaLoja = 1;
             $("#ProdutosVendedorL").css("display","none");
             $("#ProdutosFotos").css("display","none");
         });
-        var definiFuncao;
+        $("#MenuVendedorD ol li:nth-child(2)").on("click",function(){
+            $("#ProdutosFotos").css("display","none");
+            $("#FotosVendedor").css("display","none");
+            $("#ProdutosVendedor").css("display","block");
+            $("#ProdutosVendedorL").css("display","block");
+            
+        });
 
-        if($(window).width() <= 480){
-            definiFuncao = DefinirOrientacao480;
-        }else if($(window).width() <= 768){
-            definiFuncao = DefinirOrientacao768;
-        }else if($(window).width() <= 1366){
-            definiFuncao = DefinirOrientacao1024;
-        }
-
+        $("#MenuVendedorD ol li:first-child").on("click",function(){
+            $("#FotosVendedor").css("display","block");
+            $("#ProdutosVendedor").css("display","none");
+            $("#ProdutosVendedorL").css("display","none");
+            $("#ProdutosFotos").css("display","none");
+        });
+    
     var ComparaTamanho, produto, ComparaLargura, teste123;
 for(aume=1;aume<=10;aume++){
     produto = "#" + "produto" + aume + " img";  
     ComparaLargura = $(produto).width();
     ComparaTamanho = $(produto).height();
 
-    definiFuncao();
-            teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
-            $(produto).css("margin-left", teste123 ); 
-            teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2));
-            $(produto).css("margin-top", teste123 );
+    teste123 = parseFloat(($(".hidde").width() / 2) - ($(produto).width()/2));
+    $(produto).css("margin-left", teste123 ); 
+    teste123 = parseFloat(($(".hidde").height() / 2) - ($(produto).height()/2));
+    $(produto).css("margin-top", teste123 );
 }
 
-
+/*
 function DefinirOrientacao480(){
         if(ComparaLargura > ComparaTamanho){
             $(produto).css("width","157px");   
         }else{
-            $(produto).css("width","117px");
+            $(produto).css("width","97px");
         }
     }
 
@@ -103,25 +107,27 @@ function DefinirOrientacao480(){
         if(ComparaLargura > ComparaTamanho){
             $(produto).css("width","177px");
         }else{
-            $(produto).css("width","137px");
+            $(produto).css("width","117px");
         }
     }
 
     function DefinirOrientacao1024(){
         if(ComparaLargura > ComparaTamanho){
             $(produto).css("width","197px");
-        }else{
-            $(produto).css("width","157px");
+        }else{  
+            alert("asdasd");
+            $(produto).css("width","127px");
         }
     }
 
     function DefinirOrientacao1366(){
         if(ComparaLargura > ComparaTamanho){
-            $(produto).css("width","10px");
+            $(produto).css("width","197px");
         }else{
-            $(produto).css("width","10px");
+            $(produto).css("width","127px");
         }
     }
+    */
     //funcao de troca o valor fecho mano pqp
     
 

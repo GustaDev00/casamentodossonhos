@@ -461,7 +461,7 @@ font-size: 77%;
 
 
 #TopoVendedor h1{float: right; margin-right: 25%; font-size: 4vw;}
-#TopoVendedor img{ width: 150px;}
+#TopoVendedor img{ width: 150px; height: 84px}
  
 #InserirN{width: 30vw;}
 #LNIP{width: 140px;}
@@ -541,3 +541,5 @@ p#cli{font-size: 4vw}
  /*fatality*/
  #campocopia{width: 100%; height: 25px;position: relative; margin: auto;}
  #campocopia input{ font-size: 16px}
+
+ .produto_loja img{width: 177px; height: 100px;}

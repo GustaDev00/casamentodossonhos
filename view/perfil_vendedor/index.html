@@ -1,40 +1,72 @@
+
                 
             <main>
                 <section id="vendedor">
                  <div id="TopoVendedor">
-                    <img src="../_imagens/galeria2.jpeg" id="tv">
-                    <h1>Nome Empresa</h1>
+                    <h1 class="SumiuTopo"><?php echo $nome ?></h1>
+                    <img src="<?php echo $imagemL ?>" class="SumiuTopo">
                  </div>
                  <div id="InfoVendedor">
-                     <h2>Descrição:</h2>
+                     <h2>Descrição</h2>
                      <article>
-                       <h3>Função:</h3>
-                       <h3>Telefone:</h3>
-                       <h3>Endereço:</h3>
-                       <a href="#"><h3>Site</h3></a>  
-                     </article>
+                       <h3 class="btnXa" >Categoria do Vendedor: <?php echo $funcE ?></h3>
+                       <h3 class="btnXa">Telefone: <?php echo $telE ?></h3>
+                       <h3 class="btnXa">Endereço: <?php echo $ruaE. " - ".$bairroE." - ". $cidadeE. " - ". $estadoE ?></h3>
+                    </article>
                  </div>
-                 <div id="MenuVendedor">
+                 <div id="MenuVendedorD">
                     <ol>
                         <li>Fotos</li>
                         <li>Produto</li>
                     </ol>
-                    <?php if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-                        
-                    }else{
-                        
-                    }
-                    ?>
                     <div id="FotosVendedor">
-                        <img src="../_imagens/galeria1.jpeg" alt="imagem 01">
-                        <img src="../_imagens/galeria1.jpeg" alt="imagem 02">
-                    </div>
+                        
+                         <?php  $cF2=0; $d=0; $nufo = 1;
+                            if($d<=$cF2){ 
+                                while($cF2 < count($dadosFot)){ ?>
+                                    <div class="Fcampo">
+                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $nufo;?>)"><br>
+                                </div>
+                                <?php $cF2++; $d++; $nufo++;} }?>
+                     </div>
+                    
                      
-                    <div id="ProdutosVendedor">
-                        <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 01"></a>
-                        <a href="#"><img src="../_imagens/galeria2.jpeg" alt="imagem 02"></a>                       
+                    <div id="ProdutosVendedorL">
+                                    <?php 
+                                        $l = 0;
+                                        while($l < count($dadosProd)){ ?>   
+                                            <div class="Pcampo">
+                                                    <a href="../produto/index.php?cod=<?php echo $dadosProd[$l]['cod_produto']; ?>">
+                                                    <img src="<?php echo $dadosProd[$l]['url_foto_prod']; ?>" alt="imagem<?php echo $l ?>">
+                                                    </a>
+                                        
+                                            </div>
+                                                    <?php $l++; } ?> 
                     </div>
                  </div>
-                </section>
-                           
-                </main>  
+                   
+                </section> 
+                <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                      <?php $cF=0; while($cF < count($dadosFot)){ ?>
+                          <div class="mySlides">
+                              <h2 class="nomedaFoto"><?php echo $dadosFot[$cF]['nome_foto']; ?></h2>
+                            <img src="<?php echo $dadosFot[$cF]['url_foto_empresa']; ?>" style="width:100%">
+                              <div class="dsFoto">
+                                  <p>
+                                      
+                                      <?php echo $dadosFot[$cF]['desc_foto']; ?>                                 
+                                                                            
+                                  </p>
+                                  </div>
+                          </div>
+                      <?php  $cF++; } ?>
+                    
+                          
+                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                          <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+                      </div>      
+            </main>
+
+<div id="branco" style="width: 50%;height: 70px"></div>

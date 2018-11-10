@@ -8,7 +8,7 @@
                     <img src="<?php echo $imagemL ?>" class="SumiuTopo">
                     <form method="POST" enctype="multipart/form-data" action="../updates/img_nome_perfil_vendedor.php">
 
-                    <img src="<?php echo $imagemL ?>" class="ETopo">
+                    <img src="<?php echo $imagemL ?>" class="ETopo" id="vejanovafoto">
                     <label for="nip" id="LNIP" class="ETopo">Escolhe Arquivo</label>
                     <input type="file" name="fotoPV" id="nip">
                     
@@ -56,7 +56,7 @@
                             if($d<=$cF2){ 
                                 while($cF2 < count($dadosFot)){ ?>
                                     <div class="Fcampo">
-                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor"><br>
+                                <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $nufo;?>)"><br>
                             <!-- ------- ------------- garcia esse é o excluir foto  --------------- ---------->    
                                 <form class="orta">
                                     
@@ -159,7 +159,7 @@
                         <div class="window" id="janela1">
                             <a href="#" class="fechar">&#215;</a>
                             <h4>Cadastro do Produto</h4>
-                            <form action="../perfil_vendedor/adicionarprodutov.php" method="post" enctype="multipart/form-data">
+                            <form action="../perfil_vendedor/adicionarprodutov.php" method="post" enctype="multipart/form-data" id="formastro">
                                 <input type="name" name="nomeproduto" placeholder="Nome Produto" >
                                 <input type="text" name="localproduto" placeholder="Digite a localização do Produto">
                                 <input type="number" name="precoproduto" placeholder="Digite o Preço Ex: 99">
