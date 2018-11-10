@@ -34,6 +34,22 @@
         
         include_once 'index.html';
     }
+    if(isset($_SESSION["email"]) and $_SESSION["defini"]!= 3){
+    }else{  
+     echo '<input id="navbar" type="checkbox">';
+     echo '<label for="navbar" id="LHburg">';
+     echo "<div class='menuBurg'>";
+     echo  "<span class='hamburger'></span>";
+     echo   "</div>";
+     echo   "</label>";
+ 
+    echo'<ul id="selecton">';
+    echo     '<li><a class="HBurg" href="#">+1 ADM</a></li>';
+    echo     '<li><a class="HBurg" href="view/perfil/deslogar.php">Deslogar</a></li>';
+    echo '</ul>';
+    
+    }
+?> 
     
    
       
