@@ -27,7 +27,7 @@ right: 44vw;
   width: 450px;
   font-size: 38px;
 }
-figure figcaption{left: calc(48vw - 225px); top:  240px;}
+figure figcaption{left: calc(48vw - 225px); top:  240px;height: 300px}
  /*-------carrossel----------*/
 
   #carrossel{

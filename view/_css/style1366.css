@@ -28,7 +28,7 @@ figure figcaption p{
     width: 880px;
     font-size: 40px;
 }
-figure figcaption{left: calc(48vw - 350px); top: 320px}
+figure figcaption{left: calc(48vw - 350px); top: 320px; height: 400px; width: 800px;}
 
 figure figcaption a{
   margin: 0px 90px 0 90px;

@@ -29,7 +29,12 @@ html{scroll-behavior:smooth}
 #complemento{height: 50px; width: 100%; background-color: #f2f2f2}
 
 /*---------------CONTEUDO 1PAG---------------*/
+figure figcaption{
+background-color: rgba(10,23,55,0.6);
+box-shadow: -4px 4px 3px 3px rgba(10,23,55,0.6);   
+}
 figure figcaption p{
+  padding: 5px;
 font-size: 25px;
 color: #ED545B;
 }
@@ -48,7 +53,10 @@ figure figcaption a{
   padding: 15px 30px;
   margin: 7VW;
 }
-
+figure figcaption a:hover{
+  background-color: #ED545B;
+  color: white;
+}
 figure figcaption a:active{
   color: #FF757F;
   border-color: #FF757F;

@@ -96,9 +96,6 @@
                     </div>
                     
                 </section>
-                <section id="complemento">
-
-                </section>
                 <section id=c>
                         <nav>
                                 <ol id="menu">
@@ -107,7 +104,6 @@
                                         <?php 
                    if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                        if($_SESSION["defini"]!= 3){
-                           echo $_SESSION['defini'];
                        echo '<li><a href="../perfil/perfil.php" class="item login" id="link">PERFIL</a>';
                        }else{
                         echo '<li><a href="view/allUser/" class="item login" id="link">PERFILS</a>';

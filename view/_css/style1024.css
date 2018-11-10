@@ -26,7 +26,7 @@
   font-size: 38px;
   
 }
-figure figcaption{left: calc(48vw - 225px);top:  240px;}
+figure figcaption{left: calc(48vw - 225px);top:  240px; height: 300px}
 
 #container main section figure{ height: 800px; overflow: hidden;}
 
