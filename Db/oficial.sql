@@ -1,5 +1,5 @@
 create database casamentodossonhos;
- -- drop database casamentodossonhos;
+-- drop database casamentodossonhos;
 use casamentodossonhos;
 /*
 create table tipo_usuario(
@@ -28,9 +28,9 @@ nascimento_par_usu varchar(60),
 data_casal varchar(60),
 horario_casal varchar(20),
 local_casal varchar(60),
-foto_local varchar(60)
+foto_local varchar(60),
+defini_usu varchar(1)
 );
-
 /*
 create table email(
 titulo_email varchar(100),
@@ -54,7 +54,8 @@ cidade_empre varchar(60),
 estado_empre varchar(60),
 foto_empre varchar(60),
 tel_empre varchar(50),
-categoria_empre varchar(60)
+categoria_empre varchar(60),
+defini_empre varchar(1)
 );
 
 create table fotos_empresa(
@@ -144,57 +145,9 @@ create table adm(
 cod_adm int primary key auto_increment,
 nome_adm varchar(100),
 email_adm varchar(100),
-senha_adm varchar(60)
+senha_adm varchar(60),
+defini_adm varchar(1)
 );
-insert into adm(nome_adm, email_adm, senha_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm');
-
-/*INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
-                nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
-                tipo_par_usu, nascimento_par_usu, data_casal) 
-values("gustavo", "tipodanado", "gusta@gg.com", "gusta", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1");
-select * from usuario;
-UPDATE USUARIO SET FOTO_USU = '$novoNome.$extensao' where email_usu = 'gusta@gg.com';*/
-/*SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
-	   p.local_prod, c.nome_categoria, c.desc_categoria,
-	   e.nome_empre
-	   FROM PRODUTO p
-	   INNER JOIN CATEGORIA c
-	   ON p.cod_categoria = c.cod_categoria 
-	   INNER JOIN EMPRESA e
-	   ON e.cod_empresa = e.cod_empresa
-	   where nome_prod like '%n%';
-       
-       select * from empresa;
-	select * from categoria;
-    SELECT COD_CATEGORIA FROM CATEGORIA WHERE NOME_CATEGORIA = 'Flores';
-
-       
-INSERT INTO PRODUTO(NOME_PROD, PRECO_PROD, DESC_PROD,
-                                    URL_FOTO_PROD, LOCAL_PROD, COD_EMPRESA, COD_CATEGORIA)
-                                    VALUES('$nome', '$preco', '$descricao', '$destino', '$local', 1, 2);
-                                    select * from produto where cod_empresa = 2;
-                                    select * from produto where cod_produto = 9;
-select * from produto;
-
-SELECT p.nome_prod, p.preco_prod, p.desc_prod, 
-        p.local_prod, p.url_foto_prod, 
-        c.nome_categoria, c.desc_categoria,
-        e.nome_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
-        FROM PRODUTO p
-        INNER JOIN CATEGORIA c
-        ON p.cod_categoria = c.cod_categoria 
-        INNER JOIN EMPRESA e
-        ON e.cod_empresa = p.cod_empresa
-        WHERE p.COD_PRODUTO = 10;*/
-        
-   /*     insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
-       insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
-       SELECT E.EMAIL_EMPRE 
-                FROM EMPRESA E
-                INNER JOIN PRODUTO P
-                ON E.COD_EMPRESA = P.COD_EMPRESA
-                WHERE E.COD_EMPRESA = P.COD_EMPRESA
-                AND P.COD_PRODUTO = '10';
-                
-                INSERT INTO CONVIDADOS(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu)
-                                VALUES('$email', '$acomp', '$nome', '$confirm', '$celular', '1')*/
+		insert into adm(nome_adm, email_adm, senha_adm, defini_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm', '3');
+		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
+		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
