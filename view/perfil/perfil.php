@@ -9,7 +9,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     //exit;
     $email = $_SESSION["email"];
     $senha = $_SESSION["senha"];
-    if($_SESSION["defini"] == 2){
+    if($_SESSION["defini"] == 1){
         $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
@@ -84,7 +84,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             //echo "<script>location.href='perfil_cliente/'</script>";
             //echo ' <img src="' . $imagemL . '" >'. "<br>"/;
 
-    }else if($_SESSION["defini"] == 1){
+    }else if($_SESSION["defini"] == 2){
         $id = $_SESSION['id'];
         $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
@@ -147,25 +147,17 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo "Sua senha é: $senhaAdm <br>";
         $selectUsu = "select * from usuario;";
         $executeU = executeSelect($pdo, $selectUsu);
-        $fetchU = $executeU->fetch(PDO::FETCH_OBJ);
-        $nomeU = $fetchU->nome_usu;
-        $tipoU = $fetchU->tipo_usu;      
-        $parceiroU = $fetchU->nome_par_usu;
-        $senhaU = $fetchU->senha_usu;
-        $diaCasU = $fetchU->data_casal; 
-        $emailU = $fetchU->email_usu;
-        $imagemLU = $fetchU->foto_usu;
-        $imagemLocU = $fetchU->foto_local;
-        $localCasU = $fetchU->local_casal;
-        $horarioCasU = $fetchU->horario_casal;
-        $nascimentoU = $fetchU->nascimento_usu;
-        $cepU = $fetchU->cep_usu;
-        $ruaU = $fetchU->rua_usu;
-        $bairroU = $fetchU->bairro_usu;
-        $cidadeU = $fetchU->cidade_usu;
-        $estadoU = $fetchU->estado_usu;
-        $tipo_parU = $fetchU->tipo_par_usu;
-        $nascimento_parU = $fetchU->nascimento_par_usu; 
+        $dadosUsu = array();
+        $r = 0;
+        while($fetchU = $executeU->fetch(PDO::FETCH_OBJ)){
+        $dadosUsu[$r]['nome_usu'] = $fetchU->nome_usu;
+        $dadosUsu[$r]['nome_usu'] = $fetchU->tipo_usu;      
+        $dadosUsu[$r]['nome_usu'] = $fetchU->nome_par_usu;
+        $dadosUsu[$r]['nome_usu'] = $fetchU->senha_usu;
+        $dadosUsu[$r]['nome_usu'] = $fetchU->email_usu;
+            $r++;
+        }
+        
 
     }
     ?>

@@ -22,28 +22,30 @@ $pdo= connection();
         session_start();
         $_SESSION["email"]= $_POST["email"];
         $_SESSION["senha"]= $_POST["senha"];
-        $_SESSION["defini"] = 2;
-        $verificar = ("SELECT cod_usu from usuario where email_usu = '$email' and senha_usu = '$senha';");
+        $verificar = ("SELECT cod_usu, defini_usu from usuario where email_usu = '$email' and senha_usu = '$senha';");
                 $validarLogin = executeSelect($pdo, $verificar);
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
                 $id = $fetch->cod_usu;
+                $defini = $fetch->defini_usu;
+                $_SESSION["defini"] = $defini;
                 $_SESSION["id"] = $id;
             echo "<script>alert('Logado Com Sucesso!');loginsucessfully(); </script>"; 
         }else{
 
             $verificar = "SELECT email_empre, senha_empre from empresa where email_empre='$email' and senha_empre='$senha';";
             $validarLogin = executeSelect($pdo, $verificar);
+            $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
             $count = $validarLogin->rowCount();
             if($count > 0){
                 session_start();
                 $_SESSION["email"]= $_POST["email"];
                 $_SESSION["senha"]= $_POST["senha"];
-                $_SESSION["defini"] = 1;
-                $verificar = ("SELECT cod_empresa from empresa where email_empre = '$email' and senha_empre = '$senha';");
+                $verificar = ("SELECT cod_empresa, defini_empre from empresa where email_empre = '$email' and senha_empre = '$senha';");
                 $validarLogin = executeSelect($pdo, $verificar);
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
+                $defini = $fetch->defini_empre;
                 $id = $fetch->cod_empresa;
-                
+                $_SESSION["defini"] = $defini;
                 $_SESSION["id"] = $id;
 
                 echo "<script>alert('Logado Com Sucesso!');
@@ -57,12 +59,13 @@ $pdo= connection();
                 session_start();
                 $_SESSION["email"]= $_POST["email"];
                 $_SESSION["senha"]= $_POST["senha"];
-                $_SESSION["defini"] = 3;
-                $verificar = ("SELECT cod_adm from adm where email_adm = '$email' and senha_adm = '$senha';");
+                $verificar = ("SELECT cod_adm, defini_adm from adm where email_adm = '$email' and senha_adm = '$senha';");
                 $validarLogin = executeSelect($pdo, $verificar);
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
                 $id = $fetch->cod_adm;
+                $defini = $fetch->defini_adm;
                 $_SESSION["id"] = $id;
+                $_SESSION["defini"] = $defini;
                 echo "<script>alert('Logado Com Sucesso!');
                 loginsucessfully();
                 </script>";

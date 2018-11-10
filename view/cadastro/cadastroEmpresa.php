@@ -90,10 +90,10 @@ try{
 }else{
                 $queryInsert = "INSERT INTO empresa(nome_empre, cnpj_empre, email_empre, senha_empre, 
                 cep_empre,  rua_empre, bairro_empre, cidade_empre, estado_empre, foto_empre, tel_empre,  
-                categoria_empre)
+                categoria_empre, defini_empre)
                          VALUES('$nomeEmpresa', '$cnpj', '$emailEmpresa', '$senhaEmpresa', '$cepEmpresa'
                          , '$ruaEmpresa', '$bairroEmpresa', '$cidadeEmpresa', '$ufEmpresa', '$destino',
-                          '$telEmpresa', '$categoriaEmpresa')";
+                          '$telEmpresa', '$categoriaEmpresa', '2')";
                 if(executeQuery($conn, $queryInsert)){
                 $querySelect2 = executeSelect($conn, "SELECT cod_empresa FROM empresa ORDER BY cod_empresa DESC LIMIT 1");
                 //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
