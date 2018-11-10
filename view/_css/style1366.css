@@ -28,7 +28,7 @@ figure figcaption p{
     width: 880px;
     font-size: 40px;
 }
-figure figcaption{left: calc(48vw - 350px); top: 320px}
+figure figcaption{left: calc(48vw - 350px); top: 320px; height: 400px; width: 800px;}
 
 figure figcaption a{
   margin: 0px 90px 0 90px;
@@ -64,10 +64,11 @@ footer a{text-decoration: none; color: black; position: absolute; left: -65px;}
 footer p{margin-left: 85%}
   /*--------------------------------loja----------------------*/
 
-    #caixa_produtos{display: flex}
+  #caixa_produtos{padding: 10px 60px}
   .produto_loja {
     width: 240px;
-    height: 240px;  
+    height: 240px; 
+    display: inline-block; 
 }
 
 .oi{
@@ -86,21 +87,152 @@ position: relative;
 font-size: 25px;
 text-align: left;
 bottom:235px;
-left: 24px;
+left: 10px;
+width: 220px;
+height: 27px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow:  ellipsis;
 }
 
 .nome_descricao p{
-  width: 190px;
-  height: 160px;
+  float: left;
   position: relative;
   font-size: 20px;
-  left: 25px;
-  bottom:225px; 
-  display: none;
-}
-.produto_loja:hover .oi img{opacity: 0.5;}
+  left: 10px;
+  bottom:225px;
+  display: none; 
 
-.produto_loja:hover .nome_descricao p{display: block;}
+}
+.produto_loja:hover .oi img{opacity: 0.2;}
+
+.produto_loja:hover .nome_descricao p{  
+  display: -webkit-box;
+  max-width: 220px;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
+  /*-------produto------------*/
+   
+  img.ffr{
+    width:55%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin-top:20px;}
+
+      #valorP{
+        display: flex;
+        margin-top: 6%;
+        justify-content:space-around
+        }
+        #valorP h2 {
+          margin-top: -11%;
+          margin-left: 77%;}
+    
+      #valorP a{  
+        margin-top: 10%;
+        margin-left: -23%;   
+        padding: 2.5% 3% 2.5% 3%;
+        background-color: #169BD5;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    
+      #all_icones{
+        margin-top: 10.5%;
+        width: 43%;
+        height: 40px;
+        background-color: #f6dddf;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 48%;
+        position: absolute;
+      }
+      #PrimeiraCaixa{height: 144px; overflow: auto;}
+      #SegundaCaixa{width: 130%;display: block; float: left; margin: 41% 0% 0% -162%;border: 1px solid black;
+         padding: 4% 8% 9% 4%;}
+      #SegundaCaixa a img{width: 105px; margin-left: 22px; margin-top: 22px;float: right;}
+      #SegundaCaixa article{}
+      #SegundaCaixa article h3{margin-top: 3px; font-size: 15px}
+      #SegundaCaixa article h2{ font-size: 20px}
+
+      #descrip_produto{
+        width: 39%;
+        border: 1px solid black;
+        margin-top: -55%;
+        margin-left: 60%;
+        padding: 2% 15% 3% 3%;   
+      }  
+      #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
+      #SobreProduto{
+        color:#5E5E5E;
+        font-family: Arial, Helvetica, sans-serif;  
+        font-size: 2vw;
+      }
+     
+      #MensagemEnviar{display: none;}
+      .digi{display: none;}
+      
+      #btnForm{position: absolute; top:410px; right: 19%;}   
+    
+      #all_icones img{width: 42px;}
+
+      .one{
+        display: none;
+      }
+
+      #all_icones a img{ width: 55px;}
+/*mensagem*/ 
+.msg2{
+  display:none;
+  background-color: pink;
+  width: 400px;
+  height: 300px;
+  border: 1px solid;
+  position: fixed;
+  left: calc(50vw - 200px);
+  bottom:10vw;
+  border-radius: 10px;
+  
+}
+  .clos{
+    background-color: antiquewhite;
+    padding:2% 7% 5% 7%;
+    text-decoration: none;
+    color: black;
+    word-spacing:6px;    
+    float: right;
+    border-radius: 10px 10px 0px 0;
+  }
+
+  label.name{
+   text-align: center;
+   padding-top:11px;
+   border-radius: 10px 10px 0px 0;
+   display: block;
+   font-size: 23px;
+  }
+  .ms{
+  width: 95%;
+  height: 200px;
+  font-size: 16px;
+  padding: 10px;
+  }
+  /*Enviar*/
+  .go{
+    width:28px;
+    float: right;
+    margin-right: 2%
+  }
+
+    
      /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
@@ -352,6 +484,14 @@ button.btn.btn-primary{
   border:solid grey 1px ;    
   height: 4vw; 
   width: calc( 100% / 5) ;
+  margin-right: -5px;
+  font-size: 110%;
+}
+.primaryA{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 4vw; 
+  width: calc( 99.7% / 4) ;
   margin-right: -5px;
   font-size: 110%;
 }
@@ -612,4 +752,23 @@ background-color: pink;
  #campocopia input{ font-size: 20px}
  #campoAdd:nth-child(6){ width: 350px; height: 25px; border: 1px solid}
  
- .produto_loja img{width: 197px; height: 150px;}
+ .produto_loja img{width: 197px; margin-left: -10px;height: 150px;}
+
+ .somenteE{
+  border: 1px solid;
+  background-color: white;
+  width: 550px;
+  padding: 10px;
+  margin: 5%;
+  box-shadow: -2px 2px 5px 1px #000;
+  position: absolute;
+  top: 20%;
+  left: 2vw;
+}
+#cC{ width: 300px; font-size: 20px}
+.x2{width: 50px; float: right; filter: saturate(10%);}
+.x2:hover{filter: saturate(100%);}
+.LadoLado{display: inline-block; margin: 0 10px;}
+.LadoLado input{ margin: 0 10px}
+#AU{ padding: 5px ;border-radius: 7px; border:none;background-color: #f2717b; color: white}
+#AU:hover{padding: 4px;background-color: white; border: 1px solid #f2717b; color: black}

@@ -20,17 +20,36 @@ from produto p
 inner join categoria c
 on p.cod_categoria = c.cod_categoria 
 inner join empresa e
-on e.cod_empresa = e.cod_empresa
-where nome_prod like '%$pesquisa%';";
+on p.cod_empresa = e.cod_empresa
+where nome_prod like '%$pesquisa%' or nome_empre = '%$pesquisa%' order by p.nome_prod asc;";
+
+$sqlVend = "select * from empresa where nome_empre like '%$pesquisa%' order by nome_empre asc";
+
 
 $stmt = $PDO->prepare($sql);
 $stmt->bindValue(':search',  $pesquisa );
 $stmt->execute();
- 
+
 // cria um array com os resultados
+
+$stmt2 = $PDO->prepare($sqlVend);
+$stmt2->bindValue(':search',  $pesquisa );
+$stmt2->execute();
+
 $produto = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$npl = 10;
+$nome = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+$CN = count($nome);
 $CR = count($produto);
+$arry2 = array();
+
+for($x=0; $x < $CN ; $x++){
+ $arry2[] = $nome[$x]['nome_empre']. ".empresa,$x";
+  }
+for($l = 0; $l < $CR; $l++){
+  $arry2[] = $produto[$l]['nome_prod']. ".produto,$l";
+  }
+
+ uasort($arry2, "strnatcmp");
 ?>
 
 <?php

@@ -27,7 +27,7 @@ right: 44vw;
   width: 450px;
   font-size: 38px;
 }
-figure figcaption{left: calc(48vw - 225px); top:  240px;}
+figure figcaption{left: calc(48vw - 225px); top:  240px;height: 300px}
  /*-------carrossel----------*/
 
   #carrossel{
@@ -62,22 +62,115 @@ figure figcaption{left: calc(48vw - 225px); top:  240px;}
 
 .nome_descricao{
 position: relative;
-width: 25vw;
+width: 40vw;
 text-align: left;
-left:56%;
+left:50%;
 bottom:186px;
 height: 170px;
 }
 
 .nome_descricao h3{
 font-size: 20px;
-padding-bottom: 10px
+padding-bottom: 10px; 
+width: 210px;
+height: 26px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow:  ellipsis;
 }
 
 .nome_descricao p{
 font-size: 18px;
 }
+.nome_descricao p{
+  margin-top: 20px;
+  display: block; 
+  display: -webkit-box;
+  max-width: 210px;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+
+  /*-------produto-------------*/
+ 
+  img.ffr{
+    width:100%;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+     margin-top:20px;
+      }
+    
+      #valorP{
+        display: flex;
+        margin-top: 4%;
+        justify-content:space-around
+        }
+        #valorP h2 {
+            margin-top: 1%}
+    
+      #valorP a{      
+        padding: 2.5% 3% 2.5% 3%;
+        background-color: #169BD5;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    
+      #all_icones{
+        margin-top: 1.5%;
+        width: 65%;
+        height: 50px;
+        background-color: #f6dddf;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+      }
+      #PrimeiraCaixa{height: 115px; word-break: break-all; overflow: auto;}
+      #SegundaCaixa{display: none;}
+      #SegundaCaixa a img{width: 125px; margin: 20px 30px 30px 0px; float: right;}
+      #SegundaCaixa article{ width: 55%; word-break: break-all; padding: 5px; }
+      #SegundaCaixa article h3{margin-top: 5px; font-size: 14px}
+      #SegundaCaixa article h2{ font-size: 18px}
+
+      #descrip_produto{
+        width: 104%;
+        border: 1px solid black;
+        margin-top: 30px;
+        padding: 10px
+      }  
+      #produto{margin: 40px 30px; width: 80%}/*conserta em cada pagina de css*/
+      #SobreProduto{
+        color:#5E5E5E;
+        font-family: Arial, Helvetica, sans-serif;  
+      }
+     
+      #MensagemEnviar form{font-family: Arial, sans-serif;}
+      #MensagemEnviar{display: none}
+      #MensagemEnviar form label{
+        border: 1px solid;
+        display: flex;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      #MensagemEnviar form textarea{
+        resize: none;
+        margin-top: 5px;
+        width: 99%;
+        height: 200px;
+    
+      }
+      #btnForm{position: absolute; top:410px; right: 19%;}   
+    
+      #all_icones img{width: 42px;}
+
+      div.msg2{
+        display: none;
+    }
 /*-----------------------------------perfilCliente.html---------------------*/
 /*LISTA DE PRESENTE*/
 div.tipo{
@@ -319,7 +412,14 @@ width: calc( 92% / 5) ;
 margin-right: -6px;
 font-size: 85%;
 }
-
+.primaryA{   
+  background-color:pink;
+  border:solid grey 1px ;    
+  height: 6vw; 
+  width: calc( 95% / 4) ;
+  margin-right: -6px;
+  font-size: 85%;
+  }
 div.conv{
 border-color: grey;
 border-style: dotted;
@@ -542,4 +642,5 @@ p#cli{font-size: 4vw}
  #campocopia{width: 100%; height: 25px;position: relative; margin: auto;}
  #campocopia input{ font-size: 16px}
 
- .produto_loja img{width: 177px; height: 100px;}
+ .produto_loja img{width: 177px; margin: 25px 15px;height: 100px;}
+ .nome_descricao{width: 200px; margin-left: 20px}

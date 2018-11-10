@@ -3,7 +3,11 @@
         //de carregar a pagina logada ira verificar se existe o codigo para assim carrega a pagina correta!!!
         include_once '../mask/header.html';
         if(isset($_GET['codigo']) and isset($_GET['par'])){
-            include_once 'index.html';
+            if($_SESSION["defini"] != 3){
+                include_once 'index.html';   
+            }else{
+                include_once 'cliente.html';
+            }
         }else{
             
         if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){

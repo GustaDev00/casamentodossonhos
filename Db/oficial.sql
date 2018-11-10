@@ -1,5 +1,9 @@
 create database casamentodossonhos;
+<<<<<<< HEAD
 -- drop database casamentodossonhos;
+=======
+  -- drop database casamentodossonhos;
+>>>>>>> master
 use casamentodossonhos;
 /*
 create table tipo_usuario(
@@ -71,9 +75,7 @@ create table categoria(
 cod_categoria int primary key auto_increment,
 nome_categoria varchar(100),
 desc_categoria text,
--- senha_empresa varchar(100), NÃO ENTENDI --
 url_foto_categoria varchar(100),
--- cep varchar(50), --
  cod_status char(1)
 );
 
@@ -116,7 +118,6 @@ foreign key(cod_conv)references convidados(cod_conv),
 foreign key(cod_usu) references usuario(cod_usu)
 );
 
--- UPDATE LISTA_PRESENTES SET STATUS_PRESENTE = 'Confirmado', COD_CONV = '$idConv' WHERE COD_USU = '1';
 
 /*INSERT INTO LISTA_PRESENTES(nome_valor_presente, tipo_presente, cod_usu) values($nomePres, $tipoPres, $id);
 select * from lista_presentes where cod_usu = 4;
