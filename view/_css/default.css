@@ -79,7 +79,7 @@ body{margin: 0px; padding: 0px}
 
 #selecton {
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
@@ -89,6 +89,20 @@ body{margin: 0px; padding: 0px}
   visibility: hidden;
   z-index: 2;
 }
+#NewADM form input:not(:last-child){
+  border: none;
+  background: none;
+ padding: 0px 0px 4px 10px;
+  border-bottom: 3px solid #FF757F;
+}
+#NewADM form input:last-child{
+  padding: 5px;
+  border: none;
+  background: none;
+  color: #FF757F;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;font-weight: 600;
+}
 
 .HBurg {
   color: #FF757F;
@@ -96,7 +110,7 @@ body{margin: 0px; padding: 0px}
   margin-bottom: 1em;
   text-decoration: none;
 }
-.HBurg:hover{
+.HBurg:hover, #NewADM form input:last-child:hover{
   text-decoration: underline;
 }
 .HBurg:active{
