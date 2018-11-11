@@ -4,7 +4,6 @@
     $idProd = $_GET['cod'];
     include_once '../mask/header.html';
     if(empty($idProd)){
-        echo " DEU CU";
     }else{
         $conn = connection();
         $select = "   select p.nome_prod, p.preco_prod, p.desc_prod, p.iz_prod, 

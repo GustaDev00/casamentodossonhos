@@ -1,4 +1,5 @@
-CAx = 1;
+CAx = 1;PFiltro = 1; UFiltro = 1;
+
 function abreCadastro(){
     if(CAx == 1){
         $("#NewADM").css("transition","5s");
@@ -15,4 +16,9 @@ function abreCadastro(){
         $("#abriAdd").text("+1 ADM");
         CAx = 1;
     }
+}
+
+function abrirF(){
+            $(".somenteE").toggle("slow");
+
 }
