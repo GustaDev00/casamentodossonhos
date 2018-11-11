@@ -25,9 +25,10 @@ try{
         }else{
              if($execute->rowCount() > 0){
             echo "convidado ja cadastrado";
-            /*echo '<script>';
-            echo "location.href='index.php?id=<?php echo $id ?>'";
-            echo '</script>';*/
+            
+            echo '<script>';
+            echo "location.href='javascript:history.go(-1)'";
+            echo '</script>';
         }else{
        session_start();
        
@@ -39,9 +40,11 @@ try{
     echo "<script>alert('Convidado Cadastrado!');
    
 </script>";
-   /*echo "<script>
-    location.href='index.php?id=<?php echo $id?>';
-    echo </script>";*/
+
+
+echo '<script>';
+echo "location.href='javascript:history.go(-1)'";
+echo '</script>';
     
     }
 

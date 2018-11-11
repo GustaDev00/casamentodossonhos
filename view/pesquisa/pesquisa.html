@@ -1,13 +1,12 @@
 
     <main>            
                <section id="filtro">
-                   <img src="../_imagens/filtro.gif" title="icone_filtro" style="cursor:pointer" onclick="abrirF()">
+                   <img src="../_imagens/filtro.gif" title="icone_filtro" id="FechaSeta" style="cursor:pointer" onclick="abrirF()">
                 </section>
                 <section id="caixa_produtos">
                         <div class="somenteE" id="PFiltro" style="z-index:2">
-                                <a href=""><img class="x2" src="../_imagens/seta_esquerda.png"></a><br>
+                                <img class="x2" src="../_imagens/seta_esquerda.png"  style="cursor:pointer" onclick="abrirF()"><br>
                                <form action="PesquisarUsuario.php" method="GET">
-                                <input id="cC" type="text" placeholder="Nome" name="Nome" require d-size = ""><br><br>
                                  <p class="LadoLado"><input type="checkbox" required-size = "">Produtos</p>
                                 <p class="LadoLado"><input type="checkbox" required-size = "">Empresas<p>
                                     <br>
@@ -91,7 +90,5 @@
                     
                 </section>
                 -->
-           
-                       
             </main>
 

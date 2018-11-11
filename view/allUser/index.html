@@ -1,9 +1,9 @@
           <section id="filtro">
-            <img src="../_imagens/filtro.gif" title="icone_filtro" style="cursor:pointer" onclick="abrirF()">
+            <img src="../_imagens/filtro.gif" title="icone_filtro" id="FechaSeta" style="cursor:pointer" onclick="abrirF()">
           </section>
           
         <div class="somenteE">
-          <a href=""><img class="x2" src="../_imagens/seta_esquerda.png"></a><br>
+            <img class="x2" src="../_imagens/seta_esquerda.png"  style="cursor:pointer" onclick="abrirF()"><br>
          <form action="PesquisarUsuario.php" method="GET">
           <input id="cC" type="text" placeholder="Nome" name="Nome" require d-size = ""><br><br>
            <p class="LadoLado"><input type="checkbox" required-size = "">Cliente</p>
@@ -16,10 +16,20 @@
 
         </div>
 <div class="adm">
-    <a href=""><img class="abc" src="../_imagens/galeria3.jpeg"></a>
-    <a href=""><img class="abc" src="../_imagens/galeria3.jpeg"></a>
-    <a href=""><img class="abc" src="../_imagens/galeria3.jpeg"></a>
-    <a href=""><img class="abc" src="../_imagens/galeria3.jpeg"></a>
+  <?php 
+    foreach($ahri as $total){
+      $quebra = explode(",", $total);
+          $i = 0;
+          if($quebra[0] == $perfilU[$quebra[1]]["nome_usu"].".casal"){
+              echo '<div class="NND"><a href="../perfil/perfil.php?codigo='. $perfilU[$quebra[1]]["cod_usu"].'&par=2"><img class="abc" src="'. $perfilU[$quebra[1]]["foto_usu"]. '"><div class="desc_user"><span >'.$perfilU[$quebra[1]]["nome_usu"]. ' e '. $perfilU[$quebra[1]]["nome_par_usu"].'</span></div></div></a>';
+            }else if($quebra[0] == $perfilE[$quebra[1]]["nome_empre"]. ".empresa"){
+              echo '<div class="NND"><a href="../perfil/perfil.php?codigo='. $perfilE[$quebra[1]]["cod_empresa"].'&par=1"><img class="abc" src="'. $perfilE[$quebra[1]]["foto_empre"]. '"><div class="desc_user"><span >'.$perfilE[$quebra[1]]["nome_empre"].'</span></div></div></a>';
+            }else{echo "algo de errado nao esta certo";   }
+             
+          $i ++;
+          }
+          ?>
+          <div style="width:100%; height: 100px"></div>
     <script>
       $(function(){
            var y = 1;
