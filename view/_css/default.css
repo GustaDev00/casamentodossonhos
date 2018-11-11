@@ -923,9 +923,12 @@ div.adm{
 img.abc{
    margin: 0 30px;
    width: 280px;  
+   height: 200px;
    border-radius: 45%;
    padding: 1%;
    border: 3px solid #fff;
+   object-fit: cover;
+   object-position: center;
 }
 .NND{
   display: inline-block;
