@@ -138,15 +138,13 @@ html{scroll-behavior:smooth}
 #complemento{height: 50px; width: 100%; background-color: #f2f2f2}
 
 /*---------------CONTEUDO 1PAG---------------*/
-figure figcaption{
-background-color: rgba(10,23,55,0.8); 
-}
+
 figure figcaption p{
   padding: 5px;
 font-size: 25px;
-color: #ED545B;
+color: #FF757F;
 }
-figure img{width: 100%}
+figure img{width: 100%;filter: brightness(0.4) grayscale(0.1);}
 
 figure figcaption{
  position: absolute;
@@ -154,15 +152,15 @@ figure figcaption{
 figure figcaption a{
   position: relative;
   text-decoration: none;
-  border: 3px solid #ED545B;
+  border: 3px solid #FF757F;
   top: 2rem;
   border-radius: 20px;
-  color: #ED545B;
+  color: #FF757F;
   padding: 15px 30px;
   margin: 7VW;
 }
 figure figcaption a:hover{
-  background-color: #ED545B;
+  background-color: #FF757F;
   color: white;
 }
 figure figcaption a:active{
