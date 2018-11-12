@@ -19,12 +19,23 @@
                     </ol>
                  </div>
                  <br><br>
-                    <div class="ad" >       
-                        <button class="pri" id="" style="background:#f6dddf;">Excluir </button>
-                        <button class="pri" id="" style="background:#f6dddf"> Banir </button>
-                        <button class="pri" id="" style="background:#f6dddf"> Alertar</button>
-                        <br><br>
-                    </div>
+                   <div class="ad">
+                    
+        <button class="pri" id=""><a href="#" class="remove">Excluir</a></button>
+        <button class="pri" id=""><a href="#" class="remove">Banir</a></button>
+        <button class="pri" id="" onclick="alerta();">Alertar </button>
+        <br><br>
+        <style>
+        </style>
+        <div class="CAlerta">
+            
+            <form action="" class="formAlerta">
+                <textarea class="campoAlerta"placeholder="Digite o alerta..."></textarea>
+                <input type="image" src="../_imagens/EnviarP.png" class="goAlerta">
+            </form>
+            <button class="btnCancela" onclick="FechaAlert();">Cancela</button>
+        </div>
+</div>      
                     <div id="FotosVendedor">
                         
                          <?php  $cF2=0; $d=0; $nufo = 1;
