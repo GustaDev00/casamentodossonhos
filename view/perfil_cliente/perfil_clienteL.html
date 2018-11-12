@@ -124,12 +124,21 @@ $id = $_SESSION['id'];
                                             <input type="text" id="link" name="link" value='<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]?codigo={$_SESSION["id"]}&par={$_SESSION["defini"]}";?>'  readonly="true">
                                             
                                             <button onclick="copiarTexto()" class="btncopia">Copiar Link</button>
-                                            </div>
+                                            </div><br>
+                                            <table>
+                                                <tr>
+                                                    <th>Nome:</th>
+                                                    <th>Presença:</th>
+                                                    <th>Acompanhantes:</th>
+                                                </tr>
                                 <?php  $cConv = 0; while($cConv < count($dadosConv)){    ?>
-                                <label class="nm">Nome: <?php   echo $dadosConv[$cConv]['nome_convi']?></label>
-                                <label class="nm">Presença: <?php   echo $dadosConv[$cConv]['presenca']?></label>
-                                <label class="qtd">Acompanhantes: <?php     echo $dadosConv[$cConv]['num_acomp'] ?></label><br>
+                                    <tr>
+                                <td><label class="nm"><?php   echo $dadosConv[$cConv]['nome_convi']?></label></td>
+                            <td><label class="nm"><?php   echo $dadosConv[$cConv]['presenca']?></label></td>
+                            <td><label class="qtd" ><?php     echo $dadosConv[$cConv]['num_acomp'] ?></label><br></td>
+                            </tr>
                                     <?php $cConv++; } ?>
+                                            </table>
                                 </div>
                     </div>
 

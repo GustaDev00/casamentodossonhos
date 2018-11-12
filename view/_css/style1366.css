@@ -2,7 +2,7 @@
 #container header{
     height: 100px;
  }
- #logo{width: 95px;}
+ #logo{width: 90px;}
  #logo{ margin:  10px}
   #user_icone, #loja_icone{margin: 0px 15px 0 5vw; width: 60px;}
   #icones_topo{ position: absolute;left: 70vw; top: 10px}
@@ -119,7 +119,7 @@ text-overflow:  ellipsis;
    
   img.ffr{
     width:55%;
-    height: 250px;
+    height: 80%;
     object-fit: cover;
     object-position: center;
     margin-top:20px;}

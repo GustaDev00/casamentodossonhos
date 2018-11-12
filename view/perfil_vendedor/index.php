@@ -9,5 +9,6 @@
         }else   if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             include_once 'perfil_vendedorL.html';
         }else{}
-        include_once '../mask/footer.html';
+
+            include_once '../mask/footer.html';
     ?>

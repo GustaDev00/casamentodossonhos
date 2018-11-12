@@ -10,8 +10,8 @@ try{
         echo "Parâmetro Vazio";
     }else{
 
-        $idUsu = isset($_GET['id'])?$_GET['id']:null;
-        $idProd = isset($_GET['?cod'])?$_GET['?cod']:null;
+        $idUsu = isset($_SESSION["id"])?$_SESSION["id"]:null;
+        $idProd = isset($_GET['cod'])?$_GET['cod']:null;
         if(empty($idUsu)){
             echo '<script>';
             echo 'alert("Você precisa estar logado para Favoritar algum Produto ou Serviço!")';

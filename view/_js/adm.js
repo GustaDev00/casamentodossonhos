@@ -20,5 +20,11 @@ function abreCadastro(){
 
 function abrirF(){
             $(".somenteE").toggle("slow");
+}
 
+function alerta(){
+    $(".CAlerta").css("display","block");
+}
+function FechaAlert(){
+    $(".CAlerta").css("display","none");
 }
