@@ -5,7 +5,7 @@
  #container header{
     height: 70px;
  }
- #logo{ margin:  10px}
+ #logo{ margin:  10px; width: 52px;}
 
  #user_icone{display: none}
  #loja_icone{display: none;}
