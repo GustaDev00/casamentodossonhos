@@ -167,6 +167,7 @@ figure figcaption a:active{
   color: #FF757F;
   border-color: #FF757F;
 }
+footer img {width: 52px;}
 footer{position: relative; bottom: -100px}
 
 /*---------------CONTEUDO 2PAG---------------*/
