@@ -138,15 +138,13 @@ html{scroll-behavior:smooth}
 #complemento{height: 50px; width: 100%; background-color: #f2f2f2}
 
 /*---------------CONTEUDO 1PAG---------------*/
-figure figcaption{
-background-color: rgba(10,23,55,0.8); 
-}
+
 figure figcaption p{
   padding: 5px;
 font-size: 25px;
-color: #ED545B;
+color: #FF757F;
 }
-figure img{width: 100%}
+figure img{width: 100%;filter: brightness(0.4) grayscale(0.1);}
 
 figure figcaption{
  position: absolute;
@@ -154,21 +152,22 @@ figure figcaption{
 figure figcaption a{
   position: relative;
   text-decoration: none;
-  border: 3px solid #ED545B;
+  border: 3px solid #FF757F;
   top: 2rem;
   border-radius: 20px;
-  color: #ED545B;
+  color: #FF757F;
   padding: 15px 30px;
   margin: 7VW;
 }
 figure figcaption a:hover{
-  background-color: #ED545B;
+  background-color: #FF757F;
   color: white;
 }
 figure figcaption a:active{
   color: #FF757F;
   border-color: #FF757F;
 }
+footer img {width: 52px;}
 footer{position: relative; bottom: -100px}
 
 /*---------------CONTEUDO 2PAG---------------*/
@@ -352,7 +351,7 @@ td, th {
         }
     }
      
-    /*------- caixa contendo as imagens e os botões -------*/
+    /*------- caixa contendo as imagens e os botÃµes -------*/
      #FEditar{ border-radius: 10px}
     .isoclose{display: block; float: right; padding: 5px; font-size: 25px}
      .moda{
@@ -428,7 +427,7 @@ td, th {
         }
     }
      
-    /*------- caixa contendo as imagens e os botões -------*/
+    /*------- caixa contendo as imagens e os botÃµes -------*/
      #FEditar{ border-radius: 10px}
     .isoclose{display: block; float: right; padding: 5px; font-size: 25px}
      .modinha{
@@ -586,7 +585,7 @@ td, th {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   padding-top: 20px;
   left: 0;
   top: 0;
@@ -1030,4 +1029,27 @@ div.msg2{
 
 .somenteE{display: none}
 #AU:hover{padding: 4px;background-color: white; border: 1px solid #f2717b; color: black}
+.pri{cursor: pointer}
+.pri a{color: black; text-decoration: none;}
 
+
+.CAlerta{
+  background-color: white;
+  border-radius: 15px;
+  display: none;
+  width: 300px; height: 200px;
+   border: 1px solid;
+    z-index: 2;
+    position: fixed;
+     top: 20vw;
+      left: calc(50vw - 150px);
+      box-shadow: 2px 1px 5px 2px #000;
+      }
+ .campoAlerta{display: block;margin: 10px auto;resize:none;padding: 3%;width: 90%; height: 120px;}
+ .goAlerta{width: 40px; float: right; margin-right: 10px;}
+
+ .btnCancela{ margin-left:10px; border: 1px solid #ED545B; padding: 4px; color: #ED545B; background: none; border-radius: 5px}
+ .btnCancela:hover{
+   background-color: #ED545B;
+   color: white;
+ }
