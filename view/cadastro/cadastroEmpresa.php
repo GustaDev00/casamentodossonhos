@@ -1,7 +1,7 @@
 <?php
 
 include_once '../../Db/daohelper.php';
-include_once 'funcoes.php';
+include_once '../funcoes/funcoes.php';
 try{
     if(empty($_POST)){
         echo'<script>';

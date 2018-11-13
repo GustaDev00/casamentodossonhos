@@ -9,6 +9,7 @@
 <?php
 
 require_once '../../Db/daohelper.php';
+require_once '../funcoes/funcoes.php';
 $email = isset($_REQUEST['email'])?$_REQUEST['email']:null;
 $senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
 $pdo= connection();
@@ -19,6 +20,14 @@ $pdo= connection();
     $count = $validarLogin->rowCount();
 
     if($count > 0){
+       
+            if( strpos(file_get_contents("../banimento/checkBan.txt"),$email) !== false) {
+                echo "<script>alert('Você está Banido Permanentemente!');
+                top.location.href='../login/';
+                 </script>";
+            }else{
+                
+            
         session_start();
         $_SESSION["email"]= $_POST["email"];
         $_SESSION["senha"]= $_POST["senha"];
@@ -30,12 +39,21 @@ $pdo= connection();
                 $_SESSION["defini"] = $defini;
                 $_SESSION["id"] = $id;
             echo "<script>alert('Logado Com Sucesso!');loginsucessfully(); </script>"; 
+        }
         }else{
 
+            if( strpos(file_get_contents("../banimento/checkBan.txt"),$email) !== false) {
+                echo "<script>alert('Você está Banido Permanentemente!');
+                top.location.href='../login/';
+                 </script>";
+            }else{
+            
+            
             $verificar = "SELECT email_empre, senha_empre from empresa where email_empre='$email' and senha_empre='$senha';";
             $validarLogin = executeSelect($pdo, $verificar);
             $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
             $count = $validarLogin->rowCount();
+            }
             if($count > 0){
                 session_start();
                 $_SESSION["email"]= $_POST["email"];
@@ -51,6 +69,7 @@ $pdo= connection();
                 echo "<script>
                         loginsucessfully();
                 </script>";
+            
             }else{
             $verificar = "SELECT email_adm, senha_adm from adm where email_adm='$email' and senha_adm='$senha';";
             $validarLogin = executeSelect($pdo, $verificar);

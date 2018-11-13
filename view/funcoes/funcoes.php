@@ -24,3 +24,23 @@ function validar_cnpj($cnpj)
 	$resto = $soma % 11;
 	return $cnpj{13} == ($resto < 2 ? 0 : 11 - $resto);
 }
+
+function criar_mascara_ip($email)
+{
+    $ip_array = explode('.', $email);
+    $ip_mask = "$ip_array[0].$ip_array[1].$ip_array[2]";
+    return $ip_mask;
+}
+
+function check_bannedips($email)
+{
+    $banned_array = file('../Banimento.php/checkBan.txt'); // carregar lista de ips numa array
+    for ($counter=0; $counter < sizeof($banned_array); $counter++) {
+        if (criar_mascara_ip($email) == criar_mascara_ip($banned_array[$counter])) {
+            echo 'Seu IP foi banido do site';
+            exit;
+        }
+    }
+}
+
+

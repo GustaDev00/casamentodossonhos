@@ -189,6 +189,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                 $funcE = $fetch2->categoria_empre;
                 $imagemL = $fetch2->foto_empre;
                 $codEmpre = $fetch2->cod_empresa;
+                $emailE = $fetch2->email_empre;
                 $select2 = "select nome_categoria from categoria;";
                 $select3= "select * from produto where cod_empresa = '{$_SESSION["id"]}';";
                 $execute2 = executeSelect($pdo, $select2);
@@ -236,6 +237,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $localCas = $fetch2->local_casal;
         $horarioCas = $fetch2->horario_casal;
         $codUsu = $fetch2->cod_usu;
+        $emailU = $fetch2->email_usu;
         $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
         $execute2 = executeSelect($pdo, $select2);
         $dadosPres = array();

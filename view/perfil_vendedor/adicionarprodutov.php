@@ -37,7 +37,7 @@ try{
                 
                 $sql = "insert into produto(nome_prod, preco_prod, desc_prod,
                 url_foto_prod, local_prod, iz_prod, cod_empresa, cod_categoria)
-                values('$nome', '$preco', '$descricao', '$destino', '$local', $sprod ,$id, $codCat);";
+                values('$nome', '$preco', '$descricao', '$destino', '$local', '$sprod' ,'$id', '$codCat');";
                 $insert = executeQuery($conn, $sql);
                 @move_uploaded_file ( $arquivo_tmp, "$destino" );
                 

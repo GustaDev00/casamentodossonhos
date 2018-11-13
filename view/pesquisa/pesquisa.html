@@ -6,50 +6,58 @@
                 <section id="caixa_produtos">
                         <div class="somenteE" id="PFiltro" style="z-index:2">
                                 <img class="x2" src="../_imagens/seta_esquerda.png"  style="cursor:pointer" onclick="abrirF()"><br>
-                               <form action="PesquisarUsuario.php" method="GET">
-                                 <p class="LadoLado"><input type="checkbox" required-size = "">Produtos</p>
-                                <p class="LadoLado"><input type="checkbox" required-size = "">Empresas<p>
-                                    <br>
-                                <input type="submit" value="Pesquisar" id="AU">
-                              </form>
+                               <form action="filtroP.php" method="GET">
+                                <input id="cC" type="search" name="produto" placeholder="Filtre Produtos" ><br><br>
+                            </form>
+                            <form action="filtroE.php" method="GET">
+                                    <input id="cC" type="search" name="empresa" placeholder="Filtre Produtos" ><br><br>
+                                </form>
+                                DA ENTER
+                              
                               </div>
                     
                     <?php
-                   
-                    foreach($arry2 as $total){
-                        $quebra = explode(",", $total);
-                            $i = 0;
-                            if($quebra[0] == $produto[$quebra[1]]["nome_prod"]."."."produto"){
-
-                                echo '<div id="produto'. $i. '" class="produto_loja">';
-                                echo '<a href="../produto/index.php?cod=' .$produto[$quebra[1]]['cod_produto']. ' " >';
-                                echo '<div class="oi">';
-                                echo '<div class="hidde">';
-                                echo '<img src="'. $produto[$quebra[1]]['url_foto_prod']. '" title="produto1">';
-                                echo '</div></div>';
-                                echo '<div class="nome_descricao">';
-                                echo '<h3>'. $produto[$quebra[1]]['nome_prod'].'</h3>';
-                                echo '<p>'. $produto[$quebra[1]]['desc_prod'];
-                                echo '</div>';
-                                echo '</a>';
-                                echo '</div>';
-                                
-                              }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"].".". "empresa"){
-                                echo '<div id="produto'. $i. '" class="produto_loja">';
-                                    echo '<a href="../perfil/perfil.php?codigo=' .$nome[$quebra[1]]['cod_empresa'].'&par=1" >';
+                 
+                    
+                    if(empty($_GET['index.php?FProduto=FProduto'])){
+                        foreach($arry2 as $total){
+                            $quebra = explode(",", $total);
+                                $i = 0;
+                                if($quebra[0] == $produto[$quebra[1]]["nome_prod"]."."."produto"){
+    
+                                    echo '<div id="produto'. $i. '" class="produto_loja">';
+                                    echo '<a href="../produto/index.php?cod=' .$produto[$quebra[1]]['cod_produto']. ' " >';
                                     echo '<div class="oi">';
                                     echo '<div class="hidde">';
-                                    echo '<img src="'. $nome[$quebra[1]]['foto_empre'].'" title="produto1">';
+                                    echo '<img src="'. $produto[$quebra[1]]['url_foto_prod']. '" title="produto1">';
                                     echo '</div></div>';
                                     echo '<div class="nome_descricao">';
-                                    echo '<h3 style="margin: 10px 10px; font-size:30px">'. $nome[$quebra[1]]['nome_empre'].'</h3>';
+                                    echo '<h3>'. $produto[$quebra[1]]['nome_prod'].'</h3>';
+                                    echo '<p>'. $produto[$quebra[1]]['desc_prod'];
                                     echo '</div>';
                                     echo '</a>';
-                                    echo '</div>'; 
-                              }else{}
-                               
-                            $i ++;
-                            }
+                                    echo '</div>';
+                                    
+                                  }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"].".". "empresa"){
+                                    echo '<div id="produto'. $i. '" class="produto_loja">';
+                                        echo '<a href="../perfil/perfil.php?codigo=' .$nome[$quebra[1]]['cod_empresa'].'&par=1" >';
+                                        echo '<div class="oi">';
+                                        echo '<div class="hidde">';
+                                        echo '<img src="'. $nome[$quebra[1]]['foto_empre'].'" title="produto1">';
+                                        echo '</div></div>';
+                                        echo '<div class="nome_descricao">';
+                                        echo '<h3 style="margin: 10px 10px; font-size:30px">'. $nome[$quebra[1]]['nome_empre'].'</h3>';
+                                        echo '</div>';
+                                        echo '</a>';
+                                        echo '</div>'; 
+                                  }else{}
+                                
+                                $i ++;
+                                }
+                    }else{
+                     echo $filtro;
+                    
+                        }
                         
                     ?>
                     
