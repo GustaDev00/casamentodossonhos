@@ -30,8 +30,9 @@ $id = $_SESSION['id'];
         </style>
         <div class="CAlerta">
             
-            <form action="" class="formAlerta">
-                <textarea class="campoAlerta"placeholder="Digite o alerta..."></textarea>
+            <form action="../alert/alertUsu.php" method="POST" class="formAlerta">
+                <textarea class="campoAlerta" name="Alert" placeholder="Digite o alerta..."></textarea>
+                <input type="hidden" name="codAlert" value="<?php echo $codUsu ?>">
                 <input type="image" src="../_imagens/EnviarP.png" class="goAlerta">
             </form>
             <button class="btnCancela" onclick="FechaAlert();">Cancela</button>

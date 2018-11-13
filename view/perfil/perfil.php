@@ -10,6 +10,25 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     $email = $_SESSION["email"];
     $senha = $_SESSION["senha"];
     if($_SESSION["defini"] == 1){
+        $verificAlert = "select a.msg_alert, dm.nome_adm, dm.cod_adm
+        from alert a
+        inner join adm dm
+        on a.cod_adm = dm.cod_adm
+        where cod_usu = '{$_SESSION["id"]}';";
+        $executeAlert = executeSelect($pdo, $verificAlert);
+        if($executeAlert->rowCount()>0){
+        
+        $fetchAlert = $executeAlert->fetch(PDO ::FETCH_OBJ);
+        $alert = $fetchAlert->msg_alert;
+        $codAdmAlert = $fetchAlert->cod_adm;
+        $nomeAdmAlert = $fetchAlert->nome_adm;
+            echo'<script>';
+            echo"alert('Aviso: $alert Enviado de: $nomeAdmAlert')";
+            echo '</script>';
+            $deleteAlert = "DELETE FROM alert WHERE cod_usu = '{$_SESSION["id"]}' AND cod_adm = '$codAdmAlert' and msg_alert = '$alert'";
+            $executeDeleteAlert = executeQuery($pdo, $deleteAlert);
+        }
+
         $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
@@ -79,7 +98,27 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             include_once "../perfil_cliente/index.php";
 
     }else if($_SESSION["defini"] == 2){
-        $id = $_SESSION['id'];
+        $verificAlert = "select a.msg_alert, dm.nome_adm, dm.cod_adm
+        from alert a
+        inner join adm dm
+        on a.cod_adm = dm.cod_adm
+        where cod_empresa = '{$_SESSION["id"]}';";
+        
+        $executeAlert = executeSelect($pdo, $verificAlert);
+        if($executeAlert->rowCount()>0){
+        
+        $fetchAlert = $executeAlert->fetch(PDO ::FETCH_OBJ);
+        $alert = $fetchAlert->msg_alert;
+        $codAdmAlert = $fetchAlert->cod_adm;
+        $nomeAdmAlert = $fetchAlert->nome_adm;
+            echo'<script>';
+            echo"alert('Aviso: $alert Enviado de: $nomeAdmAlert')";
+            echo '</script>';
+            $deleteAlert = "DELETE FROM alert WHERE cod_empresa = '{$_SESSION["id"]}' AND cod_adm = '$codAdmAlert' and msg_alert = '$alert'";
+            $executeDeleteAlert = executeQuery($pdo, $deleteAlert);
+        }
+
+
         $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
@@ -137,8 +176,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $fetchU = $executeU->fetch(PDO::FETCH_OBJ);
         if(isset($_GET['codigo']) and isset($_GET['par'])){
             if($_GET['par'] == 1){
-                $id = $_SESSION['id'];
-                $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
+                $get1 = $_SESSION['id'];
+                $select = "select * from empresa where cod_empresa = '$get1'";
                 $execute = executeSelect($pdo, $select);
                 $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
                 $nome = $fetch2->nome_empre;
@@ -149,6 +188,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                 $telE = $fetch2->tel_empre;
                 $funcE = $fetch2->categoria_empre;
                 $imagemL = $fetch2->foto_empre;
+                $codEmpre = $fetch2->cod_empresa;
                 $select2 = "select nome_categoria from categoria;";
                 $select3= "select * from produto where cod_empresa = '{$_SESSION["id"]}';";
                 $execute2 = executeSelect($pdo, $select2);
@@ -182,8 +222,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                 }
                 include_once '../perfil_vendedor/index.php';
             }else{
-                $_SESSION["id"] = $_GET['codigo'];
-                $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
+                $get2 = $_GET['codigo'];
+                $select = "select * from usuario where cod_usu = '$get2'";        
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
         $nome = $fetch2->nome_usu;      
@@ -195,6 +235,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $imagemLoc = $fetch2->foto_local;
         $localCas = $fetch2->local_casal;
         $horarioCas = $fetch2->horario_casal;
+        $codUsu = $fetch2->cod_usu;
         $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
         $execute2 = executeSelect($pdo, $select2);
         $dadosPres = array();

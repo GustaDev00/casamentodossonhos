@@ -48,7 +48,7 @@ $pdo= connection();
                 $_SESSION["defini"] = $defini;
                 $_SESSION["id"] = $id;
 
-                echo "<script>alert('Logado Com Sucesso!');
+                echo "<script>
                         loginsucessfully();
                 </script>";
             }else{
@@ -66,7 +66,7 @@ $pdo= connection();
                 $defini = $fetch->defini_adm;
                 $_SESSION["id"] = $id;
                 $_SESSION["defini"] = $defini;
-                echo "<script>alert('Logado Com Sucesso!');
+                echo "<script>
                 loginsucessfully();
                 </script>";
                 
