@@ -1,9 +1,5 @@
 create database casamentodossonhos;
-<<<<<<< HEAD
--- drop database casamentodossonhos;
-=======
   -- drop database casamentodossonhos;
->>>>>>> master
 use casamentodossonhos;
 /*
 create table tipo_usuario(
@@ -152,3 +148,4 @@ defini_adm varchar(1)
 		insert into adm(nome_adm, email_adm, senha_adm, defini_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm', '3');
 		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
 		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
+	
