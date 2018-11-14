@@ -95,6 +95,7 @@ body{margin: 0px; padding: 0px}
  padding: 0px 0px 4px 10px;
   border-bottom: 3px solid #FF757F;
 }
+#logologin{width: 52px;}
 #NewADM form input:last-child{
   padding: 5px;
   border: none;
