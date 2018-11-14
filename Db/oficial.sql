@@ -145,6 +145,16 @@ email_adm varchar(100),
 senha_adm varchar(60),
 defini_adm varchar(1)
 );
+create table alert(
+cod_alert int primary key auto_increment,
+msg_alert varchar(100), 
+cod_empresa int,
+cod_usu int,
+cod_adm int,
+foreign key(cod_usu) references usuario(cod_usu),
+foreign key(cod_usu) references usuario(cod_usu),
+foreign key(cod_usu) references usuario(cod_usu)
+);
 		insert into adm(nome_adm, email_adm, senha_adm, defini_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm', '3');
 		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
 		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');

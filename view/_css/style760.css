@@ -2,6 +2,7 @@
 #container header{
   height: 70px;
 }
+#logo{width: 54px;}
 #logo{ margin:  10px}
 #icones_topo a img{width: 42px;} 
 #user_icone{margin: 10px 11px 0 2vw;}
@@ -132,8 +133,8 @@ font-size: 18px;
       }
       #PrimeiraCaixa{height: 115px; word-break: break-all; overflow: auto;}
       #SegundaCaixa{display: none;}
-      #SegundaCaixa a img{width: 125px; margin: 20px 30px 30px 0px; float: right;}
-      #SegundaCaixa article{ width: 55%; word-break: break-all; padding: 5px; }
+      #SegundaCaixa a img{width: 125px; margin: 20px 0px 0px 0px;}
+      #SegundaCaixa article{ width: 55%; float: left;word-break: break-all; padding: 5px; }
       #SegundaCaixa article h3{margin-top: 5px; font-size: 14px}
       #SegundaCaixa article h2{ font-size: 18px}
 
