@@ -249,10 +249,10 @@ figure{background-color: #FFACAC}
   color: black
 }
 #container main #setasConjunto{
-	display:flex;
-	justify-content: center;
-	align-items:center;
+  display:block;
+  text-align: center;
 }
+#Categoria_icones{text-align: center; display: none}
 #Categoria_icones a img{
   width: 30%;
 }

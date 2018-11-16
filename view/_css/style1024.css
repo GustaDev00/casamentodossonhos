@@ -104,6 +104,10 @@ overflow: hidden;
 text-overflow: ellipsis;
 }
 
+#Categoria_icones a img{
+  width: 18%;
+}
+
   /*-------produto-------------*/
 
   img.ffr{
