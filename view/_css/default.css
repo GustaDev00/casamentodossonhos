@@ -173,11 +173,13 @@ footer img {width: 52px;}
 footer{position: relative; bottom: -100px}
 
 /*---------------CONTEUDO 2PAG---------------*/
-#nos{ background-color: #F2F2F2; padding: 9vw; }
+figure{background-color: #FFACAC}
+#nos{ background: url("../_imagens/back21.png")no-repeat 11%;background-size: 102%; padding: 9vw; color: black }
 #nos h2{
    text-align: CENTER;
 }
-
+#nos a{text-decoration: none}
+#nos a:hover{text-decoration: underline}
 #nos p{
   margin-top: 7vw;
   line-height: 28px;
@@ -1055,3 +1057,7 @@ div.msg2{
    background-color: #ED545B;
    color: white;
  }
+
+ /*---------------tela de carregamento ----------*/
+
+ .load{width: 100%; --ajuste: 100%; height: var(--ajuste); background: url("../_imagens/gif_load.gif")no-repeat center top #FF757F}

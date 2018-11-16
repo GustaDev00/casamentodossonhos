@@ -1,7 +1,11 @@
 
+<html>
+<link href="../_css/default.css" rel=stylesheet>
+    <div class="load"></div>
+</html>
 <script type="text/javascript">
 		function loginsucessfully(){
-			setTimeout("location.href='../perfil/perfil.php'", 1);
+			setTimeout("location.href='../perfil/perfil.php'", 500);
                         
 		}
 
@@ -38,7 +42,7 @@ $pdo= connection();
                 $defini = $fetch->defini_usu;
                 $_SESSION["defini"] = $defini;
                 $_SESSION["id"] = $id;
-            echo "<script>alert('Logado Com Sucesso!');loginsucessfully(); </script>"; 
+            echo "<script>loginsucessfully(); </script>"; 
         }
         }else{
 
@@ -97,5 +101,5 @@ $pdo= connection();
     }
         }
 
-    
+    ?>
 
