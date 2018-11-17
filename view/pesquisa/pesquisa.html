@@ -6,13 +6,13 @@
                 <section id="caixa_produtos">
                         <div class="somenteE" id="PFiltro" style="z-index:2">
                                 <img class="x2" src="../_imagens/seta_esquerda.png"  style="cursor:pointer" onclick="abrirF()"><br>
-                               <form action="filtroP.php" method="GET">
-                                <input id="cC" type="search" name="produto" placeholder="Filtre Produtos" ><br><br>
-                            </form>
-                            <form action="filtroE.php" method="GET">
-                                    <input id="cC" type="search" name="empresa" placeholder="Filtre Produtos" ><br><br>
-                                </form>
-                                DA ENTER
+                                <form action="index.php" method="POST">
+                                    <input id="cC" type="text" placeholder="Nome" name="nomeF" require d-size = ""><br><br>
+                                     <p class="LadoLado"><input type="checkbox" name="escolhaC[]" value="produto" required-size = "">Produto</p>
+                                    <p class="LadoLado"><input type="checkbox" name="escolhaC[]" value="empresa" required-size = "">Empresa<p>
+                                        <br>
+                                    <input type="submit" value="Pesquisar" id="AU">
+                                  </form>
                               
                               </div>
                     
@@ -23,7 +23,7 @@
                         foreach($arry2 as $total){
                             $quebra = explode(",", $total);
                                 $i = 0;
-                                if($quebra[0] == $produto[$quebra[1]]["nome_prod"]."."."produto"){
+                                if(count($produto) > 0 and $quebra[0] == $produto[$quebra[1]]["nome_prod"].".produto"){
     
                                     echo '<div id="produto'. $i. '" class="produto_loja">';
                                     echo '<a href="../produto/index.php?cod=' .$produto[$quebra[1]]['cod_produto']. ' " >';
@@ -38,7 +38,7 @@
                                     echo '</a>';
                                     echo '</div>';
                                     
-                                  }else if($quebra[0] == $nome[$quebra[1]]["nome_empre"].".". "empresa"){
+                                  }else if(count($nome) > 0 and $quebra[0] == $nome[$quebra[1]]["nome_empre"].".empresa"){
                                     echo '<div id="produto'. $i. '" class="produto_loja">';
                                         echo '<a href="../perfil/perfil.php?codigo=' .$nome[$quebra[1]]['cod_empresa'].'&par=1" >';
                                         echo '<div class="oi">';
