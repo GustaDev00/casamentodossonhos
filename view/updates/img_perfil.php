@@ -1,3 +1,7 @@
+<html>
+<link href="../_css/default.css" rel=stylesheet>
+    <div class="load"></div>
+</html>
 <?php
 include_once '../../Db/daohelper.php';
 session_start();

@@ -1,14 +1,15 @@
    $(function(){
-        $("#Categoria_icones").css("display","none");
         var x = 1;
 var TrocaLoja = 1;
  $("#ClickLoja").click(function(){
     if(TrocaLoja == 1){
         $("#caixa_produtos").css("display","none");
+        $("#setasConjunto").css("display","none");
         $("#Categoria_icones").css("display","block");
         TrocaLoja = 2;
     } else{
         $("#caixa_produtos").css("display","block");
+        $("#setasConjunto").css("display","block");
         $("#Categoria_icones").css("display","none");
         TrocaLoja = 1;
     }
@@ -94,41 +95,6 @@ for(aume=1;aume<=10;aume++){
     $(produto).css("margin-top", teste123 );
 }
 
-/*
-function DefinirOrientacao480(){
-        if(ComparaLargura > ComparaTamanho){
-            $(produto).css("width","157px");   
-        }else{
-            $(produto).css("width","97px");
-        }
-    }
-
-    function DefinirOrientacao768(){
-        if(ComparaLargura > ComparaTamanho){
-            $(produto).css("width","177px");
-        }else{
-            $(produto).css("width","117px");
-        }
-    }
-
-    function DefinirOrientacao1024(){
-        if(ComparaLargura > ComparaTamanho){
-            $(produto).css("width","197px");
-        }else{  
-            alert("asdasd");
-            $(produto).css("width","127px");
-        }
-    }
-
-    function DefinirOrientacao1366(){
-        if(ComparaLargura > ComparaTamanho){
-            $(produto).css("width","197px");
-        }else{
-            $(produto).css("width","127px");
-        }
-    }
-    */
-    //funcao de troca o valor fecho mano pqp
     
 
     //loja trocando para sessão enviar mensage

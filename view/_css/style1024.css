@@ -5,7 +5,7 @@
 #icones_topo{ position: absolute;left: 70vw; top: 20px}
 
 #logo{ margin:  20px}
-
+#logo{width: 60px;}
 #container header form input{
   position: relative;
   margin: 15px 0 0 26px;
@@ -102,6 +102,10 @@ max-width: 280px;
 -webkit-box-orient: vertical;
 overflow: hidden;
 text-overflow: ellipsis;
+}
+
+#Categoria_icones a img{
+  width: 18%;
 }
 
   /*-------produto-------------*/
