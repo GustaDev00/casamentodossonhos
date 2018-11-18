@@ -9,41 +9,34 @@ try{
     }else{
         
         //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
-        $assunto = isset($_POST['Assunto'])?$_POST['Assunto']:null;
-        $msg = isset($_POST['mensagem'])?$_POST['mensagem']:null;
-        $idProd = isset($_GET['cod'])?$_GET['cod']:null;
-        $id = $_SESSION['id'];
-        $emailUsu = "select * from usuario where cod_usuario ='$id'";
-
-        $sql = "SELECT *
-                FROM EMPRESA E
-                INNER JOIN PRODUTO P
-                ON E.COD_EMPRESA = P.COD_EMPRESA
-                WHERE E.COD_EMPRESA = P.COD_EMPRESA
-                AND P.COD_PRODUTO = '$idProd' ";
-        $pdo = connection();
-        $execute = executeSelect($pdo, $sql);
-        $execute2 = executeSelect($pdo, $sql);
-        if($execute->rowCount() > 0){
+        $conn = connection();
+        $msg = isset($_POST['msg'])?$_POST['msg']:null;
+        $id = isset($_POST['idUsu'])?$_POST['idUsu']:null;
+        $email = isset($_POST['emailE'])?$_POST['emailE']:null;
+        $nomeProd = isset($_POST['nomeProd'])?$_POST['nomeProd']:null;
+        $emailUsu = "select * from usuario where cod_usu ='$id'";
+        $execute = executeSelect($conn, $emailUsu);
         $fetch = $execute->fetch(PDO::FETCH_OBJ);
-        $email = $fetch->email_empre;
-        $fetch2 = $execute2->fetch(PDO::FETCH_OBJ);
-        $emailUsuario = $fetch2->emai_usu;
-        echo $email;
+        $emailU = $fetch->email_usu;
         
-        $to = "$email";
-$subject = "$assunto";
-$txt = "$msg";
-$headers = "From: Casamento dos Sonhos" . "\r\n" . //Cabeçalho 
-"CC: $email";
+        
+        $destino = "$email";
+        $arquivo = "$msg";
+        $assunto = "Casamento dos Sonhos - Contato Produto";
+        
+        $headers =  'MIME-Version: 1.0' . "\r\n"; 
+        $headers .= "From: Your name <$emailU>" . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        
+        $enviaremail = mail($destino, $assunto, $arquivo, $headers);
+        if($enviaremail){$mgm = "E-mail enviado com sucesso";
+        echo $mgm;
+        }else{
+            $mgm = "erro ao enviar mensagem";
+            echo $mgm;
+        }
 
-mail($to,$subject,$txt,$headers);
-
-
-
-echo "A mensagem de e-mail foi enviada.";
-
-        }else{ echo "Select Nao encontrado";}
+        
     }
 } catch(Exeption $ex){
 

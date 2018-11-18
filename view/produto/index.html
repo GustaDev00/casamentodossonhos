@@ -30,16 +30,6 @@
             
 </section>
 
-<section id="MensagemEnviar">
-        <form action="EnviarMensagem.php" method="POST" class="digi">
-            <label><?php echo $_SESSION["email"]; ?></label>
-            <label><?php echo $emailE ;?></label><br>
-            <label><?php echo $nome; ?></label>
-            <textarea placeholder="Digite aqui sua mensagem"  style="resize:none;"></textarea>
-            <input type="image" src="../_imagens/EnviarP.png" width="40px" name="Enviar" id="btnForm">
-        </form>
-    </section>
-
     
     <div id="all_icones">
         <a href="#" class="one"><img  src="../_imagens/descricao.png" alt="descrição"></a>
@@ -47,10 +37,13 @@
         <a href="favorita.php?cod=<?php echo $idProd; ?>"><img src="../_imagens/favorito.png" alt="favorito"></a>
     </div>   
    <div class="msg2">
-       <form class="two" action="">
+       <form class="two" action="../email/enviarEmail.php" method="POST">
              <a href="#" class="clos"> X  Fechar</a>
             <label class="name" style="white-space: nowrap; overflow: hidden;text-overflow:  ellipsis;"> <?php echo $nome; ?></label>
-            <textarea class="ms" placeholder="Digite aqui sua mensagem" style="resize:none;"></textarea>
+            <textarea class="ms" name="msg" placeholder="Digite aqui sua mensagem" style="resize:none;"></textarea>
+            <input type="hidden" name="idUsu" value="<?php $id = $_SESSION['id']; echo $id ?>">
+            <input type="hidden" name="emailE" value="<?php echo $emailE ?>">
+            <input type="hidden" name="nomeProd" value="<?php echo $nome ?>">
             <input type="image" src="../_imagens/EnviarP.png" class="go">
         </form>
         </div>
