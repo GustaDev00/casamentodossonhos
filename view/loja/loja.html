@@ -12,6 +12,7 @@
                         if($npl <= $qtd[0]){
                             for($x=0; $x< 9;$x++){
                             $i = 1;
+                            if(isset($produto[$x]['cod_produto'])){
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
                         echo '<a href="../produto/?cod=' .$produto[$x]['cod_produto']. ' " >';
                         echo '<div class="oi">';
@@ -24,6 +25,7 @@
                     echo '</div>';
                 echo '</a>';
                     echo '</div>';
+                }else{}
                             $i ++;
                             }
                         }else{
@@ -31,6 +33,7 @@
                                 for($x=0; $x< $max; $x++){
                                     
                             $i = 1;
+                            if(!(isset($produto[$x]['cod_produto']))){$i++;}else{}
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
                         echo '<a href="../produto/?cod='.$produto[$x]['cod_produto']. ' " >';
                         echo '<div class="oi">';
@@ -43,6 +46,7 @@
                     echo '</div>';
                 echo '</a>';
                     echo '</div>';
+                        
                             $i ++;
                             }
                         }
