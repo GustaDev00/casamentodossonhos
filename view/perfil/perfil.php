@@ -1,3 +1,4 @@
+<div style="background-color: black; width:100%; height: 50vw"></div>
 <?php
 
 require_once '../../Db/daohelper.php';
@@ -5,10 +6,37 @@ require_once '../../Db/daohelper.php';
 session_start();
 $pdo = connection();
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
-	//header("Location: login_usuarios/login.php");
-    //exit;
+    
     $email = $_SESSION["email"];
     $senha = $_SESSION["senha"];
+    
+    if( strpos(file_get_contents("../banimento/checkBan.txt"),$email) != false) {
+        $recebe = file_get_contents("../banimento/checkBan.txt");
+        $hora =  date('d-m-y');    
+        $quebra1 = explode(",",$recebe);
+        unset($quebra1[0]);
+        for($x=1; $x<=(count($quebra1) -1);$x++){            
+            $quebra2 = explode("~", $quebra1[$x]);
+            if($email == $quebra2[0]){
+                if(strtotime($hora) >= strtotime($quebra2[1])){
+                     $fp = fopen("../banimento/checkBan.txt", "w");
+                     $escreve = fwrite($fp,",");
+                     fclose($fp);
+                    $fp = fopen("../banimento/checkBan.txt", "a");
+                    for($l=1; $l<=(count($quebra1) -1);$l++){
+                        if($x == $l){$l++;}else{}
+                        $escreve = fwrite($fp, $quebra1[$l].",");
+                    }
+                    fclose($fp);
+                }else{
+                    echo "<script>";
+                    echo "alert('Você esta Banido até ".$quebra2[1]."!');";
+                    echo "top.location.href='deslogar.php';";
+                    echo "</script>";
+                }
+            }else{}
+        }
+    }
     if($_SESSION["defini"] == 1){
         $verificAlert = "select a.msg_alert, dm.nome_adm, dm.cod_adm
         from alert a
@@ -175,8 +203,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $executeU = executeSelect($pdo, $selectUsu);
         $fetchU = $executeU->fetch(PDO::FETCH_OBJ);
         if(isset($_GET['codigo']) and isset($_GET['par'])){
-            if($_GET['par'] == 1){
-                $get1 = $_SESSION['id'];
+            if($_GET['par'] == 2){
+                $get1 = $_GET['codigo'];
                 $select = "select * from empresa where cod_empresa = '$get1'";
                 $execute = executeSelect($pdo, $select);
                 $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
