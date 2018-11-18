@@ -3,7 +3,7 @@ include_once '../../Db/daohelper.php';
 try{
 $pagina = 1;
  $conn = connection();
- $verificar = "SELECT count(cod_produto) FROM produto";
+ $verificar = "SELECT count(cod_produto) FROM produto where cod_categoria ='$codCat'";
  $querySelect = executeSelect($conn, $verificar);
     $cod = array();
     $produto = array();
@@ -16,7 +16,7 @@ $pagina = 1;
         $pl = (10 * ($pagina - 1)) + 1;
         $npl = $pagina * 10;
         for($i=$pl;$i<=$npl;$i++){
-             $verificar2 = "SELECT * FROM produto where cod_produto = {$i}";
+             $verificar2 = "SELECT * FROM produto where cod_produto = {$i} and cod_categoria='$codCat'";
                 $querySelect = executeSelect($conn, $verificar2);
                 if($querySelect->rowCount() > 0){
                     while($fetch = $querySelect->fetch(PDO::FETCH_ASSOC)){
@@ -27,22 +27,17 @@ $pagina = 1;
     }else{
         $npl = 10;
         
-             $verificar3 = "SELECT * FROM produto";
-                $querySelect2 = executeSelect($conn, $verificar3);
-                if($querySelect2->rowCount() > 0){
-                    while($fetch2 = $querySelect2->fetch(PDO::FETCH_ASSOC)){
-                    $produto[] = $fetch2;
+             $verificar2 = "SELECT * FROM produto where cod_categoria='$codCat'";
+                $querySelect = executeSelect($conn, $verificar2);
+                if($querySelect->rowCount() > 0){
+                    while($fetch = $querySelect->fetch(PDO::FETCH_ASSOC)){
+                    $produto[] = $fetch;
                     }
-                }else{ echo "erro"; }
+                }else{ echo "errosss"; }
         
-        
+    
     }
 }catch (Exception $ex) {
  $ex = "nao esta pegando amiguinho";
     echo $ex;
 }
-?>
-
-
-            <!-- echo "Nome Produto {$fetch['nomeproduto']} - descrição {$fetch['descricaoproduto']} <br> ";
-            //echo "<img src= '". $fetch['imgproduto'] ."' alt=algumacoisa width=100px>"; -->

@@ -190,7 +190,7 @@ Insert into categoria(nome_categoria, desc_categoria, cod_status)
 Values("Joias", "Joias em geral", "A");
 
 Insert into categoria(nome_categoria, desc_categoria, cod_status)
-Values("Acessórias ", "Acessórias em geral", "A");
+Values("Acessórios ", "Acessórios em geral", "A");
 
 Insert into categoria(nome_categoria, desc_categoria, cod_status)
 Values("Cerimonialista ", "Cerimonialista em geral", "A");

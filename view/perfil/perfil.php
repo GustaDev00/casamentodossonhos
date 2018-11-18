@@ -1,4 +1,4 @@
-<div style="background-color: black; width:100%; height: 50vw"></div>
+
 <?php
 
 require_once '../../Db/daohelper.php';

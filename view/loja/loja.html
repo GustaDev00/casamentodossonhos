@@ -12,6 +12,7 @@
                         if($npl <= $qtd[0]){
                             for($x=0; $x< 9;$x++){
                             $i = 1;
+                            if(!(isset($produto[$x]['cod_produto']))){$x++;}else{}
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
                         echo '<a href="../produto/?cod=' .$produto[$x]['cod_produto']. ' " >';
                         echo '<div class="oi">';
@@ -24,13 +25,15 @@
                     echo '</div>';
                 echo '</a>';
                     echo '</div>';
+                      
                             $i ++;
                             }
                         }else{
+                            
                             $max = $qtd[0] - ($npl - 10);
                                 for($x=0; $x< $max; $x++){
-                                    
-                            $i = 1;
+                                    $i = 1;
+                                    if(!(isset($produto[$x]['cod_produto']))){$x++;}else{}
                                 echo '<div id="produto'. $i. '" class="produto_loja">';
                         echo '<a href="../produto/?cod='.$produto[$x]['cod_produto']. ' " >';
                         echo '<div class="oi">';
@@ -43,6 +46,7 @@
                     echo '</div>';
                 echo '</a>';
                     echo '</div>';
+                        
                             $i ++;
                             }
                         }
@@ -52,19 +56,19 @@
                 
                 </section>
                 <section id="Categoria_icones">
-                    <a href="#"><img src="../_imagens/icones/Prancheta 1.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 2.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 3.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 4.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 5.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 6.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 7.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 8.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 9.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 10.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 11.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 12.png"></a>
-                    <a href="#"><img src="../_imagens/icones/Prancheta 13.png"></a>
+                    <a href="../loja/?categoria=Salões de festa"><img src="../_imagens/icones/Prancheta 1.png"></a>
+                    <a href="../loja/?categoria=Vestidos"><img src="../_imagens/icones/Prancheta 2.png"></a>
+                    <a href="../loja/?categoria=Ternos"><img src="../_imagens/icones/Prancheta 3.png"></a>
+                    <a href="../loja/?categoria=Salões de beleza"><img src="../_imagens/icones/Prancheta 4.png"></a>
+                    <a href="../loja/?categoria=Dj/música "><img src="../_imagens/icones/Prancheta 5.png"></a>
+                    <a href="../loja/?categoria=Lua de mel"><img src="../_imagens/icones/Prancheta 6.png"></a>
+                    <a href="../loja/?categoria=Lembrancinhas"><img src="../_imagens/icones/Prancheta 7.png"></a>
+                    <a href="../loja/?categoria=Flores"><img src="../_imagens/icones/Prancheta 8.png"></a>
+                    <a href="../loja/?categoria=Fotografia"><img src="../_imagens/icones/Prancheta 9.png"></a>
+                    <a href="../loja/?categoria=Automóveis"><img src="../_imagens/icones/Prancheta 10.png"></a>
+                    <a href="../loja/?categoria=Joias"><img src="../_imagens/icones/Prancheta 11.png"></a>
+                    <a href="../loja/?categoria=Acessórios "><img src="../_imagens/icones/Prancheta 12.png"></a>
+                    <a href="../loja/?categoria=Cerimonialista "><img src="../_imagens/icones/Prancheta 13.png"></a>
                 </section>
                 <section id=setasConjunto>
                     <?php $troca = isset($_GET['pagina'])?$_GET['pagina']:1; // echo $npl."<br>".$qtd[0]; 
