@@ -72,18 +72,20 @@ try{
         $exD = executeQuery($conn, $upD);
     }
 
-    if(empty($cat)){}else{
+    if(empty($cat)){ echo"dwew";}else{
         $categoria = "SELECT * FROM categoria WHERE nome_categoria = '$cat';";
         $execute = executeSelect($conn, $categoria);
         $fetch = $execute->fetch(PDO ::FETCH_OBJ);
-        if($cat = 'Nova Categoria'){}else{
+        
+        if($cat == 'Nova Categoria'){echo "nova";}else{
             
         $codCat = $fetch->cod_categoria;
 
-        $upD = "update produto
+        $upC = "update produto
                 set cod_categoria = '$codCat'
                 where cod_produto ='$idProd' and cod_empresa='$id'";
-        $exC = executeQuery($conn, $upD);
+        $exC = executeQuery($conn, $upC);
+        
     }
 }
 
