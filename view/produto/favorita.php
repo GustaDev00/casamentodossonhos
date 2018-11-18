@@ -28,7 +28,7 @@ try{
         }else if(empty($idProd)){
            
         }else{
-            if($_SESSION["defini"] == 2){
+            if($_SESSION["defini"] == 1){
             $verific = "select * from favorita where cod_produto = '$idProd' and cod_usu = '$idUsu'";
             $executeSelect = executeSelect($pdo, $verific);
             if($executeSelect->rowCount() > 0){

@@ -9,7 +9,7 @@
         $select = "   select p.nome_prod, p.preco_prod, p.desc_prod, p.iz_prod, 
         p.local_prod, p.url_foto_prod, 
         c.nome_categoria, c.desc_categoria,
-        e.nome_empre, e.email_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
+        e.cod_empresa, e.nome_empre, e.email_empre, e.cidade_empre, e.estado_empre, e.tel_empre, e.foto_empre
         from produto p
         inner join categoria c
         on p.cod_categoria = c.cod_categoria 
@@ -30,6 +30,7 @@
         $locEst = $fetch->estado_empre;
         $contato = $fetch->tel_empre;
         $fotoE = $fetch->foto_empre;
+        $codEmpresa = $fetch->cod_empresa;
         
         include_once 'index.html';
     }

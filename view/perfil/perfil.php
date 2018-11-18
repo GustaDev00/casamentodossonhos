@@ -176,7 +176,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $fetchU = $executeU->fetch(PDO::FETCH_OBJ);
         if(isset($_GET['codigo']) and isset($_GET['par'])){
             if($_GET['par'] == 1){
-                $get1 = $_SESSION['id'];
+                $get1 = $_GET['codigo'];
                 $select = "select * from empresa where cod_empresa = '$get1'";
                 $execute = executeSelect($pdo, $select);
                 $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);

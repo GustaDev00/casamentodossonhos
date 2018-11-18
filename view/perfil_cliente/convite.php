@@ -18,7 +18,7 @@ $fetch = $execute->fetch(PDO ::FETCH_OBJ);
         $imagemLoc = $fetch->foto_local;
         $localCas = $fetch->local_casal;
         $horarioCas = $fetch->horario_casal;
-        $select2 = "select * from lista_presentes where cod_usu = '$id'";
+        $select2 = "select * from lista_presentes where cod_usu = '$id' and status_presente='Em Aberto' ";
         $execute2 = executeSelect($conn, $select2);
         $dadosPres = array();
         $dP = 0;
