@@ -72,7 +72,7 @@ try{
         $exD = executeQuery($conn, $upD);
     }
 
-    if(empty($cat)){ echo"dwew";}else{
+    if(empty($cat)){}else{
         $categoria = "SELECT * FROM categoria WHERE nome_categoria = '$cat';";
         $execute = executeSelect($conn, $categoria);
         $fetch = $execute->fetch(PDO ::FETCH_OBJ);
