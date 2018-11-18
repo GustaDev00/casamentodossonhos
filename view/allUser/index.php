@@ -27,8 +27,11 @@
              }
            
             uasort($ahri, "strnatcmp");
-            
-                
+        $nomeF = isset($_POST["NomeCC"])?$_POST["NomeCC"]:NULL;
+        $checkbox = isset($_POST["escolhaC"])?$_POST["escolhaC"]:NULL;
+        if($nomeF != NULL or $checkbox != NULL){
+            include_once 'filtroAU.php';
+        }
         
         include_once '../mask/header.html';
         include_once 'index.html';

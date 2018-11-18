@@ -24,12 +24,6 @@ $pdo= connection();
     $count = $validarLogin->rowCount();
 
     if($count > 0){
-       
-            if( strpos(file_get_contents("../banimento/checkBan.txt"),$email) !== false) {
-                echo "<script>alert('Você está Banido Permanentemente!');
-                top.location.href='../login/';
-                 </script>";
-            }else{
                 
             
         session_start();
@@ -43,21 +37,15 @@ $pdo= connection();
                 $_SESSION["defini"] = $defini;
                 $_SESSION["id"] = $id;
             echo "<script>loginsucessfully(); </script>"; 
-        }
+        
         }else{
-
-            if( strpos(file_get_contents("../banimento/checkBan.txt"),$email) !== false) {
-                echo "<script>alert('Você está Banido Permanentemente!');
-                top.location.href='../login/';
-                 </script>";
-            }else{
             
             
             $verificar = "SELECT email_empre, senha_empre from empresa where email_empre='$email' and senha_empre='$senha';";
             $validarLogin = executeSelect($pdo, $verificar);
             $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
             $count = $validarLogin->rowCount();
-            }
+            
             if($count > 0){
                 session_start();
                 $_SESSION["email"]= $_POST["email"];
