@@ -33,21 +33,21 @@
       
       <!-- -------Aqui começa o cadastro do casal------ -->
       <div class="cadastro_casal">
-          <input type="text" name="nomeCasal" placeholder="Nome" id="NomedoCasal" maxlength="30" required>
+          <input type="text" name="nomeCasal" class="NMC" placeholder="Nome" id="NomedoCasal" maxlength="30" required>
           <select id="SelecaoTipoC" name="casalDefinicao">
               <option selected>Selecione</option>
               <option value="Noivo">Noivo</option>
               <option value="Noiva">Noiva</option>
           </select>
-        <input type="email" name="emailCasal" placeholder="E-mail" required>
-          <input type="password" name="senhaCasal" placeholder="Senha" required>
-          <input type="password" name="confirma_senhaCasal" placeholder="Confirmar Senha" required>
+        <input type="email" name="emailCasal" class="EMC" placeholder="E-mail" required>
+          <input type="password" class="SAC" name="senhaCasal" placeholder="Senha" required>
+          <input type="password" class="CSAC" name="confirma_senhaCasal" placeholder="Confirmar Senha" required>
           <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data de Nascimento</label>
-          <input type="date" name="NascimentoCasal" required>
+          <input type="date" class="DTC" name="NascimentoCasal" required>
       </div>
       <!-- -------Aqui começa o cadastro da Empresa------ -->
       <div class="cadastro_Empresa">
-          <input type="text" name="nomeEmpresa" placeholder="Nome Empresa" required>
+          <input type="text" class="NMC" name="nomeEmpresa" placeholder="Nome Empresa" required>
         <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
           <input type="email" name="emailEmpresa" placeholder="E-mail" required>
           <input type="password" name="senhaEmpresa" placeholder="Senha" required>

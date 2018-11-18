@@ -54,11 +54,20 @@ $("#valor").click(function(){
 
 // funcção proximo
 $(".next").click(function(){
-if(animating) return false;
+    if($("#msform").attr("action") == "cadastroEmpresa.php"){
+        alert("Cadastro Empresa");
+    }else if($("#msform").attr("action") == "cadastroCasal.php"){
+        
+        if($(".NMC").val() == "" ){
+            alert("Digite o Nome!");
+        }else if(){anima();}
+    }
+    function anima(){
+        if(animating) return false;
 animating = true;
 
-current_fs = $(this).parent();
-next_fs = $(this).parent().next();
+current_fs = $(".next").parent();
+next_fs = $(".next").parent().next();
 
 //activate next step on progressbar using the index of next_fs
 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -88,6 +97,8 @@ current_fs.animate({opacity: 0}, {
     //this comes from the custom easing plugin
     easing: 'easeInOutBack'
 });
+    }
+
 });
 
 //funcao para volta
@@ -141,12 +152,6 @@ function limpa_formulário_cep() {
         }
         
         //Quando o campo cep perde o foco.
-        $("#cep").focus(function() {
-                    $("#rua").val("...");
-                    $("#bairro").val("...");
-                    $("#cidade").val("...");
-                    $("#uf").val("...");
-        });
         $("#cep").blur(function() {
             
 
@@ -163,10 +168,10 @@ function limpa_formulário_cep() {
                 if(validacep.test(cep)) {
 
                     //Preenche os campos com "..." enquanto consulta webservice.
-                    $("#rua").val("...");
-                    $("#bairro").val("...");
-                    $("#cidade").val("...");
-                    $("#uf").val("...");
+                    $("#rua").attr("placeholder","...");
+                    $("#bairro").attr("placeholder","...");
+                    $("#cidade").attr("placeholder","...");
+                    $("#uf").attr("placeholder","...");
 
                     //Consulta o webservice viacep.com.br/
                     $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
