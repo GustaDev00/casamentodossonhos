@@ -152,8 +152,8 @@ cod_empresa int,
 cod_usu int,
 cod_adm int,
 foreign key(cod_usu) references usuario(cod_usu),
-foreign key(cod_usu) references usuario(cod_usu),
-foreign key(cod_usu) references usuario(cod_usu)
+foreign key(cod_empresa) references empresa(cod_empresa),
+foreign key(cod_adm) references adm(cod_adm)
 );
 		
 Insert into categoria(nome_categoria, desc_categoria, cod_status)

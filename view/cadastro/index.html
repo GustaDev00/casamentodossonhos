@@ -47,11 +47,11 @@
       </div>
       <!-- -------Aqui começa o cadastro da Empresa------ -->
       <div class="cadastro_Empresa">
-          <input type="text" class="NMC" name="nomeEmpresa" placeholder="Nome Empresa" required>
-        <input type="text" name="cnpjEmpresa" placeholder="CNPJ" required>
-          <input type="email" name="emailEmpresa" placeholder="E-mail" required>
-          <input type="password" name="senhaEmpresa" placeholder="Senha" required>
-          <input type="password" name="confirmar_senhaEmpresa" placeholder="Confirmar Senha" required>     
+          <input type="text" id="NMC" name="nomeEmpresa" placeholder="Nome Empresa" required>
+        <input type="text" class="CNPJC" name="cnpjEmpresa" placeholder="CNPJ" required>
+          <input type="email" id="EMC" name="emailEmpresa" placeholder="E-mail" required>
+          <input type="password" id="SAC" name="senhaEmpresa" placeholder="Senha" required>
+          <input type="password" id="CSAC" name="confirmar_senhaEmpresa" placeholder="Confirmar Senha" required>     
       </div>
       <div id="viaC" style="display: none">
         <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="CEP" required>
@@ -71,7 +71,7 @@
         <div id="quadro" >
         <img id=preview style="width:70%;" alt="Carregue Sua Foto Abaixo" class="ilg">
         </div>
-        <input type=file id=imgChooser name=SImagem onchange="testeimagem()">
+        <input type=file id=imgChooser name="SImagem" onchange="testeimagem()" required>
         <!-- --------segunda caixa do cadastro casal ----- -->
     <div class="cadastro_casal">
         <div id="infoColoca">
@@ -79,12 +79,13 @@
         <label class="InfodoC definiTamanhoL">Casal</label>
         </div>
         <input type="text" name="segundoCasal" placeholder="Nome do Parceiro(a)" id="segundoCasal" required>
-          <select name="casalDefinicao2">
+          <select id="PSDB" name="casalDefinicao2">
+              <option selected>Selecione</option>  
               <option value="Noivo">Noivo</option>
               <option value="Noiva">Noiva</option>
           </select>
         <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data de Nascimento</label>
-          <input type="date" name="NascimentoCasal2" required>
+          <input type="date" id="DTC2" name="NascimentoCasal2" required>
         <br>
         <hr><p style="font-family: arial, sans-serif; margin: 10px 0 10px 0"> Opcional</p><hr>
         <label style="float: left; margin-bottom: 10px" class="definiTamanhoL">Data do Casamento:</label>
@@ -93,8 +94,8 @@
       </div>
       <!-- --------segunda caixa do cadastro empresa ----- -->
       <div class="cadastro_Empresa">
-          <input type=tel name=telEmpresa placeholder="Celular ou telefone ex 11912345678" maxlength="11" style="font-size: 15px" required>
-          <select name=cate>
+          <input type=tel name=telEmpresa id="TELC" placeholder="Celular ou telefone ex 11912345678" maxlength="11" style="font-size: 15px" required>
+          <select name=cate id="CCE" >
             <option selected>Selecione a Categoria:
             <option value="joias">Jóias
             <option value="acessoria">Acessórias

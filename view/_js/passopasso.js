@@ -44,23 +44,90 @@ $(function(){
 $("#valor").click(function(){
     var submi =  $("#msform").attr("action");
     if(submi == "cadastroCasal.php"){
-        $(".cadastro_Empresa").remove();
+        
+        if($("#imgChooser").val() == ""){
+            alert("Escolha uma imagem!");
+        }else if($("#segundoCasal").val() == ""){
+            alert("Defina o nome do parceiro");
+        }else if($("#segundoCasal").val() == ""){
+            alert("Defina o nome do parceiro");
+        }else if($("#PSDB option:selected").val() == "Selecione"){
+            alert("Escolha o gênero!");
+        }else if($("#DTC2").val() == ""){
+            alert("Digite a data de nascimento!");
+        }else{
+            $(".cadastro_Empresa").remove();
+        }
+        
     }else{
-        $(".cadastro_casal").remove();
+        if($("#imgChooser").val() == ""){
+            alert("Escolha uma imagem!");
+        }else if($("#TELC").val() == ""){
+            alert("Digite um numero!");
+        }else if($("#CCE option:selected").val() == "Selecione a Categoria:"){
+            alert("Escolha uma Categoria");
+        }else{
+            $(".cadastro_casal").remove();
+        }
     }
     $("#valor").submit();
     });
     
-
+//else{anima();}
 // funcção proximo
 $(".next").click(function(){
     if($("#msform").attr("action") == "cadastroEmpresa.php"){
-        alert("Cadastro Empresa");
+
+        if($("#NMC").val() == ""){
+            alert("Digite o Nome da empresa!");
+        }else if($(".CNPJC").val() ==  ""){
+            alert("Digite o CNPJ!");
+        }else if($("#EMC").val() == ""){
+            alert("Digite o email!");
+        }else if($("#SAC").val() == ""){
+            alert("Digite a senha!");
+        }else if($("#CSAC").val() == ""){
+            alert("Digite o confirmar senha!");
+        }else if($("#SAC").val() != $("#CSAC").val()){
+            alert("As senhas não estão iguais.");
+        }else if($("#cep").val() == ""){
+            alert("Digite o CEP!");
+        }else if($("#rua").val() == ""){
+            alert("Digite a rua!");
+        }else if($("#bairro").val() == ""){
+            alert("Digite o bairro!");
+        }else if($("#cidade").val() == ""){
+            alert("Digite a cidade!");
+        }else if($("#uf").val() == ""){
+            alert("Digite o estado!");
+        }else{anima();}
     }else if($("#msform").attr("action") == "cadastroCasal.php"){
         
-        if($(".NMC").val() == "" ){
+        if($(".NMC").val() == ""){
             alert("Digite o Nome!");
-        }else if(){anima();}
+        }else if($("#SelecaoTipoC option:selected").val() ==  "Selecione"){
+            alert("Selecione o gênero!");
+        }else if($(".EMC").val() == ""){
+            alert("Digite o email!");
+        }else if($(".SAC").val() == ""){
+            alert("Digite a senha!");
+        }else if($(".CSAC").val() == ""){
+            alert("Digite o confirmar senha!");
+        }else if($(".SAC").val() != $(".CSAC").val()){
+            alert("As senhas não estão iguais.");
+        }else if($(".DTC").val() == ""){
+            alert("Digite a data de nascimento!");
+        }else if($("#cep").val() == ""){
+            alert("Digite o CEP!");
+        }else if($("#rua").val() == ""){
+            alert("Digite a rua!");
+        }else if($("#bairro").val() == ""){
+            alert("Digite o bairro!");
+        }else if($("#cidade").val() == ""){
+            alert("Digite a cidade!");
+        }else if($("#uf").val() == ""){
+            alert("Digite o estado!");
+        }else{anima();}
     }
     function anima(){
         if(animating) return false;
