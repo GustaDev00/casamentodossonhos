@@ -4,10 +4,10 @@
           
         <div class="somenteE">
             <img class="x2" src="../_imagens/seta_esquerda.png"  style="cursor:pointer" onclick="abrirF()"><br>
-         <form action="PesquisarUsuario.php" method="GET">
-          <input id="cC" type="text" placeholder="Nome" name="Nome" require d-size = ""><br><br>
-           <p class="LadoLado"><input type="checkbox" required-size = "">Cliente</p>
-          <p class="LadoLado"><input type="checkbox" required-size = "">Empresa<p>
+         <form action="../allUser/" method="POST">
+          <input id="cC" type="text" placeholder="Nome" name="NomeCC" require d-size = ""><br><br>
+           <p class="LadoLado"><input type="checkbox" name="escolhaC[]" value="cliente" equired-size = "">Cliente</p>
+          <p class="LadoLado"><input type="checkbox" name="escolhaC[]" value="empresa" required-size = "">Empresa<p>
               <br>
           <input type="submit" value="Pesquisar" id="AU">
         </form>
