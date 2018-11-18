@@ -155,7 +155,42 @@ foreign key(cod_usu) references usuario(cod_usu),
 foreign key(cod_usu) references usuario(cod_usu),
 foreign key(cod_usu) references usuario(cod_usu)
 );
-		insert into adm(nome_adm, email_adm, senha_adm, defini_adm) values ('SENHOR FODÃO', 'adm@adm.adm', 'adm', '3');
-		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Flores', 'Flores em Geral', 'A');
-		insert into categoria(nome_categoria, desc_categoria, cod_status) values ('Jóias', 'Jóias em Geral', 'A');
-	
+		
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Salões de festa", "Salões em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Vestidos", "Vestidos em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Ternos", "Ternos em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Salões de beleza", " Salões de beleza em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Dj/música ", "Músicas em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Lua de mel", "Lua de mel em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Lembrancinhas", "Lembrancinhas em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Flores", "Flores em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Fotografia", "Fotografia em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Automóveis", "Automóveis em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Joias", "Joias em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Acessórias ", "Acessórias em geral", "A");
+
+Insert into categoria(nome_categoria, desc_categoria, cod_status)
+Values("Cerimonialista ", "Cerimonialista em geral", "A");
