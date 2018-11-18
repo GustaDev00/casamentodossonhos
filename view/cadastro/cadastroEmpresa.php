@@ -26,6 +26,7 @@ try{
         $telEmpresa = isset($_REQUEST['telEmpresa'])?$_REQUEST['telEmpresa']:null;
         $categoriaEmpresa = isset($_REQUEST['cate'])?$_REQUEST['cate']:null;
     }
+    var_dump($_POST);
 
 
         if($nomeEmpresa == null or $cnpj == null or $emailEmpresa == null 
