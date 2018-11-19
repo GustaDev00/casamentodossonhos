@@ -1,13 +1,6 @@
 create database casamentodossonhos;
   -- drop database casamentodossonhos;
 use casamentodossonhos;
-/*
-create table tipo_usuario(
-desc_tipo_usu text,
-cod_status_usu char(2),
-cod_tipo_usu int primary key auto_increment
-);
-*/
 
 create table usuario(
 cod_usu int primary key auto_increment, 
@@ -31,15 +24,6 @@ local_casal varchar(60),
 foto_local varchar(60),
 defini_usu varchar(1)
 );
-/*
-create table email(
-titulo_email varchar(100),
-data_hora_email datetime,
-espaço_email varchar(80),
-cod_status_email char(2),
-cod_email int primary key auto_increment
-);
-*/
 
 create table empresa(
 cod_empresa int primary key auto_increment,
@@ -89,7 +73,6 @@ foreign key(cod_empresa)references empresa(cod_empresa),
 foreign key(cod_categoria)references categoria(cod_categoria)
 );
 
-
 create table convidados(
  cod_conv int primary key auto_increment,
  email_conv varchar(80),
@@ -101,8 +84,6 @@ create table convidados(
  foreign key(cod_usu) references usuario(cod_usu)
 );
 
--- insert into convidados(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu) values ('xd@', '2', 'xupinga', 'vo nada', '40028922'); 
-
 create table lista_presentes(
 cod_list_pres int primary key auto_increment,
 nome_valor_presente varchar(40),
@@ -113,20 +94,6 @@ cod_usu int not null,
 foreign key(cod_conv)references convidados(cod_conv),
 foreign key(cod_usu) references usuario(cod_usu)
 );
-
-
-/*INSERT INTO LISTA_PRESENTES(nome_valor_presente, tipo_presente, cod_usu) values($nomePres, $tipoPres, $id);
-select * from lista_presentes where cod_usu = 4;
-DELETE FROM LISTA_PRESENTES WHERE NOME_VALOR_PRESENTE = 'Foguete' AND COD_USU = '4';
-select* from lista_presentes;*/
-/*
-create table comentario(
-cod_coment int primary key auto_increment,
-data_hora_coment varchar(20),
-cod_status_coment char(2),
-desc_coment varchar(100)
-);
-*/
 
 create table favorita(
 cod_favorita int primary key auto_increment,
