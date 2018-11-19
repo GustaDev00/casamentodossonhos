@@ -133,9 +133,9 @@ $id = $_SESSION['id'];
                                                 </tr>
                                 <?php  $cConv = 0; while($cConv < count($dadosConv)){    ?>
                                     <tr>
-                                <td><label class="nm"><?php   echo $dadosConv[$cConv]['nome_convi']?></label></td>
-                            <td><label class="nm"><?php   echo $dadosConv[$cConv]['presenca']?></label></td>
-                            <td><label class="qtd" ><?php     echo $dadosConv[$cConv]['num_acomp'] ?></label><br></td>
+                                <td><a class="pres"><?php   echo $dadosConv[$cConv]['nome_convi']?></a></td>
+                            <td><a class="pres"><?php   echo $dadosConv[$cConv]['presenca']?></a></td>
+                            <td><a class="pres"><?php     echo $dadosConv[$cConv]['num_acomp'] ?></a><br></td>
                             </tr>
                                     <?php $cConv++; } ?>
                                             </table>
