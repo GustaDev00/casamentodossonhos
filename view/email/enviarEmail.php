@@ -11,9 +11,9 @@ try{
         //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
         $conn = connection();
         $msg = isset($_POST['msg'])?$_POST['msg']:null;
-        $id = isset($_POST['idUsu'])?$_POST['idUsu']:null;
         $email = isset($_POST['emailE'])?$_POST['emailE']:null;
         $nomeProd = isset($_POST['nomeProd'])?$_POST['nomeProd']:null;
+        $id = $_SESSION["id"];
         $emailUsu = "select * from usuario where cod_usu ='$id'";
         $execute = executeSelect($conn, $emailUsu);
         $fetch = $execute->fetch(PDO::FETCH_OBJ);
