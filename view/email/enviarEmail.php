@@ -29,17 +29,17 @@ try{
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         
         $enviaremail = mail($destino, $assunto, $arquivo, $headers);
-        if($enviaremail){$mgm = "E-mail enviado com sucesso";
-        echo $mgm;
+        if($enviaremail){
+        $mgm = "E-mail enviado com sucesso";
+        echo "<script>alert('".$mgm."');</script>";
         echo '<script>';
-        echo 'alert("E-mail enviado com sucesso")';
         echo "location.href='javascript:history.go(-1)'";
         echo '</script>';
         }else{
             $mgm = "erro ao enviar mensagem";
             echo $mgm;
             echo '<script>';
-            echo "location.href='javascript:history.go(-1)'";
+            echo "location.href='javascript:history.go(-1);'";
             echo '</script>';
         }
 

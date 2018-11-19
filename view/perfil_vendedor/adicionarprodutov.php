@@ -4,7 +4,9 @@ include_once "../../Db/daohelper.php";
 session_start();
 try{
     if(empty($_POST)){
-        echo "TEM ALGO ERRADO CUZAO";
+        echo'<script>';
+        echo"location.href='../perfil/perfil.php'";
+        echo '</script>';
     }else{
 
     if($_FILES['SImagemP'] == null){
