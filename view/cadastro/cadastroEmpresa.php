@@ -70,7 +70,7 @@ try{
                      @move_uploaded_file ( $arquivo_tmp, $destino );
 
             $conn = connection();
-            $verificar = "SELECT * FROM empresa WHERE email_empre = '$emailEmpresa' or cnpj_empre = '$cnpj'";
+            $verificar = "select * from empresa where email_empre = '$emailEmpresa' or cnpj_empre = '$cnpj'";
             $querySelect = executeSelect($conn, $verificar);
             
             if($querySelect->rowCount() > 0){
@@ -93,10 +93,10 @@ try{
                 echo "location.href='../cadastro/'";
                 echo '</script>';
 }else{
-                $queryInsert = "INSERT INTO empresa(nome_empre, cnpj_empre, email_empre, senha_empre, 
+                $queryInsert = "insert into empresa(nome_empre, cnpj_empre, email_empre, senha_empre, 
                 cep_empre,  rua_empre, bairro_empre, cidade_empre, estado_empre, foto_empre, tel_empre,  
                 categoria_empre, defini_empre)
-                         VALUES('$nomeEmpresa', '$cnpj', '$emailEmpresa', '$senhaEmpresa', '$cepEmpresa'
+                         values('$nomeEmpresa', '$cnpj', '$emailEmpresa', '$senhaEmpresa', '$cepEmpresa'
                          , '$ruaEmpresa', '$bairroEmpresa', '$cidadeEmpresa', '$ufEmpresa', '$destino',
                           '$telEmpresa', '$categoriaEmpresa', '2')";
                 if(executeQuery($conn, $queryInsert)){
