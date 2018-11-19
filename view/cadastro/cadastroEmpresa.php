@@ -26,7 +26,7 @@ try{
         $telEmpresa = isset($_REQUEST['telEmpresa'])?$_REQUEST['telEmpresa']:null;
         $categoriaEmpresa = isset($_REQUEST['cate'])?$_REQUEST['cate']:null;
     }
-    var_dump($_POST);
+   
 
 
         if($nomeEmpresa == null or $cnpj == null or $emailEmpresa == null 
@@ -70,6 +70,7 @@ try{
                      @move_uploaded_file ( $arquivo_tmp, $destino );
 
             $conn = connection();
+            $conn->exec("set names utf8");
             $verificar = "select * from empresa where email_empre = '$emailEmpresa' or cnpj_empre = '$cnpj'";
             $querySelect = executeSelect($conn, $verificar);
             
