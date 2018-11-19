@@ -18,14 +18,14 @@ try{
         $execute = executeSelect($conn, $emailUsu);
         $fetch = $execute->fetch(PDO::FETCH_OBJ);
         $emailU = $fetch->email_usu;
-        
+        $nomeU = $fetch->nome_usu;
         
         $destino = "$email";
-        $arquivo = "$msg";
+        $arquivo = "Mensagem referente ao produto $nomeProd: <br> $msg";
         $assunto = "Casamento dos Sonhos - Contato Produto";
         
         $headers =  'MIME-Version: 1.0' . "\r\n"; 
-        $headers .= "From: Your name <$emailU>" . "\r\n";
+        $headers .= "From: $nomeU <$emailU>" . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         
         $enviaremail = mail($destino, $assunto, $arquivo, $headers);
