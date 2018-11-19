@@ -38,7 +38,7 @@ try{
        
 
        
-       $sql = "INSERT INTO CONVIDADOS(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu)
+       $sql = "INSERT INTO convidados(email_conv, num_acomp, nome_convi, presenca, celular_conv, cod_usu)
                            VALUES('$email', '$acomp', '$nome', '$confirm', '$celular', '$id')";
     $executeInsert = executeQuery($conn, $sql);
     echo "<script>alert('Convidado Cadastrado!');
