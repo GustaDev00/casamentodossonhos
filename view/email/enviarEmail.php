@@ -31,9 +31,16 @@ try{
         $enviaremail = mail($destino, $assunto, $arquivo, $headers);
         if($enviaremail){$mgm = "E-mail enviado com sucesso";
         echo $mgm;
+        echo '<script>';
+        echo 'alert("E-mail enviado com sucesso")';
+        echo "location.href='javascript:history.go(-1)'";
+        echo '</script>';
         }else{
             $mgm = "erro ao enviar mensagem";
             echo $mgm;
+            echo '<script>';
+            echo "location.href='javascript:history.go(-1)'";
+            echo '</script>';
         }
 
         
