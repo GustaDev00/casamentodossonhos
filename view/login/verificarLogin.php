@@ -19,7 +19,7 @@ $senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
 $pdo= connection();
 
 
-    $verificar = "SELECT email_usu, senha_usu from usuario where email_usu='$email' and senha_usu='$senha';";
+    $verificar = "select email_usu, senha_usu from usuario where email_usu='$email' and senha_usu='$senha';";
     $validarLogin = executeSelect($pdo, $verificar);
     $count = $validarLogin->rowCount();
 
@@ -29,7 +29,7 @@ $pdo= connection();
         session_start();
         $_SESSION["email"]= $_POST["email"];
         $_SESSION["senha"]= $_POST["senha"];
-        $verificar = ("SELECT cod_usu, defini_usu from usuario where email_usu = '$email' and senha_usu = '$senha';");
+        $verificar = ("select cod_usu, defini_usu from usuario where email_usu = '$email' and senha_usu = '$senha';");
                 $validarLogin = executeSelect($pdo, $verificar);
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
                 $id = $fetch->cod_usu;
@@ -41,7 +41,7 @@ $pdo= connection();
         }else{
             
             
-            $verificar = "SELECT email_empre, senha_empre from empresa where email_empre='$email' and senha_empre='$senha';";
+            $verificar = "select email_empre, senha_empre from empresa where email_empre='$email' and senha_empre='$senha';";
             $validarLogin = executeSelect($pdo, $verificar);
             $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
             $count = $validarLogin->rowCount();
@@ -50,7 +50,7 @@ $pdo= connection();
                 session_start();
                 $_SESSION["email"]= $_POST["email"];
                 $_SESSION["senha"]= $_POST["senha"];
-                $verificar = ("SELECT cod_empresa, defini_empre from empresa where email_empre = '$email' and senha_empre = '$senha';");
+                $verificar = ("select cod_empresa, defini_empre from empresa where email_empre = '$email' and senha_empre = '$senha';");
                 $validarLogin = executeSelect($pdo, $verificar);
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
                 $defini = $fetch->defini_empre;
@@ -63,14 +63,14 @@ $pdo= connection();
                 </script>";
             
             }else{
-            $verificar = "SELECT email_adm, senha_adm from adm where email_adm='$email' and senha_adm='$senha';";
+            $verificar = "select email_adm, senha_adm from adm where email_adm='$email' and senha_adm='$senha';";
             $validarLogin = executeSelect($pdo, $verificar);
             $count = $validarLogin->rowCount();
             if($count > 0){
                 session_start();
                 $_SESSION["email"]= $_POST["email"];
                 $_SESSION["senha"]= $_POST["senha"];
-                $verificar = ("SELECT cod_adm, defini_adm from adm where email_adm = '$email' and senha_adm = '$senha';");
+                $verificar = ("select cod_adm, defini_adm from adm where email_adm = '$email' and senha_adm = '$senha';");
                 $validarLogin = executeSelect($pdo, $verificar);
                 $fetch = $validarLogin->fetch(PDO ::FETCH_OBJ);
                 $id = $fetch->cod_adm;

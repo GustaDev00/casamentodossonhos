@@ -69,7 +69,7 @@ try{
                         //
 
             $conn = connection();
-            $verificar = "SELECT email_usu FROM usuario WHERE email_usu = '$emailCasal'";
+            $verificar = "select email_usu from usuario where email_usu = '$emailCasal'";
             $querySelect = executeSelect($conn, $verificar);
             
             if($querySelect->rowCount() > 0){
@@ -81,15 +81,15 @@ try{
                 echo "location.href='../cadastro/'";
                 echo '</script>';
             }else{
-                $queryInsert = "INSERT INTO usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
+                $queryInsert = "insert into usuario(nome_usu, tipo_usu, email_usu, senha_usu, 
                 nascimento_usu, cep_usu,  rua_usu, bairro_usu, cidade_usu, estado_usu, foto_usu, nome_par_usu,  
                 tipo_par_usu, nascimento_par_usu, data_casal, horario_casal, local_casal, foto_local, defini_usu)
-                         VALUES('$nomeCasal', '$casalDefinicao' ,'$emailCasal', '$senhaCasal', '$NascimentoCasal', '$cepCasal'
+                         values('$nomeCasal', '$casalDefinicao' ,'$emailCasal', '$senhaCasal', '$NascimentoCasal', '$cepCasal'
                          , '$ruaCasal', '$bairroCasal', '$cidadeCasal', '$ufCasal', '$destino', '$NomeParceiro', '$casalDefinicao2'
                          , '$NascimentoCasal2', '$DataCasal', 'Não Definido', 'Não Definido', '../_imagens/galeria3.jpeg', '1')";
                         
                 if(executeQuery($conn, $queryInsert)){
-                $querySelect2 = executeSelect($conn, "SELECT cod_usuario FROM usuario ORDER BY cod_usuario DESC LIMIT 1");
+                $querySelect2 = executeSelect($conn, "select cod_usuario from usuario order by cod_usuario desc limit 1");
                 //$cod_usu = $querySelect2->fetch(PDO ::FETCH_OBJ);
                 //$ultimoCod = $cod_usu->cod_usuario;
                 session_start();
