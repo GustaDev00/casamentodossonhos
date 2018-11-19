@@ -7,7 +7,7 @@ try{
     if(empty($_POST)){
         echo "post vazio";
     }else{
-        
+        session_start();
         //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
         $conn = connection();
         $msg = isset($_POST['msg'])?$_POST['msg']:null;
