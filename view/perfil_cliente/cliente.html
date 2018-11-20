@@ -49,15 +49,15 @@ $id = $_SESSION['id'];
                                 </tr>
                         <?php 
                         $r = 0;
-                        while($r < count($dadosPres)){
+                        while($r < count($dadosPres2)){
                         
                      ?>  
                      
                         <div class="l1">  
                         <tr>                         
                             <form action="../deletes/list_pres.php" method="POST">
-                                <td><a class="pres"> <?php echo $dadosPres[$r]['nome_valor_presente']  ?></a> </td>
-                            <td><a class="co">  <?php echo $dadosPres[$r]['status_presente'] ?></a>  </td>
+                                <td><a class="pres"> <?php echo $dadosPres2[$r]['nome_valor_presente']  ?></a> </td>
+                            <td><a class="co">  <?php echo $dadosPres2[$r]['status_presente'] ?></a>  </td>
                             <input type='hidden' name='nomePres' value="<?php echo $dadosPres[$r]['nome_valor_presente']  ?>">
                               </form>                                                                                
                         </tr>

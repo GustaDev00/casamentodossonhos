@@ -265,14 +265,14 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $horarioCas = $fetch2->horario_casal;
         $codUsu = $fetch2->cod_usu;
         $emailU = $fetch2->email_usu;
-        $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
+        $select2 = "select * from lista_presentes where cod_usu = '$codUsu'";
         $execute2 = executeSelect($pdo, $select2);
-        $dadosPres = array();
+        $dadosPres2 = array();
         $dP = 0;
         while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
-            $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
-            $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
-            $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
+            $dadosPres2[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
+            $dadosPres2[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+            $dadosPres2[$dP]['status_presente'] = $fetch3->status_presente;
             $dP++;
         }
         
