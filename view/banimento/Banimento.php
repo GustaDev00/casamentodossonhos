@@ -8,6 +8,7 @@ try{
 $fp = fopen("checkBan.txt", "a");
  
 // Escreve "exemplo de escrita" no bloco1.txt
+date_default_timezone_set('America/Sao_Paulo');
 $hora =  date('d-m-y');
 $horaBanimento =  date('d-m-y', strtotime("+7 days", strtotime($hora)));
 $escreve = fwrite($fp, "$email~$horaBanimento,");
