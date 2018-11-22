@@ -29,8 +29,19 @@
         </div>
             
 </section>
-
-    
+<section id="MensagemEnviar">
+    <form action="../email/enviarEmail.php" method="POST" class="digi">
+        <label><?php if(isset($_SESSION["email"])){echo $_SESSION["email"]; }else{ ?>EmailUsuario@exemplo.com<?php } ?></label>
+        <label><?php echo $emailE; ?></label><br>
+        <label><?php echo $nome; ?></label>
+        <textarea placeholder="Digite aqui sua mensagem" name="msg" ></textarea>
+        <input type="hidden" name="idUsu" value="<?php $id = $_SESSION['id']; echo $id ?>">
+        <input type="hidden" name="emailE" value="<?php echo $emailE ?>">
+        <input type="hidden" name="nomeProd" value="<?php echo $nome ?>">
+            
+        <input type="image" src="../_imagens/EnviarP.png" width="40px" name="Enviar" id="btnForm">
+    </form>
+</section>    
     <div id="all_icones">
         <a href="#" class="one"><img  src="../_imagens/descricao.png" alt="descrição"></a>
         <a href="#"><img src="../_imagens/msg.png" alt="mensagem"></a>
