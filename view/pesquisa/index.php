@@ -1,9 +1,9 @@
 <?php
         require_once '../../Db/daohelper.php';
         session_start();
+        include_once '../mask/header.html';
         $conn = connection();
         $conn->exec("set names utf8");
-        include_once '../mask/header.html';
         $nomeF = isset($_POST["nomeF"])?$_POST["nomeF"]:NULL;
         $checkbox = isset($_POST["escolhaC"])?$_POST["escolhaC"]:NULL;
         $pesquisa = isset($_GET['pesquisar'])?$_GET['pesquisar']:NULL;
