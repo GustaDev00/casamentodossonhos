@@ -69,6 +69,7 @@ try{
                         //
 
             $conn = connection();
+            $conn->exec("set names utf8");
             $verificar = "select email_usu from usuario where email_usu = '$emailCasal'";
             $querySelect = executeSelect($conn, $verificar);
             

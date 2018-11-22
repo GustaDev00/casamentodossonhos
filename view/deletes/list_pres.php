@@ -5,7 +5,7 @@ session_start();
 
 try{
     if(empty($_POST)){
-        echo "vazio tio";
+       
     }else{
         $id = $_SESSION['id'];
         $nomePres = isset($_REQUEST['nomePres'])?$_REQUEST['nomePres']:null;

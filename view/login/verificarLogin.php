@@ -17,7 +17,7 @@ require_once '../funcoes/funcoes.php';
 $email = isset($_REQUEST['email'])?$_REQUEST['email']:null;
 $senha = isset($_REQUEST['senha'])?$_REQUEST['senha']:null;
 $pdo= connection();
-
+$pdo->exec("set names utf8");
 
     $verificar = "select email_usu, senha_usu from usuario where email_usu='$email' and senha_usu='$senha';";
     $validarLogin = executeSelect($pdo, $verificar);

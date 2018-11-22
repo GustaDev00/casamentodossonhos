@@ -3,9 +3,9 @@
 include_once '../../Db/daohelper.php';
 try{
 if(empty($_POST)){
-    echo 'post vazio';
+   
 }else if(empty($_FILES)){
-    echo 'imagem n ta vindo caraio';
+  
 }else{
     session_start();
     $nomeFoto = isset($_POST['nomeFoto'])?$_POST['nomeFoto']:null;

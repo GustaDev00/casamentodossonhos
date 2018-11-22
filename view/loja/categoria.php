@@ -33,11 +33,10 @@ $pagina = 1;
                     while($fetch = $querySelect->fetch(PDO::FETCH_ASSOC)){
                     $produto[] = $fetch;
                     }
-                }else{ echo "errosss"; }
+                }else{ }
         
     
     }
 }catch (Exception $ex) {
- $ex = "nao esta pegando amiguinho";
-    echo $ex;
+
 }

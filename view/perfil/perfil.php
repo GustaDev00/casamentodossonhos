@@ -37,6 +37,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         }
     }
     if($_SESSION["defini"] == 1){
+      
         $verificAlert = "select a.msg_alert, dm.nome_adm, dm.cod_adm
         from alert a
         inner join adm dm
@@ -55,7 +56,6 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $deleteAlert = "DELETE FROM alert WHERE cod_usu = '{$_SESSION["id"]}' AND cod_adm = '$codAdmAlert' and msg_alert = '$alert'";
             $executeDeleteAlert = executeQuery($pdo, $deleteAlert);
         }
-
         $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
@@ -121,8 +121,10 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
 
                 $dConv++;
             }
-            
             include_once "../perfil_cliente/index.php";
+
+
+            
 
     }else if($_SESSION["defini"] == 2){
         $verificAlert = "select a.msg_alert, dm.nome_adm, dm.cod_adm
@@ -265,14 +267,14 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $horarioCas = $fetch2->horario_casal;
         $codUsu = $fetch2->cod_usu;
         $emailU = $fetch2->email_usu;
-        $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
+        $select2 = "select * from lista_presentes where cod_usu = '$codUsu'";
         $execute2 = executeSelect($pdo, $select2);
-        $dadosPres = array();
+        $dadosPres2 = array();
         $dP = 0;
         while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
-            $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
-            $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
-            $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
+            $dadosPres2[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
+            $dadosPres2[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+            $dadosPres2[$dP]['status_presente'] = $fetch3->status_presente;
             $dP++;
         }
         
@@ -326,17 +328,16 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo '</script>';
     }
     }
-    ?>
-  <?php
+
 }else{
 
     //verifica se existe  codigo para carrega outro pagina de perfil.... a deslogada
     if(isset($_GET['codigo']) and isset($_GET['par'])){
-        $_SESSION["id"] = $_GET['codigo'];
-        $_SESSION["defini"] = $_GET['par'];
+        $id = $_GET['codigo'];
+        $defini = $_GET['par'];
         
-        if($_SESSION["defini"] == 1){
-            $select = "select * from usuario where cod_usu = '{$_SESSION["id"]}'";        
+        if($defini == 1){
+            $select = "select * from usuario where cod_usu = '$id'";        
             $execute = executeSelect($pdo, $select);
             $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
             $nome = $fetch2->nome_usu;      
@@ -348,13 +349,15 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $imagemLoc = $fetch2->foto_local;
             $localCas = $fetch2->local_casal;
             $horarioCas = $fetch2->horario_casal;
-            $select2 = "select * from lista_presentes where cod_usu = '{$_SESSION["id"]}'";
+            $select2 = "select * from lista_presentes where cod_usu = '$id' and status_presente = 'Em Aberto'";
             $execute2 = executeSelect($pdo, $select2);
             $dadosPres = array();
             $dP = 0;
             
             while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+                $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
                 $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+                $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
                 $dP++;
             }
             

@@ -14,7 +14,7 @@ try{
 $imagemCasal = isset($_FILES['img_local'])?$_FILES['img_local']:null;
 
 if($_FILES['img_local'] == null){
-    echo "vazio porra";
+   
 }else{
     $arquivo_tmp = $imagemCasal[ 'tmp_name' ];
     $nome = $imagemCasal[ 'name' ];

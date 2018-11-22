@@ -5,7 +5,7 @@ session_start();
 
 try{
     if(empty($_POST)){
-        echo "tem nada aqui tio";
+       
     }else{
        $nomePres = isset($_REQUEST['nomePresente'])?$_REQUEST['nomePresente']:null;
        $tipoPres = isset($_REQUEST['tipoPresente'])?$_REQUEST['tipoPresente']:null;
