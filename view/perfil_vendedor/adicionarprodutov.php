@@ -8,7 +8,7 @@ try{
     }else{
 
     if($_FILES['SImagemP'] == null){
-        echo "vazio porra";
+        
     }else{
         $img = isset($_FILES['SImagemP'])?$_FILES['SImagemP']:NULL;
         $nome = isset($_POST['nomeproduto'])?$_POST['nomeproduto']:NULL;

@@ -5,7 +5,7 @@ include_once '../../Db/daohelper.php';
 try{
 
     if(empty($_POST)){
-        echo "ta vazio";
+       
     }else{
         $emailConvidado = isset($_POST['confirmEmail'])?$_POST['confirmEmail']:null;
         //echo $emailConvidado;

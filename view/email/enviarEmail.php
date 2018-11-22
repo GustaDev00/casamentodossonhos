@@ -16,6 +16,7 @@ try{
         session_start();
         //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
         $conn = connection();
+        $conn->exec("set names utf8");
         $msg = isset($_POST['msg'])?$_POST['msg']:null;
         $email = isset($_POST['emailE'])?$_POST['emailE']:null;
         $nomeProd = isset($_POST['nomeProd'])?$_POST['nomeProd']:null;
@@ -46,6 +47,7 @@ try{
                     session_start();
                     //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
                     $conn = connection();
+                    $conn->exec("set names utf8");
                     $msg = isset($_POST['msg'])?$_POST['msg']:null;
                     $email = isset($_POST['emailE'])?$_POST['emailE']:null;
                     $nomeProd = isset($_POST['nomeProd'])?$_POST['nomeProd']:null;
