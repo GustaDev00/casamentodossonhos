@@ -6,7 +6,6 @@
     if(empty($idProd)){
     }else{
         $conn = connection();
-        $conn->exec("set names utf8");
         $select = "   select p.nome_prod, p.preco_prod, p.desc_prod, p.iz_prod, 
         p.local_prod, p.url_foto_prod, 
         c.nome_categoria, c.desc_categoria,
@@ -33,7 +32,7 @@
         $fotoE = $fetch->foto_empre;
         $codEmpresa = $fetch->cod_empresa;
         
-        include_once 'index.html';
+        include_once 'produto.html';
     }
 
 

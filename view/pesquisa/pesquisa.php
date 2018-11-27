@@ -8,7 +8,6 @@ if (empty($_GET['pesquisar'])) {
   
 $pesquisa =  $_SESSION['pesquisado'];
 $PDO = connection();
-$PDO->exec("set names utf8");
 
 $sql = "select distinct(p.cod_produto), p.nome_prod, p.preco_prod, p.desc_prod, 
   p.local_prod, p.url_foto_prod, c.nome_categoria, c.desc_categoria,

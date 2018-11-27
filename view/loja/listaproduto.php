@@ -3,7 +3,7 @@ include_once '../../Db/daohelper.php';
 try{
 $pagina = 1;
  $conn = connection();
- $conn->exec("set names utf8");
+ 
  $verificar = "SELECT count(cod_produto) FROM produto";
  $querySelect = executeSelect($conn, $verificar);
     $cod = array();

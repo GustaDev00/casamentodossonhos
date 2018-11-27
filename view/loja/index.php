@@ -3,7 +3,6 @@
         session_start();
         include_once '../mask/header.html';
         $conn = connection();
-        $conn->exec("set names utf8");
         $nomeCat = isset($_GET['categoria'])?$_GET['categoria']:null;
         if($nomeCat == true){
             $sql = "select * from categoria where nome_categoria = '$nomeCat'";

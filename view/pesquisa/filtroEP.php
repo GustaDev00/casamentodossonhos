@@ -1,7 +1,5 @@
 <?php
         require_once '../../Db/daohelper.php';
-        $conn = connection();
-        $conn->exec("set names utf8");
 if($checkbox != NULL){
     if($nomeF != NULL){
         $nomeF = strtolower($nomeF);
