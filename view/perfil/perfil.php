@@ -363,9 +363,8 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             
             include_once "../perfil_cliente/index.php";
 
-    }else if($_SESSION["defini"] == 2){
-        $id = $_SESSION['id'];
-        $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";
+    }else if($defini == 2){
+        $select = "select * from empresa where cod_empresa = '$id'";
         $execute = executeSelect($pdo, $select);
         $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
         $nome = $fetch2->nome_empre;
@@ -377,7 +376,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $funcE = $fetch2->categoria_empre;
         $imagemL = $fetch2->foto_empre;
         $select2 = "select nome_categoria from categoria;";
-        $select3= "select * from produto where cod_empresa = '{$_SESSION["id"]}';";
+        $select3= "select * from produto where cod_empresa = '$id';";
         $execute2 = executeSelect($pdo, $select2);
         $execute3 = executeSelect($pdo, $select3);
         $dadosCat = array();
@@ -397,7 +396,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             $dP++;
         }
 
-        $selectFoto = "select * from fotos_empresa where cod_empresa = '{$_SESSION["id"]}';";
+        $selectFoto = "select * from fotos_empresa where cod_empresa = '$id';";
         $execFoto = executeSelect($pdo, $selectFoto);
         $dadosFoto = array();
         $df = 0;
