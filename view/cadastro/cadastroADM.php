@@ -19,7 +19,6 @@ try{
         echo '</script>';
     }else{
         $conn = connection();
-        $conn->exec("set names utf8");
         $nome = isset($_POST['nomeAdm'])?$_POST['nomeAdm']:null;
         $email = isset($_POST['emailAdm'])?$_POST['emailAdm']:null;
         $senha = isset($_POST['senhaAdm'])?$_POST['senhaAdm']:null;

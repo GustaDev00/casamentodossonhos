@@ -70,7 +70,6 @@ try{
                      @move_uploaded_file ( $arquivo_tmp, $destino );
 
             $conn = connection();
-            $conn->exec("set names utf8");
             $verificar = "select * from empresa where email_empre = '$emailEmpresa' or cnpj_empre = '$cnpj'";
             $querySelect = executeSelect($conn, $verificar);
             
