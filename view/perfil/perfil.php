@@ -1,9 +1,92 @@
 <?php
 
 require_once '../../Db/daohelper.php';
-//require_once './processo.php';
 session_start();
 $pdo = connection();
+//require_once './processo.php';
+//verifica se existe  codigo para carrega outro pagina de perfil.... a deslogada
+if(isset($_GET['codigo']) and isset($_GET['par'])){
+    $id = $_GET['codigo'];
+    $defini = $_GET['par'];
+    
+    if($defini == 1){
+        $select = "select * from usuario where cod_usu = '$id'";        
+        $execute = executeSelect($pdo, $select);
+        $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
+        $nome = $fetch2->nome_usu;      
+        $parceiro = $fetch2->nome_par_usu;
+        $senha = $fetch2->senha_usu;
+        $diaCas = $fetch2->data_casal; 
+        $email = $fetch2->email_usu;
+        $imagemL = $fetch2->foto_usu;
+        $imagemLoc = $fetch2->foto_local;
+        $localCas = $fetch2->local_casal;
+        $horarioCas = $fetch2->horario_casal;
+        $select2 = "select * from lista_presentes where cod_usu = '$id' and status_presente = 'Em Aberto'";
+        $execute2 = executeSelect($pdo, $select2);
+        $dadosPres = array();
+        $dP = 0;
+        
+        while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+            $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
+            $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
+            $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
+            $dP++;
+        }
+        
+        include_once "../perfil_cliente/index.php";
+
+}else if($defini == 2){
+    $select = "select * from empresa where cod_empresa = '$id'";
+    $execute = executeSelect($pdo, $select);
+    $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
+    $nome = $fetch2->nome_empre;
+    $ruaE = $fetch2->rua_empre;
+    $bairroE = $fetch2->bairro_empre;
+    $cidadeE = $fetch2->cidade_empre;
+    $estadoE = $fetch2->estado_empre;
+    $telE = $fetch2->tel_empre;
+    $funcE = $fetch2->categoria_empre;
+    $imagemL = $fetch2->foto_empre;
+    $select2 = "select nome_categoria from categoria;";
+    $select3= "select * from produto where cod_empresa = '$id';";
+    $execute2 = executeSelect($pdo, $select2);
+    $execute3 = executeSelect($pdo, $select3);
+    $dadosCat = array();
+    $dC = 0;
+    while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
+        $dadosCat[$dC]['nome_categoria'] = $fetch3->nome_categoria;
+        $dC++;
+    }
+    
+    $dadosProd = array();
+    $dP = 0;
+    while($fetch4 = $execute3->fetch(PDO ::FETCH_OBJ)){
+        $dadosProd[$dP]['cod_produto'] = $fetch4->cod_produto;
+        $dadosProd[$dP]['nome_produto'] = $fetch4->nome_prod;
+        $dadosProd[$dP]['url_foto_prod'] = $fetch4->url_foto_prod;
+        
+        $dP++;
+    }
+
+    $selectFoto = "select * from fotos_empresa where cod_empresa = '$id';";
+    $execFoto = executeSelect($pdo, $selectFoto);
+    $dadosFoto = array();
+    $df = 0;
+    while($fetchFoto = $execFoto->fetch(PDO::FETCH_OBJ)){
+        $dadosFot[$df]['nome_foto'] = $fetchFoto->nome_foto;
+        $dadosFot[$df]['url_foto_empresa'] = $fetchFoto->url_foto_empresa;
+        $dadosFot[$df]['desc_foto'] = $fetchFoto->desc_foto;
+        $df++;
+    }
+
+    include_once '../perfil_vendedor/index.php';
+ 
+}else{}
+    
+}else{
+//pega abaixo
+
 if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
     
     $email = $_SESSION["email"];
@@ -328,90 +411,10 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         echo '</script>';
     }
     }
-
+// pega acima
 }else{
 
-    //verifica se existe  codigo para carrega outro pagina de perfil.... a deslogada
-    if(isset($_GET['codigo']) and isset($_GET['par'])){
-        $id = $_GET['codigo'];
-        $defini = $_GET['par'];
-        
-        if($defini == 1){
-            $select = "select * from usuario where cod_usu = '$id'";        
-            $execute = executeSelect($pdo, $select);
-            $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
-            $nome = $fetch2->nome_usu;      
-            $parceiro = $fetch2->nome_par_usu;
-            $senha = $fetch2->senha_usu;
-            $diaCas = $fetch2->data_casal; 
-            $email = $fetch2->email_usu;
-            $imagemL = $fetch2->foto_usu;
-            $imagemLoc = $fetch2->foto_local;
-            $localCas = $fetch2->local_casal;
-            $horarioCas = $fetch2->horario_casal;
-            $select2 = "select * from lista_presentes where cod_usu = '$id' and status_presente = 'Em Aberto'";
-            $execute2 = executeSelect($pdo, $select2);
-            $dadosPres = array();
-            $dP = 0;
-            
-            while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
-                $dadosPres[$dP]['cod_list_pres'] = $fetch3->cod_list_pres;
-                $dadosPres[$dP]['nome_valor_presente'] = $fetch3->nome_valor_presente;
-                $dadosPres[$dP]['status_presente'] = $fetch3->status_presente;
-                $dP++;
-            }
-            
-            include_once "../perfil_cliente/index.php";
-
-    }else if($defini == 2){
-        $select = "select * from empresa where cod_empresa = '$id'";
-        $execute = executeSelect($pdo, $select);
-        $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
-        $nome = $fetch2->nome_empre;
-        $ruaE = $fetch2->rua_empre;
-        $bairroE = $fetch2->bairro_empre;
-        $cidadeE = $fetch2->cidade_empre;
-        $estadoE = $fetch2->estado_empre;
-        $telE = $fetch2->tel_empre;
-        $funcE = $fetch2->categoria_empre;
-        $imagemL = $fetch2->foto_empre;
-        $select2 = "select nome_categoria from categoria;";
-        $select3= "select * from produto where cod_empresa = '$id';";
-        $execute2 = executeSelect($pdo, $select2);
-        $execute3 = executeSelect($pdo, $select3);
-        $dadosCat = array();
-        $dC = 0;
-        while($fetch3 = $execute2->fetch(PDO ::FETCH_OBJ)){
-            $dadosCat[$dC]['nome_categoria'] = $fetch3->nome_categoria;
-            $dC++;
-        }
-        
-        $dadosProd = array();
-        $dP = 0;
-        while($fetch4 = $execute3->fetch(PDO ::FETCH_OBJ)){
-            $dadosProd[$dP]['cod_produto'] = $fetch4->cod_produto;
-            $dadosProd[$dP]['nome_produto'] = $fetch4->nome_prod;
-            $dadosProd[$dP]['url_foto_prod'] = $fetch4->url_foto_prod;
-            
-            $dP++;
-        }
-
-        $selectFoto = "select * from fotos_empresa where cod_empresa = '$id';";
-        $execFoto = executeSelect($pdo, $selectFoto);
-        $dadosFoto = array();
-        $df = 0;
-        while($fetchFoto = $execFoto->fetch(PDO::FETCH_OBJ)){
-            $dadosFot[$df]['nome_foto'] = $fetchFoto->nome_foto;
-            $dadosFot[$df]['url_foto_empresa'] = $fetchFoto->url_foto_empresa;
-            $dadosFot[$df]['desc_foto'] = $fetchFoto->desc_foto;
-            $df++;
-        }
-
-        include_once '../perfil_vendedor/index.php';
-     
-    }else{}
-        
-    }else{
+    
 
     
 	echo "<script>alert('Faça o Login para continuar!');</script>";
