@@ -1,7 +1,7 @@
 <?php
         include_once '../mask/header.html';
         if(isset($_GET['codigo']) and isset($_GET['par'])){
-            if($_SESSION["defini"] != 3){
+            if($defini != 3){
                 include_once 'index.html';   
             }else{
                 include_once 'empresa.html';
