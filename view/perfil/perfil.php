@@ -220,7 +220,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                 $codEmpre = $fetch2->cod_empresa;
                 $emailE = $fetch2->email_empre;
                 $select2 = "select nome_categoria from categoria;";
-                $select3= "select * from produto where cod_empresa = '{$_SESSION["id"]}';";
+                $select3= "select * from produto where cod_empresa = '$get1';";
                 $execute2 = executeSelect($pdo, $select2);
                 $execute3 = executeSelect($pdo, $select3);
                 $dadosCat = array();
@@ -240,7 +240,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                     $dP++;
                 }
         
-                $selectFoto = "select * from fotos_empresa where cod_empresa = '{$_SESSION["id"]}';";
+                $selectFoto = "select * from fotos_empresa where cod_empresa = '$get1';";
                 $execFoto = executeSelect($pdo, $selectFoto);
                 $dadosFoto = array();
                 $df = 0;
