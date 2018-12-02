@@ -73,7 +73,12 @@ try{
                             $mgm = "erro ao enviar mensagem";
                             echo $mgm;
                         }
-                }else{echo "você não está logado!";}
+                }else{echo'<script>';
+                    echo"alert('Você precisa estar logado para enviar um email para o Vendedor!')";
+                    echo '</script>';
+                    echo'<script>';
+                    echo"location.href='../../index.php'";
+                    echo '</script>';}
             }
         
     }
