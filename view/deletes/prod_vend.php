@@ -14,7 +14,7 @@ try{
     $sql = "DELETE FROM produto WHERE cod_produto = '$idProd' AND cod_empresa = '$id'";
     $conn = connection();
     $execute = executeQuery($conn, $sql);
-    
+    echo "<script>location.href='../perfil/perfil.php'</script>";
 
 } catch (Exception $ex) {
 
