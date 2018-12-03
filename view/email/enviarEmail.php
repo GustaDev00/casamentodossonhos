@@ -7,8 +7,8 @@ try{
     if(empty($_POST)){
         echo "post vazio";
     }else{
-        if($_SESSION["defini_usu"] == false or $_SESSION["defini_empre"] == false){
-            echo "você não está logado!";
+        if($_SESSION["defini"] == false){
+            
         }else{
             if($_SESSION["defini_usu"] == true){
 
