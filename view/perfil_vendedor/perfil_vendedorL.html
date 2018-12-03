@@ -51,8 +51,8 @@
                     </ol>
                     <div id="FotosVendedor">
                         
-                         <?php  $cF2=0; $d=0; $nufo = 1;
-                            if($d<=$cF2){ 
+                         <?php  $cF2=0;
+                            if($cF2 < count($dadosFot)){
                                 while($cF2 < count($dadosFot)){ ?>
                                     <div class="Fcampo">
                                 <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $nufo;?>)"><br>
@@ -63,7 +63,7 @@
                                 <a href="#" <?php  echo "onclick='myfunction(". $dadosFot[$cF2]['cod_foto_empre'] . ")'";  ?> >Editar</a>
                                     </form>
                                 </div>
-                                <?php $cF2++; $d++; $nufo++;} }?>
+                                <?php $cF2++;} }else{echo "<h1>Você não tem nenhuma Foto!<h1>";}?>
                              <!-- ------- ------------- garcia esse é o editar foto  --------------- ---------->   
                                 <div class="moda" id="FEditar">
                                     <a href="#" class="isoclose">&#215;</a>
@@ -89,6 +89,7 @@
                     <div id="ProdutosVendedorL">
                                     <?php 
                                         $l = 0;
+                                        if($l< count($dadosProd)){
                                         while($l < count($dadosProd)){ ?>   
                                             <div class="Pcampo">
                                                     <a href="../produto/index.php?cod=<?php echo $dadosProd[$l]['cod_produto']; ?>">
@@ -101,7 +102,7 @@
                                                         <a href="#" <?php  echo "onclick='functionmy(" . $dadosProd[$l]['cod_produto'] . ")'";  ?> >Editar</a>
                                                         </form>
                                                     </div>
-                                                    <?php $l++; } ?>
+                                                    <?php $l++; } }else{echo "<h1>Você não tem nenhum Produto!</h1>";}?>
                                 
                                
                                         <!-- ------- ------------- garcia esse é o editar produto  --------------- ---------->

@@ -21,20 +21,22 @@
                     </ol>
                     <div id="FotosVendedor">
                         
-                         <?php  $cF2=0; $d=0; $nufo = 1;
-                         if(!(isset($dadosFot))){}else{
-                            if($d<=$cF2){ 
+                         <?php  $cF2=0; $nufo = 1;
+                         if(!(isset($dadosFot))){echo "<h1> Esta empresa não possui nenhuma Foto!</h1>";}else{
+                            
                                 while($cF2 < count($dadosFot)){ ?>
                                     <div class="Fcampo">
                                 <img src="<?php  echo $dadosFot[$cF2]['url_foto_empresa']; ?>" class="hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $nufo;?>)"><br>
                                 </div>
-                                <?php $cF2++; $d++; $nufo++;} } }?>
+                                <?php $cF2++;  $nufo++;} } ?>
                      </div>
                     
                      
                     <div id="ProdutosVendedorL">
                                     <?php 
                                         $l = 0;
+                                        if($l < count($dadosProd)){
+
                                         while($l < count($dadosProd)){ ?>   
                                             <div class="Pcampo">
                                                     <a href="../produto/index.php?cod=<?php echo $dadosProd[$l]['cod_produto']; ?>">
@@ -42,7 +44,7 @@
                                                     </a>
                                         
                                             </div>
-                                                    <?php $l++; } ?> 
+                                                    <?php $l++; } }else{echo "<h1> Esta empresa não possui nenhum Produto!</h1>";} ?> 
                     </div>
                  </div>
                    

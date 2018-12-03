@@ -7,10 +7,10 @@ try{
     if(empty($_POST)){
         echo "post vazio";
     }else{
-        if($_SESSION["defini_usu"] == false or $_SESSION["defini_empre"] == false){
-            echo "você não está logado!";
+        if($_SESSION["defini"] == false ){
+            
         }else{
-            if($_SESSION["defini_usu"] == true){
+            if($_SESSION["defini"] == 1){
 
             
         session_start();
@@ -49,7 +49,7 @@ try{
                 echo '</script>';
             }
             }else{
-                if($_SESSION["defini_empre"] == true){
+                if($_SESSION["defini"] == 2){
                     session_start();
                     //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
                     $conn = connection();
@@ -85,12 +85,12 @@ try{
                             echo "location.href='javascript:history.go(-1)'";
                             echo '</script>';
                         }
-                }else{
-                    echo "<script>alert('você não está logado!');</script>";
-                            echo '<script>';
-                            echo "location.href='javascript:history.go(-1)'";
-                            echo '</script>';
-                }
+                }else{echo'<script>';
+                    echo"alert('Você precisa estar logado para enviar um email para o Vendedor!')";
+                    echo '</script>';
+                    echo'<script>';
+                    echo "location.href='javascript:history.go(-1)'";
+                    echo '</script>';}
             }
         
     }
