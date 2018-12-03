@@ -7,10 +7,10 @@ try{
     if(empty($_POST)){
         echo "post vazio";
     }else{
-        if($_SESSION["defini"] == false){
+        if($_SESSION["defini"] == false ){
             
         }else{
-            if($_SESSION["defini_usu"] == true){
+            if($_SESSION["defini"] == 1){
 
             
         session_start();
@@ -43,7 +43,7 @@ try{
                 echo $mgm;
             }
             }else{
-                if($_SESSION["defini_empre"] == true){
+                if($_SESSION["defini"] == 2){
                     session_start();
                     //$emailO = isset($_POST['Email'])?$_POST['Email']:null;
                     $conn = connection();
