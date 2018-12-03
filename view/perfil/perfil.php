@@ -8,7 +8,7 @@ $pdo = connection();
 if(isset($_GET['codigo']) and isset($_GET['par'])){
     $id = $_GET['codigo'];
     $defini = $_GET['par'];
-    
+    $definiAdm = 3;
     if($defini == 1){
         $select = "select * from usuario where cod_usu = '$id'";        
         $execute = executeSelect($pdo, $select);
