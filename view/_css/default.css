@@ -307,6 +307,7 @@ td, th {
 .ETeste{position: relative;}
 .EDescricao, .ETopo{display:none}
 .btnAlterar{position:absolute; right: 10%; cursor: pointer;}
+.btnAlterar:not(:first-child){margin-top: -30px}
 #nip{display: none}
 #LNIP{border: 1px solid #ED545B ;border-radius: 5px;padding: 3px;margin-top: 4px;color: #ED545B; background: none}
 #LNIP:hover{color: white; background-color: #ED545B}
@@ -945,8 +946,6 @@ img.abc{
   margin-left: 30px;
   text-align: center;
   color: black;
-}
-.desc_user span{
 }
 .NND:hover{
   border: 3px solid #FF757F;

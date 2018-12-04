@@ -42,6 +42,7 @@ if(isset($_GET['codigo']) and isset($_GET['par'])){
     $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
     $nome = $fetch2->nome_empre;
     $ruaE = $fetch2->rua_empre;
+    $emailE = $fetch2->email_empre;
     $bairroE = $fetch2->bairro_empre;
     $cidadeE = $fetch2->cidade_empre;
     $estadoE = $fetch2->estado_empre;
