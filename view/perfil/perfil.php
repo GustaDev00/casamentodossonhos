@@ -18,6 +18,7 @@ if(isset($_GET['codigo']) and isset($_GET['par'])){
         $senha = $fetch2->senha_usu;
         $diaCas = $fetch2->data_casal; 
         $email = $fetch2->email_usu;
+        $emailU = $fetch2->email_usu;
         $imagemL = $fetch2->foto_usu;
         $imagemLoc = $fetch2->foto_local;
         $localCas = $fetch2->local_casal;
@@ -294,6 +295,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
                 $execute = executeSelect($pdo, $select);
                 $fetch2 = $execute->fetch(PDO ::FETCH_OBJ);
                 $nome = $fetch2->nome_empre;
+                $emailE = $fetch2->email_empre;
                 $ruaE = $fetch2->rua_empre;
                 $bairroE = $fetch2->bairro_empre;
                 $cidadeE = $fetch2->cidade_empre;
@@ -345,6 +347,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         $senha = $fetch2->senha_usu;
         $diaCas = $fetch2->data_casal; 
         $email = $fetch2->email_usu;
+        $emailU = $fetch2->email_usu;
         $imagemL = $fetch2->foto_usu;
         $imagemLoc = $fetch2->foto_local;
         $localCas = $fetch2->local_casal;
