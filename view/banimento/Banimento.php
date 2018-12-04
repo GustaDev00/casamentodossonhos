@@ -10,7 +10,9 @@ $fp = fopen("checkBan.txt", "a");
 // Escreve "exemplo de escrita" no bloco1.txt
 date_default_timezone_set('America/Sao_Paulo');
 $hora =  date('d-m-y');
-$horaBanimento =  date('d-m-y', strtotime("+7 days", strtotime($hora)));
+$horaBanimento =  date('d');
+$horaBanimento = $horaBanimento + 5;
+$horaBanimento = date($horaBanimento. '-m-y');
 $escreve = fwrite($fp, "$email~$horaBanimento,");
  
 // Fecha o arquivo
