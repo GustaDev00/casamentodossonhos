@@ -123,7 +123,7 @@
                                                 <option>Nova Categoria</option>
                                                 <?php 
                                         $p = 0;while($p < count($dadosCat)){?>                                      
-                                        <option  value="<?php echo $dadosCat[$p]['nome_categoria']  ?>"><?php echo $dadosCat[$p]['nome_categoria']  ?>
+                                        <option  value="<?php echo $dadosCat[$p]['COD']  ?>"><?php echo $dadosCat[$p]['nome_categoria']  ?>
                                             <?php  $p++; } ?>
                                             </select>
                                             <input type="hidden" id="codproduto" name="codproduto">
@@ -173,7 +173,7 @@
                                         <option selected>Selecione a Categoria:
                                         <?php 
                                         $r = 0;while($r < count($dadosCat)){?>                                      
-                                    <option  value="<?php echo $dadosCat[$r]['nome_categoria']  ?>"><?php echo $dadosCat[$r]['nome_categoria']  ?>
+                                    <option  value="<?php echo utf8_encode($dadosCat[$r]['nome_categoria']);  ?>"><?php echo utf8_encode($dadosCat[$r]['nome_categoria']);  ?>
                                             <?php  $r++; } ?>
                                   </select>
                                 <button class="button">Salvar</button>

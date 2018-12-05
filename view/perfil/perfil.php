@@ -1,3 +1,4 @@
+
 <?php
 
 require_once '../../Db/daohelper.php';
@@ -126,7 +127,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         from alert a
         inner join adm dm
         on a.cod_adm = dm.cod_adm
-        where cod_usu = '{$_SESSION["id"]}';";
+        where cod_usu = '{$_SESSION["id"]}'";
         $executeAlert = executeSelect($pdo, $verificAlert);
         if($executeAlert->rowCount()>0){
         
@@ -215,10 +216,10 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
         from alert a
         inner join adm dm
         on a.cod_adm = dm.cod_adm
-        where cod_empresa = '{$_SESSION["id"]}';";
+        where cod_empresa = '{$_SESSION["id"]}'";
         
         $executeAlert = executeSelect($pdo, $verificAlert);
-        if($executeAlert->rowCount()>0){
+        if($executeAlert->rowCount() > 0){
         
         $fetchAlert = $executeAlert->fetch(PDO ::FETCH_OBJ);
         $alert = $fetchAlert->msg_alert;
@@ -229,7 +230,7 @@ if(isset($_SESSION["email"]) and isset($_SESSION["senha"])){
             echo '</script>';
             $deleteAlert = "DELETE FROM alert WHERE cod_empresa = '{$_SESSION["id"]}' AND cod_adm = '$codAdmAlert' and msg_alert = '$alert'";
             $executeDeleteAlert = executeQuery($pdo, $deleteAlert);
-        }
+        }else{}
 
 
         $select = "select * from empresa where cod_empresa = '{$_SESSION["id"]}'";

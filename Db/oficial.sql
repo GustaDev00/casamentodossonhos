@@ -1,6 +1,6 @@
-create database casamentodossonhos;
+-- create database casamentodossonhos;
   -- drop database casamentodossonhos;
-use casamentodossonhos;
+-- use casamentodossonhos;
 
 create table usuario(
 cod_usu int primary key auto_increment, 
